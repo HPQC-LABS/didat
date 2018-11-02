@@ -1,0 +1,648 @@
+ Direct fit to  MLR{q= 2, p= 5; Rref= Re  ; NL= 2} potential:   dd= 1.39629D+02
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.65; NL= 2} potential:   dd= 1.41985D+02
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.70; NL= 2} potential:   dd= 1.37786D+02
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.75; NL= 2} potential:   dd= 1.33082D+02
+ Direct fit to  MLR{q= 2, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.04653D+02
+ Direct fit to  MLR{q= 2, p= 5; Rref= 3.00; NL= 2} potential:   dd= 2.57860D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 4.00; NL= 2} potential:   dd= 8.90752D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 5.00; NL= 2} potential:   dd= 1.53509D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 6.00; NL= 2} potential:   dd= 1.62115D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= Re  ; NL= 2} potential:   dd= 1.78297D+02
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.65; NL= 2} potential:   dd= 1.79827D+02
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.70; NL= 2} potential:   dd= 1.77203D+02
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.75; NL= 2} potential:   dd= 1.74669D+02
+ Direct fit to  MLR{q= 3, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.08652D+02
+ Direct fit to  MLR{q= 3, p= 5; Rref= 3.00; NL= 2} potential:   dd= 2.06266D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 4.00; NL= 2} potential:   dd= 7.30391D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 5.00; NL= 2} potential:   dd= 6.75423D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 6.00; NL= 2} potential:   dd= 4.84902D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= Re  ; NL= 2} potential:   dd= 1.88849D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.65; NL= 2} potential:   dd= 1.90951D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.70; NL= 2} potential:   dd= 1.87377D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.75; NL= 2} potential:   dd= 1.84207D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.12251D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 3.00; NL= 2} potential:   dd= 1.74772D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 4.00; NL= 2} potential:   dd= 5.87876D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 5.00; NL= 2} potential:   dd= 1.20428D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 6.00; NL= 2} potential:   dd= 1.65342D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= Re  ; NL= 2} potential:   dd= 1.98480D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.65; NL= 2} potential:   dd= 2.00980D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.70; NL= 2} potential:   dd= 1.96602D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.75; NL= 2} potential:   dd= 1.92324D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.15197D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 3.00; NL= 2} potential:   dd= 1.81499D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 4.00; NL= 2} potential:   dd= 2.00346D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 5.00; NL= 2} potential:   dd= 3.18974D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 6.00; NL= 2} potential:   dd= 3.68090D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= Re  ; NL= 2} potential:   dd= 2.06435D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.65; NL= 2} potential:   dd= 2.08600D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.70; NL= 2} potential:   dd= 2.04616D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.75; NL= 2} potential:   dd= 1.99735D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.75512D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 3.00; NL= 2} potential:   dd= 2.35180D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 4.00; NL= 2} potential:   dd= 3.93056D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 5.00; NL= 2} potential:   dd= 5.20973D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 6.00; NL= 2} potential:   dd= 5.61108D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= Re  ; NL= 2} potential:   dd= 2.11806D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.65; NL= 2} potential:   dd= 2.13248D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.70; NL= 2} potential:   dd= 2.10472D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.75; NL= 2} potential:   dd= 2.06153D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 2.00; NL= 2} potential:   dd= 1.80090D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 3.00; NL= 2} potential:   dd= 3.30681D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 4.00; NL= 2} potential:   dd= 5.89971D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 5.00; NL= 2} potential:   dd= 7.01156D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 6.00; NL= 2} potential:   dd= 7.28708D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= Re  ; NL= 2} potential:   dd= 1.97041D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.65; NL= 2} potential:   dd= 1.98689D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.70; NL= 2} potential:   dd= 1.95799D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.75; NL= 2} potential:   dd= 1.92842D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.80454D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 3.00; NL= 2} potential:   dd= 4.48902D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 4.00; NL= 2} potential:   dd= 6.93119D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 5.00; NL= 2} potential:   dd= 1.69784D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 6.00; NL= 2} potential:   dd= 1.86105D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= Re  ; NL= 2} potential:   dd= 2.06136D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.65; NL= 2} potential:   dd= 2.07873D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.70; NL= 2} potential:   dd= 2.04752D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.75; NL= 2} potential:   dd= 2.01203D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.85488D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 3.00; NL= 2} potential:   dd= 3.79730D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 4.00; NL= 2} potential:   dd= 6.52169D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 5.00; NL= 2} potential:   dd= 8.89704D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 6.00; NL= 2} potential:   dd= 7.33831D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= Re  ; NL= 2} potential:   dd= 2.13528D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.65; NL= 2} potential:   dd= 2.14822D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.70; NL= 2} potential:   dd= 2.12406D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.75; NL= 2} potential:   dd= 2.09114D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.90146D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 3.00; NL= 2} potential:   dd= 3.18404D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 4.00; NL= 2} potential:   dd= 4.94477D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 5.00; NL= 2} potential:   dd= 8.63716D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 6.00; NL= 2} potential:   dd= 1.22650D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= Re  ; NL= 2} potential:   dd= 2.18058D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.65; NL= 2} potential:   dd= 2.18721D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.70; NL= 2} potential:   dd= 2.17424D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.75; NL= 2} potential:   dd= 2.15203D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.93280D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 3.00; NL= 2} potential:   dd= 2.86305D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 4.00; NL= 2} potential:   dd= 1.70074D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 5.00; NL= 2} potential:   dd= 2.75506D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 6.00; NL= 2} potential:   dd= 3.19562D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= Re  ; NL= 2} potential:   dd= 2.20246D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.65; NL= 2} potential:   dd= 2.20410D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.70; NL= 2} potential:   dd= 2.20054D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.75; NL= 2} potential:   dd= 2.19071D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.94273D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 3.00; NL= 2} potential:   dd= 2.97357D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 4.00; NL= 2} potential:   dd= 3.47346D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 5.00; NL= 2} potential:   dd= 4.72109D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 6.00; NL= 2} potential:   dd= 5.10021D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= Re  ; NL= 2} potential:   dd= 2.21014D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.65; NL= 2} potential:   dd= 2.20876D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.70; NL= 2} potential:   dd= 2.21130D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.75; NL= 2} potential:   dd= 2.21159D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 2.00; NL= 2} potential:   dd= 1.93400D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 3.00; NL= 2} potential:   dd= 3.53314D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 4.00; NL= 2} potential:   dd= 5.33768D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 5.00; NL= 2} potential:   dd= 6.49023D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 6.00; NL= 2} potential:   dd= 6.76675D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.17108D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.17600D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.16704D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.15551D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.01701D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 3.00; NL= 2} potential:   dd= 6.18888D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 4.00; NL= 2} potential:   dd= 6.10694D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 5.00; NL= 2} potential:   dd= 1.91694D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 6.00; NL= 2} potential:   dd= 2.11290D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.19813D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.20116D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.19560D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.18783D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.03974D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 3.00; NL= 2} potential:   dd= 5.46672D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 4.00; NL= 2} potential:   dd= 6.30440D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 5.00; NL= 2} potential:   dd= 1.15623D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 6.00; NL= 2} potential:   dd= 1.04878D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.21454D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.21535D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.21398D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.21176D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.05970D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 3.00; NL= 2} potential:   dd= 4.70326D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 4.00; NL= 2} potential:   dd= 4.12008D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 5.00; NL= 2} potential:   dd= 5.53841D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 6.00; NL= 2} potential:   dd= 8.29095D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.22101D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.22018D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.22213D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.22542D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.06771D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 3.00; NL= 2} potential:   dd= 4.10408D+01
+ Direct fit to  MLR{q= 5, p= 7; Rref= 4.00; NL= 2} potential:   dd= 1.45040D+01
+ Direct fit to  MLR{q= 5, p= 7; Rref= 5.00; NL= 2} potential:   dd= 2.34847D+01
+ Direct fit to  MLR{q= 5, p= 7; Rref= 6.00; NL= 2} potential:   dd= 2.73837D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.22103D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.21942D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.22328D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.23103D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.05737D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 3.00; NL= 2} potential:   dd= 3.85183D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 4.00; NL= 2} potential:   dd= 3.10481D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 5.00; NL= 2} potential:   dd= 4.27874D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 6.00; NL= 2} potential:   dd= 4.62561D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= Re  ; NL= 2} potential:   dd= 2.21744D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.65; NL= 2} potential:   dd= 2.21576D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.70; NL= 2} potential:   dd= 2.22033D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.75; NL= 2} potential:   dd= 2.23144D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 2.00; NL= 2} potential:   dd= 2.03090D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 3.00; NL= 2} potential:   dd= 4.02016D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 4.00; NL= 2} potential:   dd= 4.87539D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 5.00; NL= 2} potential:   dd= 6.02479D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 6.00; NL= 2} potential:   dd= 6.28740D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= Re  ; NL= 3} potential:   dd= 7.72499D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.65; NL= 3} potential:   dd= 7.85842D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.70; NL= 3} potential:   dd= 7.62238D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.75; NL= 3} potential:   dd= 7.36383D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 2.00; NL= 3} potential:   dd= 5.51267D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 3.00; NL= 3} potential:   dd= 5.62609D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 4.00; NL= 3} potential:   dd= 5.09979D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 5.00; NL= 3} potential:   dd= 4.46704D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 6.00; NL= 3} potential:   dd= 4.12554D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= Re  ; NL= 3} potential:   dd= 9.55280D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.65; NL= 3} potential:   dd= 9.67475D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.70; NL= 3} potential:   dd= 9.45753D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.75; NL= 3} potential:   dd= 9.21378D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 2.00; NL= 3} potential:   dd= 7.40820D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 3.00; NL= 3} potential:   dd= 4.65501D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 4.00; NL= 3} potential:   dd= 4.49058D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 5.00; NL= 3} potential:   dd= 4.04238D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 6.00; NL= 3} potential:   dd= 3.99253D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= Re  ; NL= 3} potential:   dd= 1.07899D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.65; NL= 3} potential:   dd= 1.08736D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.70; NL= 3} potential:   dd= 1.07208D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.75; NL= 3} potential:   dd= 1.05325D+02
+ Direct fit to  MLR{q= 4, p= 5; Rref= 2.00; NL= 3} potential:   dd= 9.03485D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 3.00; NL= 3} potential:   dd= 4.01976D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 4.00; NL= 3} potential:   dd= 5.13554D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 5.00; NL= 3} potential:   dd= 5.78395D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 6.00; NL= 3} potential:   dd= 6.42156D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= Re  ; NL= 3} potential:   dd= 1.71943D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.65; NL= 3} potential:   dd= 1.74707D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.70; NL= 3} potential:   dd= 1.69395D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.75; NL= 3} potential:   dd= 1.62306D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 2.00; NL= 3} potential:   dd= 1.02144D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 3.00; NL= 3} potential:   dd= 3.96156D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 4.00; NL= 3} potential:   dd= 1.03617D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 5.00; NL= 3} potential:   dd= 1.42697D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 6.00; NL= 3} potential:   dd= 1.60531D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= Re  ; NL= 3} potential:   dd= 1.80395D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.65; NL= 3} potential:   dd= 1.80588D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.70; NL= 3} potential:   dd= 1.80075D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.75; NL= 3} potential:   dd= 1.77890D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 2.00; NL= 3} potential:   dd= 1.10689D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 3.00; NL= 3} potential:   dd= 6.55248D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= 4.00; NL= 3} potential:   dd= 2.13679D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 5.00; NL= 3} potential:   dd= 2.75793D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 6.00; NL= 3} potential:   dd= 2.96407D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= Re  ; NL= 3} potential:   dd= 1.81168D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.65; NL= 3} potential:   dd= 1.81296D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.70; NL= 3} potential:   dd= 1.81273D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.75; NL= 3} potential:   dd= 1.81649D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 2.00; NL= 3} potential:   dd= 1.17082D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 3.00; NL= 3} potential:   dd= 1.29990D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 4.00; NL= 3} potential:   dd= 3.58320D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 5.00; NL= 3} potential:   dd= 4.25330D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 6.00; NL= 3} potential:   dd= 4.42899D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.01663D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.02287D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.01172D+02
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.75; NL= 3} potential:   dd= 9.98982D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 2.00; NL= 3} potential:   dd= 9.06334D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 3.00; NL= 3} potential:   dd= 1.07005D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 4.00; NL= 3} potential:   dd= 4.77112D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 5.00; NL= 3} potential:   dd= 4.56963D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 6.00; NL= 3} potential:   dd= 4.13621D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.11765D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.12238D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.11370D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.75; NL= 3} potential:   dd= 1.10264D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 2.00; NL= 3} potential:   dd= 1.00867D+02
+ Direct fit to  MLR{q= 3, p= 6; Rref= 3.00; NL= 3} potential:   dd= 7.20260D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 4.00; NL= 3} potential:   dd= 4.17148D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 5.00; NL= 3} potential:   dd= 3.77901D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 6.00; NL= 3} potential:   dd= 3.77387D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.81673D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.82363D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.80835D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.75; NL= 3} potential:   dd= 1.77127D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 2.00; NL= 3} potential:   dd= 1.09728D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 3.00; NL= 3} potential:   dd= 5.05837D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 4.00; NL= 3} potential:   dd= 4.60453D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 5.00; NL= 3} potential:   dd= 4.79671D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 6.00; NL= 3} potential:   dd= 5.09920D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.84489D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.84334D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.84688D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.75; NL= 3} potential:   dd= 1.85070D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 2.00; NL= 3} potential:   dd= 1.16760D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 3.00; NL= 3} potential:   dd= 3.56392D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 4.00; NL= 3} potential:   dd= 8.94306D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 5.00; NL= 3} potential:   dd= 1.20000D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 6.00; NL= 3} potential:   dd= 1.33956D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.84939D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.85917D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.84697D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.75; NL= 3} potential:   dd= 1.85155D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 2.00; NL= 3} potential:   dd= 1.69024D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 3.00; NL= 3} potential:   dd= 4.20067D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= 4.00; NL= 3} potential:   dd= 1.87705D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 5.00; NL= 3} potential:   dd= 2.43481D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 6.00; NL= 3} potential:   dd= 2.61396D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= Re  ; NL= 3} potential:   dd= 1.88508D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.65; NL= 3} potential:   dd= 1.91942D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.70; NL= 3} potential:   dd= 1.86844D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.75; NL= 3} potential:   dd= 1.85130D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 2.00; NL= 3} potential:   dd= 1.78252D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 3.00; NL= 3} potential:   dd= 9.36718D+00
+ Direct fit to  MLR{q= 7, p= 6; Rref= 4.00; NL= 3} potential:   dd= 3.21141D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 5.00; NL= 3} potential:   dd= 3.85964D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 6.00; NL= 3} potential:   dd= 4.02393D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= Re  ; NL= 3} potential:   dd= 1.74850D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.65; NL= 3} potential:   dd= 1.76068D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.70; NL= 3} potential:   dd= 1.73758D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.70448D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.09623D+02
+ Direct fit to  MLR{q= 2, p= 7; Rref= 3.00; NL= 3} potential:   dd= 2.07177D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 4.00; NL= 3} potential:   dd= 4.45519D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 5.00; NL= 3} potential:   dd= 4.88532D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 6.00; NL= 3} potential:   dd= 4.37883D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= Re  ; NL= 3} potential:   dd= 1.83649D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.65; NL= 3} potential:   dd= 1.83776D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.70; NL= 3} potential:   dd= 1.83541D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.83028D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.15431D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 3.00; NL= 3} potential:   dd= 1.43648D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 4.00; NL= 3} potential:   dd= 3.82847D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 5.00; NL= 3} potential:   dd= 3.62201D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 6.00; NL= 3} potential:   dd= 3.71082D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= Re  ; NL= 3} potential:   dd= 1.85622D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.65; NL= 3} potential:   dd= 1.86002D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.70; NL= 3} potential:   dd= 1.85573D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.85944D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.72824D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 3.00; NL= 3} potential:   dd= 1.01669D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 4.00; NL= 3} potential:   dd= 4.05000D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 5.00; NL= 3} potential:   dd= 4.00919D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 6.00; NL= 3} potential:   dd= 4.08608D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= Re  ; NL= 3} potential:   dd= 1.88486D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.65; NL= 3} potential:   dd= 1.90910D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.70; NL= 3} potential:   dd= 1.87330D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.86254D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.83665D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 3.00; NL= 3} potential:   dd= 7.23431D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 4.00; NL= 3} potential:   dd= 7.53319D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 5.00; NL= 3} potential:   dd= 9.77863D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 6.00; NL= 3} potential:   dd= 1.08369D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= Re  ; NL= 3} potential:   dd= 1.95973D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.65; NL= 3} potential:   dd= 2.00817D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.70; NL= 3} potential:   dd= 1.93035D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.88515D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.91292D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 3.00; NL= 3} potential:   dd= 5.17561D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 4.00; NL= 3} potential:   dd= 1.63860D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 5.00; NL= 3} potential:   dd= 2.12498D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 6.00; NL= 3} potential:   dd= 2.27754D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= Re  ; NL= 3} potential:   dd= 2.04525D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.65; NL= 3} potential:   dd= 2.09393D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.70; NL= 3} potential:   dd= 2.01078D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.75; NL= 3} potential:   dd= 1.94057D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 2.00; NL= 3} potential:   dd= 1.91697D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 3.00; NL= 3} potential:   dd= 6.87139D+00
+ Direct fit to  MLR{q= 7, p= 7; Rref= 4.00; NL= 3} potential:   dd= 2.88234D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 5.00; NL= 3} potential:   dd= 3.49207D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 6.00; NL= 3} potential:   dd= 3.63997D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= Re  ; NL= 4} potential:   dd= 2.37688D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.65; NL= 4} potential:   dd= 2.51256D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.70; NL= 4} potential:   dd= 2.27955D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.75; NL= 4} potential:   dd= 2.05868D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 2.00; NL= 4} potential:   dd= 1.15146D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= 3.00; NL= 4} potential:   dd= 5.07169D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 4.00; NL= 4} potential:   dd= 4.37111D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 5.00; NL= 4} potential:   dd= 4.07298D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 6.00; NL= 4} potential:   dd= 4.01203D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= Re  ; NL= 4} potential:   dd= 5.45567D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.65; NL= 4} potential:   dd= 5.76621D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.70; NL= 4} potential:   dd= 5.23090D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.75; NL= 4} potential:   dd= 4.71478D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 2.00; NL= 4} potential:   dd= 2.49647D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 3.00; NL= 4} potential:   dd= 4.57947D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 4.00; NL= 4} potential:   dd= 4.01563D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 5.00; NL= 4} potential:   dd= 3.98340D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 6.00; NL= 4} potential:   dd= 3.99034D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= Re  ; NL= 4} potential:   dd= 9.23380D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.65; NL= 4} potential:   dd= 9.45182D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.70; NL= 4} potential:   dd= 8.91859D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.75; NL= 4} potential:   dd= 8.15632D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 2.00; NL= 4} potential:   dd= 4.45965D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 3.00; NL= 4} potential:   dd= 4.00523D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 4.00; NL= 4} potential:   dd= 3.90027D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 5.00; NL= 4} potential:   dd= 4.33390D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 6.00; NL= 4} potential:   dd= 4.60196D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= Re  ; NL= 4} potential:   dd= 1.26307D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.65; NL= 4} potential:   dd= 1.32205D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.70; NL= 4} potential:   dd= 1.21965D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.75; NL= 4} potential:   dd= 1.11775D+02
+ Direct fit to  MLR{q= 5, p= 5; Rref= 2.00; NL= 4} potential:   dd= 6.63858D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 3.00; NL= 4} potential:   dd= 3.36055D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 4.00; NL= 4} potential:   dd= 5.82904D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 5.00; NL= 4} potential:   dd= 8.10003D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 6.00; NL= 4} potential:   dd= 9.08438D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= Re  ; NL= 4} potential:   dd= 1.53471D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.65; NL= 4} potential:   dd= 1.58071D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.70; NL= 4} potential:   dd= 1.48922D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.75; NL= 4} potential:   dd= 1.38368D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 2.00; NL= 4} potential:   dd= 8.52718D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 3.00; NL= 4} potential:   dd= 3.60152D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= 4.00; NL= 4} potential:   dd= 1.24209D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 5.00; NL= 4} potential:   dd= 1.68546D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 6.00; NL= 4} potential:   dd= 1.82874D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= Re  ; NL= 4} potential:   dd= 1.75098D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.65; NL= 4} potential:   dd= 1.82170D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.70; NL= 4} potential:   dd= 1.70344D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.75; NL= 4} potential:   dd= 1.60531D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 2.00; NL= 4} potential:   dd= 9.83926D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 3.00; NL= 4} potential:   dd= 6.86741D+00
+ Direct fit to  MLR{q= 7, p= 5; Rref= 4.00; NL= 4} potential:   dd= 2.35479D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 5.00; NL= 4} potential:   dd= 2.91071D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 6.00; NL= 4} potential:   dd= 3.04718D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= Re  ; NL= 4} potential:   dd= 5.42649D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.65; NL= 4} potential:   dd= 5.65635D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.70; NL= 4} potential:   dd= 5.25877D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.75; NL= 4} potential:   dd= 4.86959D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 2.00; NL= 4} potential:   dd= 3.10069D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 3.00; NL= 4} potential:   dd= 3.95192D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 4.00; NL= 4} potential:   dd= 4.02376D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 5.00; NL= 4} potential:   dd= 3.81578D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 6.00; NL= 4} potential:   dd= 3.77828D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= Re  ; NL= 4} potential:   dd= 9.04470D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.65; NL= 4} potential:   dd= 9.47926D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.70; NL= 4} potential:   dd= 8.73267D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.75; NL= 4} potential:   dd= 8.46215D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 2.00; NL= 4} potential:   dd= 5.17985D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 3.00; NL= 4} potential:   dd= 3.71441D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 4.00; NL= 4} potential:   dd= 3.74379D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 5.00; NL= 4} potential:   dd= 3.75254D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 6.00; NL= 4} potential:   dd= 3.76071D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= Re  ; NL= 4} potential:   dd= 1.31475D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.65; NL= 4} potential:   dd= 1.36926D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.70; NL= 4} potential:   dd= 1.27432D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.75; NL= 4} potential:   dd= 1.17845D+02
+ Direct fit to  MLR{q= 4, p= 6; Rref= 2.00; NL= 4} potential:   dd= 7.59851D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 3.00; NL= 4} potential:   dd= 3.48677D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 4.00; NL= 4} potential:   dd= 3.71182D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 5.00; NL= 4} potential:   dd= 4.04084D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 6.00; NL= 4} potential:   dd= 4.20370D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= Re  ; NL= 4} potential:   dd= 1.64128D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.65; NL= 4} potential:   dd= 1.69566D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.70; NL= 4} potential:   dd= 1.59671D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.75; NL= 4} potential:   dd= 1.47320D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 2.00; NL= 4} potential:   dd= 9.61212D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 3.00; NL= 4} potential:   dd= 3.28160D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 4.00; NL= 4} potential:   dd= 5.35871D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 5.00; NL= 4} potential:   dd= 7.16063D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 6.00; NL= 4} potential:   dd= 7.90629D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= Re  ; NL= 4} potential:   dd= 1.89056D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.65; NL= 4} potential:   dd= 1.95858D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.70; NL= 4} potential:   dd= 1.84379D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.75; NL= 4} potential:   dd= 1.74953D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 2.00; NL= 4} potential:   dd= 1.08870D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 3.00; NL= 4} potential:   dd= 3.78882D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= 4.00; NL= 4} potential:   dd= 1.11253D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 5.00; NL= 4} potential:   dd= 1.49631D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 6.00; NL= 4} potential:   dd= 1.61548D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= Re  ; NL= 4} potential:   dd= 1.85430D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.65; NL= 4} potential:   dd= 1.85930D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.70; NL= 4} potential:   dd= 2.05126D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.75; NL= 4} potential:   dd= 1.92430D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 2.00; NL= 4} potential:   dd= 1.16346D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 3.00; NL= 4} potential:   dd= 6.50440D+00
+ Direct fit to  MLR{q= 7, p= 6; Rref= 4.00; NL= 4} potential:   dd= 2.11704D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 5.00; NL= 4} potential:   dd= 2.63101D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 6.00; NL= 4} potential:   dd= 2.75303D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= Re  ; NL= 4} potential:   dd= 8.96011D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.65; NL= 4} potential:   dd= 9.30139D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.70; NL= 4} potential:   dd= 8.71345D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.75; NL= 4} potential:   dd= 8.15079D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 2.00; NL= 4} potential:   dd= 6.06430D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 3.00; NL= 4} potential:   dd= 4.60621D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 4.00; NL= 4} potential:   dd= 3.68716D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 5.00; NL= 4} potential:   dd= 3.63948D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 6.00; NL= 4} potential:   dd= 3.64818D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= Re  ; NL= 4} potential:   dd= 1.31453D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.65; NL= 4} potential:   dd= 1.36265D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.70; NL= 4} potential:   dd= 1.27884D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.75; NL= 4} potential:   dd= 1.19421D+02
+ Direct fit to  MLR{q= 3, p= 7; Rref= 2.00; NL= 4} potential:   dd= 8.40790D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 3.00; NL= 4} potential:   dd= 3.40912D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 4.00; NL= 4} potential:   dd= 3.55450D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 5.00; NL= 4} potential:   dd= 3.61990D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 6.00; NL= 4} potential:   dd= 3.62414D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= Re  ; NL= 4} potential:   dd= 1.68302D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.65; NL= 4} potential:   dd= 1.73293D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.70; NL= 4} potential:   dd= 1.64248D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.75; NL= 4} potential:   dd= 1.51323D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 2.00; NL= 4} potential:   dd= 1.03763D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 3.00; NL= 4} potential:   dd= 3.27987D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 4.00; NL= 4} potential:   dd= 3.60182D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 5.00; NL= 4} potential:   dd= 3.80977D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 6.00; NL= 4} potential:   dd= 3.87892D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= Re  ; NL= 4} potential:   dd= 1.95893D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.65; NL= 4} potential:   dd= 2.02142D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.70; NL= 4} potential:   dd= 1.91484D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.75; NL= 4} potential:   dd= 1.82432D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 2.00; NL= 4} potential:   dd= 1.26043D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 3.00; NL= 4} potential:   dd= 3.56270D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 4.00; NL= 4} potential:   dd= 4.94232D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 5.00; NL= 4} potential:   dd= 6.26737D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 6.00; NL= 4} potential:   dd= 6.80184D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= Re  ; NL= 4} potential:   dd= 1.87831D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.65; NL= 4} potential:   dd= 1.88740D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.70; NL= 4} potential:   dd= 1.87384D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.75; NL= 4} potential:   dd= 2.02189D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 2.00; NL= 4} potential:   dd= 1.42075D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 3.00; NL= 4} potential:   dd= 4.36277D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 4.00; NL= 4} potential:   dd= 9.93530D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 5.00; NL= 4} potential:   dd= 1.31438D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 6.00; NL= 4} potential:   dd= 1.41121D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= Re  ; NL= 4} potential:   dd= 2.19665D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.65; NL= 4} potential:   dd= 2.22014D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.70; NL= 4} potential:   dd= 1.91721D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.75; NL= 4} potential:   dd= 1.88812D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 2.00; NL= 4} potential:   dd= 1.60211D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 3.00; NL= 4} potential:   dd= 6.61641D+00
+ Direct fit to  MLR{q= 7, p= 7; Rref= 4.00; NL= 4} potential:   dd= 1.90327D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 5.00; NL= 4} potential:   dd= 2.36576D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 6.00; NL= 4} potential:   dd= 2.47158D+01
+ Direct fit to  MLR{q= 2, p= 5; Rref= Re  ; NL= 5} potential:   dd= 3.82760D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.65; NL= 5} potential:   dd= 4.02359D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.70; NL= 5} potential:   dd= 3.72775D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 1.75; NL= 5} potential:   dd= 3.62038D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 2.00; NL= 5} potential:   dd= 4.25060D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 3.00; NL= 5} potential:   dd= 3.93289D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 4.00; NL= 5} potential:   dd= 3.58774D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 5.00; NL= 5} potential:   dd= 3.76125D+00
+ Direct fit to  MLR{q= 2, p= 5; Rref= 6.00; NL= 5} potential:   dd= 3.86079D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= Re  ; NL= 5} potential:   dd= 1.65045D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.65; NL= 5} potential:   dd= 1.85748D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.70; NL= 5} potential:   dd= 1.50995D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 1.75; NL= 5} potential:   dd= 1.21574D+01
+ Direct fit to  MLR{q= 3, p= 5; Rref= 2.00; NL= 5} potential:   dd= 3.41532D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 3.00; NL= 5} potential:   dd= 3.29613D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 4.00; NL= 5} potential:   dd= 3.87497D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 5.00; NL= 5} potential:   dd= 3.97517D+00
+ Direct fit to  MLR{q= 3, p= 5; Rref= 6.00; NL= 5} potential:   dd= 3.91658D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= Re  ; NL= 5} potential:   dd= 4.54967D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.65; NL= 5} potential:   dd= 5.03431D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.70; NL= 5} potential:   dd= 4.21071D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 1.75; NL= 5} potential:   dd= 3.48899D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 2.00; NL= 5} potential:   dd= 1.28717D+01
+ Direct fit to  MLR{q= 4, p= 5; Rref= 3.00; NL= 5} potential:   dd= 3.22843D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 4.00; NL= 5} potential:   dd= 3.55786D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 5.00; NL= 5} potential:   dd= 3.10447D+00
+ Direct fit to  MLR{q= 4, p= 5; Rref= 6.00; NL= 5} potential:   dd= 2.96390D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= Re  ; NL= 5} potential:   dd= 7.85052D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.65; NL= 5} potential:   dd= 8.42191D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.70; NL= 5} potential:   dd= 7.40650D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 1.75; NL= 5} potential:   dd= 6.33860D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 2.00; NL= 5} potential:   dd= 2.76566D+01
+ Direct fit to  MLR{q= 5, p= 5; Rref= 3.00; NL= 5} potential:   dd= 3.32628D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 4.00; NL= 5} potential:   dd= 2.24702D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 5.00; NL= 5} potential:   dd= 3.23634D+00
+ Direct fit to  MLR{q= 5, p= 5; Rref= 6.00; NL= 5} potential:   dd= 3.86744D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= Re  ; NL= 5} potential:   dd= 1.00413D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.65; NL= 5} potential:   dd= 1.04950D+02
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.70; NL= 5} potential:   dd= 9.66533D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 1.75; NL= 5} potential:   dd= 8.65180D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 2.00; NL= 5} potential:   dd= 4.48555D+01
+ Direct fit to  MLR{q= 6, p= 5; Rref= 3.00; NL= 5} potential:   dd= 2.62627D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= 4.00; NL= 5} potential:   dd= 5.49554D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= 5.00; NL= 5} potential:   dd= 8.75208D+00
+ Direct fit to  MLR{q= 6, p= 5; Rref= 6.00; NL= 5} potential:   dd= 9.78299D+00
+ Direct fit to  MLR{q= 7, p= 5; Rref= Re  ; NL= 5} potential:   dd= 1.52528D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.65; NL= 5} potential:   dd= 1.57707D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.70; NL= 5} potential:   dd= 1.35067D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 1.75; NL= 5} potential:   dd= 1.00590D+02
+ Direct fit to  MLR{q= 7, p= 5; Rref= 2.00; NL= 5} potential:   dd= 6.18113D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 3.00; NL= 5} potential:   dd= 1.79508D+00
+ Direct fit to  MLR{q= 7, p= 5; Rref= 4.00; NL= 5} potential:   dd= 1.36203D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 5.00; NL= 5} potential:   dd= 1.80622D+01
+ Direct fit to  MLR{q= 7, p= 5; Rref= 6.00; NL= 5} potential:   dd= 1.92109D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= Re  ; NL= 5} potential:   dd= 1.21449D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.65; NL= 5} potential:   dd= 1.34538D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.70; NL= 5} potential:   dd= 1.12449D+01
+ Direct fit to  MLR{q= 2, p= 6; Rref= 1.75; NL= 5} potential:   dd= 9.32712D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 2.00; NL= 5} potential:   dd= 3.47170D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 3.00; NL= 5} potential:   dd= 3.84336D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 4.00; NL= 5} potential:   dd= 3.55379D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 5.00; NL= 5} potential:   dd= 3.68525D+00
+ Direct fit to  MLR{q= 2, p= 6; Rref= 6.00; NL= 5} potential:   dd= 3.74204D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= Re  ; NL= 5} potential:   dd= 3.92821D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.65; NL= 5} potential:   dd= 4.31479D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.70; NL= 5} potential:   dd= 3.65851D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 1.75; NL= 5} potential:   dd= 3.07916D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 2.00; NL= 5} potential:   dd= 1.22288D+01
+ Direct fit to  MLR{q= 3, p= 6; Rref= 3.00; NL= 5} potential:   dd= 3.30381D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 4.00; NL= 5} potential:   dd= 3.68497D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 5.00; NL= 5} potential:   dd= 3.71131D+00
+ Direct fit to  MLR{q= 3, p= 6; Rref= 6.00; NL= 5} potential:   dd= 3.63019D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= Re  ; NL= 5} potential:   dd= 7.61143D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.65; NL= 5} potential:   dd= 8.15333D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.70; NL= 5} potential:   dd= 7.19753D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 1.75; NL= 5} potential:   dd= 6.21406D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 2.00; NL= 5} potential:   dd= 2.79007D+01
+ Direct fit to  MLR{q= 4, p= 6; Rref= 3.00; NL= 5} potential:   dd= 3.17472D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 4.00; NL= 5} potential:   dd= 3.34842D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 5.00; NL= 5} potential:   dd= 2.92086D+00
+ Direct fit to  MLR{q= 4, p= 6; Rref= 6.00; NL= 5} potential:   dd= 2.79139D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= Re  ; NL= 5} potential:   dd= 1.01956D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.65; NL= 5} potential:   dd= 1.06195D+02
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.70; NL= 5} potential:   dd= 9.84822D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 1.75; NL= 5} potential:   dd= 8.91513D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 2.00; NL= 5} potential:   dd= 4.66227D+01
+ Direct fit to  MLR{q= 5, p= 6; Rref= 3.00; NL= 5} potential:   dd= 3.28147D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 4.00; NL= 5} potential:   dd= 2.18020D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 5.00; NL= 5} potential:   dd= 2.95374D+00
+ Direct fit to  MLR{q= 5, p= 6; Rref= 6.00; NL= 5} potential:   dd= 3.45751D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= Re  ; NL= 5} potential:   dd= 1.60990D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.65; NL= 5} potential:   dd= 1.66829D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.70; NL= 5} potential:   dd= 1.55392D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 1.75; NL= 5} potential:   dd= 1.04889D+02
+ Direct fit to  MLR{q= 6, p= 6; Rref= 2.00; NL= 5} potential:   dd= 6.47263D+01
+ Direct fit to  MLR{q= 6, p= 6; Rref= 3.00; NL= 5} potential:   dd= 2.81617D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= 4.00; NL= 5} potential:   dd= 4.93255D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= 5.00; NL= 5} potential:   dd= 7.80717D+00
+ Direct fit to  MLR{q= 6, p= 6; Rref= 6.00; NL= 5} potential:   dd= 8.67574D+00
+ Direct fit to  MLR{q= 7, p= 6; Rref= Re  ; NL= 5} potential:   dd= 1.78814D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.65; NL= 5} potential:   dd= 1.82794D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.70; NL= 5} potential:   dd= 1.76683D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 1.75; NL= 5} potential:   dd= 1.70677D+02
+ Direct fit to  MLR{q= 7, p= 6; Rref= 2.00; NL= 5} potential:   dd= 7.99515D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 3.00; NL= 5} potential:   dd= 2.02838D+00
+ Direct fit to  MLR{q= 7, p= 6; Rref= 4.00; NL= 5} potential:   dd= 1.22600D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 5.00; NL= 5} potential:   dd= 1.63075D+01
+ Direct fit to  MLR{q= 7, p= 6; Rref= 6.00; NL= 5} potential:   dd= 1.73089D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= Re  ; NL= 5} potential:   dd= 3.20358D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.65; NL= 5} potential:   dd= 3.47302D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.70; NL= 5} potential:   dd= 3.01388D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 1.75; NL= 5} potential:   dd= 2.59902D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 2.00; NL= 5} potential:   dd= 1.17935D+01
+ Direct fit to  MLR{q= 2, p= 7; Rref= 3.00; NL= 5} potential:   dd= 3.46667D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 4.00; NL= 5} potential:   dd= 3.53620D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 5.00; NL= 5} potential:   dd= 3.62641D+00
+ Direct fit to  MLR{q= 2, p= 7; Rref= 6.00; NL= 5} potential:   dd= 3.64559D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= Re  ; NL= 5} potential:   dd= 6.90064D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.65; NL= 5} potential:   dd= 7.38509D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.70; NL= 5} potential:   dd= 6.53891D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 1.75; NL= 5} potential:   dd= 5.69548D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 2.00; NL= 5} potential:   dd= 2.66781D+01
+ Direct fit to  MLR{q= 3, p= 7; Rref= 3.00; NL= 5} potential:   dd= 3.28373D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 4.00; NL= 5} potential:   dd= 3.55209D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 5.00; NL= 5} potential:   dd= 3.50416D+00
+ Direct fit to  MLR{q= 3, p= 7; Rref= 6.00; NL= 5} potential:   dd= 3.40568D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= Re  ; NL= 5} potential:   dd= 9.99335D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.65; NL= 5} potential:   dd= 1.03989D+02
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.70; NL= 5} potential:   dd= 9.66504D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 1.75; NL= 5} potential:   dd= 8.79392D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 2.00; NL= 5} potential:   dd= 4.59592D+01
+ Direct fit to  MLR{q= 4, p= 7; Rref= 3.00; NL= 5} potential:   dd= 3.27231D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 4.00; NL= 5} potential:   dd= 3.21764D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 5.00; NL= 5} potential:   dd= 2.83574D+00
+ Direct fit to  MLR{q= 4, p= 7; Rref= 6.00; NL= 5} potential:   dd= 2.72365D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= Re  ; NL= 5} potential:   dd= 1.60972D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.65; NL= 5} potential:   dd= 1.67755D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.70; NL= 5} potential:   dd= 1.55268D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 1.75; NL= 5} potential:   dd= 1.06361D+02
+ Direct fit to  MLR{q= 5, p= 7; Rref= 2.00; NL= 5} potential:   dd= 6.48300D+01
+ Direct fit to  MLR{q= 5, p= 7; Rref= 3.00; NL= 5} potential:   dd= 3.40131D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 4.00; NL= 5} potential:   dd= 2.26941D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 5.00; NL= 5} potential:   dd= 2.80588D+00
+ Direct fit to  MLR{q= 5, p= 7; Rref= 6.00; NL= 5} potential:   dd= 3.17832D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= Re  ; NL= 5} potential:   dd= 1.83068D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.65; NL= 5} potential:   dd= 1.86293D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.70; NL= 5} potential:   dd= 1.81378D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 1.75; NL= 5} potential:   dd= 1.75479D+02
+ Direct fit to  MLR{q= 6, p= 7; Rref= 2.00; NL= 5} potential:   dd= 8.03133D+01
+ Direct fit to  MLR{q= 6, p= 7; Rref= 3.00; NL= 5} potential:   dd= 3.13221D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 4.00; NL= 5} potential:   dd= 4.48955D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 5.00; NL= 5} potential:   dd= 6.93333D+00
+ Direct fit to  MLR{q= 6, p= 7; Rref= 6.00; NL= 5} potential:   dd= 7.64942D+00
+ Direct fit to  MLR{q= 7, p= 7; Rref= Re  ; NL= 5} potential:   dd= 1.98623D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.65; NL= 5} potential:   dd= 1.99704D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.70; NL= 5} potential:   dd= 1.95425D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 1.75; NL= 5} potential:   dd= 1.86990D+02
+ Direct fit to  MLR{q= 7, p= 7; Rref= 2.00; NL= 5} potential:   dd= 9.19721D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 3.00; NL= 5} potential:   dd= 2.49076D+00
+ Direct fit to  MLR{q= 7, p= 7; Rref= 4.00; NL= 5} potential:   dd= 1.10439D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 5.00; NL= 5} potential:   dd= 1.46477D+01
+ Direct fit to  MLR{q= 7, p= 7; Rref= 6.00; NL= 5} potential:   dd= 1.55030D+01
