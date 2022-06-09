@@ -1,3 +1,12 @@
+MAJOR BUG IN PAPER:
+In the file: https://aip.scitation.org/doi/suppl/10.1063/1.2354502/suppl_file/n2_data.txt
+
+The line:
+1 0 'X0' X0' 14 14                     % CARS: Gilson et al. [JRS 9, 6 [1980)]
+
+Doesn't have an apostrophe before the X0, so the whole data set was not included, resuling in 42 fewer lines in my fits than in Table 1 of the paper. This took hours to figure out, see the analysis I did below:
+
+====================================================
 Toatl amount of data: 
     19 
    +42 
