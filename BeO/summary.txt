@@ -1,0 +1,46 @@
+Geometry optimization:
+
+STO-3G-NR
+[nike@gra-login1 2z]$ grep "E(CCSD(T))   " ../sto-3g/out.1 
+        E(CCSD(T))        =     -88.328734210791
+        E(CCSD(T))        =     -88.329029734118
+        E(CCSD(T))        =     -88.329100431518
+        E(CCSD(T))        =     -88.329100649617
+        E(CCSD(T))        =     -88.329100649759
+        E(CCSD(T))        =     -88.329100649759 R = 1.35041 
+
+6-31G-NR
+[nike@gra-login1 3z]$ grep "E(CCSD(T))   " ../6-31g/out.1 
+        E(CCSD(T))        =     -89.561789438469
+        E(CCSD(T))        =     -89.563854785415
+        E(CCSD(T))        =     -89.564682171205
+        E(CCSD(T))        =     -89.564704400148
+        E(CCSD(T))        =     -89.564704621345
+        E(CCSD(T))        =     -89.564704621412
+        E(CCSD(T))        =     -89.564704621412 R = 1.39356        
+
+aug-cc-pCV2Z-NR
+[nike@gra-login1 3z]$ grep "E(CCSD(T))   " ../2z/out.5269108 
+        E(CCSD(T))        =     -89.758230250798
+        E(CCSD(T))        =     -89.758928677670
+        E(CCSD(T))        =     -89.759202440192
+        E(CCSD(T))        =     -89.759205070515
+        E(CCSD(T))        =     -89.759205078810
+        E(CCSD(T))        =     -89.759205078810
+        E(CCSD(T))        =     -89.759205078810 R = 1.36612
+        
+aug-cc-pCV3Z-NR 
+[nike@gra-login1 4z]$ grep "E(CCSD(T))   " ../3z/out.5269755 
+        E(CCSD(T))        =     -89.859471740080
+        E(CCSD(T))        =     -89.859530289278
+        E(CCSD(T))        =     -89.859551832405
+        E(CCSD(T))        =     -89.859551850708
+        E(CCSD(T))        =     -89.859551850713
+        E(CCSD(T))        =     -89.859551850712 R = 1.34073
+
+aug-cc-pCV4Z-NR - running
+aug-cc-pCV5Z-NR - running
+aug-cc-pCV6Z-NR - running
+        
+unc-aug-cc-pCV5Z/NR-CCSD(T)
+unc-aug-cc-pCV5Z/X2C-CCSD(T)
