@@ -19,6 +19,12 @@ STO-3G-NR
         E(CCSD(T))        =     -89.564704621412
         E(CCSD(T))        =     -89.564704621412 R = 1.39356        
 
+aug-cc-pV2Z-NR - done
+aug-cc-pV3Z-NR - done
+aug-cc-pV4Z-NR - done
+aug-cc-pV5Z-NR - need to update GENBAS
+aug-cc-pV6Z-NR - need to update GENBAS
+
 aug-cc-pCV2Z-NR
 [nike@gra-login1 3z]$ grep "E(CCSD(T))   " ../2z/out.5269108 
         E(CCSD(T))        =     -89.758230250798
@@ -37,6 +43,14 @@ aug-cc-pCV3Z-NR
         E(CCSD(T))        =     -89.859551850708
         E(CCSD(T))        =     -89.859551850713
         E(CCSD(T))        =     -89.859551850712 R = 1.34073
+
+[nike@gra-login1 ta]$ grep "E(CCSD(T))   " ../../4z/ta/out.5270907 
+        E(CCSD(T))        =     -89.889290065269
+        E(CCSD(T))        =     -89.889291660708
+        E(CCSD(T))        =     -89.889292242088
+        E(CCSD(T))        =     -89.889292242105
+        E(CCSD(T))        =     -89.889292242094 R = 1.33259
+
 
 aug-cc-pCV4Z-NR - running
 aug-cc-pCV5Z-NR - running
