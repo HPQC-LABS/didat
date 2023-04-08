@@ -1,10 +1,12 @@
 (2014) https://www.iasj.net/iasj/download/3ac899bd578ce2c2 Relative intensity distribution in the rotational structure for B1Σ+-A1Π and B1Σ+-X1Σ+electronic systems of BeO molecule, used re = 1.3309 Angstoms from:  K. Huber and  G.  Herzberg,Constants of    Diatomic    Molecules,    Van    Nostrand Reinhold, New York, (1979)p.82
 
-(1992) HCP92 (from GW100 dataset) uses 0.13308
+(1995) Rod Bartlet calculates it and compares to Huber & Herzberg: https://link.springer.com/article/10.1007/BF01113541
+
+(1992) HCP92 (from GW100 dataset) uses 0.13308 
 
 (1991) Table 1 has raw data with uncertainties (could be used with PotFit!):
 https://www.researchgate.net/profile/Nikola-Vukelic-4/publication/245334004_Analysis_of_the_AX_System_of_Be18O/links/5873565008ae329d621bcafc/Analysis-of-the-AX-System-of-Be18O.pdf
 
-(1991) uses Re = 1.3310 without giving a reference
+(1991) uses Re = 1.3310 without giving a reference https://www.tandfonline.com/doi/abs/10.1080/00387019108018135
 
-(1986) uses Re = 0.13308 
+(1986) uses Re = 0.13308  https://link.springer.com/article/10.1007/BF03157423
