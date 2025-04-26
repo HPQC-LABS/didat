@@ -903,3 +903,23 @@ ylabel('$V(r)$ cm$^{-1}$','FontSize',20,'Interpreter','latex');
 
 box('on');
 set(gca,'XMinorTick','on','YMinorTick','on','LineWidth',2,'FontSize',14);
+
+function [convertedValue,convertedUncertainty]=dispersionCoefficientsFromAtomicUnits2spectroscopic(originalValue,originalUncertainty,order,atomicUnits2SpectroscopicUnitsORspectroscopicUnits2atomicUnits)
+
+% atomicUnits2SpectroscopicUnitsORspectroscopicUnits2atomicUnits = 1 to get spectroscopic units, and -1 to get atomic units
+
+BohrRadius=5.2917721092e-1; % Angstronms , from  2010 CODATA , http://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0
+
+RinfinityTIMESTwo=219474.6313605; % this is just what i had in my excel spreadsheet .. couldn't find it in these units online, should be recalculated some time
+
+RinfinityTIMESTwo=219474.6313705; % wavenumbers , http://en.wikipedia.org/wiki/Hartree says this number came from 2010 CODATA, but the CODATA recommended value seems to be in Joules, and in case we don't trust wikipedia's conversion:
+
+RinfinityTIMESTwo=219474.631333725; % 4.35974434(19)e-18 Joules /((6.62606957e-34 Js)*(29979245800 cm/s)) , 4.35974434(19)e-18 = raw value from 2010 CODATA http://physics.nist.gov/cgi-bin/cuu/Value?hr
+
+conversionFactor=RinfinityTIMESTwo*(BohrRadius^order); 
+
+convertedValue=originalValue*conversionFactor^atomicUnits2SpectroscopicUnitsORspectroscopicUnits2atomicUnits;     
+
+convertedUncertainty=originalUncertainty*conversionFactor^atomicUnits2SpectroscopicUnitsORspectroscopicUnits2atomicUnits;     
+
+end
