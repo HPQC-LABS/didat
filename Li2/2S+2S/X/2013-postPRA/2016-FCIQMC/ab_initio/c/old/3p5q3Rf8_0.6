@@ -1,0 +1,142 @@
+  Input data for  3  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122795      6.015122795      3.007835712
+  Li(  7) - Li(  7)      7.016004550      7.016004550      3.508276586
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+  Li(  0) - Li(  0)      6.941000000      6.941000000      3.470774312
+ -------------------------------------------------------------------
+ Since this is an ion with charge +2, use Watson's charge-modified reduced mass.
+
+ Use experimental data input file:  DATA_c-a_24-02-16_abInitioOnly
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00100
+ ==============================================================================
+
+ State a3 represented by an MLR(p= 5, q= 3) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                                for  i= 0 -  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y6= (R^6 - Re^6)/(R^6 + Re^6)
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02       --            --
+      Re      4.170006000000D+00       --            --
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01       --            --
+   beta( 1)  -9.804102637260D-02       --            --
+   beta( 2)   1.132213644225D-01       --            --
+   beta( 3)  -2.515349973312D-02       --            --
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -8.364370221336D+09       --            --
+    uLi( 0)   6.888864517011D-02       --            --
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+                             or  v  outside range  0  to   9   for   ISOT= 3
+
+ NOTE that read-in potential fx. values for   ISTATE=**   ISOT= 1
+                                 must be input as a single "band" or data group
+
+ NOTE that read-in potential fx. values for   ISTATE= 1   ISOT= 1
+                                 must be input as a single "band" or data group
+ State a3  Energy Convergence criterion EPS is 1.0D-06 cm-1
+
+ ====================================================================
+ For fit of    0  parameters to    20  transitions,  DSE=  295.30013    
+ ==============================================================================
+
+ State a3 represented by an MLR(p= 5, q= 3) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                                for  i= 0 -  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y6= (R^6 - Re^6)/(R^6 + Re^6)
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02       --            --
+      Re      4.170006000000D+00       --            --
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01       --            --
+   beta( 1)  -9.804102637260D-02       --            --
+   beta( 2)   1.132213644225D-01       --            --
+   beta( 3)  -2.515349973312D-02       --            --
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -8.364370221336D+09       --            --
+    uLi( 0)   6.888864517011D-02       --            --
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ ===============================================================
+  *** Discrepancies for    2 bands/series of Li(  6)-Li(  6) ***
+ ===============================================================
+
+ =======================================================
+   12  State a3  Li(  6)-Li(  6)  Potential fx. values
+ ========================================== Avge. ====
+     #data    Av.Unc.    Max.Unc.    Err/Unc   DRMSD
+ ----------------------------------------------------
+       12    0.00D+00    0.00D+00   -0.08962   0.454
+ ================================================ calc-obs
+       R       V(r)        u(V(r))   calc-obs   /u(V(r))
+ -----------------------------------------------------
+   1.000000    86534.40     20.20     21.166      1.048
+   3.351000       -0.54      0.20     -0.183     -0.913
+   4.167000     -333.65      0.20     -0.127     -0.637
+   5.000000     -255.22      0.20     -0.067     -0.336
+   6.000000     -137.66      0.20     -0.026     -0.129
+   6.500000      -96.51      0.20     -0.013     -0.067
+   7.000000      -66.74      0.20     -0.009     -0.043
+   8.000000      -31.72      0.20     -0.002     -0.011
+   9.000000      -15.55      0.20      0.001      0.004
+  15.000000       -0.64      0.20      0.001      0.007
+  20.000000       -0.11      0.20      0.000      0.002
+  30.000000       -0.01      0.20     -0.000     -0.000
+
+ ===============================================================
+  *** Discrepancies for    0 bands/series of Li(  7)-Li(  7) ***
+ ===============================================================
+
+ ===============================================================
+  *** Discrepancies for    0 bands/series of Li(  0)-Li(  0) ***
+ ===============================================================
+
+ ==================================================================
+ Fit of     0 param to    20 data:  DRMS(devn)= 0.351617    
+ ==================================================================

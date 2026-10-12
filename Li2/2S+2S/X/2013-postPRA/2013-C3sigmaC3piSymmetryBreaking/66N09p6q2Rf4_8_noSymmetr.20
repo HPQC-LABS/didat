@@ -1,0 +1,39 @@
+
+  3.337795000000D+02  1         % De  IFXDe
+  4.170006000000D+00  1         % Re  IFXRe
+
+  0  3   5  3   8.00D+00        % APSE Nbeta nPB nQB RREF
+ -5.161372764975D-01  1         % BETA 0  IFXBETA 0
+ -9.804102637260D-02  1         % BETA 1  IFXBETA 1
+  1.132213644225D-01  1         % BETA 2  IFXBETA 2
+ -2.515349973312D-02  1         % BETA 3  IFXBETA 3
+
+  0 -8   6  6                   % NUA NUB  pAD qAD
+  6.888864517011D-02  1         % UA 0  IFXUA 0
+  0.000000000000D+00  1         % uAinf  IFXuAinf
+
+ -2 -2   3  3                   % NTA NTB  pNA qNA
+
+  7.093492600000D+03  1         % De  IFXDe
+  3.065436000000D+00  1         % Re  IFXRe
+
+  0  9   6  2   4.80D+00        % APSE Nbeta nPB nQB RREF
+ -1.819414082192D+00  1         % BETA 0  IFXBETA 0
+ -4.728967959293D-01  1         % BETA 1  IFXBETA 1
+ -5.184287256451D-01  1         % BETA 2  IFXBETA 2
+ -1.606926700447D-01  1         % BETA 3  IFXBETA 3
+ -8.598014552006D-01  1         % BETA 4  IFXBETA 4
+  3.935211131913D+00  1         % BETA 5  IFXBETA 5
+  9.595477762844D-01  1         % BETA 6  IFXBETA 6
+ -2.821502060220D+00  1         % BETA 7  IFXBETA 7
+ -2.251266244596D+00  1         % BETA 8  IFXBETA 8
+  1.230734010813D+00  1         % BETA 9  IFXBETA 9
+
+  3 -9   3  3                   % NUA NUB  pAD qAD
+  1.596338834725D+00  1         % UA 0  IFXUA 0
+  3.139895233177D+00  1         % UA 1  IFXUA 1
+ -1.558684778364D+00  1         % UA 2  IFXUA 2
+ -1.968153637545D+00  1         % UA 3  IFXUA 3
+  1.231515500000D+00  1         % uAinf  IFXuAinf
+
+ -2 -2   3  3                   % NTA NTB  pNA qNA

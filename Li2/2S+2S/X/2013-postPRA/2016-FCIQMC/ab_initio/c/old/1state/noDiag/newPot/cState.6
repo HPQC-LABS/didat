@@ -1,0 +1,44 @@
+  Input data for  3  isotopologues(s)
+  ********************************
+      Isotopologues    Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+  Li(  6) - Li(  7)      6.015122887      7.016003437      3.238562945
+
+ Use experimental data input file:  ./DATA_c-a_24-02-16_abInitioOn
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX=  32 cycles
+
+ For state   1c 
+    integrate from   RMIN= 1.00   to   RMAX= -2.00   with mesh   RH= 3.00000
+ ***** WARNING  p= 2 .LE.[MMLR(NCMM)-MMLR(1)]= 5 *****
+   so tail of MLR exponential will 'pollute' u_{LR}(r) behaviour
+  ****************************************************************************
+ ==============================================================================
+
+ State 1c  represented by an MLR(q= 6, p= 2) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y2 +(1-y2)*Sum{beta_i*y6^i}
+                                                              for  i= 0 to  9
+        with radial variable:   y_{p,q} = (R^q - 4.800000^q)/(R^q + 4.800000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Aubert-Frecon 3x3  c-state uLR(r)  with   Aso=   0.335338[cm-1]
+                                        C3(^3Sig)= 3.5768280D+05[cm-1 Ang^{ 3}]
+                                        C3(^1Pi) = 1.7884140D+05[cm-1 Ang^{ 3}]
+                                        C3(^3Pi) = 1.7884140D+05[cm-1 Ang^{ 3}]
+                                        C6(^3Sig)= 1.0000590D+07[cm-1 Ang^{ 6}]
+                                        C6(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C6(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C8(^3Sig)= 3.6996500D+08[cm-1 Ang^{ 8}]
+                                        C8(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                                        C8(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                    These constants yield:   betaINF= -1.6231985451
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45095460D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.12723901D+06
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.12723901D+06

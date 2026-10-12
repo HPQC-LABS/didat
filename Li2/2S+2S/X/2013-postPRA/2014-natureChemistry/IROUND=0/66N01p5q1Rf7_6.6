@@ -1,0 +1,431 @@
+  Input data for  2  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+
+ Use experimental data input file:  ../DATA_c-a_29-08-14.4        
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3 
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00500
+ ==============================================================================
+
+ State a3  represented by an MLR(p= 5, q= 1) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y1^i}
+                                                              for  i= 1 to  1
+        with radial variable:   y_{p,q} = (R^q - 7.600000^q)/(R^q + 7.600000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02    0.0D+00       0.0D+00
+      Re      4.170006000000D+00    0.0D+00       0.0D+00
+     C 6      6.719000000000D+06    0.0D+00       0.0D+00
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01    0.0D+00       0.0D+00
+   beta( 1)  -9.804102637260D-02    0.0D+00       0.0D+00
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -6.872141129587D+09       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= a3  ISOT= 1
+           must be in a single "band" or data group
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ *** CAUTION *** For  J=  0  E= -304.76933    
+                WF(first)/WF(Max)= 0.58D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -249.49605    
+                WF(first)/WF(Max)=-0.22D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -198.22988    
+                WF(first)/WF(Max)= 0.57D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -151.64088    
+                WF(first)/WF(Max)=-0.12D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -110.38038    
+                WF(first)/WF(Max)= 0.20D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -75.081554    
+                WF(first)/WF(Max)=-0.30D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -46.337413    
+                WF(first)/WF(Max)= 0.39D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -24.633320    
+                WF(first)/WF(Max)=-0.45D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -10.180109    
+                WF(first)/WF(Max)= 0.46D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.5533144    
+                WF(first)/WF(Max)=-0.38D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -304.76933    
+                WF(first)/WF(Max)= 0.58D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -249.49605    
+                WF(first)/WF(Max)=-0.22D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -198.22988    
+                WF(first)/WF(Max)= 0.57D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -151.64088    
+                WF(first)/WF(Max)=-0.12D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -110.38038    
+                WF(first)/WF(Max)= 0.20D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -75.081554    
+                WF(first)/WF(Max)=-0.30D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -46.337413    
+                WF(first)/WF(Max)= 0.39D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -24.633320    
+                WF(first)/WF(Max)=-0.45D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -10.180109    
+                WF(first)/WF(Max)= 0.46D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.5533144    
+                WF(first)/WF(Max)=-0.38D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -306.89357    
+                WF(first)/WF(Max)= 0.16D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -255.45627    
+                WF(first)/WF(Max)=-0.63D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -207.39141    
+                WF(first)/WF(Max)= 0.17D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -163.23307    
+                WF(first)/WF(Max)=-0.36D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -123.50069    
+                WF(first)/WF(Max)= 0.65D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -88.701937    
+                WF(first)/WF(Max)=-0.10D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -59.323550    
+                WF(first)/WF(Max)= 0.14D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -35.800432    
+                WF(first)/WF(Max)=-0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -18.440097    
+                WF(first)/WF(Max)= 0.20D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -7.2564646    
+                WF(first)/WF(Max)=-0.19D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -1.6558100    
+                WF(first)/WF(Max)= 0.15D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -306.89357    
+                WF(first)/WF(Max)= 0.16D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -255.45627    
+                WF(first)/WF(Max)=-0.63D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -207.39141    
+                WF(first)/WF(Max)= 0.17D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -163.23307    
+                WF(first)/WF(Max)=-0.36D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -123.50069    
+                WF(first)/WF(Max)= 0.65D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -88.701937    
+                WF(first)/WF(Max)=-0.10D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -59.323550    
+                WF(first)/WF(Max)= 0.14D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -35.800432    
+                WF(first)/WF(Max)=-0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -18.440097    
+                WF(first)/WF(Max)= 0.20D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -7.2564646    
+                WF(first)/WF(Max)=-0.19D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -1.6558100    
+                WF(first)/WF(Max)= 0.15D-06  suggests  RMIN  may be too large
+ After Cycle # 1:  DRMSD= 4.6933132D+03    test(PS)= 7.9D+01   test(PU)= 1.5D-02
+    PV(   1) =  3.33671466600042D+02 (+/- 6.8D+01)    PS= 3.8D-01   PC=-1.1D-01
+    PV(   2) =  4.10395530091943D+00 (+/- 1.3D+01)    PS= 4.2D-03   PC=-6.6D-02
+    PV(   3) =  6.91620494400327D+06 (+/- 1.3D+08)    PS= 6.0D+04   PC= 2.0D+05
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -6.41667659165016D-01 (+/- 9.1D+00)    PS= 2.3D-03   PC=-1.3D-01
+    PV(   7) = -7.58997060160679D-01 (+/- 4.4D+01)    PS= 8.3D-03   PC=-6.6D-01
+ After Cycle # 2:  DRMSD= 1.1613217D+03    test(PS)= 1.5D+02   test(PU)= 8.4D-02
+    PV(   1) =  3.33882240015194D+02 (+/- 2.3D+01)    PS= 1.0D-01   PC= 2.1D-01
+    PV(   2) =  4.13203282445218D+00 (+/- 3.5D+00)    PS= 7.3D-04   PC= 2.8D-02
+    PV(   3) =  6.79313198669799D+06 (+/- 3.9D+07)    PS= 1.8D+04   PC=-1.2D+05
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.49097500040436D-01 (+/- 1.1D+00)    PS= 6.4D-04   PC= 9.3D-02
+    PV(   7) = -6.13403468437645D-01 (+/- 1.2D+01)    PS= 2.6D-03   PC= 1.5D-01
+ For J=  0  ETRY=     0.1026 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ After Cycle # 3:  DRMSD= 4.8022677D+02    test(PS)= 4.5D+01   test(PU)= 3.5D-02
+    PV(   1) =  3.33924620467106D+02 (+/- 9.2D+00)    PS= 4.2D-02   PC= 4.2D-02
+    PV(   2) =  4.13792443344355D+00 (+/- 1.6D+00)    PS= 3.2D-04   PC= 5.9D-03
+    PV(   3) =  6.45638901553239D+06 (+/- 1.7D+07)    PS= 7.4D+03   PC=-3.4D+05
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.38984477560310D-01 (+/- 2.9D-01)    PS= 2.7D-04   PC= 1.0D-02
+    PV(   7) = -5.96270207862485D-01 (+/- 4.4D+00)    PS= 1.1D-03   PC= 1.7D-02
+ For J=  0  ETRY=     0.0486 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 4:  DRMSD= 8.8037288D+01    test(PS)= 6.4D+01   test(PU)= 3.7D-02
+    PV(   1) =  3.33915593174823D+02 (+/- 1.7D+00)    PS= 7.7D-03   PC=-9.0D-03
+    PV(   2) =  4.14172402488934D+00 (+/- 2.9D-01)    PS= 5.9D-05   PC= 3.8D-03
+    PV(   3) =  6.46499731459225D+06 (+/- 2.9D+06)    PS= 1.3D+03   PC= 8.6D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.36549668708432D-01 (+/- 6.6D-02)    PS= 4.9D-05   PC= 2.4D-03
+    PV(   7) = -5.89070652412654D-01 (+/- 8.4D-01)    PS= 2.0D-04   PC= 7.2D-03
+ For J=  0  ETRY=     0.0256 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 5:  DRMSD= 6.0734250D+01    test(PS)= 5.3D+01   test(PU)= 2.4D-02
+    PV(   1) =  3.33913072776284D+02 (+/- 1.2D+00)    PS= 5.3D-03   PC=-2.5D-03
+    PV(   2) =  4.14391049725906D+00 (+/- 2.0D-01)    PS= 4.1D-05   PC= 2.2D-03
+    PV(   3) =  6.46492016483292D+06 (+/- 2.0D+06)    PS= 9.0D+02   PC=-7.7D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.35451381185073D-01 (+/- 4.6D-02)    PS= 3.4D-05   PC= 1.1D-03
+    PV(   7) = -5.85956503464064D-01 (+/- 5.8D-01)    PS= 1.4D-04   PC= 3.1D-03
+ For J=  0  ETRY=     0.0262 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 6:  DRMSD= 3.4629247D+01    test(PS)= 5.3D+01   test(PU)= 2.4D-02
+    PV(   1) =  3.33911620176843D+02 (+/- 6.6D-01)    PS= 3.0D-03   PC=-1.5D-03
+    PV(   2) =  4.14516247308679D+00 (+/- 1.1D-01)    PS= 2.3D-05   PC= 1.3D-03
+    PV(   3) =  6.46482871428284D+06 (+/- 1.1D+06)    PS= 5.2D+02   PC=-9.1D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34822238164450D-01 (+/- 2.7D-02)    PS= 1.9D-05   PC= 6.3D-04
+    PV(   7) = -5.84183183911125D-01 (+/- 3.3D-01)    PS= 7.8D-05   PC= 1.8D-03
+ For J=  0  ETRY=     0.0058 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 7:  DRMSD= 1.9769388D+01    test(PS)= 5.3D+01   test(PU)= 2.3D-02
+    PV(   1) =  3.33910801589604D+02 (+/- 3.7D-01)    PS= 1.7D-03   PC=-8.2D-04
+    PV(   2) =  4.14587729591250D+00 (+/- 6.5D-02)    PS= 1.3D-05   PC= 7.1D-04
+    PV(   3) =  6.46477260668864D+06 (+/- 6.5D+05)    PS= 2.9D+02   PC=-5.6D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34463182852548D-01 (+/- 1.5D-02)    PS= 1.1D-05   PC= 3.6D-04
+    PV(   7) = -5.83173227339280D-01 (+/- 1.9D-01)    PS= 4.5D-05   PC= 1.0D-03
+ For J=  0  ETRY=     0.0209 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 8:  DRMSD= 1.1343107D+01    test(PS)= 5.3D+01   test(PU)= 2.3D-02
+    PV(   1) =  3.33910338766600D+02 (+/- 2.2D-01)    PS= 9.9D-04   PC=-4.6D-04
+    PV(   2) =  4.14628458818279D+00 (+/- 3.7D-02)    PS= 7.7D-06   PC= 4.1D-04
+    PV(   3) =  6.46473771596122D+06 (+/- 3.7D+05)    PS= 1.7D+02   PC=-3.5D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34258565471238D-01 (+/- 8.9D-03)    PS= 6.3D-06   PC= 2.0D-04
+    PV(   7) = -5.82598073358669D-01 (+/- 1.1D-01)    PS= 2.6D-05   PC= 5.8D-04
+ For J=  0  ETRY=     0.0314 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 9:  DRMSD= 6.6112748D+00    test(PS)= 5.2D+01   test(PU)= 2.3D-02
+    PV(   1) =  3.33910076409215D+02 (+/- 1.3D-01)    PS= 5.8D-04   PC=-2.6D-04
+    PV(   2) =  4.14651646526496D+00 (+/- 2.2D-02)    PS= 4.5D-06   PC= 2.3D-04
+    PV(   3) =  6.46471772455445D+06 (+/- 2.2D+05)    PS= 9.8D+01   PC=-2.0D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34142104072291D-01 (+/- 5.2D-03)    PS= 3.7D-06   PC= 1.2D-04
+    PV(   7) = -5.82270987837373D-01 (+/- 6.4D-02)    PS= 1.5D-05   PC= 3.3D-04
+ For J=  0  ETRY=     0.0285 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #10:  DRMSD= 4.0286659D+00    test(PS)= 4.8D+01   test(PU)= 2.1D-02
+    PV(   1) =  3.33909927507028D+02 (+/- 7.6D-02)    PS= 3.5D-04   PC=-1.5D-04
+    PV(   2) =  4.14664840207479D+00 (+/- 1.3D-02)    PS= 2.7D-06   PC= 1.3D-04
+    PV(   3) =  6.46470618532722D+06 (+/- 1.3D+05)    PS= 6.0D+01   PC=-1.2D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34075842062328D-01 (+/- 3.2D-03)    PS= 2.2D-06   PC= 6.6D-05
+    PV(   7) = -5.82084957315180D-01 (+/- 3.9D-02)    PS= 9.1D-06   PC= 1.9D-04
+ For J=  0  ETRY=     0.0285 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #11:  DRMSD= 2.7096705D+00    test(PS)= 4.1D+01   test(PU)= 1.8D-02
+    PV(   1) =  3.33909842931302D+02 (+/- 5.1D-02)    PS= 2.4D-04   PC=-8.5D-05
+    PV(   2) =  4.14672344937148D+00 (+/- 8.9D-03)    PS= 1.8D-06   PC= 7.5D-05
+    PV(   3) =  6.46469956799273D+06 (+/- 8.9D+04)    PS= 4.0D+01   PC=-6.6D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34038152579249D-01 (+/- 2.1D-03)    PS= 1.5D-06   PC= 3.8D-05
+    PV(   7) = -5.81979166083071D-01 (+/- 2.6D-02)    PS= 6.1D-06   PC= 1.1D-04
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #12:  DRMSD= 2.1138695D+00    test(PS)= 3.0D+01   test(PU)= 1.3D-02
+    PV(   1) =  3.33909794872495D+02 (+/- 4.0D-02)    PS= 1.8D-04   PC=-4.8D-05
+    PV(   2) =  4.14676612949767D+00 (+/- 7.0D-03)    PS= 1.4D-06   PC= 4.3D-05
+    PV(   3) =  6.46469578887078D+06 (+/- 7.0D+04)    PS= 3.1D+01   PC=-3.8D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34016718670515D-01 (+/- 1.7D-03)    PS= 1.2D-06   PC= 2.1D-05
+    PV(   7) = -5.81919010078502D-01 (+/- 2.0D-02)    PS= 4.8D-06   PC= 6.0D-05
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #13:  DRMSD= 1.8813263D+00    test(PS)= 1.9D+01   test(PU)= 8.3D-03
+    PV(   1) =  3.33909767556141D+02 (+/- 3.6D-02)    PS= 1.6D-04   PC=-2.7D-05
+    PV(   2) =  4.14679039954737D+00 (+/- 6.2D-03)    PS= 1.3D-06   PC= 2.4D-05
+    PV(   3) =  6.46469363339380D+06 (+/- 6.2D+04)    PS= 2.8D+01   PC=-2.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.34004530354906D-01 (+/- 1.5D-03)    PS= 1.0D-06   PC= 1.2D-05
+    PV(   7) = -5.81884804848341D-01 (+/- 1.8D-02)    PS= 4.3D-06   PC= 3.4D-05
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #14:  DRMSD= 1.7997528D+00    test(PS)= 1.1D+01   test(PU)= 4.9D-03
+    PV(   1) =  3.33909752027732D+02 (+/- 3.4D-02)    PS= 1.6D-04   PC=-1.6D-05
+    PV(   2) =  4.14680419989457D+00 (+/- 5.9D-03)    PS= 1.2D-06   PC= 1.4D-05
+    PV(   3) =  6.46469240593451D+06 (+/- 5.9D+04)    PS= 2.7D+01   PC=-1.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33997599918393D-01 (+/- 1.4D-03)    PS= 1.0D-06   PC= 6.9D-06
+    PV(   7) = -5.81865356047996D-01 (+/- 1.7D-02)    PS= 4.1D-06   PC= 1.9D-05
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #15:  DRMSD= 1.7725929D+00    test(PS)= 6.5D+00   test(PU)= 2.8D-03
+    PV(   1) =  3.33909743199657D+02 (+/- 3.4D-02)    PS= 1.5D-04   PC=-8.8D-06
+    PV(   2) =  4.14681204673508D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 7.8D-06
+    PV(   3) =  6.46469170742212D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-7.0D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33993659303882D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 3.9D-06
+    PV(   7) = -5.81854297791100D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 1.1D-05
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #16:  DRMSD= 1.7637317D+00    test(PS)= 3.7D+00   test(PU)= 1.6D-03
+    PV(   1) =  3.33909738180563D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-5.0D-06
+    PV(   2) =  4.14681650834218D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 4.5D-06
+    PV(   3) =  6.46469131006338D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-4.0D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33991418727803D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 2.2D-06
+    PV(   7) = -5.81848010304326D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 6.3D-06
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #17:  DRMSD= 1.7608625D+00    test(PS)= 2.1D+00   test(PU)= 9.2D-04
+    PV(   1) =  3.33909735326945D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-2.9D-06
+    PV(   2) =  4.14681904512376D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 2.5D-06
+    PV(   3) =  6.46469108406941D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-2.3D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33990144781795D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 1.3D-06
+    PV(   7) = -5.81844435392064D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 3.6D-06
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #18:  DRMSD= 1.7599367D+00    test(PS)= 1.2D+00   test(PU)= 5.2D-04
+    PV(   1) =  3.33909733704490D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-1.6D-06
+    PV(   2) =  4.14682048747954D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 1.4D-06
+    PV(   3) =  6.46469095556290D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-1.3D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33989420446248D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 7.2D-07
+    PV(   7) = -5.81842402791271D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 2.0D-06
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #19:  DRMSD= 1.7596390D+00    test(PS)= 6.9D-01   test(PU)= 3.0D-04
+    PV(   1) =  3.33909732782016D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-9.2D-07
+    PV(   2) =  4.14682130756653D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 8.2D-07
+    PV(   3) =  6.46469088248612D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-7.3D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33989008607221D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 4.1D-07
+    PV(   7) = -5.81841247106979D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 1.2D-06
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #20:  DRMSD= 1.7595436D+00    test(PS)= 3.9D-01   test(PU)= 1.7D-04
+    PV(   1) =  3.33909732257525D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-5.2D-07
+    PV(   2) =  4.14682177384607D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 4.7D-07
+    PV(   3) =  6.46469084093257D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-4.2D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988774446376D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 2.3D-07
+    PV(   7) = -5.81840590015447D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 6.6D-07
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #21:  DRMSD= 1.7595133D+00    test(PS)= 2.2D-01   test(PU)= 9.6D-05
+    PV(   1) =  3.33909731959319D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-3.0D-07
+    PV(   2) =  4.14682203896019D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 2.7D-07
+    PV(   3) =  6.46469081730733D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-2.4D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988641309122D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 1.3D-07
+    PV(   7) = -5.81840216413202D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 3.7D-07
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #22:  DRMSD= 1.7595038D+00    test(PS)= 1.3D-01   test(PU)= 5.5D-05
+    PV(   1) =  3.33909731789765D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-1.7D-07
+    PV(   2) =  4.14682218969666D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 1.5D-07
+    PV(   3) =  6.46469080387272D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-1.3D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988565610798D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 7.6D-08
+    PV(   7) = -5.81840003992165D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 2.1D-07
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #23:  DRMSD= 1.7595009D+00    test(PS)= 7.2D-02   test(PU)= 3.1D-05
+    PV(   1) =  3.33909731693363D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-9.6D-08
+    PV(   2) =  4.14682227540158D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 8.6D-08
+    PV(   3) =  6.46469079623801D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-7.6D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988522570913D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 4.3D-08
+    PV(   7) = -5.81839883216586D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 1.2D-07
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #24:  DRMSD= 1.7595000D+00    test(PS)= 4.1D-02   test(PU)= 1.8D-05
+    PV(   1) =  3.33909731638549D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-5.5D-08
+    PV(   2) =  4.14682232413067D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 4.9D-08
+    PV(   3) =  6.46469079189422D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-4.3D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988498099381D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 2.4D-08
+    PV(   7) = -5.81839814544653D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 6.9D-08
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #25:  DRMSD= 1.7594998D+00    test(PS)= 2.3D-02   test(PU)= 1.0D-05
+    PV(   1) =  3.33909731607387D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-3.1D-08
+    PV(   2) =  4.14682235183709D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 2.8D-08
+    PV(   3) =  6.46469078942740D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-2.5D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988484185870D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 1.4D-08
+    PV(   7) = -5.81839775502584D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 3.9D-08
+ For J=  0  ETRY=     0.0279 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #26:  DRMSD= 1.7594998D+00    test(PS)= 1.3D-02   test(PU)= 5.7D-06
+    PV(   1) =  3.33909731589665D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-1.8D-08
+    PV(   2) =  4.14682236758996D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 1.6D-08
+    PV(   3) =  6.46469078802086D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-1.4D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988476274801D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 7.9D-09
+    PV(   7) = -5.81839753302500D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 2.2D-08
+
+ Full 26-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 2.27D-08  TSTPS= 1.3D-02
+
+    20 data fit to    5 param. yields  DRMS(devn)= 1.75950D+00  tst(PS)= 1.3D-02
+    PV(   1) =  3.33909731589665D+02 (+/- 3.3D-02)    PS= 1.5D-04   PC=-1.8D-08
+    PV(   2) =  4.14682236758996D+00 (+/- 5.8D-03)    PS= 1.2D-06   PC= 1.6D-08
+    PV(   3) =  6.46469078802086D+06 (+/- 5.8D+04)    PS= 2.6D+01   PC=-1.4D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.33988476274801D-01 (+/- 1.4D-03)    PS= 9.8D-07   PC= 7.9D-09
+    PV(   7) = -5.81839753302500D-01 (+/- 1.7D-02)    PS= 4.0D-06   PC= 2.2D-08
+
+ ========================================================================
+ For fit of    5  free parameters to    20  transitions,  DSE=  2.0316953    
+ ========================================================================
+ ==============================================================================
+
+ State a3  represented by an MLR(p= 5, q= 1) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y1^i}
+                                                              for  i= 1 to  1
+        with radial variable:   y_{p,q} = (R^q - 7.600000^q)/(R^q + 7.600000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.4646908D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5085715295
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.339097315897D+02    3.3D-02       1.5D-04
+      Re      4.146822367590D+00    5.8D-03       1.2D-06
+     C 6      6.464690788021D+06    5.8D+04       2.6D+01
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.339884762748D-01    1.4D-03       9.8D-07
+   beta( 1)  -5.818397533025D-01    1.7D-02       4.0D-06
+   beta_INF  -5.085715295495D-01       --            --
+   C11{eff}   1.564612553555D+09       --            --
+ ==============================================================================
+
+ ===============================================================
+  *** Discrepancies for    1 bands/series of Li(  6)-Li(  6) ***
+ ===============================================================
+
+ ==========================================================
+   20 PAS Binding Energies for State a3   Li(  6)-Li(  6)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   20      0      9    8.4D-03  2.6D-02   -0.530   1.759
+ ============================================================
+
+ ===============================================================
+  *** Discrepancies for    0 bands/series of Li(  7)-Li(  7) ***
+ ===============================================================
+
+ ==============================================================================
+ Fit of      5 param to     20 data yields   DMS(devn.)=  1.75950    
+ ==============================================================================

@@ -1,0 +1,51 @@
+96,99c96,99
+< c** If bDAMP > 0.0  apply 'normalized' incomplete gamma function damping
+< c     function of order  m  to each Cm/r^m  term.  Otherwise, no damping.
+< c** For alkali dimer A-state: Aubert-Frecon ULR(r) [PRA 55, 3458 (1997)]
+< c  is special case with MMLR= {3, 0, 6, 6, 8, 8, ...} 
+---
+> c  If  Asw > 0.0  fix  Cn = CmVAL(1)  using the switching fx.
+> c              fsw(R) = 1/[e^(Asw*(R - Rsw)) + 1]  
+> c     where  Rsw(s)  defines distance at which  fsw(Rsw) = 0.5
+> c  If Asw .le.0   phi(R)= yp*phiINF + [1-yp]* Sum{ phi_i * yp^i }
+101c101
+<           READ(5,*) NCMM(ISTATE), bDAMP(ISTATE)
+---
+>           READ(5,*) NCMM(ISTATE), bDAMP(ISTATE), Asw(ISTATE),Rsw(ISTATE)
+109,111c109,112
+< c** For DELR potential, read parameter to define form of `LR' part
+< c  Switch to Tang-Toennies-type damping function with order s.th.
+< c      Dm(r)*Cm/r^m --> {constant}  as  r --> 0
+---
+> c** For DELR potential, read parameters to define form of `LR' part
+> c  IDF  define the form of damping function:  IDF=1 - Tang-Toennies fx.
+> c  IDF=2 use Douketis-Scoles Dm fx.  
+> c!!!!  IDF=3 also Scoles' global fx. !!!! this option commented out !!!!
+113c114
+<           READ(5,*) NCMM(ISTATE), bDAMP(ISTATE)
+---
+>           READ(5,*) NCMM(ISTATE), bDAMP(ISTATE), IDF(ISTATE)
+117a119
+>           IF(IDF(ISTATE).GE.3) IDF(ISTATE)= 2
+119d120
+< c-----------------------------------------------------------------------
+160,162c161,164
+<       IF((PSEL(ISTATE).EQ.2).OR.(PSEL(ISTATE).EQ.3)) THEN
+<           MMN= MMLR(NCMM(ISTATE),ISTATE)- MMLR(1,ISTATE)
+<           IF((NCMM(ISTATE).GT.1).AND.(MMLR(1,ISTATE).NE.3).AND.
+---
+> c** For alkali dimer A-state: Aubert-Frecon ULR(r) [PRA 55, 3458 (1997)]
+> c  is special case with MMLR= {3, 0, 6, 6, 8, 8, ...} 
+>       MMN= MMLR(NCMM(ISTATE),ISTATE)- MMLR(1,ISTATE)
+>       IF((NCMM(ISTATE).GT.1).AND.(MMLR(1,ISTATE).NE.3).AND.
+164,166c166,167
+<               WRITE(6,628) nPB(ISTATE),MMN
+<               STOP
+<               ENDIF
+---
+>           WRITE(6,628) nPB(ISTATE),MMN
+>           STOP
+167a169
+> c-----------------------------------------------------------------------
+190a193
+>           Rsw(ISTATE)= RE(ISTATE)

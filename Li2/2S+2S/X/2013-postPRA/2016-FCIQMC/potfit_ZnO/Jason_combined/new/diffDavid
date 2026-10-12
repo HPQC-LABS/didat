@@ -1,0 +1,19 @@
+177,194d176
+<       IF(IEP(IBAND).EQ.-4) THEN
+< c** Now ... consider the case of virial coefficients ...
+<           COUNT= COUNT+ 1
+<           IFIRST(IBAND)= COUNT
+<    14     READ(4,*) TEMP(COUNT),FREQ(COUNT),UFREQ(COUNT)
+<           IF(TEMP(COUNT).GT.0.d0) THEN
+<               COUNT= COUNT+1
+<               GOTO 14
+<               ENDIF
+<           ILAST(IBAND)= COUNT
+<           NTRANS= ILAST(IBAND) - IFIRST(IBAND) + 1
+<           IF(ISOT.LE.0) THEN
+<               COUNT= COUNT- NTRANS
+<               IBAND= IBAND- 1
+<               ENDIF
+<           GOTO 10
+<           ENDIF
+< c... now ... for the case of spectroscopic data ...

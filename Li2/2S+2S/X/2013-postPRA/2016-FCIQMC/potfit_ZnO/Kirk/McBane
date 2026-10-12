@@ -1,0 +1,93 @@
+Date: Tue, 13 Aug 2002 17:58:15 -0400
+From: "George McBane" <mcbaneg@gvsu.edu>
+To: <leroy@scienide.uwaterloo.ca>
+Subject: interpolation errors etc.
+
+Bob,
+
+It looks like my idea works correctly (once I figured out how to use the
+LAPACK SVD routines right!)
+
+Kirk and I have never used a full 3D direct product RKHS interpolation.  Even
+his original version of the program did the RKHS in R and theta for fixed r,
+then did a 1D RKHS interpolation on r.  We later changed the final 1D
+interpolation to a cubic fit, as I described earlier. 
+
+So, I have implemented your idea of drop-a-single-point on 2D grids only, and
+done it for each different value of r in our ab initio set.    It would be
+easy to extend the idea to the final 1D interpolation as well, though it's
+not clear to me that you would learn much.
+
+Here's how it works.  As Rabitz points out (JCP 114, 3940), if a particular
+grid point has exactly the ab initio energy that you would get by dropping
+that point and interpolating over all the others, then the RKHS coefficient
+for that particular grid point will be 0.  So what I do is to calculate how
+much the energy at a particular grid point would have to change by in order
+to force its coefficient to zero.  That change is the difference
+between the ab initio energy and the value that would be interpolated for it
+if it was missing.
+
+It's very easy to figure out what that change must be.  You get the RKHS
+coefficients by solving the linear system
+
+Q*c = V,
+
+where Q is the matrix of kernel values at the grid points, Q_{ij} =
+Q(x_i, x_j), c is the vector of RKHS coefficients, and V is the vector of
+potential values at the grid points.  Formally the solution to this system
+is
+
+c = Q^{-1}V.
+
+In practice we find Q^{-1} by singular value decomposition, but we still end
+up with effectively an inverse matrix.
+
+Now, I want to find a new vector V', all of whose elements are the same as
+those of V except one, and I want that one to force the corresponding element
+of c to zero.  I write c + dc = Q^{-1} (V + dV) where dc and dV both have
+elements that are all zero except for a single one, at position k.  dc_k =
+-c_k, and dV_k = delta, the estimated error I am looking for.  I have
+
+c + dc = Q^{-1} V + Q^{-1} dV
+
+dc = Q^{-1} dV
+
+Considering only the kth element of dc, I have
+
+dc_k = \sum_i (Q^{-1})_{ki} dV_i
+
+and because all the elements of dV are zero except for that with i=k, I get
+
+dc_k = (Q^{-1})_{kk} dV_k
+
+or, finally,
+
+dV_k = dc_k/(Q^{-1})_{kk}
+
+       = -c_k/(Q^{-1})_{kk}
+
+So, to estimate the error in a particular ab initio grid point energy, you
+simply divide the RKHS coefficient for that point by the corresponding
+diagonal element of the inverse kernel matrix.
+
+I have carried out this program for Kirk's points, considering each R, theta
+plane with a given value of r separately.  Attached is a file that gives, in
+the same order as in kpdata.pot, the ab initio energy at the grid point,
+the RKHS interpolated energy at that grid point, and the (negative of the)
+estimated error obtained as = just described.  Let me know what you think.
+
+Best regards,
+George.
+
+George C. McBane
+Department of Chemistry
+Grand Valley State University
+349 Padnos Hall
+Allendale, MI 49401
+mcbaneg@gvsu.edu
+ph (616) 895-2167
+fax (616) 895-3230
+
+Content-Type: application/octet-stream; name="dumout"
+Content-Disposition: attachment; filename="dumout"
+

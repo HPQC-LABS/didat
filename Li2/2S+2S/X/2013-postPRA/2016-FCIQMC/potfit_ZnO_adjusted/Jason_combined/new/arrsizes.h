@@ -1,0 +1,49 @@
+c** Utility routine to summarize dimensioning of arrays
+c
+      INTEGER NISTPMX,NPARMX,NphiMX,NBOBMX,HPARMX,NDATAMX,
+     1  NVIBMX,NSTATEMX,NPNTMX,NROTMX,NCMMmax 
+
+c*  NISTPMX  is the maximum number of isotopomers allowed for fit
+      PARAMETER (NISTPMX =  6)
+
+c*  NSTATEMX  is maximum no. of electronic states which can be
+c             simultaneously fitted to
+      PARAMETER (NSTATEMX = 4)
+
+c*  NPARMX  is the largest number of free parameters allowed for fit
+c  Since FS origins may be parameters, this is also max. no, data bands
+      PARAMETER (NPARMX  = 2800)
+
+c*  NphiMX  is the largest number of exponent parameters allowed for fit
+      PARAMETER (NphiMX  = 30)
+
+c*  NBOBMX-1  is the highest-order polynomial expansion allowed for the
+c      adiabatic or centrifugal Born-Oppenheimer breakdown functions, or 
+c      the Lambda-doubling or 2\Sigma splitting radial strength functions
+      PARAMETER (NBOBMX  = 15)
+
+c*  HPARMX  is the largest number of Hamiltonian parameters of all types
+c    (potential energy, BOB. etc.) for all states.
+c           HPARMX >= NSTATEMX*[5 + (NphiMX+1) + 5*(NBOBMX+1)]
+      PARAMETER (HPARMX= NSTATEMX*(5 + (NphiMX+1) + 5*(NBOBMX+1)))
+cc    PARAMETER (HPARMX = 300)
+
+c*  NDATAMX  is largest No. of individual data which may be considered
+      PARAMETER (NDATAMX = 20000)
+
+c*  NVIBMX  is the maximum number of vibrational levels of a single
+c           state for which data are to be considered
+      PARAMETER (NVIBMX    = 150)
+
+c*  NPNTMX  is the largest number of potential data points that can be
+c           stored
+      PARAMETER (NPNTMX = 90000)
+
+c*  NROTMX  is the highest order of rotational constants calculated and
+c            used for estimating level energies
+      PARAMETER (NROTMX = 7)
+
+c*  NCMMmax is the largest number of Cm terms in the MLR or DELR 
+c            long-range potential
+      PARAMETER (NCMMmax = 6)
+

@@ -1,0 +1,31 @@
+Date: Thu, 22 Aug 2002 18:23:48 -0600
+From: Jeremy Hutson <J.M.Hutson@durham.ac.uk>
+To: Robert J Le Roy <leroy@scienide.uwaterloo.ca>
+Subject: new dspotfit
+
+Hi, Bob.
+
+I'm on the launch-pad from JILA - leaving in a few minutes, then travelling
+for 2 weeks and back in Durham on 7 Sept. I don't expect to have much email
+contact until I'm in Durham.
+
+I've tried to put the new dspotfit on scienide, but haven't been able to
+connect; trying telnet just now, I see that ftp is disabled because of
+attempted break-ins. So you'll have to pick up the files from me instead of
+vice versa. And do it soon, in case JILA removes my account.
+
+Do ftp to jilau1.colorado.edu, and use account jmh, password ebm12ece The
+files are in directory dspotfit; have a look at Makefile to see which .f
+files are actually needed.
+
+This version implements the new ofrm of the potential that we discussed (as
+in betaTRIAL) and implements fitting to vD with IETP = 'VD' instead of 'BV',
+'FS' etc. The new calculations are done in dvddp and scatln. You need to set
+J=0 for the scattering length calculation to work. For a sample channel 4
+data file (for K2), look in fort.4 in the same directory.
+
+Good luck!
+
+Jeremy
+-- 
+

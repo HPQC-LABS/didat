@@ -1,0 +1,118 @@
+  ==============================
+   diff vgen.f ../17May12/vgen.f
+  ==============================
+14,15c14
+< c               ----- Version of  18 November 2012 -----
+< c           (after removal or RREFna, RREFad & RREFw variables!)
+---
+> c               ----- Version of  22 February 2012 -----
+102,103c101,103
+<      7 RETm,REadAp,REadBp,REadAq,REadBq,REnaAp,REnaBp,REnaAq,REnaBq,
+<      8 REwp,dC6dDe,dC9dC3,dC9dC6,dC9dDe,BT,Rinn,Rout,A1,A2,A3,B1,B2,B3,
+---
+>      7 RETm,AREFadA,AREFadB,AREFadAp,AREFadBp,AREFadAq,AREFadBq,
+>      7 AREFnaA,AREFnaB,AREFnaAp,AREFnaBp,AREFnaAq,AREFnaBq,AREFw,AREFwp,
+>      8 dC6dDe,dC9dC3,dC9dC6,dC9dDe,BT,Rinn,Rout,A1,A2,A3,B1,B2,B3,
+148c148
+< c** For forward data simulation using a known input pointwise potential 
+---
+> c** For forward data simulation using a known input potential 
+882a883
+> 
+891,894c892,899
+<           REadAp= RE(ISTATE)**pAD(ISTATE)
+<           REadAq= RE(ISTATE)**qAD(ISTATE)
+<           REadBp= RE(ISTATE)**pAD(ISTATE)
+<           REadBq= RE(ISTATE)**qAD(ISTATE)
+---
+>           IF(RREFadA(ISTATE).LE.0) AREFadA= RE(ISTATE)
+>           IF(RREFadB(ISTATE).LE.0) AREFadB= RE(ISTATE)
+>           IF(RREFadA(ISTATE).GT.0) AREFadA= RREFadA(ISTATE)
+>           IF(RREFadB(ISTATE).GT.0) AREFadB= RREFadB(ISTATE)
+>           AREFadAp= AREFadA**pAD(ISTATE)
+>           AREFadAq= AREFadA**qAD(ISTATE)
+>           AREFadBp= AREFadB**pAD(ISTATE)
+>           AREFadBq= AREFadB**qAD(ISTATE)
+906,909c911,914
+<               YPA= (RDp - REadAp)/(RDp + REadAp)
+<               YQA= (RDq - REadAq)/(RDq + REadAq)
+<               YPB= (RDp - REadBp)/(RDp + REadBp)
+<               YQB= (RDq - REadBq)/(RDq + REadBq)
+---
+>               YPA= (RDp - AREFadAp)/(RDp + AREFadAp)
+>               YQA= (RDq - AREFadAq)/(RDq + AREFadAq)
+>               YPB= (RDp - AREFadBp)/(RDp + AREFadBp)
+>               YQB= (RDq - AREFadBq)/(RDq + AREFadBq)
+939,941c944,947
+< c ... and derivative of UA w.r.t. Re ...
+<                   DUADRe(I,ISTATE)= -HReQ*(1.d0 - YQA**2)*YPMA*DVAL
+<      1            + HReP*(1.d0 - YPA**2)*(VAL- UA(NUA(ISTATE),ISTATE))
+---
+> c ... and derivative of UA w.r.t. Re ... if  RREFadA.LE.0
+>                   IF(RREFadA(ISTATE).LE.0.d0) 
+>      1               DUADRe(I,ISTATE)= -HReQ*(1.d0 - YQA**2)*YPMA*DVAL
+>      2            + HReP*(1.d0 - YPA**2)*(VAL- UA(NUA(ISTATE),ISTATE))
+967,969c973,976
+< c ... and derivative of UB w.r.t. Re ...
+<                    DUBDRe(I,ISTATE)= -HReQ*(1.d0 - YQB**2)*YPMB*DVAL
+<      1            + HReP*(1.d0 - YPB**2)*(VAL- UB(NUB(ISTATE),ISTATE))
+---
+> c ... and derivative of UB w.r.t. Re ... if  RREFadB.LE.0
+>                   IF(RREFadB(ISTATE).LE.0.d0) 
+>      1               DUBDRe(I,ISTATE)= -HReQ*(1.d0 - YQB**2)*YPMB*DVAL
+>      2            + HReP*(1.d0 - YPB**2)*(VAL- UB(NUB(ISTATE),ISTATE))
+986,989c993,1000
+<           REnaAp= Re(ISTATE)**pNA(ISTATE)
+<           REnaAq= Re(ISTATE)**qNA(ISTATE)
+<           REnaBp= Re(ISTATE)**pNA(ISTATE)
+<           REnaBq= Re(ISTATE)**qNA(ISTATE)
+---
+>           IF(RREFnaA(ISTATE).LE.0.d0) AREFnaA= RE(ISTATE)
+>           IF(RREFnaB(ISTATE).LE.0.d0) AREFnaB= RE(ISTATE)
+>           IF(RREFnaA(ISTATE).GT.0.d0) AREFnaA= RREFnaA(ISTATE)
+>           IF(RREFnaB(ISTATE).GT.0.d0) AREFnaB= RREFnaB(ISTATE)
+>           AREFnaAp= AREFnaA**pNA(ISTATE)
+>           AREFnaAq= AREFnaA**qNA(ISTATE)
+>           AREFnaBp= AREFnaB**pNA(ISTATE)
+>           AREFnaBq= AREFnaB**qNA(ISTATE)
+1001,1004c1012,1015
+<               YPA= (RDp - REnaAp)/(RDp + REnaAp)
+<               YQA= (RDq - REnaAq)/(RDq + REnaAq)
+<               YPB= (RDp - REnaBp)/(RDp + REnaBp)
+<               YQB= (RDq - REnaBq)/(RDq + REnaBq)
+---
+>               YPA= (RDp - AREFnaAp)/(RDp + AREFnaAp)
+>               YQA= (RDq - AREFnaAq)/(RDq + AREFnaAq)
+>               YPB= (RDp - AREFnaBp)/(RDp + AREFnaBp)
+>               YQB= (RDq - AREFnaBq)/(RDq + AREFnaBq)
+1031,1033c1042,1045
+< c ... and derivative of TA w.r.t. Re ... 
+<                   DTADRe(I,ISTATE)= (-HReQ*(1.d0 - YQA**2)*YPMA*DVAL
+<      1       + HReP*(1.d0 - YPA**2)*(VAL- TA(NTA(ISTATE),ISTATE)))*RM2
+---
+> c ... and derivative of TA w.r.t. Re ... for when RREFna.LE.0
+>                   IF(RREFnaA(ISTATE).LE.0.d0)
+>      1              DTADRe(I,ISTATE)= (-HReQ*(1.d0 - YQA**2)*YPMA*DVAL
+>      2       + HReP*(1.d0 - YPA**2)*(VAL- TA(NTA(ISTATE),ISTATE)))*RM2
+1059,1060c1071,1073
+<                   DTBDRe(I,ISTATE)= (-HReQ*(1.d0 - YQB**2)*YPMB*DVAL
+<      1       + HReP*(1.d0 - YPB**2)*(VAL- TB(NTB(ISTATE),ISTATE)))*RM2
+---
+>                   IF(RREFnaB(ISTATE).LE.0.d0)
+>      1              DTBDRe(I,ISTATE)= (-HReQ*(1.d0 - YQB**2)*YPMB*DVAL
+>      2       + HReP*(1.d0 - YPB**2)*(VAL- TB(NTB(ISTATE),ISTATE)))*RM2
+1073c1086,1088
+<           REwp= RE(ISTATE)**Pqw(ISTATE)
+---
+>           IF(RREFw(ISTATE).LE.0.d0) AREFw= RE(ISTATE)
+>           IF(RREFw(ISTATE).GT.0.d0) AREFw= RREFw(ISTATE)
+>           AREFwp= AREFw**Pqw(ISTATE)
+1081c1096
+<               YP= (RDp - REwp)/(RDp + REwp)
+---
+>               YP= (RDp - AREFwp)/(RDp + AREFwp)
+1097c1112,1113
+<               dLDDRe(I,NSTATEMX)= -HReP*(1.d0 - YP**2)*DVAL
+---
+>               IF(RREFw(ISTATE).LE.0.d0)
+>      1                   dLDDRe(I,NSTATEMX)= -HReP*(1.d0 - YP**2)*DVAL

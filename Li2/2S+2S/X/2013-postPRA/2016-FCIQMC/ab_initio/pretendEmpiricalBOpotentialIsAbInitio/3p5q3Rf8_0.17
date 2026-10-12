@@ -1,0 +1,378 @@
+
+   Predict Bv uncertainties for isotopologue-1 in state a3
+   for param( 1)      dBvdp(approx)= 3.807826D-05   Bvdp(exact)=-7.347338D+02
+   for param( 2)      dBvdp(approx)=-2.859224D-01   Bvdp(exact)=-7.348419D+02
+   for param( 3)      dBvdp(approx)=-6.861495D-10   Bvdp(exact)=-7.347338D+02
+   for param( 4)      dBvdp(approx)=-1.393171D-11   Bvdp(exact)=-7.347338D+02
+   for param( 5)      dBvdp(approx)=-1.880150D-13   Bvdp(exact)=-7.347338D+02
+   for param( 6)      dBvdp(approx)=-1.147884D-02   Bvdp(exact)=-7.345830D+02
+   for param( 7)      dBvdp(approx)= 1.601255D-02   Bvdp(exact)=-7.347338D+02
+   for param( 8)      dBvdp(approx)=-1.734123D-02   Bvdp(exact)=-7.347338D+02
+   for param( 9)      dBvdp(approx)= 1.692429D-02   Bvdp(exact)=-7.347338D+02
+   for param(10)      dBvdp(approx)=-4.660182D-08   Bvdp(exact)=-7.347338D+02
+   for param(11)      dBvdp(approx)= 4.660182D-08   Bvdp(exact)=-7.347338D+02
+ v=  0    E= -15202.6753  u(E)=  0.000000  Bv= 0.31038423  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 1.216272D-04   Bvdp(exact)=-9.346371D+01
+   for param( 2)      dBvdp(approx)=-2.219435D-01   Bvdp(exact)=-9.339439D+01
+   for param( 3)      dBvdp(approx)=-2.271816D-09   Bvdp(exact)=-9.346371D+01
+   for param( 4)      dBvdp(approx)=-4.903154D-11   Bvdp(exact)=-9.346371D+01
+   for param( 5)      dBvdp(approx)=-7.314004D-13   Bvdp(exact)=-9.346371D+01
+   for param( 6)      dBvdp(approx)=-4.008542D-02   Bvdp(exact)=-9.349572D+01
+   for param( 7)      dBvdp(approx)= 4.923320D-02   Bvdp(exact)=-9.342603D+01
+   for param( 8)      dBvdp(approx)=-4.944545D-02   Bvdp(exact)=-9.349986D+01
+   for param( 9)      dBvdp(approx)= 4.565608D-02   Bvdp(exact)=-9.344169D+01
+   for param(10)      dBvdp(approx)=-4.787028D-08   Bvdp(exact)=-9.346371D+01
+   for param(11)      dBvdp(approx)= 4.787028D-08   Bvdp(exact)=-9.346371D+01
+ v=  1    E= -15139.9649  u(E)=  0.000000  Bv= 0.28672216  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 2.087428D-04   Bvdp(exact)= 3.288460D+03
+   for param( 2)      dBvdp(approx)=-1.592194D-01   Bvdp(exact)= 3.288501D+03
+   for param( 3)      dBvdp(approx)=-3.891771D-09   Bvdp(exact)= 3.288460D+03
+   for param( 4)      dBvdp(approx)=-8.754625D-11   Bvdp(exact)= 3.288460D+03
+   for param( 5)      dBvdp(approx)=-1.384629D-12   Bvdp(exact)= 3.288460D+03
+   for param( 6)      dBvdp(approx)=-7.129856D-02   Bvdp(exact)= 3.288424D+03
+   for param( 7)      dBvdp(approx)= 7.892754D-02   Bvdp(exact)= 3.288479D+03
+   for param( 8)      dBvdp(approx)=-7.392584D-02   Bvdp(exact)= 3.288473D+03
+   for param( 9)      dBvdp(approx)= 6.499363D-02   Bvdp(exact)= 3.288451D+03
+   for param(10)      dBvdp(approx)=-4.881608D-08   Bvdp(exact)= 3.288460D+03
+   for param(11)      dBvdp(approx)= 4.881608D-08   Bvdp(exact)= 3.288460D+03
+ v=  2    E= -15084.8460  u(E)=  0.000000  Bv= 0.26308569  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 2.965772D-04   Bvdp(exact)= 4.803877D+02
+   for param( 2)      dBvdp(approx)=-1.007604D-01   Bvdp(exact)= 4.804620D+02
+   for param( 3)      dBvdp(approx)=-5.383397D-09   Bvdp(exact)= 4.803877D+02
+   for param( 4)      dBvdp(approx)=-1.255924D-10   Bvdp(exact)= 4.803877D+02
+   for param( 5)      dBvdp(approx)=-2.078337D-12   Bvdp(exact)= 4.803877D+02
+   for param( 6)      dBvdp(approx)=-1.022104D-01   Bvdp(exact)= 4.803532D+02
+   for param( 7)      dBvdp(approx)= 1.026416D-01   Bvdp(exact)= 4.804344D+02
+   for param( 8)      dBvdp(approx)=-8.989159D-02   Bvdp(exact)= 4.804133D+02
+   for param( 9)      dBvdp(approx)= 7.579696D-02   Bvdp(exact)= 4.804222D+02
+   for param(10)      dBvdp(approx)=-5.017254D-08   Bvdp(exact)= 4.803877D+02
+   for param(11)      dBvdp(approx)= 5.017254D-08   Bvdp(exact)= 4.803877D+02
+ v=  3    E= -15037.1111  u(E)=  0.000000  Bv= 0.23903367  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 3.847428D-04   Bvdp(exact)= 3.862674D+01
+   for param( 2)      dBvdp(approx)=-4.831246D-02   Bvdp(exact)= 3.858482D+01
+   for param( 3)      dBvdp(approx)=-6.631253D-09   Bvdp(exact)= 3.862674D+01
+   for param( 4)      dBvdp(approx)=-1.607784D-10   Bvdp(exact)= 3.862674D+01
+   for param( 5)      dBvdp(approx)=-2.772739D-12   Bvdp(exact)= 3.862674D+01
+   for param( 6)      dBvdp(approx)=-1.312928D-01   Bvdp(exact)= 3.862770D+01
+   for param( 7)      dBvdp(approx)= 1.192845D-01   Bvdp(exact)= 3.860988D+01
+   for param( 8)      dBvdp(approx)=-9.792808D-02   Bvdp(exact)= 3.864245D+01
+   for param( 9)      dBvdp(approx)= 8.007477D-02   Bvdp(exact)= 3.859713D+01
+   for param(10)      dBvdp(approx)=-5.259523D-08   Bvdp(exact)= 3.862674D+01
+   for param(11)      dBvdp(approx)= 5.259523D-08   Bvdp(exact)= 3.862674D+01
+ v=  4    E= -14996.6842  u(E)=  0.000000  Bv= 0.21401291  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 4.746394D-04   Bvdp(exact)=-7.664267D+02
+   for param( 2)      dBvdp(approx)=-3.053828D-03   Bvdp(exact)=-7.664091D+02
+   for param( 3)      dBvdp(approx)=-7.528874D-09   Bvdp(exact)=-7.664267D+02
+   for param( 4)      dBvdp(approx)=-1.914936D-10   Bvdp(exact)=-7.664267D+02
+   for param( 5)      dBvdp(approx)=-3.445578D-12   Bvdp(exact)=-7.664267D+02
+   for param( 6)      dBvdp(approx)=-1.579227D-01   Bvdp(exact)=-7.664126D+02
+   for param( 7)      dBvdp(approx)= 1.286528D-01   Bvdp(exact)=-7.664195D+02
+   for param( 8)      dBvdp(approx)=-9.967066D-02   Bvdp(exact)=-7.664078D+02
+   for param( 9)      dBvdp(approx)= 8.036600D-02   Bvdp(exact)=-7.664235D+02
+   for param(10)      dBvdp(approx)=-5.679206D-08   Bvdp(exact)=-7.664267D+02
+   for param(11)      dBvdp(approx)= 5.679206D-08   Bvdp(exact)=-7.664267D+02
+ v=  5    E= -14963.5915  u(E)=  0.000000  Bv= 0.18732158  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 5.685880D-04   Bvdp(exact)=-1.079474D+03
+   for param( 2)      dBvdp(approx)= 3.406983D-02   Bvdp(exact)=-1.079445D+03
+   for param( 3)      dBvdp(approx)=-7.931544D-09   Bvdp(exact)=-1.079474D+03
+   for param( 4)      dBvdp(approx)=-2.161388D-10   Bvdp(exact)=-1.079474D+03
+   for param( 5)      dBvdp(approx)=-4.078026D-12   Bvdp(exact)=-1.079474D+03
+   for param( 6)      dBvdp(approx)=-1.818989D-01   Bvdp(exact)=-1.079447D+03
+   for param( 7)      dBvdp(approx)= 1.312829D-01   Bvdp(exact)=-1.079469D+03
+   for param( 8)      dBvdp(approx)=-9.771892D-02   Bvdp(exact)=-1.079444D+03
+   for param( 9)      dBvdp(approx)= 7.926024D-02   Bvdp(exact)=-1.079458D+03
+   for param(10)      dBvdp(approx)=-6.363367D-08   Bvdp(exact)=-1.079474D+03
+   for param(11)      dBvdp(approx)= 6.363367D-08   Bvdp(exact)=-1.079474D+03
+ v=  6    E= -14937.9189  u(E)=  0.000000  Bv= 0.15804783  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.667255D-04   Bvdp(exact)= 5.102006D+02
+   for param( 2)      dBvdp(approx)= 6.244022D-02   Bvdp(exact)= 5.101950D+02
+   for param( 3)      dBvdp(approx)=-7.592783D-09   Bvdp(exact)= 5.102006D+02
+   for param( 4)      dBvdp(approx)=-2.320698D-10   Bvdp(exact)= 5.102006D+02
+   for param( 5)      dBvdp(approx)=-4.630200D-12   Bvdp(exact)= 5.102006D+02
+   for param( 6)      dBvdp(approx)=-2.025504D-01   Bvdp(exact)= 5.102301D+02
+   for param( 7)      dBvdp(approx)= 1.286333D-01   Bvdp(exact)= 5.101734D+02
+   for param( 8)      dBvdp(approx)=-9.547167D-02   Bvdp(exact)= 5.102094D+02
+   for param( 9)      dBvdp(approx)= 7.852521D-02   Bvdp(exact)= 5.101891D+02
+   for param(10)      dBvdp(approx)=-7.395925D-08   Bvdp(exact)= 5.102006D+02
+   for param(11)      dBvdp(approx)= 7.395925D-08   Bvdp(exact)= 5.102006D+02
+ v=  7    E= -14919.7217  u(E)=  0.000000  Bv= 0.12506506  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 7.557448D-04   Bvdp(exact)=-4.178063D+02
+   for param( 2)      dBvdp(approx)= 8.198468D-02   Bvdp(exact)=-4.178363D+02
+   for param( 3)      dBvdp(approx)=-6.143490D-09   Bvdp(exact)=-4.178063D+02
+   for param( 4)      dBvdp(approx)=-2.342946D-10   Bvdp(exact)=-4.178063D+02
+   for param( 5)      dBvdp(approx)=-4.988635D-12   Bvdp(exact)=-4.178063D+02
+   for param( 6)      dBvdp(approx)=-2.163238D-01   Bvdp(exact)=-4.177791D+02
+   for param( 7)      dBvdp(approx)= 1.230921D-01   Bvdp(exact)=-4.175519D+02
+   for param( 8)      dBvdp(approx)=-9.519606D-02   Bvdp(exact)=-4.178274D+02
+   for param( 9)      dBvdp(approx)= 7.720762D-02   Bvdp(exact)=-4.175386D+02
+   for param(10)      dBvdp(approx)=-8.704338D-08   Bvdp(exact)=-4.178063D+02
+   for param(11)      dBvdp(approx)= 8.704338D-08   Bvdp(exact)=-4.178231D+02
+ v=  8    E= -14908.7897  u(E)=  0.000000  Bv= 0.08742796  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 8.000467D-04   Bvdp(exact)=-2.663146D+03
+   for param( 2)      dBvdp(approx)= 9.351646D-02   Bvdp(exact)=-2.663012D+03
+   for param( 3)      dBvdp(approx)=-3.538129D-09   Bvdp(exact)=-2.663146D+03
+   for param( 4)      dBvdp(approx)=-2.206671D-10   Bvdp(exact)=-2.663146D+03
+   for param( 5)      dBvdp(approx)=-4.999932D-12   Bvdp(exact)=-2.663146D+03
+   for param( 6)      dBvdp(approx)=-2.166630D-01   Bvdp(exact)=-2.662944D+03
+   for param( 7)      dBvdp(approx)= 1.167141D-01   Bvdp(exact)=-2.662994D+03
+   for param( 8)      dBvdp(approx)=-9.324429D-02   Bvdp(exact)=-2.663128D+03
+   for param( 9)      dBvdp(approx)= 7.205825D-02   Bvdp(exact)=-2.662983D+03
+   for param(10)      dBvdp(approx)=-9.778184D-08   Bvdp(exact)=-2.663146D+03
+   for param(11)      dBvdp(approx)= 9.778184D-08   Bvdp(exact)=-2.662987D+03
+ v=  9    E= -14904.1149  u(E)=  0.000000  Bv= 0.04587534  u(Bv)= 0.000000D+00
+
+   Predict Bv uncertainties for isotopologue-2 in state a3
+   for param( 1)      dBvdp(approx)= 3.018590D-05   Bvdp(exact)=-1.250175D+02
+   for param( 2)      dBvdp(approx)=-2.470701D-01   Bvdp(exact)=-1.249983D+02
+   for param( 3)      dBvdp(approx)=-5.439211D-10   Bvdp(exact)=-1.250175D+02
+   for param( 4)      dBvdp(approx)=-1.102346D-11   Bvdp(exact)=-1.250175D+02
+   for param( 5)      dBvdp(approx)=-1.482714D-13   Bvdp(exact)=-1.250175D+02
+   for param( 6)      dBvdp(approx)=-9.084779D-03   Bvdp(exact)=-1.251182D+02
+   for param( 7)      dBvdp(approx)= 1.273417D-02   Bvdp(exact)=-1.250175D+02
+   for param( 8)      dBvdp(approx)=-1.382853D-02   Bvdp(exact)=-1.250175D+02
+   for param( 9)      dBvdp(approx)= 1.352015D-02   Bvdp(exact)=-1.250175D+02
+   for param(10)      dBvdp(approx)=-3.420144D-08   Bvdp(exact)=-1.250175D+02
+   for param(11)      dBvdp(approx)= 3.420144D-08   Bvdp(exact)=-1.250175D+02
+ v=  0    E= -15205.1598  u(E)=  0.000000  Bv= 0.26686338  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 9.615556D-05   Bvdp(exact)=-6.125870D+02
+   for param( 2)      dBvdp(approx)=-1.963354D-01   Bvdp(exact)=-6.125713D+02
+   for param( 3)      dBvdp(approx)=-1.794880D-09   Bvdp(exact)=-6.125870D+02
+   for param( 4)      dBvdp(approx)=-3.854446D-11   Bvdp(exact)=-6.125870D+02
+   for param( 5)      dBvdp(approx)=-5.706229D-13   Bvdp(exact)=-6.125870D+02
+   for param( 6)      dBvdp(approx)=-3.152923D-02   Bvdp(exact)=-6.126134D+02
+   for param( 7)      dBvdp(approx)= 3.920267D-02   Bvdp(exact)=-6.125582D+02
+   for param( 8)      dBvdp(approx)=-3.968151D-02   Bvdp(exact)=-6.126097D+02
+   for param( 9)      dBvdp(approx)= 3.684423D-02   Bvdp(exact)=-6.125627D+02
+   for param(10)      dBvdp(approx)=-3.509831D-08   Bvdp(exact)=-6.125870D+02
+   for param(11)      dBvdp(approx)= 3.509831D-08   Bvdp(exact)=-6.125870D+02
+ v=  1    E= -15146.5616  u(E)=  0.000000  Bv= 0.24807023  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 1.650771D-04   Bvdp(exact)= 3.811699D+03
+   for param( 2)      dBvdp(approx)=-1.462168D-01   Bvdp(exact)= 3.811705D+03
+   for param( 3)      dBvdp(approx)=-3.086404D-09   Bvdp(exact)= 3.811699D+03
+   for param( 4)      dBvdp(approx)=-6.895069D-11   Bvdp(exact)= 3.811699D+03
+   for param( 5)      dBvdp(approx)=-1.080479D-12   Bvdp(exact)= 3.811699D+03
+   for param( 6)      dBvdp(approx)=-5.617873D-02   Bvdp(exact)= 3.811688D+03
+   for param( 7)      dBvdp(approx)= 6.333881D-02   Bvdp(exact)= 3.811710D+03
+   for param( 8)      dBvdp(approx)=-6.007295D-02   Bvdp(exact)= 3.811724D+03
+   for param( 9)      dBvdp(approx)= 5.325997D-02   Bvdp(exact)= 3.811736D+03
+   for param(10)      dBvdp(approx)=-3.573819D-08   Bvdp(exact)= 3.811699D+03
+   for param(11)      dBvdp(approx)= 3.573819D-08   Bvdp(exact)= 3.811699D+03
+ v=  2    E= -15094.4981  u(E)=  0.000000  Bv= 0.22932721  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 2.347395D-04   Bvdp(exact)=-3.275871D+02
+   for param( 2)      dBvdp(approx)=-9.892185D-02   Bvdp(exact)=-3.276424D+02
+   for param( 3)      dBvdp(approx)=-4.301871D-09   Bvdp(exact)=-3.275871D+02
+   for param( 4)      dBvdp(approx)=-9.942817D-11   Bvdp(exact)=-3.275871D+02
+   for param( 5)      dBvdp(approx)=-1.627343D-12   Bvdp(exact)=-3.275871D+02
+   for param( 6)      dBvdp(approx)=-8.090181D-02   Bvdp(exact)=-3.275874D+02
+   for param( 7)      dBvdp(approx)= 8.331324D-02   Bvdp(exact)=-3.275959D+02
+   for param( 8)      dBvdp(approx)=-7.422270D-02   Bvdp(exact)=-3.276413D+02
+   for param( 9)      dBvdp(approx)= 6.320227D-02   Bvdp(exact)=-3.276461D+02
+   for param(10)      dBvdp(approx)=-3.655808D-08   Bvdp(exact)=-3.275871D+02
+   for param(11)      dBvdp(approx)= 3.655808D-08   Bvdp(exact)=-3.275871D+02
+ v=  3    E= -15048.7879  u(E)=  0.000000  Bv= 0.21034498  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 3.045595D-04   Bvdp(exact)= 3.457743D+02
+   for param( 2)      dBvdp(approx)=-5.577280D-02   Bvdp(exact)= 3.464847D+02
+   for param( 3)      dBvdp(approx)=-5.358224D-09   Bvdp(exact)= 3.457743D+02
+   for param( 4)      dBvdp(approx)=-1.281754D-10   Bvdp(exact)= 3.457743D+02
+   for param( 5)      dBvdp(approx)=-2.180532D-12   Bvdp(exact)= 3.457743D+02
+   for param( 6)      dBvdp(approx)=-1.044861D-01   Bvdp(exact)= 3.458164D+02
+   for param( 7)      dBvdp(approx)= 9.821982D-02   Bvdp(exact)= 3.465235D+02
+   for param( 8)      dBvdp(approx)=-8.234726D-02   Bvdp(exact)= 3.457611D+02
+   for param( 9)      dBvdp(approx)= 6.791587D-02   Bvdp(exact)= 3.464850D+02
+   for param(10)      dBvdp(approx)=-3.794277D-08   Bvdp(exact)= 3.457743D+02
+   for param(11)      dBvdp(approx)= 3.794277D-08   Bvdp(exact)= 3.457743D+02
+ v=  4    E= -15009.3500  u(E)=  0.000000  Bv= 0.19076581  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 3.751794D-04   Bvdp(exact)= 2.629360D+02
+   for param( 2)      dBvdp(approx)=-1.764535D-02   Bvdp(exact)= 2.629809D+02
+   for param( 3)      dBvdp(approx)=-6.184702D-09   Bvdp(exact)= 2.629360D+02
+   for param( 4)      dBvdp(approx)=-1.539996D-10   Bvdp(exact)= 2.629360D+02
+   for param( 5)      dBvdp(approx)=-2.722422D-12   Bvdp(exact)= 2.629360D+02
+   for param( 6)      dBvdp(approx)=-1.263632D-01   Bvdp(exact)= 2.629343D+02
+   for param( 7)      dBvdp(approx)= 1.077657D-01   Bvdp(exact)= 2.629241D+02
+   for param( 8)      dBvdp(approx)=-8.536389D-02   Bvdp(exact)= 2.629318D+02
+   for param( 9)      dBvdp(approx)= 6.905889D-02   Bvdp(exact)= 2.629625D+02
+   for param(10)      dBvdp(approx)=-4.028582D-08   Bvdp(exact)= 2.629360D+02
+   for param(11)      dBvdp(approx)= 4.028582D-08   Bvdp(exact)= 2.629360D+02
+ v=  5    E= -14976.1844  u(E)=  0.000000  Bv= 0.17014687  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 4.480681D-04   Bvdp(exact)= 8.868912D+02
+   for param( 2)      dBvdp(approx)= 1.476486D-02   Bvdp(exact)= 8.869132D+02
+   for param( 3)      dBvdp(approx)=-6.697470D-09   Bvdp(exact)= 8.868912D+02
+   for param( 4)      dBvdp(approx)=-1.758848D-10   Bvdp(exact)= 8.868912D+02
+   for param( 5)      dBvdp(approx)=-3.240820D-12   Bvdp(exact)= 8.868912D+02
+   for param( 6)      dBvdp(approx)=-1.463395D-01   Bvdp(exact)= 8.869215D+02
+   for param( 7)      dBvdp(approx)= 1.121237D-01   Bvdp(exact)= 8.868986D+02
+   for param( 8)      dBvdp(approx)=-8.479624D-02   Bvdp(exact)= 8.869118D+02
+   for param( 9)      dBvdp(approx)= 6.842965D-02   Bvdp(exact)= 8.868886D+02
+   for param(10)      dBvdp(approx)=-4.405648D-08   Bvdp(exact)= 8.868912D+02
+   for param(11)      dBvdp(approx)= 4.405648D-08   Bvdp(exact)= 8.868912D+02
+ v=  6    E= -14949.3480  u(E)=  0.000000  Bv= 0.14792596  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 5.245207D-04   Bvdp(exact)=-1.447392D+03
+   for param( 2)      dBvdp(approx)= 4.091042D-02   Bvdp(exact)=-1.447441D+03
+   for param( 3)      dBvdp(approx)=-6.766244D-09   Bvdp(exact)=-1.447392D+03
+   for param( 4)      dBvdp(approx)=-1.924718D-10   Bvdp(exact)=-1.447392D+03
+   for param( 5)      dBvdp(approx)=-3.718304D-12   Bvdp(exact)=-1.447392D+03
+   for param( 6)      dBvdp(approx)=-1.642325D-01   Bvdp(exact)=-1.447368D+03
+   for param( 7)      dBvdp(approx)= 1.119786D-01   Bvdp(exact)=-1.447434D+03
+   for param( 8)      dBvdp(approx)=-8.276738D-02   Bvdp(exact)=-1.447396D+03
+   for param( 9)      dBvdp(approx)= 6.760329D-02   Bvdp(exact)=-1.447407D+03
+   for param(10)      dBvdp(approx)=-4.979844D-08   Bvdp(exact)=-1.447392D+03
+   for param(11)      dBvdp(approx)= 4.979844D-08   Bvdp(exact)=-1.447392D+03
+ v=  7    E= -14928.9112  u(E)=  0.000000  Bv= 0.12339258  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.018511D-04   Bvdp(exact)= 1.191941D+04
+   for param( 2)      dBvdp(approx)= 6.054397D-02   Bvdp(exact)= 1.191940D+04
+   for param( 3)      dBvdp(approx)=-6.176360D-09   Bvdp(exact)= 1.191941D+04
+   for param( 4)      dBvdp(approx)=-2.012622D-10   Bvdp(exact)= 1.191941D+04
+   for param( 5)      dBvdp(approx)=-4.109716D-12   Bvdp(exact)= 1.191941D+04
+   for param( 6)      dBvdp(approx)=-1.789594D-01   Bvdp(exact)= 1.191944D+04
+   for param( 7)      dBvdp(approx)= 1.086687D-01   Bvdp(exact)= 1.191939D+04
+   for param( 8)      dBvdp(approx)=-8.157332D-02   Bvdp(exact)= 1.191943D+04
+   for param( 9)      dBvdp(approx)= 6.710666D-02   Bvdp(exact)= 1.191939D+04
+   for param(10)      dBvdp(approx)=-5.778122D-08   Bvdp(exact)= 1.191941D+04
+   for param(11)      dBvdp(approx)= 5.778122D-08   Bvdp(exact)= 1.191941D+04
+ v=  8    E= -14914.8565  u(E)=  0.000000  Bv= 0.09576273  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.636042D-04   Bvdp(exact)=-9.363080D+03
+   for param( 2)      dBvdp(approx)= 7.371437D-02   Bvdp(exact)=-9.363092D+03
+   for param( 3)      dBvdp(approx)=-4.685157D-09   Bvdp(exact)=-9.363080D+03
+   for param( 4)      dBvdp(approx)=-1.983293D-10   Bvdp(exact)=-9.363080D+03
+   for param( 5)      dBvdp(approx)=-4.307109D-12   Bvdp(exact)=-9.363080D+03
+   for param( 6)      dBvdp(approx)=-1.866538D-01   Bvdp(exact)=-9.363060D+03
+   for param( 7)      dBvdp(approx)= 1.038398D-01   Bvdp(exact)=-9.363097D+03
+   for param( 8)      dBvdp(approx)=-8.147046D-02   Bvdp(exact)=-9.363051D+03
+   for param( 9)      dBvdp(approx)= 6.519456D-02   Bvdp(exact)=-9.363091D+03
+   for param(10)      dBvdp(approx)=-6.663880D-08   Bvdp(exact)=-9.363080D+03
+   for param(11)      dBvdp(approx)= 6.663880D-08   Bvdp(exact)=-9.363073D+03
+ v=  9    E= -14906.8342  u(E)=  0.000000  Bv= 0.06466868  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.878909D-04   Bvdp(exact)= 6.736578D+05
+   for param( 2)      dBvdp(approx)= 8.169781D-02   Bvdp(exact)= 6.736578D+05
+   for param( 3)      dBvdp(approx)=-2.488252D-09   Bvdp(exact)= 6.736578D+05
+   for param( 4)      dBvdp(approx)=-1.861097D-10   Bvdp(exact)= 6.736578D+05
+   for param( 5)      dBvdp(approx)=-4.259997D-12   Bvdp(exact)= 6.736578D+05
+   for param( 6)      dBvdp(approx)=-1.845474D-01   Bvdp(exact)= 6.736576D+05
+   for param( 7)      dBvdp(approx)= 9.889215D-02   Bvdp(exact)= 6.736578D+05
+   for param( 8)      dBvdp(approx)=-7.893818D-02   Bvdp(exact)= 6.736577D+05
+   for param( 9)      dBvdp(approx)= 6.057738D-02   Bvdp(exact)= 6.736578D+05
+   for param(10)      dBvdp(approx)=-7.297169D-08   Bvdp(exact)= 6.736578D+05
+   for param(11)      dBvdp(approx)= 7.297153D-08   Bvdp(exact)= 6.736578D+05
+ v= 10    E= -14903.7143  u(E)=  0.000000  Bv= 0.03128134  u(Bv)= 0.000000D+00
+
+   Predict Bv uncertainties for isotopologue-3 in state a3
+   for param( 1)      dBvdp(approx)= 3.067941D-05   Bvdp(exact)=-8.213159D+01
+   for param( 2)      dBvdp(approx)=-2.496081D-01   Bvdp(exact)=-8.202331D+01
+   for param( 3)      dBvdp(approx)=-5.528156D-10   Bvdp(exact)=-8.213159D+01
+   for param( 4)      dBvdp(approx)=-1.120513D-11   Bvdp(exact)=-8.213159D+01
+   for param( 5)      dBvdp(approx)=-1.507492D-13   Bvdp(exact)=-8.213159D+01
+   for param( 6)      dBvdp(approx)=-9.234347D-03   Bvdp(exact)=-8.222936D+01
+   for param( 7)      dBvdp(approx)= 1.293960D-02   Bvdp(exact)=-8.213159D+01
+   for param( 8)      dBvdp(approx)=-1.404901D-02   Bvdp(exact)=-8.213159D+01
+   for param( 9)      dBvdp(approx)= 1.373406D-02   Bvdp(exact)=-8.213159D+01
+   for param(10)      dBvdp(approx)=-3.494824D-08   Bvdp(exact)=-8.213159D+01
+   for param(11)      dBvdp(approx)= 3.494824D-08   Bvdp(exact)=-8.213159D+01
+ v=  0    E= -15204.9921  u(E)=  0.000000  Bv= 0.26969552  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 9.774626D-05   Bvdp(exact)= 7.143618D+01
+   for param( 2)      dBvdp(approx)=-1.980445D-01   Bvdp(exact)= 7.151252D+01
+   for param( 3)      dBvdp(approx)=-1.824671D-09   Bvdp(exact)= 7.143618D+01
+   for param( 4)      dBvdp(approx)=-3.919763D-11   Bvdp(exact)= 7.143618D+01
+   for param( 5)      dBvdp(approx)=-5.805954D-13   Bvdp(exact)= 7.143618D+01
+   for param( 6)      dBvdp(approx)=-3.206228D-02   Bvdp(exact)= 7.140612D+01
+   for param( 7)      dBvdp(approx)= 3.983221D-02   Bvdp(exact)= 7.057414D+01
+   for param( 8)      dBvdp(approx)=-4.029736D-02   Bvdp(exact)= 7.146781D+01
+   for param( 9)      dBvdp(approx)= 3.740198D-02   Bvdp(exact)= 7.056774D+01
+   for param(10)      dBvdp(approx)=-3.586711D-08   Bvdp(exact)= 7.143618D+01
+   for param(11)      dBvdp(approx)= 3.586711D-08   Bvdp(exact)= 7.143618D+01
+ v=  1    E= -15146.1143  u(E)=  0.000000  Bv= 0.25059762  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 1.678055D-04   Bvdp(exact)= 3.247769D+03
+   for param( 2)      dBvdp(approx)=-1.471320D-01   Bvdp(exact)= 3.247776D+03
+   for param( 3)      dBvdp(approx)=-3.136895D-09   Bvdp(exact)= 3.247769D+03
+   for param( 4)      dBvdp(approx)=-7.011167D-11   Bvdp(exact)= 3.247769D+03
+   for param( 5)      dBvdp(approx)=-1.099372D-12   Bvdp(exact)= 3.247769D+03
+   for param( 6)      dBvdp(approx)=-5.712279D-02   Bvdp(exact)= 3.247758D+03
+   for param( 7)      dBvdp(approx)= 6.432337D-02   Bvdp(exact)= 3.247777D+03
+   for param( 8)      dBvdp(approx)=-6.095511D-02   Bvdp(exact)= 3.247793D+03
+   for param( 9)      dBvdp(approx)= 5.401114D-02   Bvdp(exact)= 3.247760D+03
+   for param(10)      dBvdp(approx)=-3.652433D-08   Bvdp(exact)= 3.247769D+03
+   for param(11)      dBvdp(approx)= 3.652433D-08   Bvdp(exact)= 3.247769D+03
+ v=  2    E= -15093.8399  u(E)=  0.000000  Bv= 0.23154882  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 2.386051D-04   Bvdp(exact)=-8.555761D+02
+   for param( 2)      dBvdp(approx)=-9.912691D-02   Bvdp(exact)=-8.555780D+02
+   for param( 3)      dBvdp(approx)=-4.370114D-09   Bvdp(exact)=-8.555761D+02
+   for param( 4)      dBvdp(approx)=-1.010687D-10   Bvdp(exact)=-8.555761D+02
+   for param( 5)      dBvdp(approx)=-1.655437D-12   Bvdp(exact)=-8.555761D+02
+   for param( 6)      dBvdp(approx)=-8.223708D-02   Bvdp(exact)=-8.555770D+02
+   for param( 7)      dBvdp(approx)= 8.454521D-02   Bvdp(exact)=-8.555434D+02
+   for param( 8)      dBvdp(approx)=-7.523322D-02   Bvdp(exact)=-8.555484D+02
+   for param( 9)      dBvdp(approx)= 6.401909D-02   Bvdp(exact)=-8.555897D+02
+   for param(10)      dBvdp(approx)=-3.737299D-08   Bvdp(exact)=-8.555761D+02
+   for param(11)      dBvdp(approx)= 3.737299D-08   Bvdp(exact)=-8.555761D+02
+ v=  3    E= -15047.9859  u(E)=  0.000000  Bv= 0.21225114  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 3.095686D-04   Bvdp(exact)=-9.398936D+01
+   for param( 2)      dBvdp(approx)=-5.537752D-02   Bvdp(exact)=-9.467643D+01
+   for param( 3)      dBvdp(approx)=-5.439362D-09   Bvdp(exact)=-9.398936D+01
+   for param( 4)      dBvdp(approx)=-1.302310D-10   Bvdp(exact)=-9.398936D+01
+   for param( 5)      dBvdp(approx)=-2.217534D-12   Bvdp(exact)=-9.398936D+01
+   for param( 6)      dBvdp(approx)=-1.061721D-01   Bvdp(exact)=-9.467924D+01
+   for param( 7)      dBvdp(approx)= 9.957876D-02   Bvdp(exact)=-9.471191D+01
+   for param( 8)      dBvdp(approx)=-8.336711D-02   Bvdp(exact)=-9.396511D+01
+   for param( 9)      dBvdp(approx)= 6.871358D-02   Bvdp(exact)=-9.471549D+01
+   for param(10)      dBvdp(approx)=-3.881234D-08   Bvdp(exact)=-9.398936D+01
+   for param(11)      dBvdp(approx)= 3.881234D-08   Bvdp(exact)=-9.398936D+01
+ v=  4    E= -15008.4713  u(E)=  0.000000  Bv= 0.19233586  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 3.813787D-04   Bvdp(exact)= 8.522013D+02
+   for param( 2)      dBvdp(approx)=-1.677754D-02   Bvdp(exact)= 8.522152D+02
+   for param( 3)      dBvdp(approx)=-6.271919D-09   Bvdp(exact)= 8.522013D+02
+   for param( 4)      dBvdp(approx)=-1.563813D-10   Bvdp(exact)= 8.522013D+02
+   for param( 5)      dBvdp(approx)=-2.767758D-12   Bvdp(exact)= 8.522013D+02
+   for param( 6)      dBvdp(approx)=-1.283550D-01   Bvdp(exact)= 8.521961D+02
+   for param( 7)      dBvdp(approx)= 1.091342D-01   Bvdp(exact)= 8.521590D+02
+   for param( 8)      dBvdp(approx)=-8.631274D-02   Bvdp(exact)= 8.521973D+02
+   for param( 9)      dBvdp(approx)= 6.980355D-02   Bvdp(exact)= 8.522261D+02
+   for param(10)      dBvdp(approx)=-4.125218D-08   Bvdp(exact)= 8.522013D+02
+   for param(11)      dBvdp(approx)= 4.125218D-08   Bvdp(exact)= 8.522013D+02
+ v=  5    E= -14975.2976  u(E)=  0.000000  Bv= 0.17134580  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 4.555579D-04   Bvdp(exact)= 7.196836D+00
+   for param( 2)      dBvdp(approx)= 1.596192D-02   Bvdp(exact)= 7.132949D+00
+   for param( 3)      dBvdp(approx)=-6.780840D-09   Bvdp(exact)= 7.196836D+00
+   for param( 4)      dBvdp(approx)=-1.784738D-10   Bvdp(exact)= 7.196836D+00
+   for param( 5)      dBvdp(approx)=-3.293596D-12   Bvdp(exact)= 7.196836D+00
+   for param( 6)      dBvdp(approx)=-1.485926D-01   Bvdp(exact)= 7.223036D+00
+   for param( 7)      dBvdp(approx)= 1.134018D-01   Bvdp(exact)= 7.116835D+00
+   for param( 8)      dBvdp(approx)=-8.565216D-02   Bvdp(exact)= 7.185225D+00
+   for param( 9)      dBvdp(approx)= 6.913586D-02   Bvdp(exact)= 7.164670D+00
+   for param(10)      dBvdp(approx)=-4.518253D-08   Bvdp(exact)= 7.196836D+00
+   for param(11)      dBvdp(approx)= 4.518253D-08   Bvdp(exact)= 7.196836D+00
+ v=  6    E= -14948.5237  u(E)=  0.000000  Bv= 0.14869955  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 5.333880D-04   Bvdp(exact)=-3.990443D+02
+   for param( 2)      dBvdp(approx)= 4.228587D-02   Bvdp(exact)=-3.990902D+02
+   for param( 3)      dBvdp(approx)=-6.829995D-09   Bvdp(exact)=-3.990443D+02
+   for param( 4)      dBvdp(approx)=-1.950883D-10   Bvdp(exact)=-3.990443D+02
+   for param( 5)      dBvdp(approx)=-3.776676D-12   Bvdp(exact)=-3.990443D+02
+   for param( 6)      dBvdp(approx)=-1.666867D-01   Bvdp(exact)=-3.990263D+02
+   for param( 7)      dBvdp(approx)= 1.131051D-01   Bvdp(exact)=-3.990573D+02
+   for param( 8)      dBvdp(approx)=-8.358366D-02   Bvdp(exact)=-3.990497D+02
+   for param( 9)      dBvdp(approx)= 6.831002D-02   Bvdp(exact)=-3.990308D+02
+   for param(10)      dBvdp(approx)=-5.116756D-08   Bvdp(exact)=-3.990443D+02
+   for param(11)      dBvdp(approx)= 5.116756D-08   Bvdp(exact)=-3.990443D+02
+ v=  7    E= -14928.2202  u(E)=  0.000000  Bv= 0.12366255  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.117871D-04   Bvdp(exact)= 2.261177D+04
+   for param( 2)      dBvdp(approx)= 6.195450D-02   Bvdp(exact)= 2.261173D+04
+   for param( 3)      dBvdp(approx)=-6.195371D-09   Bvdp(exact)= 2.261177D+04
+   for param( 4)      dBvdp(approx)=-2.035959D-10   Bvdp(exact)= 2.261177D+04
+   for param( 5)      dBvdp(approx)=-4.168767D-12   Bvdp(exact)= 2.261177D+04
+   for param( 6)      dBvdp(approx)=-1.814541D-01   Bvdp(exact)= 2.261178D+04
+   for param( 7)      dBvdp(approx)= 1.096439D-01   Bvdp(exact)= 2.261175D+04
+   for param( 8)      dBvdp(approx)=-8.244283D-02   Bvdp(exact)= 2.261178D+04
+   for param( 9)      dBvdp(approx)= 6.779904D-02   Bvdp(exact)= 2.261174D+04
+   for param(10)      dBvdp(approx)=-5.945620D-08   Bvdp(exact)= 2.261177D+04
+   for param(11)      dBvdp(approx)= 5.945620D-08   Bvdp(exact)= 2.261172D+04
+ v=  8    E= -14914.3620  u(E)=  0.000000  Bv= 0.09543272  u(Bv)= 0.000000D+00
+   for param( 1)      dBvdp(approx)= 6.730262D-04   Bvdp(exact)=-1.791469D+04
+   for param( 2)      dBvdp(approx)= 7.502906D-02   Bvdp(exact)=-1.791471D+04
+   for param( 3)      dBvdp(approx)=-4.633755D-09   Bvdp(exact)=-1.791469D+04
+   for param( 4)      dBvdp(approx)=-1.999702D-10   Bvdp(exact)=-1.791469D+04
+   for param( 5)      dBvdp(approx)=-4.356346D-12   Bvdp(exact)=-1.791469D+04
+   for param( 6)      dBvdp(approx)=-1.887796D-01   Bvdp(exact)=-1.791465D+04
+   for param( 7)      dBvdp(approx)= 1.046949D-01   Bvdp(exact)=-1.791472D+04
+   for param( 8)      dBvdp(approx)=-8.231185D-02   Bvdp(exact)=-1.791469D+04
+   for param( 9)      dBvdp(approx)= 6.571081D-02   Bvdp(exact)=-1.791471D+04
+   for param(10)      dBvdp(approx)=-6.850848D-08   Bvdp(exact)=-1.791469D+04
+   for param(11)      dBvdp(approx)= 6.850848D-08   Bvdp(exact)=-1.791470D+04
+ v=  9    E= -14906.5696  u(E)=  0.000000  Bv= 0.06367558  u(Bv)= 0.000000D+00

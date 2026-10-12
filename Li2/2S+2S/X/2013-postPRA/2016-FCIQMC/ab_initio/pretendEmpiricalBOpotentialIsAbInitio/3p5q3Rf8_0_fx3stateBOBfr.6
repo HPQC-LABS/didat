@@ -1,0 +1,963 @@
+  Input data for  3  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122795      6.015122795      3.007561397
+  Li(  7) - Li(  7)      7.016004550      7.016004550      3.508002275
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+  Li(  0) - Li(  0)      6.941000000      6.941000000      3.470500000
+
+ Use experimental data input file:  DATA_c-a_05-04-13.4           
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00100
+
+ For state   13
+    integrate from   RMIN= 1.40   to   RMAX=181.40   with mesh   RH= 0.00200
+
+ For state 23 represent level energies by independent term values
+ ==============================================================================
+
+ State a3 represented by an MLR(p= 5, q= 3) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                                for  i= 0 -  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y6= (R^6 - Re^6)/(R^6 + Re^6)
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02       --            --
+      Re      4.170006000000D+00       --            --
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01       --            --
+   beta( 1)  -9.804102637260D-02       --            --
+   beta( 2)   1.132213644225D-01       --            --
+   beta( 3)  -2.515349973312D-02       --            --
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -8.364370221336D+09       --            --
+    uLi( 0)  -7.264066936157D+02    0.0D+00       0.0D+00
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13 represented by an MLR(p= 6, q= 2) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y2^i}
+                                                                for  i= 0 -  9
+        with radial variable:   y_{p,q} = (R^q - 4.800000^q)/(R^q + 4.800000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Lyon 3x3  uLR(r)  with   Aso=  0.335325   C_3(Sigma)=  3.5768280D+05
+                                               C_6(Sigma)=  1.0005900D+07
+                                               C_6(Pi)   =  0.0000000D+00
+                                               C_8(Sigma)=  3.6996500D+08
+                                               C_8(Pi)   =  0.0000000D+00
+                    These constants yield:   betaINF= -1.8784101036
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y3= (R^3 - Re^3)/(R^3 + Re^3)
+ Centrifugal potential strength factor is  [J(J+1) + 2]
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      1.490329673640D+04       --            --
+      Te      8.146742125746D+03    0.0D+00       0.0D+00
+      Te
+      De      7.090334110654D+03       --            --
+      Re      3.064947135937D+00       --            --
+     C 3      3.576828000000D+05       --            --
+     C-1      3.353246000000D-01       --            --
+     C 6      1.000590000000D+07       --            --
+     C 6      0.000000000000D+00       --            --
+     C 8      3.699650000000D+08       --            --
+     C 8      0.000000000000D+00       --            --
+   beta( 0)  -1.819932597057D+00       --            --
+   beta( 1)  -4.681808460364D-01       --            --
+   beta( 2)  -4.982402450369D-01       --            --
+   beta( 3)  -1.280661964478D-01       --            --
+   beta( 4)  -7.889475662227D-01       --            --
+   beta( 5)   4.096343436321D+00       --            --
+   beta( 6)   7.377967705315D-01       --            --
+   beta( 7)  -3.514258833541D+00       --            --
+   beta( 8)  -1.600091780863D+00       --            --
+   beta( 9)   2.633383058865D+00       --            --
+   beta_INF  -1.878410103565D+00       --            --
+   C 9{eff}  -1.427165961443D+09       --            --
+    uLi( 0)  -1.711852592324D+04       --            --
+    uLi( 1)  -6.043583219028D+04       --            --
+    uLi( 2)  -5.460968450217D+03       --            --
+    uLi( 3)   9.875423502059D+04       --            --
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+ All distinct levels of State 23 fitted as independent term values
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+                             or  v  outside range  0  to   9   for   ISOT= 3
+       and State 13 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to  84   for   ISOT= 1
+                             or  v  outside range  0  to  90   for   ISOT= 2
+                             or  v  outside range  0  to  84   for   ISOT= 3
+       and State 23 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+                             or  v  outside range  0  to  10   for   ISOT= 3
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= 13  ISOT= 1
+           must be in a single "band" or data group
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= a3  ISOT= 2
+           must be in a single "band" or data group
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= 13  ISOT= 2
+           must be in a single "band" or data group
+
+ For State 23  fit to individual term values for each  {v,J,p,isot}
+ ************************************
+ For Li(  6)-Li(  6)  fit to    0 T(v,J,p) term values,
+                    of which    0 are involved in only one transition
+ For Li(  7)-Li(  7)  fit to   20 T(v,J,p) term values,
+                    of which    2 are involved in only one transition
+ For Li(  0)-Li(  0)  fit to    0 T(v,J,p) term values,
+                    of which    0 are involved in only one transition
+ State a3  Energy Convergence criterion EPS is 2.0D-07 cm-1
+ State 13  Energy Convergence criterion EPS is 2.0D-07 cm-1
+ State 23  Energy Convergence criterion EPS is 2.0D-07 cm-1
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 1:   DRMSD= 5.77878D+05    test(PS)= 8.5D+01   test(PU)= 1.2D+01
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) = -7.26406693615700D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16095442970930D+04 (+/- 4.6D+03)    PS= 6.3D+02   PC= 2.2D+04
+    PV(  36) =  2.16141120857281D+04 (+/- 3.8D+03)    PS= 5.1D+02   PC= 2.2D+04
+    PV(  37) =  2.16172788408462D+04 (+/- 8.0D+03)    PS= 1.1D+03   PC= 2.2D+04
+    PV(  38) =  2.16212717761849D+04 (+/- 3.8D+03)    PS= 5.1D+02   PC= 2.2D+04
+    PV(  39) =  2.16257388242507D+04 (+/- 4.3D+03)    PS= 5.8D+02   PC= 2.2D+04
+    PV(  40) =  2.16310136250337D+04 (+/- 4.3D+03)    PS= 5.8D+02   PC= 2.2D+04
+    PV(  41) =  2.16367950472093D+04 (+/- 4.0D+03)    PS= 5.4D+02   PC= 2.2D+04
+    PV(  42) =  2.16433569776805D+04 (+/- 5.1D+03)    PS= 6.9D+02   PC= 2.2D+04
+    PV(  43) =  2.16504631684897D+04 (+/- 4.0D+03)    PS= 5.4D+02   PC= 2.2D+04
+    PV(  44) =  2.16582933594036D+04 (+/- 1.1D+04)    PS= 1.5D+03   PC= 2.2D+04
+    PV(  45) =  2.16666690003961D+04 (+/- 4.3D+03)    PS= 5.8D+02   PC= 2.2D+04
+    PV(  46) =  2.16854387877313D+04 (+/- 1.1D+04)    PS= 1.5D+03   PC= 2.2D+04
+    PV(  47) =  2.17936552099519D+04 (+/- 3.3D+03)    PS= 4.4D+02   PC= 2.2D+04
+    PV(  48) =  2.17982226412836D+04 (+/- 1.9D+03)    PS= 2.6D+02   PC= 2.2D+04
+    PV(  49) =  2.18054119387764D+04 (+/- 2.5D+03)    PS= 3.4D+02   PC= 2.2D+04
+    PV(  50) =  2.18054611251956D+04 (+/- 2.8D+03)    PS= 3.7D+02   PC= 2.2D+04
+    PV(  51) =  2.18152217011265D+04 (+/- 2.8D+03)    PS= 3.8D+02   PC= 2.2D+04
+    PV(  52) =  2.18210613321577D+04 (+/- 4.1D+03)    PS= 5.5D+02   PC= 2.2D+04
+    PV(  53) =  2.18347144190867D+04 (+/- 3.4D+03)    PS= 4.6D+02   PC= 2.2D+04
+    PV(  54) =  2.18509263821577D+04 (+/- 4.1D+03)    PS= 5.5D+02   PC= 2.2D+04
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 2:   DRMSD= 7.84343D+00    test(PS)= 1.0D-09   test(PU)= 1.4D-10
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) = -7.26406693615700D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16095442970930D+04 (+/- 6.3D-02)    PS= 8.5D-03   PC=-3.0D-12
+    PV(  36) =  2.16141120857281D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC=-4.9D-12
+    PV(  37) =  2.16172788408462D+04 (+/- 1.1D-01)    PS= 1.5D-02   PC=-5.5D-12
+    PV(  38) =  2.16212717761849D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC= 2.0D-12
+    PV(  39) =  2.16257388242507D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC= 3.6D-12
+    PV(  40) =  2.16310136250338D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC= 2.1D-12
+    PV(  41) =  2.16367950472093D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 4.1D-12
+    PV(  42) =  2.16433569776805D+04 (+/- 6.9D-02)    PS= 9.3D-03   PC= 1.5D-12
+    PV(  43) =  2.16504631684897D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 3.1D-18
+    PV(  44) =  2.16582933594036D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  45) =  2.16666690003961D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC= 3.1D-12
+    PV(  46) =  2.16854387877313D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  47) =  2.17936552099518D+04 (+/- 4.5D-02)    PS= 6.0D-03   PC=-3.6D-12
+    PV(  48) =  2.17982226412836D+04 (+/- 2.6D-02)    PS= 3.5D-03   PC=-3.6D-12
+    PV(  49) =  2.18054119387764D+04 (+/- 3.5D-02)    PS= 4.7D-03   PC= 8.9D-18
+    PV(  50) =  2.18054611251956D+04 (+/- 3.7D-02)    PS= 5.0D-03   PC=-6.4D-13
+    PV(  51) =  2.18152217011265D+04 (+/- 3.9D-02)    PS= 5.2D-03   PC= 4.5D-12
+    PV(  52) =  2.18210613321577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 3.6D-12
+    PV(  53) =  2.18347144190867D+04 (+/- 4.7D-02)    PS= 6.3D-03   PC=-2.6D-12
+    PV(  54) =  2.18509263821577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 1.5D-12
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 3:   DRMSD= 7.84343D+00    test(PS)= 2.5D-10   test(PU)= 3.3D-11
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) = -7.26406693615700D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16095442970930D+04 (+/- 6.3D-02)    PS= 8.5D-03   PC= 6.1D-13
+    PV(  36) =  2.16141120857281D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC=-1.2D-12
+    PV(  37) =  2.16172788408462D+04 (+/- 1.1D-01)    PS= 1.5D-02   PC=-1.8D-12
+    PV(  38) =  2.16212717761849D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC=-1.6D-12
+    PV(  39) =  2.16257388242507D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC= 5.9D-18
+    PV(  40) =  2.16310136250338D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC=-1.6D-12
+    PV(  41) =  2.16367950472093D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 4.5D-13
+    PV(  42) =  2.16433569776805D+04 (+/- 6.9D-02)    PS= 9.3D-03   PC= 1.5D-12
+    PV(  43) =  2.16504631684897D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 3.1D-18
+    PV(  44) =  2.16582933594036D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  45) =  2.16666690003961D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC=-5.2D-13
+    PV(  46) =  2.16854387877313D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  47) =  2.17936552099518D+04 (+/- 4.5D-02)    PS= 6.0D-03   PC= 5.1D-18
+    PV(  48) =  2.17982226412836D+04 (+/- 2.6D-02)    PS= 3.5D-03   PC= 1.1D-17
+    PV(  49) =  2.18054119387764D+04 (+/- 3.5D-02)    PS= 4.7D-03   PC= 8.9D-18
+    PV(  50) =  2.18054611251956D+04 (+/- 3.7D-02)    PS= 5.0D-03   PC=-6.4D-13
+    PV(  51) =  2.18152217011265D+04 (+/- 3.9D-02)    PS= 5.2D-03   PC= 9.1D-13
+    PV(  52) =  2.18210613321577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 0.0D+00
+    PV(  53) =  2.18347144190867D+04 (+/- 4.7D-02)    PS= 6.3D-03   PC= 1.6D-12
+    PV(  54) =  2.18509263821577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 1.5D-12
+
+ Full  3-cycle convergence:  Max{|change/sens.|}= 3.3D-11 < 1   DRMSD=  7.84D+00
+
+  2798 data fit to   20 param. yields  DRMS(devn)= 7.84343D+00  tst(PS)= 2.5D-10
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) = -7.26406693615700D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16095442970930D+04 (+/- 6.3D-02)    PS= 8.5D-03   PC= 6.1D-13
+    PV(  36) =  2.16141120857281D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC=-1.2D-12
+    PV(  37) =  2.16172788408462D+04 (+/- 1.1D-01)    PS= 1.5D-02   PC=-1.8D-12
+    PV(  38) =  2.16212717761849D+04 (+/- 5.1D-02)    PS= 6.9D-03   PC=-1.6D-12
+    PV(  39) =  2.16257388242507D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC= 5.9D-18
+    PV(  40) =  2.16310136250338D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC=-1.6D-12
+    PV(  41) =  2.16367950472093D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 4.5D-13
+    PV(  42) =  2.16433569776805D+04 (+/- 6.9D-02)    PS= 9.3D-03   PC= 1.5D-12
+    PV(  43) =  2.16504631684897D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 3.1D-18
+    PV(  44) =  2.16582933594036D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  45) =  2.16666690003961D+04 (+/- 5.8D-02)    PS= 7.9D-03   PC=-5.2D-13
+    PV(  46) =  2.16854387877313D+04 (+/- 1.5D-01)    PS= 2.1D-02   PC= 0.0D+00
+    PV(  47) =  2.17936552099518D+04 (+/- 4.5D-02)    PS= 6.0D-03   PC= 5.1D-18
+    PV(  48) =  2.17982226412836D+04 (+/- 2.6D-02)    PS= 3.5D-03   PC= 1.1D-17
+    PV(  49) =  2.18054119387764D+04 (+/- 3.5D-02)    PS= 4.7D-03   PC= 8.9D-18
+    PV(  50) =  2.18054611251956D+04 (+/- 3.7D-02)    PS= 5.0D-03   PC=-6.4D-13
+    PV(  51) =  2.18152217011265D+04 (+/- 3.9D-02)    PS= 5.2D-03   PC= 9.1D-13
+    PV(  52) =  2.18210613321577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 0.0D+00
+    PV(  53) =  2.18347144190867D+04 (+/- 4.7D-02)    PS= 6.3D-03   PC= 1.6D-12
+    PV(  54) =  2.18509263821577D+04 (+/- 5.5D-02)    PS= 7.4D-03   PC= 1.5D-12
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 1:   DRMSD= 7.84343D+00    test(PS)= 2.1D+02   test(PU)= 2.7D+01
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) =  4.85559042007021D+01 (+/- 2.9D+01)    PS= 3.7D+00   PC= 7.7D+02
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16096003468386D+04 (+/- 6.3D-02)    PS= 8.1D-03   PC= 5.6D-02
+    PV(  36) =  2.16141644952789D+04 (+/- 5.1D-02)    PS= 6.6D-03   PC= 5.2D-02
+    PV(  37) =  2.16173451548387D+04 (+/- 1.1D-01)    PS= 1.4D-02   PC= 6.6D-02
+    PV(  38) =  2.16213233879910D+04 (+/- 5.1D-02)    PS= 6.6D-03   PC= 5.2D-02
+    PV(  39) =  2.16258015023660D+04 (+/- 5.8D-02)    PS= 7.5D-03   PC= 6.3D-02
+    PV(  40) =  2.16310757901484D+04 (+/- 5.8D-02)    PS= 7.5D-03   PC= 6.2D-02
+    PV(  41) =  2.16368506361649D+04 (+/- 5.5D-02)    PS= 7.0D-03   PC= 5.6D-02
+    PV(  42) =  2.16434209982239D+04 (+/- 6.9D-02)    PS= 8.9D-03   PC= 6.4D-02
+    PV(  43) =  2.16505172154928D+04 (+/- 5.5D-02)    PS= 7.0D-03   PC= 5.4D-02
+    PV(  44) =  2.16583619196202D+04 (+/- 1.5D-01)    PS= 2.0D-02   PC= 6.9D-02
+    PV(  45) =  2.16667274620060D+04 (+/- 5.8D-02)    PS= 7.5D-03   PC= 5.8D-02
+    PV(  46) =  2.16854926254253D+04 (+/- 1.5D-01)    PS= 2.0D-02   PC= 5.4D-02
+    PV(  47) =  2.17937153590350D+04 (+/- 4.5D-02)    PS= 5.7D-03   PC= 6.0D-02
+    PV(  48) =  2.17982750508345D+04 (+/- 2.6D-02)    PS= 3.3D-03   PC= 5.2D-02
+    PV(  49) =  2.18054602616819D+04 (+/- 3.5D-02)    PS= 4.4D-03   PC= 4.8D-02
+    PV(  50) =  2.18055122194325D+04 (+/- 3.7D-02)    PS= 4.8D-03   PC= 5.1D-02
+    PV(  51) =  2.18152745690340D+04 (+/- 3.9D-02)    PS= 5.0D-03   PC= 5.3D-02
+    PV(  52) =  2.18211217280215D+04 (+/- 5.5D-02)    PS= 7.1D-03   PC= 6.0D-02
+    PV(  53) =  2.18347680028926D+04 (+/- 4.7D-02)    PS= 6.0D-03   PC= 5.4D-02
+    PV(  54) =  2.18509882875624D+04 (+/- 5.5D-02)    PS= 7.1D-03   PC= 6.2D-02
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 2:   DRMSD= 1.00435D+00    test(PS)= 2.2D-01   test(PU)= 2.8D-02
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) =  4.86597175313441D+01 (+/- 3.7D+00)    PS= 4.7D-01   PC= 1.0D-01
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16096003462048D+04 (+/- 8.1D-03)    PS= 1.0D-03   PC=-6.3D-07
+    PV(  36) =  2.16141644942508D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC=-1.0D-06
+    PV(  37) =  2.16173451554027D+04 (+/- 1.4D-02)    PS= 1.8D-03   PC= 5.6D-07
+    PV(  38) =  2.16213233867313D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC=-1.3D-06
+    PV(  39) =  2.16258015023540D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC=-1.2D-08
+    PV(  40) =  2.16310757900064D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC=-1.4D-07
+    PV(  41) =  2.16368506350613D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC=-1.1D-06
+    PV(  42) =  2.16434209982368D+04 (+/- 8.8D-03)    PS= 1.1D-03   PC= 1.3D-08
+    PV(  43) =  2.16505172138724D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC=-1.6D-06
+    PV(  44) =  2.16583619200506D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC= 4.3D-07
+    PV(  45) =  2.16667274608424D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC=-1.2D-06
+    PV(  46) =  2.16854926238315D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC=-1.6D-06
+    PV(  47) =  2.17937153589418D+04 (+/- 5.7D-03)    PS= 7.3D-04   PC=-9.3D-08
+    PV(  48) =  2.17982750498063D+04 (+/- 3.3D-03)    PS= 4.2D-04   PC=-1.0D-06
+    PV(  49) =  2.18054602599647D+04 (+/- 4.4D-03)    PS= 5.7D-04   PC=-1.7D-06
+    PV(  50) =  2.18055122180967D+04 (+/- 4.8D-03)    PS= 6.2D-04   PC=-1.3D-06
+    PV(  51) =  2.18152745676988D+04 (+/- 4.9D-03)    PS= 6.3D-04   PC=-1.3D-06
+    PV(  52) =  2.18211217275397D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC=-4.8D-07
+    PV(  53) =  2.18347680011526D+04 (+/- 6.0D-03)    PS= 7.7D-04   PC=-1.7D-06
+    PV(  54) =  2.18509882867017D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC=-8.6D-07
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490295D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490308D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490317D+04  WF(NEND)/WF(Max)= 4.6D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490300D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E= 1.490311D+04  WF(NEND)/WF(Max)= 4.7D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 3:   DRMSD= 1.00435D+00    test(PS)= 4.2D-07   test(PU)= 5.3D-08
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) =  4.86597177276932D+01 (+/- 3.7D+00)    PS= 4.7D-01   PC= 2.0D-07
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16096003462048D+04 (+/- 8.1D-03)    PS= 1.0D-03   PC= 1.4D-11
+    PV(  36) =  2.16141644942508D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC= 1.3D-11
+    PV(  37) =  2.16173451554027D+04 (+/- 1.4D-02)    PS= 1.8D-03   PC= 1.5D-11
+    PV(  38) =  2.16213233867313D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC= 1.3D-11
+    PV(  39) =  2.16258015023540D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.5D-11
+    PV(  40) =  2.16310757900064D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.5D-11
+    PV(  41) =  2.16368506350613D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC= 1.3D-11
+    PV(  42) =  2.16434209982368D+04 (+/- 8.8D-03)    PS= 1.1D-03   PC= 1.2D-11
+    PV(  43) =  2.16505172138724D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC= 1.3D-11
+    PV(  44) =  2.16583619200506D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC= 2.1D-11
+    PV(  45) =  2.16667274608424D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.6D-11
+    PV(  46) =  2.16854926238316D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC= 2.1D-11
+    PV(  47) =  2.17937153589418D+04 (+/- 5.7D-03)    PS= 7.3D-04   PC= 1.5D-11
+    PV(  48) =  2.17982750498064D+04 (+/- 3.3D-03)    PS= 4.2D-04   PC= 1.4D-11
+    PV(  49) =  2.18054602599647D+04 (+/- 4.4D-03)    PS= 5.7D-04   PC= 1.1D-11
+    PV(  50) =  2.18055122180967D+04 (+/- 4.8D-03)    PS= 6.2D-04   PC= 1.4D-11
+    PV(  51) =  2.18152745676989D+04 (+/- 4.9D-03)    PS= 6.3D-04   PC= 1.2D-11
+    PV(  52) =  2.18211217275397D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC= 9.5D-12
+    PV(  53) =  2.18347680011526D+04 (+/- 6.0D-03)    PS= 7.7D-04   PC= 9.9D-12
+    PV(  54) =  2.18509882867017D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC= 1.6D-11
+
+ Full  3-cycle convergence:  Max{|change/sens.|}= 5.3D-08 < 1   DRMSD=  1.00D+00
+
+  2798 data fit to   21 param. yields  DRMS(devn)= 1.00435D+00  tst(PS)= 4.2D-07
+    PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) =  4.86597177276932D+01 (+/- 3.7D+00)    PS= 4.7D-01   PC= 2.0D-07
+    PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) =  7.09033411065400D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) =  3.06494713593700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  15) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  20) = -1.81993259705700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  21) = -4.68180846036400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  22) = -4.98240245036900D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  23) = -1.28066196447800D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  24) = -7.88947566222700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  25) =  4.09634343632100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  26) =  7.37796770531500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  27) = -3.51425883354100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  28) = -1.60009178086300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  29) =  2.63338305886500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  30) = -1.71185259232400D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  31) = -6.04358321902800D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  32) = -5.46096845021700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  33) =  9.87542350205900D+04 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  34) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  35) =  2.16096003462048D+04 (+/- 8.1D-03)    PS= 1.0D-03   PC= 1.4D-11
+    PV(  36) =  2.16141644942508D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC= 1.3D-11
+    PV(  37) =  2.16173451554027D+04 (+/- 1.4D-02)    PS= 1.8D-03   PC= 1.5D-11
+    PV(  38) =  2.16213233867313D+04 (+/- 6.6D-03)    PS= 8.5D-04   PC= 1.3D-11
+    PV(  39) =  2.16258015023540D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.5D-11
+    PV(  40) =  2.16310757900064D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.5D-11
+    PV(  41) =  2.16368506350613D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC= 1.3D-11
+    PV(  42) =  2.16434209982368D+04 (+/- 8.8D-03)    PS= 1.1D-03   PC= 1.2D-11
+    PV(  43) =  2.16505172138724D+04 (+/- 7.0D-03)    PS= 9.0D-04   PC= 1.3D-11
+    PV(  44) =  2.16583619200506D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC= 2.1D-11
+    PV(  45) =  2.16667274608424D+04 (+/- 7.5D-03)    PS= 9.6D-04   PC= 1.6D-11
+    PV(  46) =  2.16854926238316D+04 (+/- 2.0D-02)    PS= 2.5D-03   PC= 2.1D-11
+    PV(  47) =  2.17937153589418D+04 (+/- 5.7D-03)    PS= 7.3D-04   PC= 1.5D-11
+    PV(  48) =  2.17982750498064D+04 (+/- 3.3D-03)    PS= 4.2D-04   PC= 1.4D-11
+    PV(  49) =  2.18054602599647D+04 (+/- 4.4D-03)    PS= 5.7D-04   PC= 1.1D-11
+    PV(  50) =  2.18055122180967D+04 (+/- 4.8D-03)    PS= 6.2D-04   PC= 1.4D-11
+    PV(  51) =  2.18152745676989D+04 (+/- 4.9D-03)    PS= 6.3D-04   PC= 1.2D-11
+    PV(  52) =  2.18211217275397D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC= 9.5D-12
+    PV(  53) =  2.18347680011526D+04 (+/- 6.0D-03)    PS= 7.7D-04   PC= 9.9D-12
+    PV(  54) =  2.18509882867017D+04 (+/- 7.1D-03)    PS= 9.1D-04   PC= 1.6D-11
+
+ ====================================================================
+ For fit of   21  parameters to  2798  transitions,  DSE=  1.0081367    
+
+ ====================================================================
+  State 23 represented by the   20 individual term values:
+ ------------------------------------------------------------------
+ T(es: v', J', p';IS)  #dat    T(value)    Uncertainty  Sensitivity
+ ------------------------------------------------------------------
+  T(23:  1,  2,+1; 2)    6   2.1609600346D+04    8.1D-03     1.0D-03
+  T(23:  1,  4,+1; 2)    9   2.1614164494D+04    6.6D-03     8.5D-04
+  T(23:  1,  5,+1; 2)    2   2.1617345155D+04    1.4D-02     1.8D-03
+  T(23:  1,  6,+1; 2)    9   2.1621323387D+04    6.6D-03     8.5D-04
+  T(23:  1,  7,+1; 2)    7   2.1625801502D+04    7.5D-03     9.6D-04
+  T(23:  1,  8,+1; 2)    7   2.1631075790D+04    7.5D-03     9.6D-04
+  T(23:  1,  9,+1; 2)    8   2.1636850635D+04    7.0D-03     9.0D-04
+  T(23:  1, 10,+1; 2)    5   2.1643420998D+04    8.8D-03     1.1D-03
+  T(23:  1, 11,+1; 2)    8   2.1650517214D+04    7.0D-03     9.0D-04
+  T(23:  1, 12,+1; 2)    1   2.1658361920D+04    2.0D-02     2.5D-03
+  T(23:  1, 13,+1; 2)    7   2.1666727461D+04    7.5D-03     9.6D-04
+  T(23:  1, 15,+1; 2)    1   2.1685492624D+04    2.0D-02     2.5D-03
+  T(23:  2,  2,+1; 2)    3   2.1793715359D+04    5.7D-03     7.3D-04
+  T(23:  2,  4,+1; 2)    9   2.1798275050D+04    3.3D-03     4.2D-04
+  T(23:  2,  6,-1; 2)    5   2.1805460260D+04    4.4D-03     5.7D-04
+  T(23:  2,  6,+1; 2)   17   2.1805512218D+04    4.8D-03     6.2D-04
+  T(23:  2,  8,+1; 2)   16   2.1815274568D+04    4.9D-03     6.3D-04
+  T(23:  2,  9,+1; 2)    5   2.1821121728D+04    7.1D-03     9.1D-04
+  T(23:  2, 11,+1; 2)    7   2.1834768001D+04    6.0D-03     7.7D-04
+  T(23:  2, 13,+1; 2)    5   2.1850988287D+04    7.1D-03     9.1D-04
+ ==============================================================================
+
+ State a3 represented by an MLR(p= 5, q= 3) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                                for  i= 0 -  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y6= (R^6 - Re^6)/(R^6 + Re^6)
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02       --            --
+      Re      4.170006000000D+00       --            --
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01       --            --
+   beta( 1)  -9.804102637260D-02       --            --
+   beta( 2)   1.132213644225D-01       --            --
+   beta( 3)  -2.515349973312D-02       --            --
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -8.364370221336D+09       --            --
+    uLi( 0)   4.865971772769D+01    3.7D+00       4.7D-01
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13 represented by an MLR(p= 6, q= 2) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y2^i}
+                                                                for  i= 0 -  9
+        with radial variable:   y_{p,q} = (R^q - 4.800000^q)/(R^q + 4.800000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Lyon 3x3  uLR(r)  with   Aso=  0.335325   C_3(Sigma)=  3.5768280D+05
+                                               C_6(Sigma)=  1.0005900D+07
+                                               C_6(Pi)   =  0.0000000D+00
+                                               C_8(Sigma)=  3.6996500D+08
+                                               C_8(Pi)   =  0.0000000D+00
+                    These constants yield:   betaINF= -1.8784101036
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y3= (R^3 - Re^3)/(R^3 + Re^3)
+ Centrifugal potential strength factor is  [J(J+1) + 2]
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      1.490329673640D+04       --            --
+      Te      8.146742125746D+03    0.0D+00       0.0D+00
+      Te
+      De      7.090334110654D+03       --            --
+      Re      3.064947135937D+00       --            --
+     C 3      3.576828000000D+05       --            --
+     C-1      3.353246000000D-01       --            --
+     C 6      1.000590000000D+07       --            --
+     C 6      0.000000000000D+00       --            --
+     C 8      3.699650000000D+08       --            --
+     C 8      0.000000000000D+00       --            --
+   beta( 0)  -1.819932597057D+00       --            --
+   beta( 1)  -4.681808460364D-01       --            --
+   beta( 2)  -4.982402450369D-01       --            --
+   beta( 3)  -1.280661964478D-01       --            --
+   beta( 4)  -7.889475662227D-01       --            --
+   beta( 5)   4.096343436321D+00       --            --
+   beta( 6)   7.377967705315D-01       --            --
+   beta( 7)  -3.514258833541D+00       --            --
+   beta( 8)  -1.600091780863D+00       --            --
+   beta( 9)   2.633383058865D+00       --            --
+   beta_INF  -1.878410103565D+00       --            --
+   C 9{eff}  -1.427165961443D+09       --            --
+    uLi( 0)  -1.711852592324D+04       --            --
+    uLi( 1)  -6.043583219028D+04       --            --
+    uLi( 2)  -5.460968450217D+03       --            --
+    uLi( 3)   9.875423502059D+04       --            --
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+ All distinct levels of State 23 fitted as independent term values
+ ==============================================================================
+
+ ===============================================================
+  *** Discrepancies for   36 bands/series of Li(  6)-Li(  6) ***
+ ===============================================================
+
+ ======================================================================
+  1276 Li(  6)-Li(  6)  {State 13}--{State a3} Transitions in  35 bands
+ ================================================== Avge. ========
+   v'  v" #data  J"min  J"max  Av.Unc.  Max.Unc.   Err/Unc   DRMSD
+ -----------------------------------------------------------------
+   7   0    39      3     27   1.0D-02  1.0D-02   -0.82060   1.183
+   7   1    32      5     27   1.0D-02  1.0D-02   -0.46549   0.956
+   6   0    47      1     27   1.0D-02  1.0D-02   -0.79933   1.008
+   6   1    48      2     28   1.0D-02  1.0D-02   -0.56354   0.846
+   6   2    25     10     28   1.0D-02  1.0D-02   -0.50951   0.766
+   5   1    56      0     31   1.0D-02  1.0D-02   -0.51818   0.835
+   5   2    49      1     30   1.0D-02  1.0D-02   -0.53460   1.137
+   4   1    59      1     32   1.0D-02  1.0D-02   -0.68426   0.933
+   4   2    51      2     30   1.0D-02  1.0D-02   -0.57015   0.767
+   4   3    48      1     27   1.0D-02  1.0D-02   -0.45959   0.714
+   3   2    51      0     29   1.0D-02  1.0D-02   -0.60308   0.814
+   3   3    47      1     28   1.0D-02  1.0D-02   -0.49910   0.646
+   3   4    39      1     24   1.0D-02  1.0D-02   -0.38903   0.763
+   2   2    49      1     30   1.0D-02  1.0D-02   -0.77042   1.042
+   2   3    48      1     28   1.0D-02  1.0D-02   -0.65152   0.857
+   2   4    42      1     25   1.0D-02  1.0D-02   -0.72898   0.923
+   2   5    35      1     20   1.0D-02  1.0D-02   -0.44234   0.665
+   2   6    26      2     17   1.0D-02  1.0D-02   -0.47806   0.697
+   1   5    32      1     20   1.0D-02  1.0D-02   -0.29631   0.684
+   1   6    25      2     17   1.0D-02  1.0D-02   -0.05393   0.578
+   5   0    49      1     31   1.0D-02  1.0D-02   -0.78671   1.023
+   5   3    28      7     27   1.0D-02  1.0D-02   -0.51149   0.863
+   2   1    49      0     30   1.0D-02  1.0D-02   -0.76392   1.061
+   1   3    34      1     23   1.0D-02  1.0D-02   -0.39893   0.593
+   1   4    38      2     25   1.0D-02  1.0D-02   -0.18430   0.726
+   1   7    14      4     14   1.0D-02  1.0D-02    0.21901   0.791
+   3   1    51      1     30   1.0D-02  1.0D-02   -0.63676   0.933
+   3   6    17      4     17   1.0D-02  1.0D-02   -0.50134   0.783
+   3   5    26      2     20   1.0D-02  1.0D-02   -0.23225   0.671
+   4   0    41      2     28   1.0D-02  1.0D-02   -0.85883   1.048
+   4   4    15      4     18   1.0D-02  1.0D-02   -0.43366   0.839
+   3   0    32      2     21   1.0D-02  1.0D-02   -0.85629   1.040
+   1   2    20      4     18   1.0D-02  1.0D-02   -0.36277   0.806
+   2   7    10      4     12   1.0D-02  1.0D-02   -0.25265   0.634
+   3   7     4      6     12   1.0D-02  1.0D-02   -0.55231   1.261
+ -------------- For these  1276 lines, overall:   -0.56011   0.880
+
+ ==========================================================
+   76 PAS Binding Energies for State 13  Li(  6)-Li(  6)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   76     20     84    5.8D-03  2.6D-02    0.287   0.711
+ ============================================================
+
+ ===============================================================
+  *** Discrepancies for   52 bands/series of Li(  7)-Li(  7) ***
+ ===============================================================
+
+ ======================================================================
+  1278 Li(  7)-Li(  7)  {State 13}--{State a3} Transitions in  32 bands
+ ================================================== Avge. ========
+   v'  v" #data  J"min  J"max  Av.Unc.  Max.Unc.   Err/Unc   DRMSD
+ -----------------------------------------------------------------
+   7   0    48      3     31   1.0D-02  1.0D-02    0.67909   1.221
+   7   1    38      5     31   1.0D-02  1.0D-02    0.71367   1.206
+   6   0    53      3     31   1.0D-02  1.0D-02    0.83181   1.242
+   6   1    55      3     33   1.0D-02  1.0D-02    0.65667   1.049
+   6   2    37      9     30   1.0D-02  1.0D-02    0.37487   0.912
+   5   1    54      3     33   1.0D-02  1.0D-02    0.69657   1.302
+   5   2    49      2     30   1.0D-02  1.0D-02    0.66033   1.060
+   4   1    53      1     30   1.0D-02  1.0D-02    0.88989   1.185
+   4   2    57      1     32   1.0D-02  1.0D-02    0.85949   1.241
+   4   3    45      3     28   1.0D-02  1.0D-02    0.68635   1.076
+   3   2    48      1     28   1.0D-02  1.0D-02    0.85521   1.083
+   3   3    52      2     30   1.0D-02  1.0D-02    0.54130   0.854
+   3   4    48      2     28   1.0D-02  1.0D-02    0.52545   0.956
+   2   2    49      1     28   1.0D-02  1.0D-02    0.77213   1.305
+   2   3    53      0     29   1.0D-02  1.0D-02    0.35265   0.914
+   2   4    47      1     27   1.0D-02  1.0D-02    0.31668   0.963
+   2   5    44      1     24   1.0D-02  1.0D-02    0.36755   0.708
+   2   6    30      1     19   1.0D-02  1.0D-02   -0.09771   1.000
+   2   7    15      1     15   1.0D-02  1.0D-02    0.05644   1.011
+   1   5    36      1     21   1.0D-02  1.0D-02    0.33113   1.178
+   1   6    30      2     20   1.0D-02  1.0D-02    0.03591   0.899
+   5   0    49      1     31   1.0D-02  1.0D-02    1.10870   1.543
+   5   3    24     11     26   1.0D-02  1.0D-02    0.55973   1.065
+   2   1    28      5     24   1.0D-02  1.0D-02    0.52475   1.090
+   1   3    27      4     21   1.0D-02  1.0D-02    0.76454   1.211
+   1   4    33      3     21   1.0D-02  1.0D-02    0.40306   1.406
+   1   7    11      4     16   1.0D-02  1.0D-02   -0.07153   1.066
+   3   1    48      1     33   1.0D-02  1.0D-02    0.92950   1.595
+   3   6    27      4     19   1.0D-02  1.0D-02    0.25287   0.899
+   3   7    11      3     17   1.0D-02  1.0D-02    0.35005   1.121
+   4   0    42      1     29   1.0D-02  1.0D-02    1.05233   1.468
+   4   4    37      4     28   1.0D-02  1.0D-02    0.70469   1.026
+ -------------- For these  1278 lines, overall:    0.61415   1.151
+
+ ======================================================================
+   137 Li(  7)-Li(  7)  {State 23}--{State a3} Transitions in  18 bands
+ ================================================== Avge. ========
+   v'  v" #data  J"min  J"max  Av.Unc.  Max.Unc.   Err/Unc   DRMSD
+ -----------------------------------------------------------------
+   1   0     8      4     13   1.0D-02  1.0D-02    0.94611   0.966
+   2   0    10      2     13   7.9D-03  1.0D-02    0.59695   0.816
+   1   2     8      2     13   1.0D-02  1.0D-02    0.32224   0.425
+   2   2     8      4     13   8.6D-03  1.0D-02   -0.07619   0.316
+   1   3    11      2     13   1.0D-02  1.0D-02    0.02841   0.232
+   2   3     7      4     13   8.7D-03  1.0D-02    0.15609   0.603
+   1   4    11      2     15   1.0D-02  1.0D-02   -0.04140   0.235
+   2   4     3      4      8   8.3D-03  1.0D-02    0.14541   0.908
+   1   5     9      2     13   1.0D-02  1.0D-02   -0.37325   0.630
+   2   5     8      4     11   8.2D-03  1.0D-02    0.31780   0.632
+   1   6     9      2     13   1.0D-02  1.0D-02    0.10413   0.728
+   2   6    10      2     13   7.9D-03  1.0D-02   -0.16089   0.939
+   1   7     8      2     13   1.0D-02  1.0D-02   -0.49385   0.552
+   2   7    10      2     13   7.9D-03  1.0D-02   -0.50448   0.900
+   1   8     4      4     11   1.0D-02  1.0D-02   -0.43068   0.542
+   2   8     7      4     11   8.3D-03  1.0D-02    0.09187   0.643
+   1   9     2      4      6   1.0D-02  1.0D-02   -0.95416   0.958
+   2   9     4      4      8   8.7D-03  1.0D-02   -0.85515   0.951
+ -------------- For these   137 lines, overall:    0.00000   0.678
+
+ ==========================================================
+    1 PAS Binding Energies for State a3  Li(  7)-Li(  7)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+    1     10     10    1.3D-03  1.3D-03    0.858   0.858
+ ============================================================
+
+ ==========================================================
+   30 PAS Binding Energies for State 13  Li(  7)-Li(  7)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   30     63     90    1.6D-03  4.0D-03   -0.505   1.125
+ ============================================================
+
+ ===============================================================
+  *** Discrepancies for    0 bands/series of Li(  0)-Li(  0) ***
+ ===============================================================
+
+ ==================================================================
+ Fit of    21 param to  2798 data:  DRMS(devn)=  1.00435    
+ ==================================================================

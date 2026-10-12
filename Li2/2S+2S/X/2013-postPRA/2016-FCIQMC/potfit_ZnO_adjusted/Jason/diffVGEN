@@ -1,0 +1,165 @@
+77a78
+> c    Rsw(ISTATE) is the Rx value used in the MLJ switching function.
+89,90d89
+<       INTEGER MMAX
+<       PARAMETER (MMAX=20)
+92c91,92
+<      1  IDAT, NBAND, IISTP, ICOXON
+---
+>      1  IDAT, NBAND, IISTP, ICOXON, MMAX
+>       PARAMETER (MMAX=20)
+105c105
+< c** Temporary variables for MLR and DELR potentials
+---
+> c** Temporary variables for DELR and MLR potentials
+107,108c107,108
+<       REAL*8 ULR,dAAdRe,dBBdRe,dVdBtemp,CmVALL,tDm,tDmp,tDmpp,Dm(MMAX),
+<      1  Dmp(MMAX),Dmpp(MMAX)
+---
+>       REAL*8 ULR,Dm(MMAX),Dmp(MMAX),Dmpp(MMAX),dAAdRe,dBBdRe,dVdBtemp,
+>      1       CmVALL
+256c256,259
+< c ... now collect derivative terms ...
+---
+> c** Now incorporate the  2*B(r)  BOB term  AND leading quadratic corrn.
+> c   but ignore effect on derivatives
+>               BFCT= 16.85762920d0/ZMASS(3,1)
+>               ULRe= ULRe - BFCT*(2.d0+ ULRe/DE(ISTATE))/RE(ISTATE)**2
+281c284
+<                   IF(bDAMP(ISTATE).LE.0.d0) THEN
+---
+>                   IF(bDAMP(ISTATE).LT.0.d0) THEN
+297c300
+<           IF(ICOXON.GE.1) BINF= 0.5d0*BINF
+---
+>           IF(ICOXON.GE.1) BINF= 0.5d0*BINF 
+338,339c341,358
+<                   DBDRe(I,ISTATE)= -YP*dLULRedRe
+<                   IF(RREF(ISTATE).LE.0.d0) DBDRe(I,ISTATE)= 
+---
+>                   IF(Asw(ISTATE).GT.0.0d0) THEN
+> c-----------------------------------------------------------------------
+> c** For switching function version of constrained exponent ...
+> c           fsw(R) = 1 / [e^(Asw'*(R - Rx)) + 1]
+> c-----------------------------------------------------------------------
+>                       FSW= 1.0d0/(1.0d0 + 
+>      1                         DEXP(Asw(ISTATE)*(RVAL-Rsw(ISTATE))))
+>                       DBDRe(I,ISTATE)= (1.d0-FSW)*DBLE(MMLR(1,ISTATE))
+>      1                                                     /RE(ISTATE)
+>                       IF(RREF(ISTATE).LE.0.d0) DBDRe(I,ISTATE)=
+>      1                               DBDRe(I,ISTATE) + FSW*DVAL*DYPDRE
+>                       VAL= FSW*(VAL - BINF) + BINF
+>                     ELSEIF(Asw(ISTATE).LE.0.0d0) THEN
+> c-----------------------------------------------------------------------
+> c** But preferably - constrain leading Cm value as per Huang thesis ...
+> c-----------------------------------------------------------------------
+>                       DBDRe(I,ISTATE)= -YP*dLULRedRe
+>                       IF(RREF(ISTATE).LE.0.d0) DBDRe(I,ISTATE)= 
+342c361,362
+<                   VAL= YP*BINF + (1.d0- YP)*VAL
+---
+>                       VAL= YP*BINF + (1.d0- YP)*VAL
+>                     ENDIF
+379a400,402
+> c** Now incorporate the  2*B(r)  BOB term  AND leading quadratic corrn.
+> c   but ignore effect on derivatives
+>                   ULR= ULR - BFCT*(2.d0 + ULR/DE(ISTATE))/RVAL**2
+396c419
+<      1            bDAMP(ISTATE),MMLR(NCMM(ISTATE),ISTATE),Dm,Dmp,Dmpp)
+---
+>      1              bDAMP(ISTATE),MMLR(NCMM(ISTATE),ISTATE),Dm,Dmp,Dmpp)
+400c423
+<                         ELSE
+---
+>                       ELSE
+402,403c425,426
+<      1                                           /RVAL**MMLR(m,ISTATE)
+<                         ENDIF
+---
+>      1                                             /RVAL**MMLR(m,ISTATE)
+>                       ENDIF
+453,455c476,481
+< c... derivative w.r.t. De  for 'conventional' power-series exponent
+<                   DVDD= DVDD + YPP*YP*YPE/DE(ISTATE)
+<                   IF((NCMM(ISTATE).GE.4).AND.(MMLR(2,ISTATE).EQ.0))
+---
+> c... for 'conventional' power-series exponent cases
+>                   IF(Asw(ISTATE).LE.0.d0) THEN
+> c... derivative w.r.t. De  for 'normal' Huang-type exponent
+>                       DVDD= DVDD + YPP*YP*YPE/DE(ISTATE)
+>                       IF((NCMM(ISTATE).GE.4).AND.
+>      1                                     (MMLR(2,ISTATE).EQ.0)) THEN
+457,458c483,492
+<      1        DVDD= DVDD+ YPP*((1.d0- YP*YPE)*dLULRedDe - dULRdDe/ULR)
+<                   YPP= YPP*YPE*(1.d0 - YP)
+---
+>                           DVDD= DVDD+ YPP*((1.d0- YP*YPE)*dLULRedDe
+>      1                                                  - dULRdDe/ULR)
+>                           ENDIF
+>                       YPP= YPP*YPE*(1.d0 - YP)
+>                     ELSE
+> c... derivative w.r.t. De  for switching fx. exponent
+>                       YPP= YPP*YPE
+>                       DVDD= DVDD + YPP*(1.d0- FSW)/DE(ISTATE)
+>                       YPP= YPP*FSW
+>                     ENDIF
+477,478c511,512
+<       rewind(10)
+<       write(10,610) (RD(i,ISTATE),vpot(i,istate),PHIFX(i,istate),
+---
+>         rewind(10)
+>         write(10,610) (RD(i,ISTATE),vpot(i,istate),PHIFX(i,istate),
+493,494c527,528
+<           CALL dampF(RE(ISTATE),bDAMP(ISTATE),
+<      1                          MMLR(NCMM(ISTATE),ISTATE),Dm,Dmp,Dmpp)
+---
+>           CALL dampF(RE(ISTATE),bDAMP(ISTATE),MMLR(NCMM(ISTATE),ISTATE),
+>      1               Dm,Dmp,Dmpp)
+499,519c533,557
+<               tDm= Dm(MMLR(m,ISTATE))
+<               tDmp= Dm(MMLR(m,ISTATE))
+<               tDmpp= Dm(MMLR(m,ISTATE))
+<               AA(ISTATE)= AA(ISTATE)- CmVALL*tDm/RE(ISTATE)**MMLRP
+<      2                              *(1.0d0 + tDmp/(PHI(0,ISTATE)*tDm)
+<      3                             - MMLRP/(PHI(0,ISTATE)*RE(ISTATE)))
+<               BB(ISTATE)= BB(ISTATE)- CmVALL*tDm/RE(ISTATE)**MMLRP
+<      2                              *(2.0d0 + tDmp/(PHI(0,ISTATE)*tDm)
+<      3                             - MMLRP/(PHI(0,ISTATE)*RE(ISTATE)))
+<               dAAdRe= dAAdRe - CmVALL*((tDmp*RE(ISTATE) - MMLRP*tDm)
+<      2          /RE(ISTATE)**(MMLRP+1)*(1.0d0+tDmp/(PHI(0,ISTATE)*tDm)
+<      3             - MMLRP/(PHI(0,ISTATE)*RE(ISTATE))) 
+<      4             + tDm/RE(ISTATE)**MMLRP*((tDm*tDmpp-tDmp**2)
+<      5 /(PHI(0,ISTATE)*tDm**2) + MMLRP/(PHI(0,ISTATE)*RE(ISTATE)**2)))
+<               dBBdRe= dBBdRe - CmVALL*((tDmp*RE(ISTATE) - MMLRP*tDm)
+<      1         /RE(ISTATE)**(MMLRP+ 1)*(2.0d0+tDmp/(PHI(0,ISTATE)*tDm)
+<      2             - MMLRP/(PHI(0,ISTATE)*RE(ISTATE)))
+<      3             + tDm/RE(ISTATE)**MMLRP*((tDm*tDmpp-tDmp**2)
+<      4 /(PHI(0,ISTATE)*tDm**2) + MMLRP/(PHI(0,ISTATE)*RE(ISTATE)**2)))
+<               dVdBtemp= dVdBtemp- CmVALL*tDm/
+<      1 (RE(ISTATE)**MMLRP*PHI(0,ISTATE)**2)*(MMLRP/RE(ISTATE)-tDmp/tDm)
+---
+>               AA(ISTATE)= AA(ISTATE)- CmVALL*Dm(MMLR(m,ISTATE))
+>      2              /RE(ISTATE)**MMLRP*(1.0d0 + Dmp(MMLR(m,ISTATE)) 
+>      3              /(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE)))- MMLRP
+>      4              /(PHI(0,ISTATE)*RE(ISTATE)))
+>               BB(ISTATE)= BB(ISTATE)- CmVALL*Dm(MMLR(m,ISTATE))
+>      2              /RE(ISTATE)**MMLRP*(2.0d0 + Dmp(MMLR(m,ISTATE))
+>      3                             /(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE)))
+>      4                             - MMLRP/(PHI(0,ISTATE)*RE(ISTATE)))
+>               dAAdRe= dAAdRe - CmVALL*((Dmp(MMLR(m,ISTATE))*RE(ISTATE) 
+>      2            - MMLRP*Dm(MMLR(m,ISTATE)))/RE(ISTATE)**(MMLRP+1)
+>      3    *(1.0d0+Dmp(MMLR(m,ISTATE))/(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE)))
+>      4    - MMLRP/(PHI(0,ISTATE)*RE(ISTATE))) + Dm(MMLR(m,ISTATE))
+>      5    /RE(ISTATE)**MMLRP*((Dm(MMLR(m,ISTATE))*Dmpp(MMLR(m,ISTATE))
+>      6  -Dmp(MMLR(m,ISTATE))**2)/(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE))**2) 
+>      7   + MMLRP/(PHI(0,ISTATE)*RE(ISTATE)**2)))
+>               dBBdRe= dBBdRe - CmVALL*((Dmp(MMLR(m,ISTATE))*RE(ISTATE) 
+>      1       - MMLRP*Dm(MMLR(m,ISTATE)))/RE(ISTATE)**(MMLRP+ 1)
+>      2    *(2.0d0+Dmp(MMLR(m,ISTATE))/(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE)))
+>      3    - MMLRP/(PHI(0,ISTATE)*RE(ISTATE)))+ Dm(MMLR(m,ISTATE))
+>      4  /RE(ISTATE)**MMLRP*((Dm(MMLR(m,ISTATE))*Dmpp(MMLR(m,ISTATE))
+>      5    -Dmp(MMLR(m,ISTATE))**2)/(PHI(0,ISTATE)*Dm(MMLR(m,ISTATE))**2)
+>      6     + MMLRP/(PHI(0,ISTATE)*RE(ISTATE)**2)))
+>               dVdBtemp= dVdBtemp- CmVALL*Dm(MMLR(m,ISTATE))/
+>      1  (RE(ISTATE)**MMLRP*PHI(0,ISTATE)**2)*(MMLRP/RE(ISTATE)
+>      2   -Dmp(MMLR(m,ISTATE))/Dm(MMLR(m,ISTATE)))

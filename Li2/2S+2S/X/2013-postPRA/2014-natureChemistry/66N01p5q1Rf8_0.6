@@ -1,0 +1,1534 @@
+  Input data for  2  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+
+ Use experimental data input file:  ./DATA_c-a_29-08-14.4         
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+
+ Apply "Sequential Rounding & Refitting" at digit-1 of the (local) parameter
+    uncertainty, proceeding sequentially from the LAST parameter to the FIRST.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3 
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00500
+ ==============================================================================
+
+ State a3  represented by an MLR(p= 5, q= 1) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y1^i}
+                                                              for  i= 1 to  1
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02    0.0D+00       0.0D+00
+      Re      4.170006000000D+00    0.0D+00       0.0D+00
+     C 6      6.719000000000D+06    0.0D+00       0.0D+00
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01    0.0D+00       0.0D+00
+   beta( 1)  -9.804102637260D-02    0.0D+00       0.0D+00
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -6.872141129587D+09       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= a3  ISOT= 1
+           must be in a single "band" or data group
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ *** CAUTION *** For  J=  0  E= -304.65489    
+                WF(first)/WF(Max)= 0.54D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -249.19765    
+                WF(first)/WF(Max)=-0.21D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -197.81125    
+                WF(first)/WF(Max)= 0.52D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -151.16143    
+                WF(first)/WF(Max)=-0.11D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -109.89513    
+                WF(first)/WF(Max)= 0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -74.639442    
+                WF(first)/WF(Max)=-0.27D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -45.977600    
+                WF(first)/WF(Max)= 0.36D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -24.379418    
+                WF(first)/WF(Max)=-0.42D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -10.033962    
+                WF(first)/WF(Max)= 0.42D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.4939182    
+                WF(first)/WF(Max)=-0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -304.65489    
+                WF(first)/WF(Max)= 0.54D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -249.19765    
+                WF(first)/WF(Max)=-0.21D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -197.81125    
+                WF(first)/WF(Max)= 0.52D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -151.16143    
+                WF(first)/WF(Max)=-0.11D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -109.89513    
+                WF(first)/WF(Max)= 0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -74.639442    
+                WF(first)/WF(Max)=-0.27D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -45.977600    
+                WF(first)/WF(Max)= 0.36D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -24.379418    
+                WF(first)/WF(Max)=-0.42D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -10.033962    
+                WF(first)/WF(Max)= 0.42D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.4939182    
+                WF(first)/WF(Max)=-0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -306.78686    
+                WF(first)/WF(Max)= 0.15D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -255.17479    
+                WF(first)/WF(Max)=-0.58D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -206.99024    
+                WF(first)/WF(Max)= 0.15D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -162.76378    
+                WF(first)/WF(Max)=-0.33D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -123.01151    
+                WF(first)/WF(Max)= 0.59D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -88.236841    
+                WF(first)/WF(Max)=-0.94D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -58.920068    
+                WF(first)/WF(Max)= 0.13D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -35.485986    
+                WF(first)/WF(Max)=-0.16D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -18.227205    
+                WF(first)/WF(Max)= 0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -7.1390878    
+                WF(first)/WF(Max)=-0.17D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -1.6110932    
+                WF(first)/WF(Max)= 0.14D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -306.78686    
+                WF(first)/WF(Max)= 0.15D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -255.17479    
+                WF(first)/WF(Max)=-0.58D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -206.99024    
+                WF(first)/WF(Max)= 0.15D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -162.76378    
+                WF(first)/WF(Max)=-0.33D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -123.01151    
+                WF(first)/WF(Max)= 0.59D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -88.236841    
+                WF(first)/WF(Max)=-0.94D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -58.920068    
+                WF(first)/WF(Max)= 0.13D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -35.485986    
+                WF(first)/WF(Max)=-0.16D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -18.227205    
+                WF(first)/WF(Max)= 0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -7.1390878    
+                WF(first)/WF(Max)=-0.17D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -1.6110932    
+                WF(first)/WF(Max)= 0.14D-06  suggests  RMIN  may be too large
+ After Cycle # 1:  DRMSD= 4.5722751D+03    test(PS)= 9.1D+01   test(PU)= 2.2D-02
+    PV(   1) =  3.33620959593105D+02 (+/- 6.3D+01)    PS= 3.7D-01   PC=-1.6D-01
+    PV(   2) =  4.10101528322437D+00 (+/- 1.3D+01)    PS= 3.8D-03   PC=-6.9D-02
+    PV(   3) =  6.60321143555192D+06 (+/- 1.3D+08)    PS= 5.6D+04   PC=-1.2D+05
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -6.56601086050609D-01 (+/- 6.4D+00)    PS= 2.2D-03   PC=-1.4D-01
+    PV(   7) = -7.74043371452376D-01 (+/- 3.4D+01)    PS= 7.4D-03   PC=-6.8D-01
+ After Cycle # 2:  DRMSD= 1.2068753D+03    test(PS)= 1.4D+02   test(PU)= 1.0D-01
+    PV(   1) =  3.33854714590093D+02 (+/- 2.2D+01)    PS= 1.0D-01   PC= 2.3D-01
+    PV(   2) =  4.13128344734121D+00 (+/- 3.8D+00)    PS= 7.2D-04   PC= 3.0D-02
+    PV(   3) =  6.66611852237027D+06 (+/- 4.1D+07)    PS= 1.7D+04   PC= 6.3D+04
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.65297378232764D-01 (+/- 9.0D-01)    PS= 6.4D-04   PC= 9.1D-02
+    PV(   7) = -6.32849395270009D-01 (+/- 1.1D+01)    PS= 2.4D-03   PC= 1.4D-01
+ For J=  0  ETRY=     0.0449 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 3:  DRMSD= 5.5797972D+02    test(PS)= 4.3D+01   test(PU)= 5.0D-02
+    PV(   1) =  3.33904130010041D+02 (+/- 9.9D+00)    PS= 4.9D-02   PC= 4.9D-02
+    PV(   2) =  4.14100845224057D+00 (+/- 2.0D+00)    PS= 3.5D-04   PC= 9.7D-03
+    PV(   3) =  6.32036211782189D+06 (+/- 2.0D+07)    PS= 8.0D+03   PC=-3.5D+05
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.53522760995808D-01 (+/- 2.4D-01)    PS= 3.0D-04   PC= 1.2D-02
+    PV(   7) = -6.21897925773773D-01 (+/- 4.5D+00)    PS= 1.1D-03   PC= 1.1D-02
+ For J=  0  ETRY=     0.1276 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 4:  DRMSD= 1.6335707D+02    test(PS)= 5.3D+01   test(PU)= 4.3D-02
+    PV(   1) =  3.33890565381381D+02 (+/- 2.9D+00)    PS= 1.4D-02   PC=-1.4D-02
+    PV(   2) =  4.14643313507933D+00 (+/- 5.7D-01)    PS= 1.0D-04   PC= 5.4D-03
+    PV(   3) =  6.32266152334329D+06 (+/- 5.4D+06)    PS= 2.3D+03   PC= 2.3D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.49954329863618D-01 (+/- 8.3D-02)    PS= 8.9D-05   PC= 3.6D-03
+    PV(   7) = -6.11069903364822D-01 (+/- 1.4D+00)    PS= 3.3D-04   PC= 1.1D-02
+ For J=  0  ETRY=     0.1346 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 5:  DRMSD= 9.3628716D+01    test(PS)= 5.0D+01   test(PU)= 3.3D-02
+    PV(   1) =  3.33886598600199D+02 (+/- 1.6D+00)    PS= 8.1D-03   PC=-4.0D-03
+    PV(   2) =  4.14939655723829D+00 (+/- 3.3D-01)    PS= 5.9D-05   PC= 3.0D-03
+    PV(   3) =  6.32073546259393D+06 (+/- 3.1D+06)    PS= 1.3D+03   PC=-1.9D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.48301297082504D-01 (+/- 4.9D-02)    PS= 5.1D-05   PC= 1.7D-03
+    PV(   7) = -6.06342420068509D-01 (+/- 8.0D-01)    PS= 1.9D-04   PC= 4.7D-03
+ For J=  0  ETRY=     0.1417 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 6:  DRMSD= 5.0491163D+01    test(PS)= 5.0D+01   test(PU)= 3.3D-02
+    PV(   1) =  3.33884508150345D+02 (+/- 8.9D-01)    PS= 4.4D-03   PC=-2.1D-03
+    PV(   2) =  4.15100666501041D+00 (+/- 1.8D-01)    PS= 3.2D-05   PC= 1.6D-03
+    PV(   3) =  6.31965950918561D+06 (+/- 1.7D+06)    PS= 7.0D+02   PC=-1.1D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47411614767762D-01 (+/- 2.7D-02)    PS= 2.7D-05   PC= 8.9D-04
+    PV(   7) = -6.03830053359731D-01 (+/- 4.3D-01)    PS= 1.0D-04   PC= 2.5D-03
+ For J=  0  ETRY=     0.1400 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 7:  DRMSD= 2.7377913D+01    test(PS)= 5.0D+01   test(PU)= 3.2D-02
+    PV(   1) =  3.33883401530971D+02 (+/- 4.8D-01)    PS= 2.4D-03   PC=-1.1D-03
+    PV(   2) =  4.15187830793224D+00 (+/- 9.5D-02)    PS= 1.8D-05   PC= 8.7D-04
+    PV(   3) =  6.31907970649978D+06 (+/- 9.0D+05)    PS= 3.8D+02   PC=-5.8D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46931569705056D-01 (+/- 1.5D-02)    PS= 1.5D-05   PC= 4.8D-04
+    PV(   7) = -6.02478996531334D-01 (+/- 2.4D-01)    PS= 5.6D-05   PC= 1.4D-03
+ For J=  0  ETRY=     0.1429 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 8:  DRMSD= 1.5035597D+01    test(PS)= 4.9D+01   test(PU)= 3.1D-02
+    PV(   1) =  3.33882810682316D+02 (+/- 2.6D-01)    PS= 1.3D-03   PC=-5.9D-04
+    PV(   2) =  4.15234916618481D+00 (+/- 5.2D-02)    PS= 9.6D-06   PC= 4.7D-04
+    PV(   3) =  6.31876672202886D+06 (+/- 5.0D+05)    PS= 2.1D+02   PC=-3.1D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46672623352744D-01 (+/- 8.3D-03)    PS= 8.2D-06   PC= 2.6D-04
+    PV(   7) = -6.01751298392775D-01 (+/- 1.3D-01)    PS= 3.1D-05   PC= 7.3D-04
+ For J=  0  ETRY=     0.1378 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 9:  DRMSD= 8.5948900D+00    test(PS)= 4.6D+01   test(PU)= 2.9D-02
+    PV(   1) =  3.33882493864706D+02 (+/- 1.5D-01)    PS= 7.4D-04   PC=-3.2D-04
+    PV(   2) =  4.15260323144386D+00 (+/- 3.0D-02)    PS= 5.5D-06   PC= 2.5D-04
+    PV(   3) =  6.31859798232501D+06 (+/- 2.8D+05)    PS= 1.2D+02   PC=-1.7D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46533008601329D-01 (+/- 4.7D-03)    PS= 4.7D-06   PC= 1.4D-04
+    PV(   7) = -6.01359268736668D-01 (+/- 7.4D-02)    PS= 1.7D-05   PC= 3.9D-04
+ For J=  0  ETRY=     0.1383 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ After Cycle #10:  DRMSD= 5.4458139D+00    test(PS)= 3.9D+01   test(PU)= 2.5D-02
+    PV(   1) =  3.33882323585800D+02 (+/- 9.5D-02)    PS= 4.7D-04   PC=-1.7D-04
+    PV(   2) =  4.15274023488857D+00 (+/- 1.9D-02)    PS= 3.5D-06   PC= 1.4D-04
+    PV(   3) =  6.31850703273049D+06 (+/- 1.8D+05)    PS= 7.6D+01   PC=-9.1D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46457752714580D-01 (+/- 3.0D-03)    PS= 3.0D-06   PC= 7.5D-05
+    PV(   7) = -6.01148046558463D-01 (+/- 4.7D-02)    PS= 1.1D-05   PC= 2.1D-04
+ For J=  0  ETRY=     0.1383 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.05D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #11:  DRMSD= 4.1009602D+00    test(PS)= 2.8D+01   test(PU)= 1.8D-02
+    PV(   1) =  3.33882231967476D+02 (+/- 7.2D-02)    PS= 3.5D-04   PC=-9.2D-05
+    PV(   2) =  4.15281408889081D+00 (+/- 1.4D-02)    PS= 2.6D-06   PC= 7.4D-05
+    PV(   3) =  6.31845801849346D+06 (+/- 1.4D+05)    PS= 5.7D+01   PC=-4.9D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46417193922730D-01 (+/- 2.3D-03)    PS= 2.2D-06   PC= 4.1D-05
+    PV(   7) = -6.01034237047610D-01 (+/- 3.5D-02)    PS= 8.3D-06   PC= 1.1D-04
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ After Cycle #12:  DRMSD= 3.6182143D+00    test(PS)= 1.7D+01   test(PU)= 1.1D-02
+    PV(   1) =  3.33882182637404D+02 (+/- 6.3D-02)    PS= 3.1D-04   PC=-4.9D-05
+    PV(   2) =  4.15285389402483D+00 (+/- 1.3D-02)    PS= 2.3D-06   PC= 4.0D-05
+    PV(   3) =  6.31843160534128D+06 (+/- 1.2D+05)    PS= 5.0D+01   PC=-2.6D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46395336571246D-01 (+/- 2.0D-03)    PS= 2.0D-06   PC= 2.2D-05
+    PV(   7) = -6.00972912475991D-01 (+/- 3.1D-02)    PS= 7.4D-06   PC= 6.1D-05
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-5.79D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #13:  DRMSD= 3.4656305D+00    test(PS)= 9.7D+00   test(PU)= 6.1D-03
+    PV(   1) =  3.33882156066861D+02 (+/- 6.1D-02)    PS= 3.0D-04   PC=-2.7D-05
+    PV(   2) =  4.15287534575611D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 2.1D-05
+    PV(   3) =  6.31841737198424D+06 (+/- 1.1D+05)    PS= 4.8D+01   PC=-1.4D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46383558001818D-01 (+/- 1.9D-03)    PS= 1.9D-06   PC= 1.2D-05
+    PV(   7) = -6.00939867983082D-01 (+/- 3.0D-02)    PS= 7.0D-06   PC= 3.3D-05
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-3.65D-03
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #14:  DRMSD= 3.4201464D+00    test(PS)= 5.3D+00   test(PU)= 3.4D-03
+    PV(   1) =  3.33882141752486D+02 (+/- 6.0D-02)    PS= 3.0D-04   PC=-1.4D-05
+    PV(   2) =  4.15288690589833D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.2D-05
+    PV(   3) =  6.31840970211596D+06 (+/- 1.1D+05)    PS= 4.8D+01   PC=-7.7D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46377210863117D-01 (+/- 1.9D-03)    PS= 1.9D-06   PC= 6.3D-06
+    PV(   7) = -6.00922061920368D-01 (+/- 3.0D-02)    PS= 7.0D-06   PC= 1.8D-05
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-1.33D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #15:  DRMSD= 3.4068786D+00    test(PS)= 2.9D+00   test(PU)= 1.8D-03
+    PV(   1) =  3.33882134040066D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-7.7D-06
+    PV(   2) =  4.15289313538012D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 6.2D-06
+    PV(   3) =  6.31840556911151D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-4.1D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46373790608781D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 3.4D-06
+    PV(   7) = -6.00912467045862D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 9.6D-06
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-1.01D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #16:  DRMSD= 3.4030451D+00    test(PS)= 1.5D+00   test(PU)= 9.8D-04
+    PV(   1) =  3.33882129884456D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-4.2D-06
+    PV(   2) =  4.15289649224750D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 3.4D-06
+    PV(   3) =  6.31840334200034D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-2.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46371947562901D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 1.8D-06
+    PV(   7) = -6.00907296788732D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 5.2D-06
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.42D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #17:  DRMSD= 3.4019467D+00    test(PS)= 8.3D-01   test(PU)= 5.3D-04
+    PV(   1) =  3.33882127645257D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-2.2D-06
+    PV(   2) =  4.15289830114114D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.8D-06
+    PV(   3) =  6.31840214190281D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-1.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46370954418330D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 9.9D-07
+    PV(   7) = -6.00904510759192D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 2.8D-06
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.84D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #18:  DRMSD= 3.4016361D+00    test(PS)= 4.5D-01   test(PU)= 2.8D-04
+    PV(   1) =  3.33882126438673D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-1.2D-06
+    PV(   2) =  4.15289927588385D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 9.7D-07
+    PV(   3) =  6.31840149521815D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-6.5D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46370419252851D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 5.4D-07
+    PV(   7) = -6.00903009485700D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 1.5D-06
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.55D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #19:  DRMSD= 3.4015504D+00    test(PS)= 2.4D-01   test(PU)= 1.5D-04
+    PV(   1) =  3.33882125788501D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-6.5D-07
+    PV(   2) =  4.15289980113379D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 5.3D-07
+    PV(   3) =  6.31840114674889D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-3.5D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46370130874016D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 2.9D-07
+    PV(   7) = -6.00902200511928D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 8.1D-07
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.39875769E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757510E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978344    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #20:  DRMSD= 3.4015280D+00    test(PS)= 1.3D-01   test(PU)= 8.3D-05
+    PV(   1) =  3.33882125438153D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-3.5D-07
+    PV(   2) =  4.15290008416920D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 2.8D-07
+    PV(   3) =  6.31840095896854D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-1.9D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369975478531D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 1.6D-07
+    PV(   7) = -6.00901764588928D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 4.4D-07
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.35635699E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757509E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978356    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #21:  DRMSD= 3.4015228D+00    test(PS)= 7.0D-02   test(PU)= 4.5D-05
+    PV(   1) =  3.33882125249366D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-1.9D-07
+    PV(   2) =  4.15290023668550D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.5D-07
+    PV(   3) =  6.31840085778388D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-1.0D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369891742475D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 8.4D-08
+    PV(   7) = -6.00901529689423D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 2.3D-07
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.33351102E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757508E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978363    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #22:  DRMSD= 3.4015220D+00    test(PS)= 3.8D-02   test(PU)= 2.4D-05
+    PV(   1) =  3.33882125147635D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-1.0D-07
+    PV(   2) =  4.15290031887044D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 8.2D-08
+    PV(   3) =  6.31840080326172D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-5.5D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369846620475D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 4.5D-08
+    PV(   7) = -6.00901403111538D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 1.3D-07
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.32120076E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757508E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978366    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #23:  DRMSD= 3.4015221D+00    test(PS)= 2.0D-02   test(PU)= 1.3D-05
+    PV(   1) =  3.33882125092820D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-5.5D-08
+    PV(   2) =  4.15290036315652D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 4.4D-08
+    PV(   3) =  6.31840077388039D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-2.9D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369822306110D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 2.4D-08
+    PV(   7) = -6.00901334904055D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 6.8D-08
+
+ Full 23-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 4.32D-08  TSTPS= 2.0D-02
+
+    20 data fit to    5 param. yields  DRMS(devn)= 3.40152D+00  tst(PS)= 2.0D-02
+    PV(   1) =  3.33882125092820D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-5.5D-08
+    PV(   2) =  4.15290036315652D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 4.4D-08
+    PV(   3) =  6.31840077388039D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-2.9D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369822306110D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 2.4D-08
+    PV(   7) = -6.00901334904055D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 6.8D-08
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.31456750E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757508E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978368    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle # 1:  DRMSD= 3.4015224D+00    test(PS)= 1.1D-02   test(PU)= 7.0D-06
+    PV(   1) =  3.33882125063279D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-3.0D-08
+    PV(   2) =  4.15290038702040D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 2.4D-08
+    PV(   3) =  6.31840075804782D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-1.6D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369809204048D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 1.3D-08
+    PV(   7) = -6.00901298149395D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 3.7D-08
+ For J=  0  ETRY=     0.1384 > VMAX=    -0.0004  find onee turn point:  R=  3.36
+ *** SCHRQ Error:  E=    -0.00 > V(  9560)=    -0.00  at  Rmax= 50.00  for  IT=12
+
+ ALF search finds next estimated trial energy  E(v= 10)=-0.31099312E-03
+        lies above potential maximum or asymptote at  VMAX=-0.40757507E-03
+ ALF finds the highest calculated level is  E(v=  9)= -3.4978369    
+
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle # 2:  DRMSD= 3.4015226D+00    test(PS)= 5.9D-03   test(PU)= 3.8D-06
+    PV(   1) =  3.33882125047363D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-1.6D-08
+    PV(   2) =  4.15290039987935D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.3D-08
+    PV(   3) =  6.31840074951356D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-8.5D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369802143927D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 7.1D-09
+    PV(   7) = -6.00901278343613D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 2.0D-08
+
+ Full  2-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 5.37D-08  TSTPS= 5.9D-03
+
+    20 data fit to    5 param. yields  DRMS(devn)= 3.40152D+00  tst(PS)= 5.9D-03
+    PV(   1) =  3.33882125047363D+02 (+/- 6.0D-02)    PS= 2.9D-04   PC=-1.6D-08
+    PV(   2) =  4.15290039987935D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.3D-08
+    PV(   3) =  6.31840074951356D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC=-8.5D-03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46369802143927D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC= 7.1D-09
+    PV(   7) = -6.00901278343613D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC= 2.0D-08
+ ===============================================================================
+ Round Off  PV(   7)= -6.0090127834361D-01 (+/- 2.94D-02)    PS= 6.91D-06
+          fix it as  -6.0000000000000D-01  & refit:  DRMS(deviations)= 3.402D+00
+ For J=  0  ETRY=     0.1433 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 1:  DRMSD= 6.4954662D+00    test(PS)= 5.5D+01   test(PU)= 4.2D-02
+    PV(   1) =  3.33880661578988D+02 (+/- 7.8D-02)    PS= 6.8D-04   PC=-1.8D-04
+    PV(   2) =  4.15229199631320D+00 (+/- 9.0D-03)    PS= 5.0D-06   PC=-2.8D-04
+    PV(   3) =  6.31537428408675D+06 (+/- 1.5D+05)    PS= 1.1D+02   PC=-6.0D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46405502497689D-01 (+/- 2.0D-03)    PS= 4.3D-06   PC=-8.3D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 2:  DRMSD= 5.7526169D+00    test(PS)= 5.2D+01   test(PU)= 4.0D-02
+    PV(   1) =  3.33880515892922D+02 (+/- 6.9D-02)    PS= 6.0D-04   PC=-1.5D-04
+    PV(   2) =  4.15205827734675D+00 (+/- 8.0D-03)    PS= 4.5D-06   PC=-2.3D-04
+    PV(   3) =  6.31486031398563D+06 (+/- 1.3D+05)    PS= 9.7D+01   PC=-5.1D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46475450907271D-01 (+/- 1.7D-03)    PS= 3.8D-06   PC=-7.0D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 3:  DRMSD= 5.1775594D+00    test(PS)= 4.9D+01   test(PU)= 3.8D-02
+    PV(   1) =  3.33880393261077D+02 (+/- 6.2D-02)    PS= 5.4D-04   PC=-1.2D-04
+    PV(   2) =  4.15186154300819D+00 (+/- 7.2D-03)    PS= 4.0D-06   PC=-2.0D-04
+    PV(   3) =  6.31442790913853D+06 (+/- 1.2D+05)    PS= 8.7D+01   PC=-4.3D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46534331143646D-01 (+/- 1.6D-03)    PS= 3.4D-06   PC=-5.9D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 4:  DRMSD= 4.7273230D+00    test(PS)= 4.5D+01   test(PU)= 3.5D-02
+    PV(   1) =  3.33880290041309D+02 (+/- 5.6D-02)    PS= 4.9D-04   PC=-1.0D-04
+    PV(   2) =  4.15169593868855D+00 (+/- 6.6D-03)    PS= 3.7D-06   PC=-1.7D-04
+    PV(   3) =  6.31406406467853D+06 (+/- 1.1D+05)    PS= 8.0D+01   PC=-3.6D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46583894735004D-01 (+/- 1.4D-03)    PS= 3.1D-06   PC=-5.0D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 5:  DRMSD= 4.3799475D+00    test(PS)= 4.1D+01   test(PU)= 3.1D-02
+    PV(   1) =  3.33880203157960D+02 (+/- 5.2D-02)    PS= 4.6D-04   PC=-8.7D-05
+    PV(   2) =  4.15155653716667D+00 (+/- 6.1D-03)    PS= 3.4D-06   PC=-1.4D-04
+    PV(   3) =  6.31375788855205D+06 (+/- 9.9D+04)    PS= 7.4D+01   PC=-3.1D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46625616252591D-01 (+/- 1.3D-03)    PS= 2.9D-06   PC=-4.2D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 6:  DRMSD= 4.1157815D+00    test(PS)= 3.7D+01   test(PU)= 2.8D-02
+    PV(   1) =  3.33880130024543D+02 (+/- 4.9D-02)    PS= 4.3D-04   PC=-7.3D-05
+    PV(   2) =  4.15143919150079D+00 (+/- 5.7D-03)    PS= 3.2D-06   PC=-1.2D-04
+    PV(   3) =  6.31350022513638D+06 (+/- 9.3D+04)    PS= 6.9D+01   PC=-2.6D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46660736767287D-01 (+/- 1.2D-03)    PS= 2.7D-06   PC=-3.5D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 7:  DRMSD= 3.9175944D+00    test(PS)= 3.3D+01   test(PU)= 2.5D-02
+    PV(   1) =  3.33880068464090D+02 (+/- 4.7D-02)    PS= 4.1D-04   PC=-6.2D-05
+    PV(   2) =  4.15134041135244D+00 (+/- 5.4D-03)    PS= 3.0D-06   PC=-9.9D-05
+    PV(   3) =  6.31328337692916D+06 (+/- 8.8D+04)    PS= 6.6D+01   PC=-2.2D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46690300858840D-01 (+/- 1.2D-03)    PS= 2.6D-06   PC=-3.0D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 8:  DRMSD= 3.7706818D+00    test(PS)= 2.8D+01   test(PU)= 2.2D-02
+    PV(   1) =  3.33880016644576D+02 (+/- 4.5D-02)    PS= 3.9D-04   PC=-5.2D-05
+    PV(   2) =  4.15125725893751D+00 (+/- 5.2D-03)    PS= 2.9D-06   PC=-8.3D-05
+    PV(   3) =  6.31310087094146D+06 (+/- 8.5D+04)    PS= 6.3D+01   PC=-1.8D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46715187747986D-01 (+/- 1.1D-03)    PS= 2.5D-06   PC=-2.5D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.57D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle # 9:  DRMSD= 3.6628768D+00    test(PS)= 2.5D+01   test(PU)= 1.9D-02
+    PV(   1) =  3.33879973024208D+02 (+/- 4.4D-02)    PS= 3.8D-04   PC=-4.4D-05
+    PV(   2) =  4.15118726148853D+00 (+/- 5.1D-03)    PS= 2.8D-06   PC=-7.0D-05
+    PV(   3) =  6.31294726296755D+06 (+/- 8.2D+04)    PS= 6.2D+01   PC=-1.5D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46736137491145D-01 (+/- 1.1D-03)    PS= 2.4D-06   PC=-2.1D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-2.10D-06
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #10:  DRMSD= 3.5844154D+00    test(PS)= 2.1D+01   test(PU)= 1.6D-02
+    PV(   1) =  3.33879936304878D+02 (+/- 4.3D-02)    PS= 3.7D-04   PC=-3.7D-05
+    PV(   2) =  4.15112833758845D+00 (+/- 5.0D-03)    PS= 2.8D-06   PC=-5.9D-05
+    PV(   3) =  6.31281797313690D+06 (+/- 8.1D+04)    PS= 6.0D+01   PC=-1.3D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46753773024352D-01 (+/- 1.1D-03)    PS= 2.4D-06   PC=-1.8D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-6.42D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #11:  DRMSD= 3.5276748D+00    test(PS)= 1.8D+01   test(PU)= 1.4D-02
+    PV(   1) =  3.33879905395373D+02 (+/- 4.2D-02)    PS= 3.7D-04   PC=-3.1D-05
+    PV(   2) =  4.15107873525042D+00 (+/- 4.9D-03)    PS= 2.7D-06   PC=-5.0D-05
+    PV(   3) =  6.31270914932131D+06 (+/- 7.9D+04)    PS= 5.9D+01   PC=-1.1D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46768618694096D-01 (+/- 1.1D-03)    PS= 2.3D-06   PC=-1.5D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-2.09D-03
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #12:  DRMSD= 3.4868394D+00    test(PS)= 1.5D+01   test(PU)= 1.2D-02
+    PV(   1) =  3.33879879375959D+02 (+/- 4.2D-02)    PS= 3.6D-04   PC=-2.6D-05
+    PV(   2) =  4.15103697971292D+00 (+/- 4.8D-03)    PS= 2.7D-06   PC=-4.2D-05
+    PV(   3) =  6.31261754971396D+06 (+/- 7.8D+04)    PS= 5.9D+01   PC=-9.2D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46781115878296D-01 (+/- 1.1D-03)    PS= 2.3D-06   PC=-1.2D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1434 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-1.64D-06
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #13:  DRMSD= 3.4575544D+00    test(PS)= 1.3D+01   test(PU)= 1.0D-02
+    PV(   1) =  3.33879857472882D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-2.2D-05
+    PV(   2) =  4.15100182957210D+00 (+/- 4.8D-03)    PS= 2.7D-06   PC=-3.5D-05
+    PV(   3) =  6.31254044676689D+06 (+/- 7.8D+04)    PS= 5.8D+01   PC=-7.7D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46791636115652D-01 (+/- 1.0D-03)    PS= 2.3D-06   PC=-1.1D-05
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #14:  DRMSD= 3.4366050D+00    test(PS)= 1.1D+01   test(PU)= 8.5D-03
+    PV(   1) =  3.33879839034855D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-1.8D-05
+    PV(   2) =  4.15097223984517D+00 (+/- 4.8D-03)    PS= 2.7D-06   PC=-3.0D-05
+    PV(   3) =  6.31247554524059D+06 (+/- 7.7D+04)    PS= 5.8D+01   PC=-6.5D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46800492159139D-01 (+/- 1.0D-03)    PS= 2.3D-06   PC=-8.9D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #15:  DRMSD= 3.4216439D+00    test(PS)= 9.4D+00   test(PU)= 7.2D-03
+    PV(   1) =  3.33879823513653D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-1.6D-05
+    PV(   2) =  4.15094733088560D+00 (+/- 4.7D-03)    PS= 2.7D-06   PC=-2.5D-05
+    PV(   3) =  6.31242091359974D+06 (+/- 7.7D+04)    PS= 5.8D+01   PC=-5.5D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46807947279158D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-7.5D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #16:  DRMSD= 3.4109706D+00    test(PS)= 7.9D+00   test(PU)= 6.1D-03
+    PV(   1) =  3.33879810447812D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-1.3D-05
+    PV(   2) =  4.15092636221701D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.1D-05
+    PV(   3) =  6.31237492625988D+06 (+/- 7.7D+04)    PS= 5.7D+01   PC=-4.6D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46814223094131D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-6.3D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #17:  DRMSD= 3.4033605D+00    test(PS)= 6.7D+00   test(PU)= 5.1D-03
+    PV(   1) =  3.33879799448879D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-1.1D-05
+    PV(   2) =  4.15090871051250D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.8D-05
+    PV(   3) =  6.31233621510286D+06 (+/- 7.7D+04)    PS= 5.7D+01   PC=-3.9D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46819506161082D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-5.3D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-5.96D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #18:  DRMSD= 3.3979353D+00    test(PS)= 5.6D+00   test(PU)= 4.3D-03
+    PV(   1) =  3.33879790189866D+02 (+/- 4.1D-02)    PS= 3.6D-04   PC=-9.3D-06
+    PV(   2) =  4.15089385105744D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.5D-05
+    PV(   3) =  6.31230362863410D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-3.3D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46823953523333D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-4.4D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.36D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #19:  DRMSD= 3.3940671D+00    test(PS)= 4.8D+00   test(PU)= 3.6D-03
+    PV(   1) =  3.33879782395526D+02 (+/- 4.1D-02)    PS= 3.5D-04   PC=-7.8D-06
+    PV(   2) =  4.15088134214676D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.3D-05
+    PV(   3) =  6.31227619766238D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.7D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46827697380350D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-3.7D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-9.21D-04
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #20:  DRMSD= 3.3913078D+00    test(PS)= 4.0D+00   test(PU)= 3.1D-03
+    PV(   1) =  3.33879775834151D+02 (+/- 4.1D-02)    PS= 3.5D-04   PC=-6.6D-06
+    PV(   2) =  4.15087081195204D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.1D-05
+    PV(   3) =  6.31225310641557D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.3D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46830849017924D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-3.2D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.63D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #21:  DRMSD= 3.3893381D+00    test(PS)= 3.4D+00   test(PU)= 2.6D-03
+    PV(   1) =  3.33879770310704D+02 (+/- 4.1D-02)    PS= 3.5D-04   PC=-5.5D-06
+    PV(   2) =  4.15086194746490D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-8.9D-06
+    PV(   3) =  6.31223366822821D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.9D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46833502117677D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.7D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-5.75D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #22:  DRMSD= 3.3879306D+00    test(PS)= 2.8D+00   test(PU)= 2.2D-03
+    PV(   1) =  3.33879765660982D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-4.6D-06
+    PV(   2) =  4.15085448519383D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-7.5D-06
+    PV(   3) =  6.31221730513294D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.6D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46835735541097D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.2D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-6.84D-03
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #23:  DRMSD= 3.3869237D+00    test(PS)= 2.4D+00   test(PU)= 1.8D-03
+    PV(   1) =  3.33879761746777D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.9D-06
+    PV(   2) =  4.15084820332874D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-6.3D-06
+    PV(   3) =  6.31220353060845D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.4D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46837615674735D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.9D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-1.68D-03
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #24:  DRMSD= 3.3862023D+00    test(PS)= 2.0D+00   test(PU)= 1.5D-03
+    PV(   1) =  3.33879758451736D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.3D-06
+    PV(   2) =  4.15084291514712D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-5.3D-06
+    PV(   3) =  6.31219193511914D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.2D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46839198403642D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.6D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-5.90D-04
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #25:  DRMSD= 3.3856844D+00    test(PS)= 1.7D+00   test(PU)= 1.3D-03
+    PV(   1) =  3.33879755677918D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.8D-06
+    PV(   2) =  4.15083846346398D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-4.5D-06
+    PV(   3) =  6.31218217393746D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-9.8D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46840530772469D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.3D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-2.77D-04
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #26:  DRMSD= 3.3853120D+00    test(PS)= 1.4D+00   test(PU)= 1.1D-03
+    PV(   1) =  3.33879753342874D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.3D-06
+    PV(   2) =  4.15083471595886D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-3.7D-06
+    PV(   3) =  6.31217395687512D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-8.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46841652384062D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.1D-06
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-1.41D-04
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #27:  DRMSD= 3.3850434D+00    test(PS)= 1.2D+00   test(PU)= 9.2D-04
+    PV(   1) =  3.33879751377193D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.0D-06
+    PV(   2) =  4.15083156124252D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-3.2D-06
+    PV(   3) =  6.31216703965824D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-6.9D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46842596576717D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-9.4D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-7.60D-05
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #28:  DRMSD= 3.3848492D+00    test(PS)= 1.0D+00   test(PU)= 7.7D-04
+    PV(   1) =  3.33879749722453D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.7D-06
+    PV(   2) =  4.15082890554555D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.7D-06
+    PV(   3) =  6.31216121665326D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-5.8D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46843391415095D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-7.9D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #29:  DRMSD= 3.3847083D+00    test(PS)= 8.5D-01   test(PU)= 6.5D-04
+    PV(   1) =  3.33879748329460D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.4D-06
+    PV(   2) =  4.15082666993198D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.2D-06
+    PV(   3) =  6.31215631477117D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-4.9D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46844060524419D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-6.7D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #30:  DRMSD= 3.3846058D+00    test(PS)= 7.2D-01   test(PU)= 5.5D-04
+    PV(   1) =  3.33879747156817D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.2D-06
+    PV(   2) =  4.15082478795163D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.9D-06
+    PV(   3) =  6.31215218829260D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-4.1D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46844623792909D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-5.6D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #31:  DRMSD= 3.3845308D+00    test(PS)= 6.0D-01   test(PU)= 4.6D-04
+    PV(   1) =  3.33879746169663D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-9.9D-07
+    PV(   2) =  4.15082320366643D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.6D-06
+    PV(   3) =  6.31214871456532D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-3.5D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46845097962564D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-4.7D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #32:  DRMSD= 3.3844757D+00    test(PS)= 5.1D-01   test(PU)= 3.9D-04
+    PV(   1) =  3.33879745338661D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-8.3D-07
+    PV(   2) =  4.15082186998578D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.3D-06
+    PV(   3) =  6.31214579032049D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.9D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46845497127356D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-4.0D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #33:  DRMSD= 3.3844350D+00    test(PS)= 4.3D-01   test(PU)= 3.3D-04
+    PV(   1) =  3.33879744639103D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-7.0D-07
+    PV(   2) =  4.15082074726927D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.1D-06
+    PV(   3) =  6.31214332865173D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.5D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46845833151525D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-3.4D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #34:  DRMSD= 3.3844048D+00    test(PS)= 3.6D-01   test(PU)= 2.8D-04
+    PV(   1) =  3.33879744050209D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-5.9D-07
+    PV(   2) =  4.15081980214561D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-9.5D-07
+    PV(   3) =  6.31214125637292D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.1D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846116022941D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.8D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #35:  DRMSD= 3.3843822D+00    test(PS)= 3.0D-01   test(PU)= 2.3D-04
+    PV(   1) =  3.33879743554465D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-5.0D-07
+    PV(   2) =  4.15081900652300D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-8.0D-07
+    PV(   3) =  6.31213951189447D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.7D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846354149332D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.4D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #36:  DRMSD= 3.3843653D+00    test(PS)= 2.6D-01   test(PU)= 2.0D-04
+    PV(   1) =  3.33879743137136D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-4.2D-07
+    PV(   2) =  4.15081833675332D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-6.7D-07
+    PV(   3) =  6.31213804336521D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.5D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846554608511D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.0D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #37:  DRMSD= 3.3843524D+00    test(PS)= 2.2D-01   test(PU)= 1.6D-04
+    PV(   1) =  3.33879742785822D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.5D-07
+    PV(   2) =  4.15081777292868D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-5.6D-07
+    PV(   3) =  6.31213680712778D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.2D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846723358753D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.7D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle #38:  DRMSD= 3.3843427D+00    test(PS)= 1.8D-01   test(PU)= 1.4D-04
+    PV(   1) =  3.33879742490082D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.0D-07
+    PV(   2) =  4.15081729829054D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-4.7D-07
+    PV(   3) =  6.31213576644204D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846865415897D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.4D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 6.98D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #39:  DRMSD= 3.3843351D+00    test(PS)= 1.5D-01   test(PU)= 1.2D-04
+    PV(   1) =  3.33879742241121D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.5D-07
+    PV(   2) =  4.15081689873134D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-4.0D-07
+    PV(   3) =  6.31213489037615D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-8.8D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46846985002274D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.2D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 8.97D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #40:  DRMSD= 3.3843293D+00    test(PS)= 1.3D-01   test(PU)= 9.8D-05
+    PV(   1) =  3.33879742031538D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.1D-07
+    PV(   2) =  4.15081656237516D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-3.4D-07
+    PV(   3) =  6.31213415288912D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-7.4D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847085672223D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.0D-07
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 9.65D-02
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #41:  DRMSD= 3.3843248D+00    test(PS)= 1.1D-01   test(PU)= 8.3D-05
+    PV(   1) =  3.33879741855111D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.8D-07
+    PV(   2) =  4.15081627922408D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.8D-07
+    PV(   3) =  6.31213353205540D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-6.2D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847170418102D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-8.5D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.15D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #42:  DRMSD= 3.3843212D+00    test(PS)= 9.1D-02   test(PU)= 7.0D-05
+    PV(   1) =  3.33879741706588D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.5D-07
+    PV(   2) =  4.15081604086236D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.4D-07
+    PV(   3) =  6.31213300942991D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-5.2D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847241758744D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-7.1D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.19D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #43:  DRMSD= 3.3843184D+00    test(PS)= 7.7D-02   test(PU)= 5.9D-05
+    PV(   1) =  3.33879741581564D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.3D-07
+    PV(   2) =  4.15081584020483D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-2.0D-07
+    PV(   3) =  6.31213256947044D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-4.4D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847301814666D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-6.0D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.24D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #44:  DRMSD= 3.3843162D+00    test(PS)= 6.4D-02   test(PU)= 4.9D-05
+    PV(   1) =  3.33879741476312D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.1D-07
+    PV(   2) =  4.15081567128777D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.7D-07
+    PV(   3) =  6.31213219910895D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-3.7D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847352370825D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-5.1D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.39D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #45:  DRMSD= 3.3843144D+00    test(PS)= 5.4D-02   test(PU)= 4.1D-05
+    PV(   1) =  3.33879741387713D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-8.9D-08
+    PV(   2) =  4.15081552908994D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.4D-07
+    PV(   3) =  6.31213188732687D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-3.1D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847394930040D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-4.3D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.93D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #46:  DRMSD= 3.3843129D+00    test(PS)= 4.6D-02   test(PU)= 3.5D-05
+    PV(   1) =  3.33879741313122D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-7.5D-08
+    PV(   2) =  4.15081540938550D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.2D-07
+    PV(   3) =  6.31213162486943D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.6D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847430757074D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-3.6D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.95D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #47:  DRMSD= 3.3843118D+00    test(PS)= 3.8D-02   test(PU)= 2.9D-05
+    PV(   1) =  3.33879741250337D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-6.3D-08
+    PV(   2) =  4.15081530861568D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-1.0D-07
+    PV(   3) =  6.31213140391891D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-2.2D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847460917003D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-3.0D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.97D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #48:  DRMSD= 3.3843108D+00    test(PS)= 3.2D-02   test(PU)= 2.5D-05
+    PV(   1) =  3.33879741197480D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-5.3D-08
+    PV(   2) =  4.15081522378577D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-8.5D-08
+    PV(   3) =  6.31213121792333D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.9D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847486306242D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.5D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 1.98D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #49:  DRMSD= 3.3843100D+00    test(PS)= 2.7D-02   test(PU)= 2.1D-05
+    PV(   1) =  3.33879741152984D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-4.4D-08
+    PV(   2) =  4.15081515237454D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-7.1D-08
+    PV(   3) =  6.31213106135090D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.6D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847507679323D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-2.1D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.10D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #50:  DRMSD= 3.3843094D+00    test(PS)= 2.3D-02   test(PU)= 1.8D-05
+    PV(   1) =  3.33879741115525D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.7D-08
+    PV(   2) =  4.15081509225935D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-6.0D-08
+    PV(   3) =  6.31213092954506D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.3D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847525671547D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.8D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.11D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #51:  DRMSD= 3.3843089D+00    test(PS)= 1.9D-02   test(PU)= 1.5D-05
+    PV(   1) =  3.33879741083994D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-3.2D-08
+    PV(   2) =  4.15081504165328D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-5.1D-08
+    PV(   3) =  6.31213081858829D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-1.1D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847540817733D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.5D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.12D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #52:  DRMSD= 3.3843084D+00    test(PS)= 1.6D-02   test(PU)= 1.2D-05
+    PV(   1) =  3.33879741057452D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.7D-08
+    PV(   2) =  4.15081499905189D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-4.3D-08
+    PV(   3) =  6.31213072517850D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-9.3D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847553568131D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.3D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.13D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #53:  DRMSD= 3.3843081D+00    test(PS)= 1.4D-02   test(PU)= 1.0D-05
+    PV(   1) =  3.33879741035103D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-2.2D-08
+    PV(   2) =  4.15081496318948D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-3.6D-08
+    PV(   3) =  6.31213064654962D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-7.9D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847564301592D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-1.1D-08
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE= 2.13D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+ After Cycle #54:  DRMSD= 3.3843078D+00    test(PS)= 1.2D-02   test(PU)= 8.8D-06
+    PV(   1) =  3.33879741016291D+02 (+/- 4.0D-02)    PS= 3.5D-04   PC=-1.9D-08
+    PV(   2) =  4.15081493299988D+00 (+/- 4.7D-03)    PS= 2.6D-06   PC=-3.0D-08
+    PV(   3) =  6.31213058035747D+06 (+/- 7.6D+04)    PS= 5.7D+01   PC=-6.6D-02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.46847573337222D-01 (+/- 1.0D-03)    PS= 2.2D-06   PC=-9.0D-09
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+ Full 54-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 8.85D-08  TSTPS= 1.2D-02
+ ===============================================================================
+ Round Off  PV(   6)= -5.4684757333722D-01 (+/- 1.03D-03)    PS= 2.22D-06
+          fix it as  -5.4700000000000D-01  & refit:  DRMS(deviations)= 3.384D+00
+ For J=  0  ETRY=     0.1387 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 1:  DRMSD= 1.1078560D+01    test(PS)= 3.5D+01   test(PU)= 6.1D-02
+    PV(   1) =  3.33879278719984D+02 (+/- 1.1D-01)    PS= 1.5D-03   PC=-3.6D-03
+    PV(   2) =  4.15031167518194D+00 (+/- 6.4D-03)    PS= 1.1D-05   PC= 1.3D-04
+    PV(   3) =  6.31136068275242D+06 (+/- 1.4D+05)    PS= 2.4D+02   PC= 8.5D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1435 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 2:  DRMSD= 3.9806586D+00    test(PS)= 2.0D+01   test(PU)= 3.4D-02
+    PV(   1) =  3.33880010039227D+02 (+/- 3.9D-02)    PS= 5.4D-04   PC= 7.3D-04
+    PV(   2) =  4.15028555313756D+00 (+/- 2.3D-03)    PS= 4.0D-06   PC=-2.6D-05
+    PV(   3) =  6.30964632610294D+06 (+/- 5.0D+04)    PS= 8.7D+01   PC=-1.7D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1440 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 3:  DRMSD= 3.4087643D+00    test(PS)= 4.8D+00   test(PU)= 8.3D-03
+    PV(   1) =  3.33879859941549D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC=-1.5D-04
+    PV(   2) =  4.15029075428661D+00 (+/- 2.0D-03)    PS= 3.4D-06   PC= 5.2D-06
+    PV(   3) =  6.30999881399679D+06 (+/- 4.3D+04)    PS= 7.4D+01   PC= 3.5D+02
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 4:  DRMSD= 3.3816610D+00    test(PS)= 9.6D-01   test(PU)= 1.7D-03
+    PV(   1) =  3.33879889893258D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC= 3.0D-05
+    PV(   2) =  4.15028970939381D+00 (+/- 1.9D-03)    PS= 3.4D-06   PC=-1.0D-06
+    PV(   3) =  6.30992848215448D+06 (+/- 4.2D+04)    PS= 7.3D+01   PC=-7.0D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 5:  DRMSD= 3.3805699D+00    test(PS)= 1.9D-01   test(PU)= 3.3D-04
+    PV(   1) =  3.33879883878872D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC=-6.0D-06
+    PV(   2) =  4.15028991890912D+00 (+/- 1.9D-03)    PS= 3.4D-06   PC= 2.1D-07
+    PV(   3) =  6.30994260516785D+06 (+/- 4.2D+04)    PS= 7.3D+01   PC= 1.4D+01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 6:  DRMSD= 3.3805288D+00    test(PS)= 3.9D-02   test(PU)= 6.7D-05
+    PV(   1) =  3.33879885084949D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC= 1.2D-06
+    PV(   2) =  4.15028987688257D+00 (+/- 1.9D-03)    PS= 3.4D-06   PC=-4.2D-08
+    PV(   3) =  6.30993977305618D+06 (+/- 4.2D+04)    PS= 7.3D+01   PC=-2.8D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 7:  DRMSD= 3.3805266D+00    test(PS)= 7.7D-03   test(PU)= 1.3D-05
+    PV(   1) =  3.33879884843029D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC=-2.4D-07
+    PV(   2) =  4.15028988531191D+00 (+/- 1.9D-03)    PS= 3.4D-06   PC= 8.4D-09
+    PV(   3) =  6.30994034113558D+06 (+/- 4.2D+04)    PS= 7.3D+01   PC= 5.7D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 8:  DRMSD= 3.3805266D+00    test(PS)= 1.6D-03   test(PU)= 2.7D-06
+    PV(   1) =  3.33879884891551D+02 (+/- 3.3D-02)    PS= 4.6D-04   PC= 4.9D-08
+    PV(   2) =  4.15028988362120D+00 (+/- 1.9D-03)    PS= 3.4D-06   PC=-1.7D-09
+    PV(   3) =  6.30994022719422D+06 (+/- 4.2D+04)    PS= 7.3D+01   PC=-1.1D-01
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+ Full  8-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 8.96D-09  TSTPS= 1.6D-03
+ ===============================================================================
+ Round Off  PV(   3)=  6.3099402271942D+06 (+/- 4.23D+04)    PS= 7.35D+01
+          fix it as   6.3100000000000D+06  & refit:  DRMS(deviations)= 3.381D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 1:  DRMSD= 3.3808719D+00    test(PS)= 2.3D-01   test(PU)= 4.8D-03
+    PV(   1) =  3.33879905078309D+02 (+/- 3.2D-02)    PS= 6.7D-04   PC= 1.7D-05
+    PV(   2) =  4.15029376012630D+00 (+/- 2.4D-04)    PS= 4.9D-06   PC= 1.1D-06
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 2:  DRMSD= 3.3806306D+00    test(PS)= 9.7D-02   test(PU)= 2.0D-03
+    PV(   1) =  3.33879912374068D+02 (+/- 3.2D-02)    PS= 6.7D-04   PC= 7.3D-06
+    PV(   2) =  4.15029423711042D+00 (+/- 2.4D-04)    PS= 4.9D-06   PC= 4.8D-07
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 3:  DRMSD= 3.3805921D+00    test(PS)= 4.0D-02   test(PU)= 8.4D-04
+    PV(   1) =  3.33879915421849D+02 (+/- 3.2D-02)    PS= 6.7D-04   PC= 3.0D-06
+    PV(   2) =  4.15029443636895D+00 (+/- 2.4D-04)    PS= 4.9D-06   PC= 2.0D-07
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 4:  DRMSD= 3.3805869D+00    test(PS)= 1.7D-02   test(PU)= 3.5D-04
+    PV(   1) =  3.33879916695052D+02 (+/- 3.2D-02)    PS= 6.7D-04   PC= 1.3D-06
+    PV(   2) =  4.15029451960847D+00 (+/- 2.4D-04)    PS= 4.9D-06   PC= 8.3D-08
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 5:  DRMSD= 3.3805866D+00    test(PS)= 7.0D-03   test(PU)= 1.5D-04
+    PV(   1) =  3.33879917226927D+02 (+/- 3.2D-02)    PS= 6.7D-04   PC= 5.3D-07
+    PV(   2) =  4.15029455438145D+00 (+/- 2.4D-04)    PS= 4.9D-06   PC= 3.5D-08
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+ Full  5-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 8.16D-08  TSTPS= 7.0D-03
+ ===============================================================================
+ Round Off  PV(   2)=  4.1502945543814D+00 (+/- 2.37D-04)    PS= 4.94D-06
+          fix it as   4.1503000000000D+00  & refit:  DRMS(deviations)= 3.381D+00
+ For J=  0  ETRY=     0.1438 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 1:  DRMSD= 3.3819417D+00    test(PS)= 2.6D-01   test(PU)= 5.6D-02
+    PV(   1) =  3.33879534446006D+02 (+/- 6.1D-03)    PS= 1.3D-03   PC= 3.4D-04
+    PV(   2) =  4.15030000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1440 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 2:  DRMSD= 3.3807336D+00    test(PS)= 3.5D-07   test(PU)= 7.4D-08
+    PV(   1) =  3.33879534446455D+02 (+/- 6.1D-03)    PS= 1.3D-03   PC= 4.5D-10
+    PV(   2) =  4.15030000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+ For J=  0  ETRY=     0.1440 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ After Cycle # 3:  DRMSD= 3.3807336D+00    test(PS)= 2.1D-10   test(PU)= 4.5D-11
+    PV(   1) =  3.33879534446454D+02 (+/- 6.1D-03)    PS= 1.3D-03   PC=-2.7D-13
+    PV(   2) =  4.15030000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  6.31000000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) = -6.00000000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+ Full  3-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 5.81D-12  TSTPS= 2.1D-10
+ ===============================================================================
+ Round Off  PV(   1)=  3.3387953444645D+02 (+/- 6.08D-03)    PS= 1.30D-03
+          fix it as   3.3388000000000D+02  & refit:  DRMS(deviations)= 3.381D+00
+ For J=  0  ETRY=     0.1440 > VMAX=    -0.0004  find onee turn point:  R=  3.35
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=20  DE=-3.89D-04
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.010
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  2  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v=  9  is below desired (v= 10, J= -1)
+    Could not find vibrational levels beyond (v=  9)
+
+    20 data fit to    5 param. yields  DRMS(devn)= 3.38302D+00
+    PV(   1) =  3.33880000000000D+02 (+/- 5.9D-02)    PS= 2.9D-04   PC= 3.6D-03
+    PV(   2) =  4.15030000000000D+00 (+/- 1.2D-02)    PS= 2.2D-06   PC= 1.1D-03
+    PV(   3) =  6.31000000000000D+06 (+/- 1.1D+05)    PS= 4.7D+01   PC= 8.9D+03
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) = -5.47000000000000D-01 (+/- 1.9D-03)    PS= 1.8D-06   PC=-1.3D-04
+    PV(   7) = -6.00000000000000D-01 (+/- 2.9D-02)    PS= 6.9D-06   PC=-2.9D-03
+
+ ========================================================================
+ For fit of    5  free parameters to    20  transitions,  DSE=  3.9063799    
+ ========================================================================
+ ==============================================================================
+
+ State a3  represented by an MLR(p= 5, q= 1) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y1^i}
+                                                              for  i= 1 to  1
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.3100000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.4909953312
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.338800000000D+02    6.0D-02       2.9D-04
+      Re      4.150300000000D+00    1.2D-02       2.2D-06
+     C 6      6.310000000000D+06    1.1D+05       4.7D+01
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.470000000000D-01    1.9D-03       1.8D-06
+   beta( 1)  -6.000000000000D-01    2.9D-02       6.9D-06
+   beta_INF  -4.909953311630D-01       --            --
+   C11{eff}   2.564279307338D+09       --            --
+ ==============================================================================
+
+ ===============================================================
+  *** Discrepancies for    1 bands/series of Li(  6)-Li(  6) ***
+ ===============================================================
+
+ ==========================================================
+   20 PAS Binding Energies for State a3   Li(  6)-Li(  6)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   20      0      9    8.4D-03  2.6D-02   -0.898   3.383
+ ============================================================
+
+ ===============================================================
+  *** Discrepancies for    0 bands/series of Li(  7)-Li(  7) ***
+ ===============================================================
+
+ ==============================================================================
+ Fit of      5 param to     20 data yields   DMS(devn.)=  3.38302    
+ ==============================================================================

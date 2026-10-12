@@ -1,0 +1,95 @@
+      IF(PSEL(ISTATE).EQ.5) THEN
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c** For the Tiemann Potential Energy Function.
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          BT= PHI(NLPow(ISTATE)+1, ISTATE)
+          Rinn= PHI(NLPow(ISTATE)+2, ISTATE)
+          Rout= PHI(NLPow(ISTATE)+3, ISTATE)
+c** Determine analytic function attaching smoothly to inner wall of 
+c  polynomial expansion at  R= Rinn < Rm
+          YP= (Rinn - RE(ISTATE))/(Rinn+ BT*RE(ISTATE))
+          YPP= 1.d0
+          A1= PHI(0,ISTATE) + VLIM(ISTATE) - DE(ISTATE)
+          A2= 0.d0
+          DO  J= 1, NLpow(ISTATE)
+              A2= A2+ J*YPP*PHI(J,ISTATE)
+              YPP= YPP*YP
+              A1= A1+ YPP*PHI(J,ISTATE)
+              ENDDO
+          A2= A2*(RE(ISTATE)+ BT*RE(ISTATE))/(Rinn + BT*RE(ISTATE))**2
+c* If inward extrapolation is exponential:   A1*exp(-A2*(R-Rinn))
+          A2= -A2/A1
+c** With long-range tail an NCMM-term inverse-power sum, add 1 exponential
+c   term to ensure continuity and smoothness at  Rout
+          YP= (Rout - RE(ISTATE))/(Rout+ BT*RE(ISTATE))
+          YPP= 1.d0
+          B1= PHI(0,ISTATE) + VLIM(ISTATE) - DE(ISTATE)
+          B2= 0.d0
+          DO  J= 1, NLpow(ISTATE)
+              B2= B2+ J*YPP*PHI(J,ISTATE)
+              YPP= YPP*YP
+              B1= B1+ YPP*PHI(J,ISTATE)
+              ENDDO
+          B3= VLIM(ISTATE)
+          B4= 0.d0
+          DO  J= 1, NCMM(ISTATE)
+              B5= CmVAL(J,ISTATE)/Rout**MMLR(J,ISTATE)
+              B3= B3- B5
+              B4= B4+ MMLR(J,ISTATE)*B5
+              ENDDO
+cc          B3= B3- B1
+          B4= (B2- B4/Rout)/B3
+c ... now generate potential as a Tiemann-type expansion
+cc              WRITE(6,698) IPVSTART+ 1
+          DO  I= ISTART, ISTOP
+              RVAL= RD(I,ISTATE)
+              IF(RDIST.GT.0) RVAL= RDIST
+              IF(RVAL.LE.Rinn) THEN
+c ... for exponential inward extrapolation ...
+                  VPOT(I,ISTATE)= A1*DEXP(-A2*(RVAL- Rinn))
+     1                                     + VLIM(ISTATE) - De(ISTATE)
+                ELSEIF(RVAL.LE.Rout) THEN
+                  YP= (RVAL - RE(ISTATE))/(RVAL + BT*RE(ISTATE))
+                  A3= PHI(0,ISTATE) + VLIM(ISTATE) - DE(ISTATE)
+                  YPP= 1.d0
+                  DO  J= 1,NLpow(ISTATE)
+                      YPP= YPP*YP
+                      A3= A3+ PHI(J,ISTATE)*YPP
+                      ENDDO
+                  VPOT(I,ISTATE)= A3
+                ELSEIF(RVAL.GT.Rout) THEN
+                  A3= VLIM(ISTATE)
+                  DO  J= 1, NCMM(ISTATE)
+                      A3= A3- CmVAL(J,ISTATE)/RVAL**MMLR(J,ISTATE)
+                      ENDDO
+                  VPOT(I,ISTATE)= A3 - B3*DEXP(-B4*(RVAL- Rout))
+                ENDIF
+              IF(RDIST.GT.0) THEN
+                  VDIST= VPOT(I,ISTATE)
+                  PHIDIST= 0.d0
+                  IF(IDAT.LE.0) GO TO 999
+                  ENDIF
+              IPV= IPVSTART
+              DVtot(IPV,I)= -1.d0
+              IPV= IPV+1
+              DVtot(IPV,I)= 0.d0
+              DO  J=1, NCMM(ISTATE)
+                  IPV= IPV+1
+                  DVtot(IPV,I)= 1.d0
+                  ENDDO
+              IPV= IPV+ 1
+              DVtot(IPV,I)= 1.d0
+              DO  J= 1, NLpow(ISTATE)
+                 IPV= IPV+ 1
+                 DVtot(IPV,I)= DVtot(IPV-1,I)*YP
+                 ENDDO
+              ENDDO
+
+cc              WRITE(6,699) IPV
+
+      rewind(10)
+      write(10,612) (RD(i,ISTATE),vpot(i,istate),
+     1                                        i= 1, NDATPT(ISTATE),50)
+          ENDIF
+c*********** End Tiemann Potential Energy Function *****************
+

@@ -1,0 +1,149 @@
+c***********************************************************************
+      SUBROUTINE dampF(r,b,fnform,MMAX,DM,DMP,DMPP)
+c** Subroutine to generate values 'Dm' and its first `Dmp' and second
+c  'Dmpp' derivatives w.r.t. R of the chosen potential damping function
+c   IDF = 1 :  Tang-Toennies damping function [JCP 80,3726(1984)]
+c   IDF = 2 :  damped-dispersion damping function [MolP 52,763(1984)]
+c   IDF = 3 : extend IDF=2 by multiplying by Scoles' global damping fx.
+c  all assuming  R  in units Angst. 
+c***********************************************************************
+
+c-----------------------------------------------------------------------
+c                 Upon Input
+c  b - the value of the damping coeffient (method of calculation described
+c      later in the subroutine)
+c  r - the radial distance at which the damping function is being evaluated
+c  MMAX - The exponent of the highest order long range term used in the 
+c         analysis
+c
+c                 Upon Output
+c  DM(i) - The value of the damping function for the long range term 
+c          C_i/r^i
+c  DMP(i) - The value of the first derivative of the damping function for 
+c           the long range term C_i/r^i
+c  DMPP(i) - The value of the second derivative of the damping function 
+c            for the long range term C_i/r^i
+c-----------------------------------------------------------------------
+
+      INTEGER MMAX,m,n,fnform
+      REAL*8 b,r,br,XP,SSm,SSm1,SSm2,mfact,TK,DM(MMAX),DMP(MMAX),
+     1       DMPP(MMAX),SM(-1:MMAX)
+
+c-----------------------------------------------------------------------
+c   Parameter fnform introduced to allow the user to choose what damping
+c   function form is used upon compiling.
+c       fnform = 0
+c     Orginial damping function form such that DM(m)= {Tang-Toennies
+c     function}(m-1). This function is such that DM(m)/r**m approaches
+c     a constant as r approaches zero.
+c       fnform = -1
+c     Modified damping function form such that DM(m)= {Tang-Toennies
+c     function}(m-2). This function is such that DM(m)/r**m approaches
+c     infinity as r approaches zero.
+c       fnform = 1
+c     Damping function form originally discounted such that DM(m)= 
+c     {Tang-Toennies function}(m). This function is such that DM(m)/r**m
+c     approaches zero as r approaches zero.
+c------------------------------------------------------------------------
+c------------------------------------------------------------------------
+c     Exit if fnform is not on of these values
+c------------------------------------------------------------------------
+
+      IF((fnform.LT.-1).OR.(fnform.GT.1)) THEN
+         WRITE(6,600)
+         STOP
+      ENDIF
+
+  600 FORMAT(/,'ERROR!! The input variable for IDF does not correspond'
+     1   ' to a valid damping function form.',/)
+
+c------------------------------------------------------------------------
+c  The value of b used has been normalized to the Hydrogen data presented
+c  by Kreek and Meath in J. Chem. Phys. Volume 50, Page 2289 (1969).
+c  The ratio has been chosen such that b = 2.78 * (I_p^X / I_p^H)^0.66
+c  for the homoatomic diatomic species X_2, where I_p^A is the ionization
+c  potential of atom A. For the heteroatomic diatomic species XY, 
+c  b = 2 * ( b^X  *  b^Y ) / ( b^X  +  b^Y )
+c------------------------------------------------------------------------
+
+      br= b*r
+
+c-----------------------------------------------------------------------
+c  The damping function is an incomplete gamma function of order m,
+c  similar to that proposed by Tang and Toennies in J. Chem. Phys. Volume
+c  80, Page 3726 (1984).  
+c-----------------------------------------------------------------------
+
+      XP= DEXP(-br)
+      SSm= 0.d0
+      SSm1= 0.d0
+      SSm2= 0.d0
+      TK= 1.d0
+      DO m=1,MMAX+fnform
+         SSm2= SSm1
+         SSm1= SSm
+         SSm= SSm + TK
+         DM(m-fnform)= 1.d0 - XP*SSm
+c   Above line is a source of numerical noise for small r
+         DMP(m-fnform)= b*XP*(SSm - SSm1)
+         DMPP(m-fnform)= b**2 *XP* (2.d0*SSm1 - SSm - SSm2)
+         TK= TK*br/DFLOAT(m)
+      ENDDO
+
+c-----------------------------------------------------------------------
+c  The above section handles the calculation of the value of the damping
+c  function for most values of r. However, as stated above, at very small
+c  r, the damping function becomes unstable due to numerical noise. Thus,
+c  if the value of the damping function falls below a certain value it
+c  is re-evaluated by the different functional definition below.
+c-----------------------------------------------------------------------
+
+      IF(DM(MMAX).LT.1.0D-13) THEN
+         mfact= 1.d0
+         DO n=1,MMAX+fnform
+            mfact= mfact*DFLOAT(n)
+         ENDDO
+         SSm= 0.d0
+         TK= (br)**(MMAX+fnform)/mfact
+         DO n=MMAX+fnform,MMAX+4+fnform
+c-----------------------------------------------------------------------
+c   This approximates a sum to infinity - however, as this functional
+c   definition is only used at very small r, successive terms decrease in 
+c   value by orders of magnitude. Thus MMAX+3 has been found to be 
+c   sufficient.
+c----------------------------------------------------------------------
+            SSm= SSm+TK
+            TK= TK*br/DFLOAT(n+1)
+         ENDDO
+         SM(MMAX)= SSm
+         TK= (br)**(MMAX+fnform)/mfact
+         DO n=1,MMAX-1
+            TK= TK*DFLOAT(MMAX+1+fnform-n)/br
+            SM(MMAX-n)= TK+SM(MMAX-n+1)
+         ENDDO
+
+         IF(fnform.EQ.0) THEN
+            SM(0)=1.d0 + SM(1)
+            SM(-1)=SM(0)
+         ENDIF
+
+         IF(fnform.EQ.-1) THEN
+            SM(0)=SM(1)
+            SM(-1)=SM(0)
+         ENDIF
+
+         IF(fnform.EQ.1) THEN
+            SM(0)=br + SM(1)
+            SM(-1)=1.d0 + SM(0)
+         ENDIF
+
+         DO m=1,MMAX
+            DM(m)= XP*SM(m)
+            DMP(m)= -b*XP*(SM(m)-SM(m-1))
+            DMPP(m)= b**2 *XP*(SM(m)-2.d0*SM(m-1)+SM(m-2))
+         ENDDO
+      ENDIF
+      RETURN
+      END
+c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12
+

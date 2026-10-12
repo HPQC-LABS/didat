@@ -1,0 +1,147 @@
+20,21d19
+<       INTEGER MMAX
+<       PARAMETER (MMAX= 20)
+25c23,24
+<       INTEGER NPASS, NSTATES,NALL,ISTATE,IPV,I,J,MMN,m,MM1
+---
+>       INTEGER NPASS, NSTATES,NALL,ISTATE,IPV,I,J,MMN,m,MM1,MMAX
+>       PARAMETER (MMAX=20)
+27,28c26
+<      1 C3VAL,C6adj,C9adj,RET,RETSig,RETPi,RETp,RETm,Dm(MMAX),Dmp(MMAX),
+<      2 Dmpp(MMAX)
+---
+>      1  C3VAL,C6adj,C9adj,Dm(MMAX),Dmp(MMAX),Dmpp(MMAX)
+58,65d55
+< c** Include QED retardation function in C3 terms for Li2(A) !!
+< c  NOTE ... the numerical factor is  2\pi/\lambda  for this case
+< c  Ignore effect of retardation on the partial derivatives & C6adj & C9adj.
+<                   RET= 9.364128d-4*RE(ISTATE) 
+<                   RETSig= DCOS(RET) + (RET)*DSIN(RET)
+<                   RETPi= RETSig - RET**2 *DCOS(RET)
+<                   RETp= RETSig + 0.5d0*RETPi
+<                   RETm= RETSig - 0.5d0*RETPi
+69c59
+<                   T1= (C3VAL*RETm 
+---
+>                   T1= (0.5d0*C3VAL 
+77,78c67,69
+<                   ULRe= 0.5d0*(- CmVAL(2,ISTATE) + RE3*(C3VAL*RETp
+<      1    + RE3*(C6adj + CmVAL(4,ISTATE)))) + 0.5d0*T0 + C9adj*RE6*RE3
+---
+>                   ULRe= 0.5d0*(- CmVAL(2,ISTATE)
+>      1            + RE3*(1.5d0*C3VAL + RE3*(C6adj + CmVAL(4,ISTATE))))
+>      2                                      + 0.5d0*T0 + C9adj*RE6*RE3
+82c73
+< c** Define uLR(r_e) for simple inverse-power-sum uLR of MLR/MLJ potential
+---
+> c** Fix up long range for 'normal' MLR/MLJ potential
+84c75
+<                   IF(bDAMP(ISTATE).LE.0.d0) THEN
+---
+>                   IF(bDAMP(ISTATE).LT.0.d0) THEN
+89c80
+<                     ELSE
+---
+>                   ELSE
+91,94c82,85
+<      1                     MMLR(NCMM(ISTATE),ISTATE),MMAX,Dm,Dmp,Dmpp)
+<                       DO  m= 1,NCMM(ISTATE)
+<                           ULRe= ULRe+ Dm(MMLR(m,ISTATE))*CmVAL(m,ISTATE)
+<      1                                     /RE(ISTATE)**MMLR(m,ISTATE)
+---
+>      1                            MMLR(NCMM(ISTATE),ISTATE),Dm,Dmp,Dmpp)
+>                       DO  m=1,NCMM(ISTATE)
+>                           ULRe= ULRe+ Dm(MMLR(m,ISTATE))
+>      1                       *CmVAL(m,ISTATE)/RE(ISTATE)**MMLR(m,ISTATE)
+96c87
+<                     ENDIF
+---
+>                   ENDIF
+100c91,92
+<               WRITE(6,604) SLABL(ISTATE),MLX,nPB(ISTATE),nQB(ISTATE)
+---
+>               WRITE(6,604) SLABL(ISTATE),MLX,MMLR(1,ISTATE),nPB(ISTATE),
+>      1                                                     nQB(ISTATE)
+102,103c94,97
+<                   WRITE(6,605) nPB(ISTATE),nPB(ISTATE),nQB(ISTATE),
+<      1                                     NSpow(ISTATE),NLpow(ISTATE)
+---
+>                   IF(Asw(ISTATE).LE.0.d0) WRITE(6,605) nPB(ISTATE),
+>      1             nPB(ISTATE),nQB(ISTATE),NSpow(ISTATE),NLpow(ISTATE)
+>                   IF(Asw(ISTATE).GT.0.d0) WRITE(6,607) ASW(ISTATE),
+>      1                         RSW(ISTATE),NSpow(ISTATE),NLpow(ISTATE)
+108,115c102,103
+<               IF(RREF(ISTATE).LE.0.d0) WRITE(6,553) nPB(ISTATE),
+<      1                 nPB(ISTATE),nPB(ISTATE),nPB(ISTATE),nPB(ISTATE)
+<               IF(RREF(ISTATE).GT.0.d0) WRITE(6,555) nPB(ISTATE),
+<      1             nPB(ISTATE),RREF(ISTATE),nPB(ISTATE),nPB(ISTATE),
+<      2                                      RREF(ISTATE),nPB(ISTATE)
+<               IF(bDAMP(ISTATE).GT.0.d0) WRITE(6,607) bDAMP(ISTATE)
+<               WRITE(6,682) BINF,MMLR(1,ISTATE),CmVAL(1,ISTATE),
+<      1                                                  MMLR(1,ISTATE)
+---
+>               WRITE(6,682) BINF,bDAMP(ISTATE),MMLR(1,ISTATE),
+>      1                                 CmVAL(1,ISTATE),MMLR(1,ISTATE)
+130,132c118
+< c
+<           IF(PSEL(ISTATE).EQ.3) THEN
+<               WRITE(6,612) SLABL(ISTATE),nPB(ISTATE),
+---
+>           IF(PSEL(ISTATE).EQ.3) WRITE(6,612) SLABL(ISTATE),nPB(ISTATE),
+133a120
+>           IF(PSEL(ISTATE).LE.3) THEN
+139c126,129
+<               WRITE(6,624) bDAMP(ISTATE)
+---
+>               ENDIF
+>           IF(PSEL(ISTATE).EQ.3) THEN
+>               IF(IDF(ISTATE).EQ.1) WRITE(6,624) bDAMP(ISTATE)
+>               IF(IDF(ISTATE).EQ.2) WRITE(6,626) bDAMP(ISTATE)
+547c537
+<   553 FORMAT(7x,'using radial expansion variable:   yp = y',i1,' = (R^',
+---
+>   553 FORMAT(4x,'using radial expansion variable:   yp = y',i1,' = (R^',
+549,550c539,540
+<   555 FORMAT(7x,'with radial variable:   yp= y',i1,' = (R^',i1,' -',
+<      1 F9.6,'^',i1,')/(R^',i1,' +',F9.6,'^',i1,')')
+---
+>   555 FORMAT(4x,'using radial variable:   yp = y',i1,' = (R^',i1,' -',
+>      1 F11.8,'^',i1,')/(R^',i1,' +',f11.8,'^',i1,')')
+573,574c563,564
+<   604 FORMAT(/' State ',A2,' represented by an ',A3,'(p=',i2,', q=',i2,
+<      1  ') potential defined in terms of')
+---
+>   604 FORMAT(/' State ',A2,' represented by an ',A3,'(n=',i2,';p=',i2,
+>      1  ', q=',i2,') potential defined in terms of')
+578,579c568,570
+<   607 FORMAT(4x,'uLR inverse-power terms incorporate DAMPING with   bDAM
+<      1P=',f10.7)
+---
+>   607 FORMAT(1x,4('=='),' exponent uses switching function with  Asw=',
+>      1 F8.6,'  &  Rsw=',F9.6/11x,'with exponent power series orders',
+>      2 i3,' for  R < Re','  and',i3,' for  R > Re')
+583,589c574,580
+<   682 FORMAT(6x,'where  betaINF=',F12.8,'  defined by:  C',I1,'=',
+<      1 1PD13.6,'[cm-1 Ang^',i1,']')
+<   608 FORMAT(48x,'C',I1,'=',1PD13.6,'[cm-1 Ang^',i1,']')
+<   609 FORMAT(47x,'C',I2,'=',1PD13.6,'[cm-1 Ang^{',i2,'}]')
+<   606 FORMAT(3x,'Use Aubert-Frecon model for uLR(r) with',
+<      1  6x,'C',I1,'=',1PD13.6,'[cm-1 Ang^',i1,']'/6x,'with retarded C3 a
+<      2nd  Delta(V)_{gu}^{(6,7)}')
+---
+>   682 FORMAT(4x,'where  betaINF=',F12.8,'  bDAMP=',F7.4,'   C',I1,'=',
+>      1                                 1PD13.6,'[cm-1 Ang^',i1,']')
+>   608 FORMAT(49x,'C',I1,'=',1PD13.6,'[cm-1 Ang^',i1,']')
+>   609 FORMAT(48x,'C',I2,'=',1PD13.6,'[cm-1 Ang^{',i2,'}]')
+>   606 FORMAT(4x,'Use Aubert-Frecon model for uLR(r) with',
+>      1  7x,'C',I1,'=',1PD13.6,'[cm-1 Ang^',i1,']'/8x,'including retarda
+>      2tion & B(r) in u^{tot} plus Delta(V)_{gu}^{(6,7)})')
+610,611c601,605
+<      1,3726(1984)]'/5x,'[1 - exp(-bDAMP*r)*SUM{(bDAMP*r)^k/k!}]  with  b
+<      2DAMP=',F9.6)
+---
+>      1,3726(1984)]'/5x,'[1 - exp(-RHOd*r)*SUM{(RHOd*r)^k/k!}]   with   R
+>      2HOd =',F9.6)
+>   626 FORMAT(3x,'U_{LR} term uses Douketis dispersion damping function [
+>      1Mol.P. 52,763(1984)]'/5x,'[1 - exp(-3.97*RHOd*r/m - 0.39*(RHOd*r)^
+>      22/sqrt{m})]^m  with  RHOd=',F9.6)

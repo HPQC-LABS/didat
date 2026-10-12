@@ -1,0 +1,52 @@
+3 3 0 1 2                  %  AN(1) AN(2) CHARGE NISTP NSTATES
+10.d0  1  0  5  -2  0      % UCUTOFF NOWIDTHS IROUND LPRINT PROMC CNDIFF
+7     7
+
+0	14	195 0                   % VMIN(1) VMAX(1) JTRUNC(1) EFSEL
+'X0' 0	6	0.0d0             % SLABL IOMEG(1) NCN VLIM(1)
+0	0	0	0	0	0	0	0     % OSEL(1-8,1)
+1.50 10.0 0.005                     % RMIN RMAX RH
+2	2	0                       % PSEL(1) BOCPE(1) inAndOut
+4 4 4 4                             % nPB nPu nPq nPL
+ 0.0
+ 0.0                                % DE RE
+1     0                             % IFDE IFRE
+5 5                                 % NBETAIn NBETAOut
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0                                % BETA(i)
+0 0 0 0 0 0                         % IFBETA(i)
+-0.0d0 -0.0d0 0.0d0 0.0d0           % RSR, CNVAL, ALPHA, RX
+-1
+-1
+-1
+-1
+-1
+
+0	25	195 0				% VMIN(2) VMAX(2) JTRUNC(2) EFSEL
+'A0' 0	3 	14016.677131d0    % SLABL IOMEG(2) NCN VLIM(2)(Asymptote 23420.766)
+10	10	10	0	10	0	10	0	% OSEL(1-8,2)
+1.50 10.0 0.005				% RMIN RMAX RH
+4	3 	0				% PSEL(2) BOCPE(2) inAndOut
+2 2 2 2                             % nPB nPu nPq nPL
+ 0.0
+ 0.0                                % DE RE
+1	0					% IFDE IFRE
+6 6                                 % NBETAIn NBETAOut
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0                                % BETA(i)
+0 0 0 0 0 0 0                       % IFBETA(i)
+-0.0d0 -1.23456D+4 0.0d0 0.0d0      % RSR, CNVAL, ALPHA, RX
+-1
+-1
+-1
+-1
+-1

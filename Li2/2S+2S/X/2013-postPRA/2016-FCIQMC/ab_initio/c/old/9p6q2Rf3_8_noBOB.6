@@ -1,0 +1,124 @@
+  Input data for  3  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122795      6.015122795      3.007698549
+  Li(  7) - Li(  7)      7.016004550      7.016004550      3.508139425
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+  Li(  0) - Li(  0)      6.941000000      6.941000000      3.470637150
+ -------------------------------------------------------------------
+ Since this is an ion with charge +1, use Watson's charge-modified reduced mass.
+
+ Use experimental data input file:  DATA_c-a_24-02-16_abInitioOnly
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   13
+    integrate from   RMIN= 1.40   to   RMAX=181.40   with mesh   RH= 0.00200
+ ==============================================================================
+
+ State 13 represented by an MLR(p= 6, q= 2) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y2^i}
+                                                                for  i= 0 -  9
+        with radial variable:   y_{p,q} = (R^q - 4.800000^q)/(R^q + 4.800000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Lyon 3x3  uLR(r)  with   Aso=  0.335325   C_3(Sigma)=  3.5768280D+05
+                                               C_6(Sigma)=  1.0005900D+07
+                                               C_6(Pi)   =  0.0000000D+00
+                                               C_8(Sigma)=  3.6996500D+08
+                                               C_8(Pi)   =  0.0000000D+00
+                    These constants yield:   betaINF= -1.8767068856
+ Centrifugal potential strength factor is  [J(J+1) + 2]
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM     -1.490329673640D+04       --            --
+      De      7.093492600000D+03       --            --
+      Re      3.065436000000D+00       --            --
+     C 3      3.576828000000D+05       --            --
+     C-1      3.353246000000D-01       --            --
+     C 6      1.000590000000D+07       --            --
+     C 6      0.000000000000D+00       --            --
+     C 8      3.699650000000D+08       --            --
+     C 8      0.000000000000D+00       --            --
+   beta( 0)  -1.819414082192D+00       --            --
+   beta( 1)  -4.728967959293D-01       --            --
+   beta( 2)  -5.184287256451D-01       --            --
+   beta( 3)  -1.606926700447D-01       --            --
+   beta( 4)  -8.598014552006D-01       --            --
+   beta( 5)   3.935211131913D+00    0.0D+00       0.0D+00
+   beta( 6)   9.595477762844D-01       --            --
+   beta( 7)  -2.821502060220D+00       --            --
+   beta( 8)  -2.251266244596D+00       --            --
+   beta( 9)   1.230734010813D+00       --            --
+   beta_INF  -1.876706885631D+00       --            --
+   C 9{eff}  -5.786869881124D+08       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+02 (cm-1)
+       and State 13 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to  84   for   ISOT= 1
+                             or  v  outside range  0  to  90   for   ISOT= 2
+                             or  v  outside range  0  to  84   for   ISOT= 3
+
+ NOTE that read-in potential fx. values for   ISTATE= 1   ISOT= 1
+                                 must be input as a single "band" or data group
+
+ NOTE that read-in potential fx. values for   ISTATE=**   ISOT= 1
+                                 must be input as a single "band" or data group
+ State 13  Energy Convergence criterion EPS is 1.0D-06 cm-1
+ ** CAUTION ** For  J=  0  E=-1.490365D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490352D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490343D+04  WF(NEND)/WF(Max)= 4.5D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490365D+04  WF(NEND)/WF(Max)= 3.2D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490352D+04  WF(NEND)/WF(Max)= 2.1D-06 > 1.0D-09
+    & initialization quality test  6.2D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490343D+04  WF(NEND)/WF(Max)= 4.5D-04 > 1.0D-09
+    & initialization quality test  1.6D-02 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490360D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490349D+04  WF(NEND)/WF(Max)= 4.6D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490360D+04  WF(NEND)/WF(Max)= 1.0D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ** CAUTION ** For  J=  0  E=-1.490349D+04  WF(NEND)/WF(Max)= 4.6D-06 > 1.0D-09
+    & initialization quality test  7.4D-03 > 1.D-3   so RMAX may be too small
+ After Cycle # 1:   DRMSD= 1.35916D+03    test(PS)=     NaN   test(PU)=     NaN
+    PV(   1) =  7.09349260000000D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   2) =  3.06543600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   3) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   7) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   8) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   9) = -1.81941408219200D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  10) = -4.72896795929300D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  11) = -5.18428725645100D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  12) = -1.60692670044700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  13) = -8.59801455200600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  14) =                  -NaN (+/-Infinity)    PS=Infinity   PC=    -NaN
+    PV(  15) =  9.59547776284400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  16) = -2.82150206022000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  17) = -2.25126624459600D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(  18) =  1.23073401081300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+  ALF  finds onee potential minimum of            NaN  at  R(1)= 1.400000
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+
+ *** SCHRQ FAILS in ALF when searching for  v=  0 J=  0   with   EO=      NaN
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  1  a serious error has occured:
+    ALF finds highest level   v= -1  is below the desired (v= 84, J= -1)

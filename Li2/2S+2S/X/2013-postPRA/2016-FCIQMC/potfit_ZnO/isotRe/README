@@ -1,0 +1,11 @@
+The code here reflects the beginnings of an effort to treat Re as an
+isotopologue-dependent parameter.  This was inspired by the very steep radial
+behaviour of the adiabatic  S_{ad}(r) function being determined for MgH, which
+suggested that a small shift of Re might account for several S_{ad}(r)
+parameters.
+
+The only .h file changed (so far) was BLKPOT.h
+
+The .f files that were changed were:
+               READPOT.f
+               WRITEPOT.f

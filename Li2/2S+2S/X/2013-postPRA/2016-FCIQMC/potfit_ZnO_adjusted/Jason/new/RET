@@ -1,0 +1,29 @@
+92c92
+<       REAL*8 BTEMP,BINF,RVAL,RTEMP,RM2,XTEMP,PBTEMP,PETEMP,
+---
+>       REAL*8 BTEMP,BINF,RVAL,RTEMP,RM2,XTEMP,PBTEMP,PETEMP,RET,
+230c230,234
+<               C3VAL= CmVAL(1,ISTATE)
+---
+> c** Include QED retardation function in definition of C3 !!
+>               RET= 9.364128d-4*RE(ISTATE)
+>               RET= DCOS(RET) + (RET)*DSIN(RET)
+>               C3VAL= CmVAL(1,ISTATE)* RET
+> c... [end of retardation modification]
+248a253,255
+> c... retardation modification
+>               dLULRedCm(1)= dLULRedCm(1)*RET
+> c... [end of retardation modification]
+359a367,374
+> c** Include QED retardation function in definition of C3 !!
+>                   RET= 9.364128d-4*RVAL
+>                   RET= DCOS(RET) + (RET)*DSIN(RET)
+>                   C3VAL= CmVAL(1,ISTATE)* RET
+>                   C3bar= C3VAL/DE(ISTATE)
+>                   C6adj= CmVAL(3,ISTATE) + C3VAL**2/(4.d0*DE(ISTATE))
+>                   C9adj= 0.5d0*C3VAL*C6adj/DE(ISTATE)
+> c... [end of retardation modification]
+375a391,393
+> c... retardation modification
+>                   dULRdCm(1)= dULRdCm(1)*RET
+> c... [end of retardation modification]

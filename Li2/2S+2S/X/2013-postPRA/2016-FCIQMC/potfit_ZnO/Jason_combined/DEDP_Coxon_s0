@@ -1,0 +1,366 @@
+c***********************************************************************
+c!! This version of DEDP was adapted for the Rey/Tyuterev [JMS 2006] to
+c  allow iterative(?) coverence on Eigenvalues with BOB correction s0
+c  in kinetic energy term.  ||  Removed from 'public' version.
+c***********************************************************************
+      SUBROUTINE DEDP(IDAT,ISTATE,IISTP,ZMU,KVLEV,JROT,efPARITY,EO,
+     1                                                 FWHM,ZK,DEDPK)
+c***********************************************************************
+c** This subroutine calculates  dE/dp from the expectation values of the
+c   partial derivatives of an analytical potential with respect to its
+c   parameters {p(k)}:    dE/dp(k) = <vj|dV/dp(k)|vj>  stored in DEDPK.
+c
+c** On entry:
+c    ISTATE  is the molecular state being considered.
+c    IISTP   is the isotopomer being considered.
+c    ZMU     is the reduced mass of the diatom in atomic units.
+c    KVLEV   is the vibrational quantum number.
+c    JROT    is the rotational quantum number.
+c    EO      is the initial trial energy (DE in cm-1).
+c
+c** On exit:
+c    EO       is the final calculated energy (DE in cm-1).
+c    DEDPK(i) are the values of the partial derivative dE/dP(k).
+c
+c** Flags: Use only when debugging.
+c    INNER specifies wave function matching (& initiation) conditions.
+c          = 0 : Match inward & outward solutions at outermost wave
+c                function maximum
+c          <>0 : Match at inner edge of classically allowed region.
+c          < 0 : uses zero slope inner boundary condition.
+c          For most normal cases set INNER = 0,  but ......
+c            To find "inner-well-dominated" solutions of an asymmetric
+c            double minimum potential, set  INNER > 0.
+c            To find symmetric eigenfunctions of a symmetric potential,
+c            set INNER < 0  & start integration (set RMIN) at potential
+c            mid point.
+c    IWR   specifies the level of printing inside SCHRQ
+c          <> 0 : print error & warning descriptions.
+c          >= 1 : also print final eigenvalues & node count.
+c          >= 2 : also show end-of-range wave function amplitudes.
+c          >= 3 : print also intermediate trial eigenvalues, etc.
+c    LPRWF specifies option of printing out generated wavefunction
+c          > 0 : print wave function every LPRWF-th  point.
+c          < 0 : compactly write to channel-7 every |LPRWF|-th wave
+c                function value.
+c          A lead "card" identifies the level, gives the position of
+c          1-st point and radial mesh, & states No. of  points.
+c=======================================================================
+      INCLUDE 'arrsizes.h'
+      INCLUDE 'BLKISOT.h'
+      INCLUDE 'BLKDATA.h'
+      INCLUDE 'BLKPOT.h'
+      INCLUDE 'BLKDVDP.h'
+      INCLUDE 'BLKBOB.h'
+      INCLUDE 'BLKBOBRF.h'
+      INCLUDE 'BLKCOUNT.h'
+c=======================================================================
+      INTEGER IDAT, bandN, efPARITY, FIX, LAMB2, JRe
+c
+      INTEGER I,ICOR,ISTATE,IISTP,INNER, J,JROT,JIN, K,KVLEV,KV, 
+     1  NBEG,NEND,INNODE,INNR(0:NVIBMX), IWR, LPRWF
+c
+      REAL*8 ZMU, EO, BFCT, JFCT, FWHM, VMAX, RM2, S0,
+     1  ETRY,EE,SUM, SWF2,JFCTA,JFCTB, DUARe,DUBRe,DTARe,DTBRe,DLDRe,
+     2   GV(0:NVIBMX),Vtotal(NPNTMX),JFCTDBL,JFCTD, muFCT,
+     3   SWF(NPNTMX), V(NPNTMX), DEDPK(HPARMX)
+c
+      COMMON /VBLIK/Vtotal
+c
+c** Vibrational energies and rotational constants.
+c
+      REAL*8 ZK(0:NVIBMX,0:NROTMX,NISTPMX,NSTATEMX)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c
+c** Initializing the arrays and variables
+c
+      DATA IWR/0/,LPRWF/0/,INNODE/1/
+c
+c** To calculate the values for <vj|dV/dP(k)|vj>
+c   we must first determine the wave equation for the vj state.
+      muFCT= 16.85762920d0/ZMU
+      BFCT= RH(ISTATE)*RH(ISTATE)/muFCT
+      JFCT= DBLE(JROT*(JROT+1))
+      IF(IOMEG(ISTATE).GT.0) JFCT= JFCT - 
+     1                               DBLE(IOMEG(ISTATE)*IOMEG(ISTATE))
+      DO  J= 1,HPARMX
+          DEDPK(J)= 0.d0
+          ENDDO
+c** Calculating the trial energy value from the band constants
+      ETRY= ZK(KVLEV,0,IISTP,ISTATE)
+      IF(JROT.GT.0) THEN
+          DO I=1,NROTMX
+              ETRY= ETRY + ZK(KVLEV,I,IISTP,ISTATE) * JFCT**I
+              ENDDO
+          ENDIF
+      IF(IOMEG(ISTATE).GT.0) THEN 
+c** For Lambda doubling, prepare rotational/mass factors
+          LAMB2= 2*IOMEG(ISTATE)
+          JFCTDBL= (efPARITY-EFREF(ISTATE))  
+     1               * (DBLE(JROT*(JROT+1)) * muFCT**2)**IOMEG(ISTATE)
+          ENDIF
+      IF(IOMEG(ISTATE).EQ.-2) THEN
+c** For doublet Sigma splitting, prepare rotational/mass factors
+          LAMB2= 1
+          IF(efPARITY.GT.0) JFCTDBL=  0.5d0*DBLE(JROT)*muFCT
+          IF(efPARITY.EQ.0) JFCTDBL=  0.d0
+          IF(efPARITY.LT.0) JFCTDBL= -0.5d0*DBLE(JROT+1)*muFCT
+          ENDIF
+c
+c** Generating potential function including centrifugal, adiabatic BOB,
+c   and rotational non-adiabatic BOB, and if appropriate, Lambda 
+c   doubling or 2\Sigma doubling radial functions.
+      JFCT= JFCT* RH(ISTATE)* RH(ISTATE)
+      JFCTD= JFCTDBL* RH(ISTATE)* RH(ISTATE)/muFCT
+      bandN= IB(IDAT)
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+c!!!! Special modification for BOB  s0 = -0.8449 [GaH] for atom-2
+ccc  Coxon UNrounded value for GaH:  s0(H)  = -0.844923030354E+00 
+      FIX= 0
+ccc36 S0= -0.844477105993d0* 5.4857990945d-04/ZMASS(2,IISTP)
+ccc36 S0= -0.8d0* 5.4857990945d-04/ZMASS(2,IISTP)
+   36 S0= 0.d0
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      DO I= 1,NDATPT(ISTATE)
+          RM2= 1/RD(I,ISTATE)**2
+          V(I)= BFCT*(VPOT(I,ISTATE) + ZMUA(IISTP,ISTATE)*UAR(I,ISTATE)
+     1                              + ZMUB(IISTP,ISTATE)*UBR(I,ISTATE))
+     2          + JFCT* (1.0d0 + ZMTA(IISTP,ISTATE)*TAR(I,ISTATE)
+     1                         + ZMTB(IISTP,ISTATE)*TBR(I,ISTATE))*RM2
+          IF(IOMEG(ISTATE).NE.0) THEN
+c ... note that power of 1/r**2  included in  wRAD  array ...
+              V(I)= V(I) + JFCTD * wRAD(I,ISTATE)
+              ENDIF
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+c!!!! Special modification for BOB  s0 = -0.8449 [GaH] for atom-2
+          IF(DABS(S0).GT.0.d0) V(I)= V(I) -
+ccc  1     S0*(BFCT*(VPOT(I,ISTATE) - ETRY) + JFCT*RM2)
+     1     S0*(1.d0- S0+ S0**2)*(V(I)- BFCT*ETRY)
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          Vtotal(I)= V(I)/BFCT
+          ENDDO
+      KV= KVLEV
+      INNER= 0
+      EO= ETRY
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      CALL SCHRQ(KV,JROT,EO,FWHM,VMAX,VLIM(ISTATE),V,SWF,BFCT,
+     1             EPS(ISTATE),RMIN(ISTATE),RH(ISTATE),NDATPT(ISTATE),
+     2                               NBEG,NEND,INNODE,INNER,IWR,LPRWF)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+c!!!! Special Case ... modification for BOB  s0  for atom-2
+      IF(DABS(S0).GT.0.d0) THEN
+          EO= EO + (EO-ETRY)*S0
+          IF(DABS(EO-ETRY).GT.1.d-04) THEN
+              ETRY= EO
+              FIX= FIX+1
+              IF(FIX.LT.20) GOTO 36
+cc          else
+cc            write(33,333) kv,jrot,eO
+cc333 format('   v=',i2,'   J=',i3,'   E=',f10.4)
+              ENDIF
+          ENDIF
+c!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      ICOR= 0
+      IF(KV.NE.KVLEV) THEN
+c** If the calculated wavefunction is for the wrong vibrational level,
+c .... First try to estimate correct energy using WKB energy derivative
+   38     ICOR= ICOR+ 1
+          EE= EO*BFCT
+          DO  I= NEND,1,-1
+              K= I
+              IF(V(I).LT.EE) GOTO 40
+              ENDDO
+   40     SUM= 0.d0
+          DO  I= K,1,-1
+              IF(V(I).GT.EE) GO TO 42
+              SUM= SUM+ 1.d0/DSQRT(EE - V(I))
+              ENDDO
+   42     ETRY= EO - DBLE(KV-KVLEV)*6.28318531d0/(BFCT*SUM)
+          EO= ETRY
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          CALL SCHRQ(KV,JROT,EO,FWHM,VMAX,VLIM(ISTATE),V,SWF,BFCT,
+     1             EPS(ISTATE),RMIN(ISTATE),RH(ISTATE),NDATPT(ISTATE),
+     2                               NBEG,NEND,INNODE,INNER,IWR,LPRWF)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          IF((KV.NE.KVLEV).AND.(ICOR.LE.2)) GOTO 38
+          ENDIF
+      IF(KV.NE.KVLEV) THEN
+c ... if that fails, next try finding the level in the inner well 
+          WRITE(6,600) ISTATE, IISTP
+          WRITE(6,610) KVLEV, JROT
+          IF(KV.GE.0) THEN
+              WRITE(6,620) KV, JROT, EO, ETRY
+              KV= KVLEV
+              INNER= 1
+              EO= ETRY
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              CALL SCHRQ(KV,JROT,EO,FWHM,VMAX,VLIM(ISTATE),V,SWF,BFCT,
+     1             EPS(ISTATE),RMIN(ISTATE),RH(ISTATE),NDATPT(ISTATE),
+     2                               NBEG,NEND,INNODE,INNER,IWR,LPRWF)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            ELSE
+              WRITE(6,621)
+            ENDIF
+          ENDIF
+c ... If that also fails, then try calling ALF to recalculate the
+c   vibrational energy from that effective radial potential.
+      IF(KV.NE.KVLEV) THEN
+          IF(INNER.EQ.1) THEN
+              WRITE(6,611) KVLEV, JROT
+              IF (KV.GE.0) THEN
+                  WRITE(6,620) KV, JROT, EO, ETRY
+                ELSE
+                  WRITE(6,621)
+                ENDIF
+              ENDIF
+          WRITE(6,612)
+          GV(KVLEV)= 0.0d0
+          KV= KVLEV
+          JIN= JROT
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          CALL ALF(NDATPT(ISTATE),RMIN(ISTATE),RH(ISTATE),V,SWF,
+     1    VLIM(ISTATE),KV,JIN,ZMU,EPS(ISTATE),MMLR(1,ISTATE),GV,INNODE,
+     2                                                     INNR,IWR)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          IF(KV.EQ.KVLEV) THEN
+              ETRY= GV(KVLEV)
+              EO= ETRY
+c
+c** Call SCHRQ again with the new calculated energy.
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              CALL SCHRQ(KV,JROT,EO,FWHM,VMAX,VLIM(ISTATE),V,SWF,BFCT,
+     1             EPS(ISTATE),RMIN(ISTATE),RH(ISTATE),NDATPT(ISTATE),
+     2                         NBEG,NEND,INNODE,INNR(KVLEV),IWR,LPRWF)
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              ENDIF
+          ENDIF
+c
+c** If the calculated wavefunction is still for the wrong vibrational
+c   level, then write out a warning and skip the calculation of the
+c   partial derivatives (hence setting them to zero).
+c
+      IF(KV.NE.KVLEV) THEN
+          IF (INNER.EQ.1) THEN
+              WRITE(6,611) KVLEV, JROT
+              IF (KV.GE.0) THEN
+                  WRITE(6,620) KV, JROT, EO, ETRY
+                ELSE
+                  WRITE(6,621)
+                ENDIF
+              ENDIF
+c.. an eigenvalue of  -9.9d9 signifies that eigenvalue search failed
+          EO= -9.9d9
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c** If the calculated wavefunction is for the right vibrational level,
+c   then continue with calculation of the partial derivatives by
+c   integration using the modified trapezoidal rule.
+c
+c** First determine which partials need to be changed, increment so
+c   that the (fluorescence term values and) lower states are skipped.
+c
+        ELSEIF(PSEL(ISTATE).GT.0) THEN
+          JRe= POTPARI(ISTATE)+ 1
+          IF(PSEL(ISTATE).EQ.4) JRe= POTPARI(ISTATE)
+c** Now calculate the rotational factors JFCT, JFCTA & JFCTB
+          JFCT= JFCT/BFCT
+          JFCTA= JFCT * ZMTA(IISTP,ISTATE)
+          JFCTB= JFCT * ZMTB(IISTP,ISTATE)
+          DUARe= 0.d0
+          DUBRe= 0.d0
+          DTARe= 0.d0
+          DTBRe= 0.d0
+          DLDRe= 0.d0
+c** Eigenvalue derivative calc using compact partial derivative array
+          DO  I= NBEG,NEND
+              SWF2= SWF(I)**2
+              IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+c ... collect contributions of BOB terms to derivatives w.r.t. Re
+              IF(NUA(ISTATE).GE.0) DUARe= DUARe+ SWF2*DUADRe(I,ISTATE)
+              IF(NUB(ISTATE).GE.0) DUBRe= DUBRe+ SWF2*DUBDRe(I,ISTATE)
+              IF(NTA(ISTATE).GE.0) DTARe= DTARe+ SWF2*DTADRe(I,ISTATE)
+              IF(NTB(ISTATE).GE.0) DTBRe= DTBRe+ SWF2*DTBDRe(I,ISTATE)
+              IF(NwCFT(ISTATE).GE.0) DLDRe= DLDRe+ SWF2*DLDDRe(I,ISTATE)
+              DO  J= POTPARI(ISTATE), POTPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                  ENDDO
+              ENDDO
+          DEDPK(JRe)= DEDPK(JRe) + DUARe*ZMUA(IISTP,ISTATE)
+     1          + DUBRe*ZMUB(IISTP,ISTATE) + JFCTA*DTARe + JFCTB*DTBRe
+     2          + JFCTDBL*DLDRE
+          DO  J= POTPARI(ISTATE), POTPARF(ISTATE)
+              DEDPK(J)= DEDPK(J)* RH(ISTATE)
+              ENDDO
+          IF(NUA(ISTATE).GE.0) THEN
+              DO  I= NBEG,NEND
+                  SWF2= SWF(I)**2
+                  IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+                  DO  J= UAPARI(ISTATE), UAPARF(ISTATE)
+                      DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                      ENDDO
+                  ENDDO
+              DO  J= UAPARI(ISTATE), UAPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J)* ZMUA(IISTP,ISTATE)* RH(ISTATE)
+                  ENDDO
+              ENDIF 
+          IF(NUB(ISTATE).GE.0) THEN
+              DO  I= NBEG,NEND
+                  SWF2= SWF(I)**2
+                  IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+                  DO  J= UBPARI(ISTATE), UBPARF(ISTATE)
+                      DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                      ENDDO
+                  ENDDO
+              DO  J= UBPARI(ISTATE), UBPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J)* ZMUB(IISTP,ISTATE)* RH(ISTATE)
+                  ENDDO
+              ENDIF 
+          IF(NTA(ISTATE).GE.0) THEN
+              DO  I= NBEG,NEND
+                  SWF2= SWF(I)**2
+                  IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+                  DO  J= TAPARI(ISTATE), TAPARF(ISTATE)
+                      DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                      ENDDO
+                  ENDDO
+              DO  J= TAPARI(ISTATE), TAPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J)* JFCTA* RH(ISTATE)
+                  ENDDO
+              ENDIF 
+          IF(NTB(ISTATE).GE.0) THEN
+              DO  I= NBEG,NEND
+                  SWF2= SWF(I)**2
+                  IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+                  DO  J= TBPARI(ISTATE), TBPARF(ISTATE)
+                      DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                      ENDDO
+                  ENDDO
+              DO  J= TBPARI(ISTATE), TBPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J)* JFCTB* RH(ISTATE)
+                  ENDDO
+              ENDIF 
+          IF(NwCFT(ISTATE).GE.0) THEN
+              DO  I= NBEG,NEND
+                  SWF2= SWF(I)**2
+                  IF((I.EQ.NBEG).OR.(I.EQ.NEND)) SWF2= 0.5d0*SWF2
+                  DO  J= LDPARI(ISTATE), LDPARF(ISTATE)
+                      DEDPK(J)= DEDPK(J) + SWF2*DVtot(J,I)
+                      ENDDO
+                  ENDDO
+              DO  J= LDPARI(ISTATE), LDPARF(ISTATE)
+                  DEDPK(J)= DEDPK(J)* JFCTDBL* RH(ISTATE)
+                  ENDDO
+              ENDIF
+          ENDIF
+      RETURN
+c-----------------------------------------------------------------------
+  600 FORMAT(/'  *** DEDP ERROR ***',/4X,'For state',I3,
+     1'  of isotope',I3,'  a serious error has occured:')
+  610 FORMAT(4X,'Unable to find v=',I3,' J=',I3,' level in outer well.')
+  611 FORMAT(4X,'Unable to find v=',I3,' J=',I3,' level in inner well.')
+  612 FORMAT(4X,'Molecular constants give improper trial energy.')
+  620 FORMAT('   SCHRQ found   E(v=',I3,',J=',I3,')=',F10.3,'  with  E(t
+     1rial)=',F10.3) 
+  621 FORMAT(4X,'SCHRQ was unable to calculate any level.')
+      END
+c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12

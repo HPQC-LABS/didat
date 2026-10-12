@@ -1,0 +1,30 @@
+# example makefile, just to show one possibility
+#
+FC = f90
+#
+FFLAGS = +O2 +U77
+#
+#LIBS = -lmkl
+#LIBS = -llapack -lblas
+#LIBS = -llapack -lmkl
+LIBS = -L/opt/mlib/lib/pa2.0 -llapack -lveclib
+# 
+#BASEOBJS = bound.o  potenl.o 
+#POTOBJS = vrtp2d.o hecokp2d.o kpcoef.o
+#POTOBJS = hecokp2d.o kpcoef.o
+#
+#POTOBJS2 = hecokp2d.o kpcoef.o
+POTOBJS3 = hecokp3d.o kpcoef.o
+
+#boundkp: $(BASEOBJS)  $(POTOBJS)
+#     $(FC) $(FFLAGS) -o $@ $(BASEOBJS)  $(POTOBJS) $(LIBS)
+
+#hecokp2d: $(POTOBJS2)
+#     $(FC) $(FFLAGS) -o $@ $(POTOBJS2) $(LIBS)
+
+hecokp3d: $(POTOBJS3)
+      $(FC) $(FFLAGS) -o $@ $(POTOBJS3) $(LIBS)
+
+##   8 -rw-r--r--    1 leroy    leroy       2166 Aug  7 13:06 hecokp3d.f
+##  32 -rw-r--r--    1 leroy    leroy      14245 Jul 12 17:18 kpcoef.f
+## 104 -rw-r--r--    1 leroy    leroy      53087 Aug  7 13:12 kpdata.pot

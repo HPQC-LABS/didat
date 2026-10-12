@@ -1,0 +1,4 @@
+Working code version with (useless?!?) inclusions of rref_{ad}^{A/B} and
+rref_{na}^{A/B} and rrefw, just before attempt to make R_e isotope-dependent
+(ATTEMPT DROPPED!)
+NOTE that tdpot.x was compiled with -g for dbx debugging

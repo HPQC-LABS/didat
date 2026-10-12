@@ -1,0 +1,8 @@
+Code version as of 03 January 2013 
+* after intruducing  IFXCm > 1  to allow fixing Cm's the same for 2 states
+* after removal of RREFadA/B, RREFnaA/B, & RREFw
+* but before implementation of case of the b ^3\Pi_u  state of Li2 and
+* before removal of NSPOW
+
+DPot2_0.f is global version collected for McBane (24/01/13).
+dpot2_0.x  is an -O2  compiled version of it

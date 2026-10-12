@@ -1,0 +1,206 @@
+  Input data for  3  isotopomer(s)
+  ********************************
+      Isotopomer       Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122795      6.015122795      3.007698549
+  Li(  7) - Li(  7)      7.016004550      7.016004550      3.508139425
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+ *** MASSES Data base does not include Li(100), so use average atomic mass.
+  Li(  0) - Li(  0)      6.941000000      6.941000000      3.470637150
+ -------------------------------------------------------------------
+ Since this is an ion with charge +1, use Watson's charge-modified reduced mass.
+
+ Use experimental data input file:  DATA_c-a_22-06-16.4           
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00100
+ ==============================================================================
+
+ State a3 represented by an MLR(p= 5, q= 3) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                                for  i= 0 -  0
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7190000D+06[cm-1 Ang^6]
+                                                C8= 1.1263500D+08[cm-1 Ang^8]
+                                               C10= 2.7869400D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+ Adiabatic BOB functions are scaled by  m_e/M(A)  and expanded as
+      simple power series in   y6= (R^6 - Re^6)/(R^6 + Re^6)
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      De      3.337795000000D+02    0.0D+00       0.0D+00
+      Re      4.170006000000D+00    0.0D+00       0.0D+00
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01    0.0D+00       0.0D+00
+   beta_INF  -5.098779854262D-01       --            --
+   C11{eff}  -8.533356287399D+09       --            --
+    uLi( 0)   6.888864517011D-02    0.0D+00       0.0D+00
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3 data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+                             or  v  outside range  0  to   9   for   ISOT= 3
+
+ NOTE that read-in potential fx. values for   ISTATE= 1   ISOT= 1
+                                 must be input as a single "band" or data group
+ State a3  Energy Convergence criterion EPS is 1.0D-06 cm-1
+ *** CAUTION *** For  J=  0  E= -306.09597    
+                WF(first)/WF(Max)= 0.71D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -252.81409    
+                WF(first)/WF(Max)=-0.28D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -202.81195    
+                WF(first)/WF(Max)= 0.74D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -156.84752    
+                WF(first)/WF(Max)=-0.16D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -115.65447    
+                WF(first)/WF(Max)= 0.28D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -79.951369    
+                WF(first)/WF(Max)=-0.43D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -50.427642    
+                WF(first)/WF(Max)= 0.57D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -27.685104    
+                WF(first)/WF(Max)=-0.68D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -12.084374    
+                WF(first)/WF(Max)= 0.70D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -3.4050550    
+                WF(first)/WF(Max)=-0.61D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -306.09597    
+                WF(first)/WF(Max)= 0.71D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -252.81409    
+                WF(first)/WF(Max)=-0.28D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -202.81195    
+                WF(first)/WF(Max)= 0.74D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -156.84752    
+                WF(first)/WF(Max)=-0.16D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -115.65447    
+                WF(first)/WF(Max)= 0.28D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -79.951369    
+                WF(first)/WF(Max)=-0.43D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -50.427642    
+                WF(first)/WF(Max)= 0.57D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -27.685104    
+                WF(first)/WF(Max)=-0.68D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -12.084374    
+                WF(first)/WF(Max)= 0.70D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -3.4050550    
+                WF(first)/WF(Max)=-0.61D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -308.12799    
+                WF(first)/WF(Max)= 0.22D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -258.58830    
+                WF(first)/WF(Max)=-0.93D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -211.78817    
+                WF(first)/WF(Max)= 0.26D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -168.33285    
+                WF(first)/WF(Max)=-0.56D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -128.80749    
+                WF(first)/WF(Max)= 0.10D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -93.786118    
+                WF(first)/WF(Max)=-0.17D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -63.827944    
+                WF(first)/WF(Max)= 0.24D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -39.452088    
+                WF(first)/WF(Max)=-0.31D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -21.069353    
+                WF(first)/WF(Max)= 0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -8.8275189    
+                WF(first)/WF(Max)=-0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.3124701    
+                WF(first)/WF(Max)= 0.29D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -308.12799    
+                WF(first)/WF(Max)= 0.22D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -258.58830    
+                WF(first)/WF(Max)=-0.93D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -211.78817    
+                WF(first)/WF(Max)= 0.26D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -168.33285    
+                WF(first)/WF(Max)=-0.56D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -128.80749    
+                WF(first)/WF(Max)= 0.10D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -93.786118    
+                WF(first)/WF(Max)=-0.17D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -63.827944    
+                WF(first)/WF(Max)= 0.24D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -39.452088    
+                WF(first)/WF(Max)=-0.31D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -21.069353    
+                WF(first)/WF(Max)= 0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -8.8275189    
+                WF(first)/WF(Max)=-0.35D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -2.3124701    
+                WF(first)/WF(Max)= 0.29D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -307.99102    
+                WF(first)/WF(Max)= 0.24D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -258.19809    
+                WF(first)/WF(Max)=-0.10D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -211.17926    
+                WF(first)/WF(Max)= 0.28D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -167.54937    
+                WF(first)/WF(Max)=-0.61D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -127.90288    
+                WF(first)/WF(Max)= 0.11D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -92.822919    
+                WF(first)/WF(Max)=-0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -62.877130    
+                WF(first)/WF(Max)= 0.26D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -38.590843    
+                WF(first)/WF(Max)=-0.33D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -20.374855    
+                WF(first)/WF(Max)= 0.37D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -8.3618155    
+                WF(first)/WF(Max)=-0.36D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -307.99102    
+                WF(first)/WF(Max)= 0.24D-08  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -258.19809    
+                WF(first)/WF(Max)=-0.10D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -211.17926    
+                WF(first)/WF(Max)= 0.28D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -167.54937    
+                WF(first)/WF(Max)=-0.61D-07  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -127.90288    
+                WF(first)/WF(Max)= 0.11D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -92.822919    
+                WF(first)/WF(Max)=-0.18D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -62.877130    
+                WF(first)/WF(Max)= 0.26D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -38.590843    
+                WF(first)/WF(Max)=-0.33D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -20.374855    
+                WF(first)/WF(Max)= 0.37D-06  suggests  RMIN  may be too large
+ *** CAUTION *** For  J=  0  E= -8.3618155    
+                WF(first)/WF(Max)=-0.36D-06  suggests  RMIN  may be too large
+ After Cycle # 1:   DRMSD= 8.35008D+02    test(PS)=     NaN   test(PU)=     NaN
+    PV(   1) =                   NaN (+/-     NaN)    PS=Infinity   PC=     NaN
+    PV(   2) =                   NaN (+/-     NaN)    PS=Infinity   PC=     NaN
+    PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+    PV(   6) =                   NaN (+/-     NaN)    PS=Infinity   PC=     NaN
+    PV(   7) =                  -NaN (+/-Infinity)    PS=Infinity   PC=    -NaN
+    PV(   8) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC= 0.0D+00
+
+  ALF  finds onee potential minimum of           -NaN  at  R(1)= 2.200000
+ *** SCHRQ inward search at   J=  0   E=       -NaN finds no classical region
+
+ *** SCHRQ FAILS in ALF when searching for  v=  0 J=  0   with   EO=     -NaN
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  1  a serious error has occured:
+    ALF finds highest level   v= -1  is below the desired (v=  9, J= -1)

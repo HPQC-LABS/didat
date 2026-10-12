@@ -1,0 +1,1 @@
+most of these fits accidentally used charge 1, which means watson's reduced mass with CHARGE=1. see if it changes when charge=0

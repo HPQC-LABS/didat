@@ -1,0 +1,19 @@
+
+  7.093492600000D+03  1         % De  IFXDe
+  3.065436000000D+00  1         % Re  IFXRe
+
+  0  9   6  2   4.80D+00        % APSE Nbeta nPB nQB RREF
+ -1.819414082192D+00  1         % BETA 0  IFXBETA 0
+ -4.728967959293D-01  1         % BETA 1  IFXBETA 1
+ -5.184287256451D-01  1         % BETA 2  IFXBETA 2
+ -1.606926700447D-01  1         % BETA 3  IFXBETA 3
+ -8.598014552006D-01  1         % BETA 4  IFXBETA 4
+  3.935211131913D+00  1         % BETA 5  IFXBETA 5
+  9.595477762844D-01  1         % BETA 6  IFXBETA 6
+ -2.821502060220D+00  1         % BETA 7  IFXBETA 7
+ -2.251266244596D+00  1         % BETA 8  IFXBETA 8
+  1.230734010813D+00  1         % BETA 9  IFXBETA 9
+
+ -2 -2   3  3                   % NUA NUB  pAD qAD
+
+ -2 -2   3  3                   % NTA NTB  pNA qNA

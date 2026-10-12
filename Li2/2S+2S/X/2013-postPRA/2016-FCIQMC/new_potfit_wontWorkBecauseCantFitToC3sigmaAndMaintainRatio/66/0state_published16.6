@@ -1,0 +1,174 @@
+  Input data for  2  isotopologues(s)
+  ********************************
+      Isotopologues    Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001719
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+
+ Use experimental data input file:  ../DATA_c-a14-12-10.4         
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX=  15 cycles
+
+ For state   a3 
+    integrate from   RMIN= 3.10   to   RMAX= 50.00   with mesh   RH= 0.00500
+ ==============================================================================
+
+ State a3  represented by an MLR(q= 3, p= 5) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+           defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                                C6= 6.7185000D+06[cm-1 Ang^6]
+                                                C8= 1.1262900D+08[cm-1 Ang^8]
+                                               C10= 2.7868300D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5070915143
+ Adiabatic BOB functions with {p= 6, q= 6} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y6 + (1 - y6)*\Sum{u_i * [y6]^i}   for  i= 0 to  0
+        with Li-atom radial expansion variable:   y6 = (R^6 - Re^6)/(R^6 + Re^6)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM     -1.490364810000D+04       --            --
+      De      3.337027727601D+02    0.0D+00       0.0D+00
+      Re      4.173086207461D+00    0.0D+00       0.0D+00
+     C 6      6.718500000000D+06       --            --
+     C 8      1.126290000000D+08       --            --
+     C10      2.786830000000D+09       --            --
+   beta( 0)  -5.167487230366D-01    0.0D+00       0.0D+00
+   beta( 1)  -1.019686171376D-01    0.0D+00       0.0D+00
+   beta( 2)   1.194863091227D-01    0.0D+00       0.0D+00
+   beta( 3)  -1.390119609763D-02    0.0D+00       0.0D+00
+   beta_INF  -5.070915142944D-01       --            --
+   C11{exp}  -8.520613394267D+09       --            --
+    uLi( 0)   6.510080413275D-02    0.0D+00       0.0D+00
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ For state 23  represent level energies by independent band constant for each
+ ============                           vibrational levels of each isotologue
+   No. band constants
+      v   isotop:  #1   #2
+    ----------------------------
+      1             3    0
+      2             3    0
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   8   for   ISOT= 1
+                             or  v  outside range  0  to   8   for   ISOT= 2
+       and State 23  data with  J > JTRUNC=  99
+                             or  v  outside range  1  to   2   for   ISOT= 1
+                             or  v  outside range  1  to   2   for   ISOT= 2
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ State 23   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ After Cycle # 1:  DRMSD= 8.2105688D+05    test(PS)= 4.7D+01   test(PU)= 2.1D+00
+   PV(   1) =  3.33702772760100D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17308620746100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16748723036600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -1.01968617137600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.19486309122700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -1.39011960976300D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.51008041327500D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  6.70535017525173D+03 (+/- 4.7D+03)    PS= 1.9D+02   PC=  6.7D+03
+   PV(  13) =  3.24715613097538D-01 (+/- 1.1D+02)    PS= 2.0D+00   PC=  3.2D-01
+   PV(  14) = -2.61381639401077D-06 (+/- 5.7D-01)    PS= 1.4D-02   PC= -2.6D-06
+   PV(  15) =  6.88945237815830D+03 (+/- 3.2D+03)    PS= 1.5D+02   PC=  6.9D+03
+   PV(  16) =  3.26978025396299D-01 (+/- 1.1D+02)    PS= 2.0D+00   PC=  3.3D-01
+   PV(  17) = -1.04953003316101D-05 (+/- 6.2D-01)    PS= 1.5D-02   PC= -1.0D-05
+ After Cycle # 2:  DRMSD= 2.7549002D+00    test(PS)= 5.2D-09   test(PU)= 2.2D-10
+   PV(   1) =  3.33702772760100D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17308620746100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16748723036600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -1.01968617137600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.19486309122700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -1.39011960976300D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.51008041327500D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  6.70535017525174D+03 (+/- 1.6D-02)    PS= 6.5D-04   PC=  3.4D-12
+   PV(  13) =  3.24715613097519D-01 (+/- 3.9D-04)    PS= 6.9D-06   PC= -2.0D-14
+   PV(  14) = -2.61381639393963D-06 (+/- 1.9D-06)    PS= 4.5D-08   PC=  7.1D-17
+   PV(  15) =  6.88945237815830D+03 (+/- 1.1D-02)    PS= 4.9D-04   PC= -2.4D-13
+   PV(  16) =  3.26978025396271D-01 (+/- 3.6D-04)    PS= 6.9D-06   PC= -2.8D-14
+   PV(  17) = -1.04953003315119D-05 (+/- 2.1D-06)    PS= 5.0D-08   PC=  9.8D-17
+ After Cycle # 3:  DRMSD= 2.7549002D+00    test(PS)= 1.8D-09   test(PU)= 7.3D-11
+   PV(   1) =  3.33702772760100D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17308620746100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16748723036600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -1.01968617137600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.19486309122700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -1.39011960976300D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.51008041327500D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  6.70535017525174D+03 (+/- 1.6D-02)    PS= 6.5D-04   PC= -7.9D-13
+   PV(  13) =  3.24715613097526D-01 (+/- 3.9D-04)    PS= 6.9D-06   PC=  7.5D-15
+   PV(  14) = -2.61381639393943D-06 (+/- 1.9D-06)    PS= 4.5D-08   PC=  2.0D-19
+   PV(  15) =  6.88945237815830D+03 (+/- 1.1D-02)    PS= 4.9D-04   PC= -7.9D-13
+   PV(  16) =  3.26978025396283D-01 (+/- 3.6D-04)    PS= 6.9D-06   PC=  1.3D-14
+   PV(  17) = -1.04953003315616D-05 (+/- 2.1D-06)    PS= 5.0D-08   PC= -5.0D-17
+
+ Full  3-cycle convergence:  {ABS(RMSR/RMSRB)-1}= 1.29D-12  TSTPS= 1.8D-09
+
+   131 data fit to    6 param. yields  DRMS(devn)= 2.7549002D+00  tst(PS)= 1.8D-09
+   PV(   1) =  3.33702772760100D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17308620746100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16748723036600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -1.01968617137600D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.19486309122700D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -1.39011960976300D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.51008041327500D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  6.70535017525174D+03 (+/- 1.6D-02)    PS= 6.5D-04   PC= -7.9D-13
+   PV(  13) =  3.24715613097526D-01 (+/- 3.9D-04)    PS= 6.9D-06   PC=  7.5D-15
+   PV(  14) = -2.61381639393943D-06 (+/- 1.9D-06)    PS= 4.5D-08   PC=  2.0D-19
+   PV(  15) =  6.88945237815830D+03 (+/- 1.1D-02)    PS= 4.9D-04   PC= -7.9D-13
+   PV(  16) =  3.26978025396283D-01 (+/- 3.6D-04)    PS= 6.9D-06   PC=  1.3D-14
+   PV(  17) = -1.04953003315616D-05 (+/- 2.1D-06)    PS= 5.0D-08   PC= -5.0D-17
+ After Cycle # 1:  DRMSD= 2.7549002D+00    test(PS)= 1.9D+02   test(PU)= 5.4D-01
+   PV(   1) =                   NaN (+/-     NaN)    PS= 3.3D-04   PC=      NaN
+   PV(   2) =                   NaN (+/-     NaN)    PS= 2.0D-06   PC=      NaN
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =                   NaN (+/-     NaN)    PS= 1.6D-06   PC=      NaN
+   PV(   7) =                   NaN (+/-     NaN)    PS= 2.7D-06   PC=      NaN
+   PV(   8) =                   NaN (+/-     NaN)    PS= 4.0D-06   PC=      NaN
+   PV(   9) =                   NaN (+/-     NaN)    PS= 5.4D-06   PC=      NaN
+   PV(  10) =                   NaN (+/-     NaN)    PS=    +Inf   PC=      NaN
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  6.70530760646005D+03 (+/- 8.1D-02)    PS= 3.1D-04   PC= -4.3D-02
+   PV(  13) =  3.24651690792725D-01 (+/- 4.7D-04)    PS= 3.3D-06   PC= -6.4D-05
+   PV(  14) = -2.63456408839012D-06 (+/- 2.0D-06)    PS= 2.2D-08   PC= -2.1D-08
+   PV(  15) =  6.88940863894209D+03 (+/- 8.1D-02)    PS= 2.3D-04   PC= -4.4D-02
+   PV(  16) =  3.26946040733129D-01 (+/- 4.3D-04)    PS= 3.3D-06   PC= -3.2D-05
+   PV(  17) = -1.06659368884386D-05 (+/- 2.1D-06)    PS= 2.4D-08   PC= -1.7D-07
+
+  ALF  finds onee potential minimum of            NaN  at  R(1)= 3.100000
+  *** Caution ***  H.Osc.ZPE places   E=      3.10   above   VLIM=   -14903.65
+
+ *** SCHRQ FAILS in ALF when searching for  v=  0 J=  0   with   EO=*********
+     Check range and/or contact R.J. Le Roy [leroy@uwaterloo.ca]
+
+  *** INITDD ERROR ***
+    For state  1  of isotope  1  a serious error has occured:
+ *** WARNING !! ALF finds highest level   v= -1  is below desired (v=  8, J= -1)

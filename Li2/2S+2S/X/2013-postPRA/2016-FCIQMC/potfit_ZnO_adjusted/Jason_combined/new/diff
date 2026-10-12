@@ -1,0 +1,1447 @@
+2c2
+<       SUBROUTINE PREPOT(LNPT,IAN1,IAN2,IMN1,IMN2,NPP,RR,RM2,VLIM,
+---
+>       SUBROUTINE PREPOT(LNPT,IAN1,IAN2,IMN1,IMN2,NPP,OMEGA,RR,RM2,VLIM,
+6c6
+< c====================== Version of 20 July 2001 ====================
+---
+> c====================== Version of  8 April 2007 ========================
+17c17
+< c        calculating adiabatic and/or non-adiabatic B-O-B correction fx.
+---
+> c        calculating adiabatic and/or non-adiabatic BOB correction fx.
+24a25
+> c  OMEGA the (integer) elelectronic angular momentum projection q.no.
+27c28
+< c  RM2 values returned may (if appropriate) be modified to include B-O-B
+---
+> c  RM2 values returned may (if appropriate) be modified to include BOB
+39c40
+<      1  NCN,NLIN,NPP,NROW,NTP,NUSE,NPRS,NPRF
+---
+>      1  NCN,NLIN,NPP,NROW,NTP,NUSE, OMEGA
+50,51d50
+<       NPRS= 1
+<       NPRF= NPP
+59a59,60
+> c  OMEGA  the (integer) total elextronic angular momentum projection
+> c            quantum number (required for proper rotational intensities)
+62c63
+<           READ(5,*) NTP, LPPOT, VLIM
+---
+>           READ(5,*) NTP, LPPOT, OMEGA, VLIM
+64c65
+<           WRITE(6,600) VLIM
+---
+>           WRITE(6,600) OMEGA,VLIM
+106c107
+<               WRITE(6,612) RFACT,EFACT
+---
+>               WRITE(6,612) VSHIFT, RFACT, EFACT
+115c116
+<               WRITE(6,618) VSHIFT
+---
+>                   WRITE(6,624)
+124a126,127
+>               IF((DABS(YI(NTP)-YI(NTP-1)).LE.0).AND.
+>      1                              (XI(NTP).LT.RR(NPP))) WRITE(6,618)
+130c133
+<      1                                              NCN,CNN,NPRS,NPRF)
+---
+>      1                                                        NCN,CNN)
+131a135,137
+> c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> c** If (NTP.le.0) PREPOT uses subroutine POTGEN to generate a fully
+> c  analytic potential defined by the following read-in parameters.
+133,134c139,142
+< c** Generate a fully analytic potential in subroutine POTGEN ***********
+< c* Potentials generated in cm-1 with potential asymptote at energy VLIM
+---
+> c* Potentials generated in cm-1 with equilibrium distance REQ [Angst.],
+> c  and for all cases except IPOTL=2, the potential asymptote energy is
+> c  VLIM and well depth is DSCM.  For IPOTL=2, VLIM is the energy at the
+> c  potential minimum and  DSCM  the leading (quadratic) potential coeft.
+137c145
+< c** MPAR & NPAR are integers for specifying potential types.
+---
+> c** MPAR, NSR & NCMM are integers cwcharacterizing the chosen potential
+141,143d148
+< c** For all functions considered, well depth and equilibrium distance
+< c  are read as  DSCM (cm-1)  and REQ (Angstroms), respectively.
+< c* [Most read-in parameters are dimensionless (scaled by DSCM & REQ).]
+145,153c150,161
+< c** If IPOTL=1  generate an L.J.(MPAR,NPAR) potential.
+< c** If IPOTL=2  generate an MLJ(NPAR) potential [JCP 112, 3949 (2000)]
+< c      If MPAR.ge.0  exponent parameter is polynomial of order (NVARB-1)
+< c           in z=(R-Re)/(R+Re), with the NVARB coefficients  PARM(j)
+< c      If MPAR < 0  exponent polynomial in  z  has order (NVARB-4) with 
+< c           coefficients PARM(i) (i= 1,NVARB-3), & includes a switching
+< c           function with exponent coefficient  ALPHA= PARM(NVARB)  and  
+< c           RSW= PARM(NVARB-1),  defined to yield limiting inverse-power
+< c           potential coefficient  Cn= PARM(NVARB-2).
+---
+> c** If IPOTL=1  generate an L.J.(MPAR,NCN) potential.
+> c** If IPOTL=2  use Seto's modification of Surkus' GPEF expansion in
+> c       z = [R**MPAR - Re**MPAR]/[a*R**MPAR + b*Re**MPAR] where 
+> c       a=PARM(NVARB-1) & b=PARM(NVARB), which incorporates Dunham, SPF,
+> c       O-T and other forms: V(z) = c_0 z^2 [1 + c_1 z + c_2 z^2 + ...]
+> c       where  c_0 [cm-1] is read in as DSCM, and the first (NVARB-2)
+> c       PARM(i)'s are the  c_i  (i > 0).  [MPAR is dummy parameter here]
+> c  * For Dunham case:  NCN=1, PARM(NVARB-1)= 0.0, PARM(NVARB)= 1.0
+> c  * For SPF case:  NCN=1, PARM(NVARB-1)= 1.0, PARM(NVARB)= 0.0
+> c  * For Ogilvie-Tipping:  NCN=1, PARM(NVARB-1)= 0.5 = PARM(NVARB)
+> c  * NOTE that for Surkus MPAR < 0 case:  z(MPAR,a,b)= z(|MPAR|,-b,-a)
+> c      Generate & return the  D_e  value implied by these coefficients.
+155,157c163,166
+< c       with exponent factor "beta" defined as a power series of order
+< c       (NVARB-1) in  z=(R-Re)/(R+Re)  with NVARB coefficients PARM(i).
+< c       Set  NVARB= 1 for conventional "simple" Morse potential.
+---
+> c      with exponent factor "beta" defined as a power series of order
+> c      (NVARB-1) in  y_{MPAR}= (R**MPAR - Re**MPAR)/(R**MPAR + Re**MPAR)
+> c      with NVARB coefficients PARM(i).    [!! MPAR .ge.1 !!]
+> c    * For conventional "simple" Morse potential,  NVARB=1 & MPAR dummy
+163,174c172,186
+< c** If IPOTL=4  use Seto's modification of Surkus' GPEF expansion in
+< c       z = [R^NPAR - Re^NPAR]/[a*R^NPAR + b*Re^NPAR] where 
+< c       a=PARM(NVARB-1) & b=PARM(NVARB), which incorporates Dunham, SPF,
+< c       O-T and other forms: V(z) = c_0 z^2 [1 + c_1 z + c_2 z^2 + ...]
+< c       where  c_0 [cm-1] is read in as DSCM, and the first (NVARB-2)
+< c       PARM(i)'s are the  c_i  (i > 0).  [MPAR is dummy parameter here]
+< c  * For Dunham case:  NPAR=1, PARM(NVARB-1)= 0.0, PARM(NVARB)= 1.0
+< c  * For SPF case:  NPAR=1, PARM(NVARB-1)= 1.0, PARM(NVARB)= 0.0
+< c  * For Ogilvie-Tipping:  NPAR=1, PARM(NVARB-1)= 0.5 = PARM(NVARB)
+< c  * NOTE that for Surkus NPAR < 0 case:  z(NPAR,a,b)= z(|NPAR|,-b,-a)
+< c      Generate & return the  D_e  value implied by these coefficients.
+< c** If IPOTL=5  generate generalized HFD(NPAR,6,8,10,12,14) potential.
+---
+> c** If IPOTL=4  generate an MLR potential [Mol.Phys. 105, 691 (2007)]
+> c      If MPAR > 0  exponent parameter defined in terms of a polynomial
+> c           of order (NVARB-2) with the NVARB coefficients  PARM(j).
+> c           in y_{MPAR}= (R**MPAR - Re**MPAR)/(R**MPAR + Re**MPAR), 
+> c           and long-range defined by NCN inverse-power terms
+> c      If MPAR = 0  exponent polynomial variable is  2*y_{1}= y{O-T}
+> c      If MPAR < 0  exponent polynomial variable is  y_{|MPAR|}
+> c      If MPAR.le.0  exponent polynomial connected to limiting inverse-
+> c           power potential exponent by exponential switching function 
+> c           with parameters  Asw= PARM(NVARB-1)  and  RSW= PARM(NVARB).
+> c** If IPOTL=5  generate a Double-Exponential Long-Range (DELR) 
+> c       potential [JCP 119, 7398 (2003)] with additive long-range part
+> c       defined by a sum of NCMM damped inverse-power terms, & exponent
+> c       polynomial radial variable defined by parameter MPAR (=p)
+> c** If IPOTL=6  generate generalized HFD({m_i},i=1,NCMM) potential.
+180,220c192,214
+< c       PARM(6-11)  are the reduced C_NPAR, C_6, C_8, C_10, C_12 and C14
+< c       parameters (NPAR < 6), while  AREP and  beta  are defined
+< c       by having the potential minimum at  x=1.  For NVARB < 11, higher
+< c       C_m coefficients automatically zero;  necessarily  NVARB.ge.7 .
+< c- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+< c** IBOB > 0, add atomic-mass-dependent Born-Openheimer breakdown 
+< c  correction functions to rotationless and/or centrifugal potential(s).
+< c  Both expressed as power series in  z= (R-Re)/(R+Re) starting with the
+< c  constant term, using the mass shift convention of Le Roy [J.Mol.Spec. 
+< c  194, 189 (1999)].  Adiabatic B-O-B potential correction fx. defined 
+< c  by polynomials of order NC1 with (NC1+1) coefficients {CA1(i)} for 
+< c  atom-1  and order NC2 with (NC2+1) coefficients {CA2(i)} for atom-2, 
+< c  while centrifugal correction fx. defined polynomial of order NG1 with
+< c  (NG1+1) coefficients {GA1(i)} for atom-1 and order NG2 with (NG2+1)
+< c  coefficients {GA2(i)} for atom-2.
+< c** Input parameters IANi & IMNi are the atomic & mass number of atom-i
+< c  (i=1,2), while integers RMN1 & RMN2 read here are the mass numbers of
+< c  the reference isotopes defining the B-O-B correction functions.
+< c** NC1 & NC2 are orders of polynomials DELTA(V,atom-i) defining 
+< c  'adiabatic' corrections to the rotationless potential for atoms 1 & 2
+< c  DELTA(V)= (1-M1ref/M1)*DELTA(V,atom-1) + (1-M2ref/M2)*DELTA(V,atom-2)
+< c** NG1 & NG2 are orders of polynomials q1(z) & q2(z) defining B-O-B
+< c   correction to the centrifugal potential:
+< c      V(centrifugal)= [1 + (M1ref/M1)*q1(z) + (M2ref/M2)*q2(z)]/R**2
+< c ... to omit a particular correction set associated NCi or NGi .lt.0
+< c** RX > 0.0  invokes Coxon's (older) expansions in (R-Re) for potential
+< c     correction and in  [(R-Rx)**j - (Re-Rx)**j] for centrifugal corrn.
+< c ... OTHERWISE (to use Le Roy B-O-B formalism) set  RX.le.0.d0 !!
+< c-----------------------------------------------------------------------
+< c** Read inside subroutine POTGEN
+< c         IF(LNPT.GT.0) THEN
+< c             READ(5,*) IPOTL, MPAR, NPAR, NVARB, IBOB, DSCM, REQ
+< c             IF(NVARB.GT.0) READ(5,*) (PARM(I), I=1,NVARB)
+< c             IF(IBOB.GT.0) THEN
+< c                 READ(5,*) RMN1, RMN2, NC1, NC2, NG1, NG2, RX
+< c                 IF(NC1.GE.0) READ(5,*) (CA1(I), I=0,NC1)
+< c                 IF(NC2.GE.0) READ(5,*) (CA2(I), I=0,NC2)
+< c                 IF(NG1.GE.0) READ(5,*) (GA1(I), I=0,NG1)
+< c                 IF(NG2.GE.0) READ(5,*) (GA2(I), I=0,NG2)
+< c             ENDIF
+< c         ENDIF
+---
+> c** If IPOTL=7  use Tiemann-type polynomial potential attached to an
+> c     inverse-power long-range tail and an 1/R^{12} (or exponential)
+> c     inner wall. 
+> c----------------------------------------------------------------------
+> c++     READ(5,*) IPOTL, MPAR, NSR, NCMM, NVARB, IBOB, DSCM, REQ
+> c++     IF(IPOTL.GE.4) READ(5,*) (MMLR(I), CMM(I),I= 1,NCMM)
+> c++     IF((IPOTL.EQ.4).OR.(IPOT.EQ.7)) READ(5,*) (MMLR(I),CMM(I),I= 1,MPAR)
+> c++     IF(NVARB.GT.0)  READ(5,*) (PARM(I), I=1,NVARB)
+> c++     IF(IBOB.GT.0) THEN
+> c++         READ(5,*) MN1R, MN2R, PAD, MAD, NU1, NU2, PNA, NT1, NT2
+> c++         IF(PAD.GT.0) THEN
+> c++              IF(NU1.GE.0) READ(5,*) U1INF, (U1(I), I=0,NU1)
+> c++              IF(NU2.GE.0) READ(5,*) U2INF, (U2(I), I=0,NU2)
+> c++              IF(NT1.GE.0) READ(5,*) T1INF, (T1(I), I=0,NT1)
+> c++              IF(NT2.GE.0) READ(5,*) T2INF, (T2(I), I=0,NT2)
+> c++           ELSE
+> c++              IF(NU1.GE.0) READ(5,*) U1INF,(U1(I), I=0,NU1), Aad1, Rad1
+> c++              IF(NU2.GE.0) READ(5,*) U2INF,(U2(I), I=0,NU2), Aad2, Rad2
+> c++              IF(NT1.GE.0) READ(5,*) T1INF,(T1(I), I=0,NT1), Ana1, Rna1
+> c++              IF(NT2.GE.0) READ(5,*) T2INF,(T2(I), I=0,NT2), Ana2, Rna2
+> c++           ENDIF
+> c++         ENDIF
+> c++     ENDIF
+240,242c234
+<               NPRS= MAX(1,(NPRS- 15*INPTS))
+<               NPRF= MIN(NPP,(NPRF+ 15*INPTS))
+<               NLIN= (NPRF-NPRS+1)/(2*INPTS)+1
+---
+>               NLIN= NPP/(2*INPTS)+1
+245c237
+<                   LWR= NPRS+INPTS*(I-1)
+---
+>                   LWR= 1+ INPTS*(I-1)
+270c262,263
+<   600 FORMAT(' Absolute energy at asymptote:   Y(lim)=',F12.4,'(cm-1)')
+---
+>   600 FORMAT(' State has  OMEGA=',i2,'   and energy asymptote:   Y(lim)=
+>      1',F12.4,'(cm-1)')
+275,283c268,278
+<   606 FORMAT(' Perform cubic spline interpolation over the',I5,' input p
+<      1oints' )
+<   608 FORMAT(' Interpolation performed over modified input array:   Y(I)
+<      1 * R(I)**2')
+<   610 FORMAT(/' Beyond read-in points extrapolate to limiting asymptotic
+<      1 behaviour:'/20x,'Y(R)  =  Y(lim) - (',D16.7,')/R**',I2)
+<   612 FORMAT(/' Scale input points:  (distance)*',1PD16.9,'   &  (energy
+<      1)*',D16.9/13x,'to get required internal units  [Angstroms & cm-1 f
+<      2or potentials]'/3('      R(i)         Y(i)  ')/3(3X,11('--')))
+---
+>   606 FORMAT(' Perform cubic spline interpolation over the',I5,
+>      1  ' input points' )
+>   608 FORMAT(' Interpolation actually performed over modified input arra
+>      1y:   Y(I) * r(I)**2')
+>   610 FORMAT( ' Beyond read-in points extrapolate to limiting asymptotic
+>      1 behaviour:'/20x,'Y(r)  =  Y(lim) - (',D16.7,')/r**',I2)
+>   612 FORMAT(' To make input points Y(i) consistent with  Y(lim),  add'
+>      1 ,'  Y(shift)=',F12.4/' Scale input points:  (distance)*',
+>      2 1PD16.9,'  &  (energy)*',D16.9/13x,'to get required internal unit
+>      3s  [Angstroms & cm-1 for potentials]'/
+>      4  3('      r(i)         Y(i)  ')/3(3X,11('--')))
+286,287c281,282
+<   618 FORMAT(3x,24('---')/' To make above input points consistent with',
+<      1  '  Y(lim),  add  Y(shift)=',F12.4)
+---
+>   618 FORMAT(/' !!! CAUTION !!! Last two mesh point  YI  values are equa
+>      1l'/17x,'so extrapolation to large  r  will be unreliable !!!'/)
+289c284
+<      1  2('     R       Y(R)     d1Y/dR1    d2Y/dR2')/2(2X,19('--')))
+---
+>      1  2('     r       Y(r)     d1Y/dr1    d2Y/dr2')/2(2X,19('--')))
+291c286,287
+<   624 FORMAT(1x,39('--'))
+---
+> c 622 FORMAT(2(0PF7.2,F12.5,1PD11.3,D10.2))
+>   624 FORMAT(1x,38('--'))
+299c295
+<      1                                              NCN,CNN,NPRS,NPRF)
+---
+>      1                                                        NCN,CNN)
+318c314
+<      1  NN,NPP,NUSE,NUST,NORD,NCN,NCN2,NCN4,NPRS,NPRF,NTP,
+---
+>      1  NN,NPP,NUSE,NUST,NORD,NCN,NCN2,NCN4,NTP,
+329,330d324
+<       NPRS= 1
+<       NPRF= NPP
+428,429c422,423
+<   600 FORMAT('  ** CAUTION ** Exponential inward extrapolation fails sin
+<      1ce first 3 points not monotonic, ... so ...')
+---
+>   600 FORMAT('  ** CAUTION ** Exponential inward extrapolation fails'/
+>      1 16x,'since first 3 points not monotonic, ... so ...')
+435c429
+<      1  SP,1PD15.6,' * exp(',SS,D13.6,'*R)')
+---
+>      1  SP,1PD15.6,' * exp(',SS,D13.6,'*X)')
+437,439c431,433
+<      1  SP,1PD16.7,' * [R - (',SS,F8.4,')]')
+<   610 FORMAT(' Extrapolate to   X .le.',F8.4,'   with   Y=',F12.3,
+<      1  SP,1PD15.6,')/R**1')
+---
+>      1  SP,1PD16.7,' * [X - (',SS,F8.4,')]')
+>   610 FORMAT(' Extrapolate to  X .le.',F8.4,'   with   Y=',F12.3,
+>      1  SP,1PD15.6,')/X**1')
+526d519
+< c         NPRS= MST
+606c599
+<               NCN= BLR
+---
+>               NCN= NINT(BLR)
+711d703
+< c         NPRF= MFN
+719c711
+<      1  F12.4,' - (',1PD13.6,') * exp{-',0PF10.6,' * (R -',F9.6,')**2}')
+---
+>      1  F12.4,' - (',1PD13.6,') * exp{-',0PF10.6,' * (r -',F9.6,')**2}')
+721c713
+<      1 F12.4,' - (',1PD13.6,') * R**',0PF10.6,'  * exp{-(',F11.6,'*R)}')
+---
+>      1 F12.4,' - (',1PD13.6,') * r**',0PF10.6,'  * exp{-(',F11.6,'*r)}')
+730c722
+<      1 '-point inverse-power interpolation'/'   with leading term  1/R**
+---
+>      1 '-point inverse-power interpolation'/'   with leading term  1/r**
+835,836c827,828
+< c+++++ Calls only subroutine SPLINE +++++++++++++++++++++++++++++++++++
+< c======================================================================
+---
+> c+++++ Calls only subroutines SPLINE and PLYINTRP ++++++++++++++++++++++
+> c=======================================================================
+1015c1007
+< 250   IER= NER
+---
+>   250 IER= NER
+1030c1022
+< c  to NBOB+1 terms.
+---
+> c  to NBOB+1 terms.  ||    ****** updated  8 April 2007 ******
+1034,1035c1026,1028
+<       INTEGER  I,J,M,IBOB,IAN1,IAN2,IMN1,IMN2,RMN1,RMN2,IORD,IPOTL,
+<      1  NC1,NC2,NG1,NG2,NCMAX,NPAR,MPAR,NVARB,NPP,LNPT,NCN,GNS,GEL
+---
+>       INTEGER  I,J,IBOB,IAN1,IAN2,IMN1,IMN2,MN1R,MN2R,IORD,IPOTL,
+>      1  PAD,MAD,PNA,NU1,NU2,NT1,NT2,NCMAX,MPAR,pPOW,NCN,NSR,NLR,
+>      2  NVARB,NPP,LNPT,GNS,GEL, NCMM,IDF, MMLR(9)
+1037,1042c1030,1044
+<       REAL*8  A0,A1,A2,A3,ALFA,BETA,BINF,B1,B2,CSAV,
+<      1  ABUND,CNN,DSCM,DX,DX1,FCT,
+<      2  FC1,FC2,MASS1,MASS2,RMASS1,RMASS2,RC6,RC8,RC10,RC12,RC14,
+<      3  RCNPAR,RD,RDIF,REQ,RPOW,RX,SC1,SC2,SG1,SG2,VLIM,
+<      4  XDF,X1,XM,XN,XM2C,XP1,ZZ,ZP, CA1(0:NBOB),CA2(0:NBOB),
+<      5  GA1(0:NBOB),GA2(0:NBOB),PARM(20),XO(NPP),VV(NPP),RM2(NPP)
+---
+>       CHARACTER*3 MLname
+>       REAL*8  A0,A1,A2,A3,ALFA,Asw,Rsw,BETA,BINF,B1,B2,BT,CSAV,U1INF,
+>      1 U2INF,T1INF,T2INF,YPAD,YMAD1,YMAD2,YMNA1,YMNA2,YPNA,ABUND,CNN,
+>      2 DSCM,DX,DX1,FCT,FC1,FC2,FG1,FG2,MASS1,MASS2,RMASS1,RMASS2,REQ,
+>      3 Rinn,Rout,SC1,SC2,SG1,SG2,VLIM,VMIN,XDF,X1,XS,XL,XP1,ZZ,ZP,ZME,
+>      4 Aad1,Aad2,Ana1,Ana2,Rad1,Rad2,Rna1,Rna2,fad1e,fad2e,
+>      5 ULR,ULRe,RHOd,REQP,Dm,Dmp,Dmpp,CMM(9),
+>      6 U1(0:NBOB),U2(0:NBOB),T1(0:NBOB),T2(0:NBOB),PARM(50),
+>      7 XO(NPP),VV(NPP),RM2(NPP)
+>       SAVE IBOB,IPOTL,IORD,MPAR,pPOW,PAD,MAD,PNA,NSR,NLR,MMLR,
+>      1 NVARB,NCMM
+>       SAVE DSCM,REQ,PARM,U1,U2,T1,T2,CSAV,BINF,ALFA,Rsw,ZME,
+>      2 Aad1,Aad2,Ana1,Ana2,Rad1,Rad2,Rna1,Rna2,Rinn,Rout,ULR,ULRe,CMM
+> c** Electron mass, as per 2002 physical constants
+>       DATA ZME/5.4857990945d-4/
+1044,1046d1045
+<       SAVE IBOB,IPOTL,IORD,MPAR,NPAR,NVARB,DSCM,REQ,PARM,CA1,CA2,GA1,
+<      1     GA2,RX,CSAV
+< c
+1050c1049,1050
+<           READ(5,*) IPOTL, MPAR, NPAR, NVARB, IBOB, DSCM, REQ
+---
+>           READ(5,*) IPOTL, MPAR, NSR, NCMM, NVARB, IBOB, DSCM, REQ
+>           IF(IPOTL.GE.4) READ(5,*) (MMLR(I), CMM(I),I= 1,NCMM)
+1052c1052,1053
+<           IF((IPOTL.EQ.3).AND.(NPAR.EQ.-1)) NVARB= 2
+---
+>           IF(IPOTL.EQ.6) NVARB= 5
+>           IF((IPOTL.EQ.3).AND.(MPAR.EQ.-1)) NVARB= 2
+1055c1056
+<               READ(5,*) RMN1, RMN2, NC1, NC2, NG1, NG2, RX
+---
+>               READ(5,*) MN1R, MN2R, PAD, MAD, NU1, NU2, PNA, NT1, NT2
+1057c1058
+<               NCMAX= MAX0(NC1,NC2,NG1,NG2)
+---
+>               NCMAX= MAX0(NU1,NU2,NT1,NT2)
+1063c1064
+<                   CALL MASSES(IAN1,RMN1,NAME1,GEL,GNS,RMASS1,ABUND)
+---
+>                   CALL MASSES(IAN1,MN1R,NAME1,GEL,GNS,RMASS1,ABUND)
+1065,1066c1066
+<                   CALL MASSES(IAN2,RMN2,NAME2,GEL,GNS,RMASS2,ABUND)
+<                   WRITE(6,628)
+---
+>                   CALL MASSES(IAN2,MN2R,NAME2,GEL,GNS,RMASS2,ABUND)
+1069,1072c1069,1072
+<                       CA1(I)= 0.d0
+<                       CA2(I)= 0.d0
+<                       GA1(I)= 0.d0
+<                       GA2(I)= 0.d0
+---
+>                       U1(I)= 0.d0
+>                       U2(I)= 0.d0
+>                       T1(I)= 0.d0
+>                       T2(I)= 0.d0
+1075a1076,1089
+>                   FG1= 0.d0
+>                   FG2= 0.d0
+>                   U1INF= 0.d0
+>                   U2INF= 0.d0
+>                   T1INF= 0.d0
+>                   T2INF= 0.d0
+>                   Aad1= 0.d0
+>                   Aad2= 0.d0
+>                   Ana1= 0.d0
+>                   Ana1= 0.d0
+>                   Rad1= 0.d0
+>                   Rad2= 0.d0
+>                   Rna1= 0.d0
+>                   Rna2= 0.d0
+1077c1091
+< c** Read actual B-O-B polynomial expansion coefficients
+---
+> c** Read actual BOB polynomial expansion coefficients
+1079c1093
+<                   IF(NC1.GE.0) THEN
+---
+>                   IF(NU1.GE.0) THEN
+1081c1095,1099
+<                       READ(5,*) (CA1(I), I=0,NC1)
+---
+>                       IF(PAD.GT.0) THEN
+>                           READ(5,*) U1INF,(U1(I), I=0,NU1)
+>                         ELSE
+>                           READ(5,*) U1INF,(U1(I),I=0,NU1),Aad1,Rad1
+>                         ENDIF
+1083,1085c1101,1105
+<                       IF(RX.LE.0.d0) THEN
+<                           WRITE(6,630) 1,MASS1,NC1,NAME1,RMN1,NAME1,
+<      1                                    IMN1,NC1+1,(CA1(I),I= 0,NC1)
+---
+>                       IF(PAD.GT.0) THEN
+> c ... for Huang/Le Roy form for the adiabatic potential BOB radial fx.
+>                           WRITE(6,630) 1,MASS1,MN1R,NAME1,IMN1,NAME1,
+>      1        1,U1INF,MAD,MAD,MAD,MAD,MAD,MAD,NU1,PAD,PAD,PAD,PAD,PAD,
+>      2                                         NU1+1,(U1(I),I= 0,NU1)
+1088,1090c1108,1112
+<                           WRITE(6,632) 1,MASS1,NC1,NAME1,IMN1,NC1+1,
+<      1                                               (CA1(I),I= 0,NC1)
+<                           FC1= 1.d0/MASS1
+---
+> c ... for Coxon/Hajigeorgiou switching fx. & mass scaling fx. for atom-1
+>                           WRITE(6,632) 1,MASS1,IMN1,NAME1,MN1R,NAME1,
+>      1                                   1,U1INF,NU1,(U1(I),I= 0,NU1)
+>                           WRITE(6,636) Aad1, Rad1
+>                           FC1= ZME*(RMASS1 - MASS1)/(RMASS1*MASS1)
+1093c1115,1116
+<                   IF(NC2.GE.0) THEN
+---
+> c
+>                   IF(NU2.GE.0) THEN
+1095c1118,1122
+<                       READ(5,*) (CA2(I), I=0,NC2)
+---
+>                       IF(PAD.GT.0) THEN
+>                           READ(5,*) U2INF,(U2(I), I=0,NU2)
+>                         ELSE
+>                           READ(5,*) U2INF,(U2(I),I=0,NU2),Aad2,Rad2
+>                         ENDIF
+1097,1099c1124,1128
+<                       IF(RX.LE.0.d0) THEN
+<                           WRITE(6,630) 2,MASS2,NC2,NAME2,RMN2,NAME2,
+<      1                                    IMN2,NC2+1,(CA2(I),I= 0,NC2)
+---
+>                       IF(PAD.GT.0) THEN
+> c ... for Huang/Le Roy adiabatic radial strength function for atom-2
+>                           WRITE(6,630) 2,MASS2,MN2R,NAME2,IMN2,NAME2,
+>      1        2,U2INF,MAD,MAD,MAD,MAD,MAD,MAD,NU2,PAD,PAD,PAD,PAD,PAD,
+>      2                                         NU2+1,(U2(I),I= 0,NU2)
+1102,1104c1131,1135
+<                           WRITE(6,632) 2,MASS2,NC2,NAME2,IMN2,NC2+1,
+<      1                                                (CA2(I),I=0,NC2)
+<                           FC2= 1.d0/MASS2
+---
+> c ... for Coxon/Hajigeorgiou switching fx. & mass scaling fx. for atom-1
+>                           WRITE(6,632) 2,MASS2,IMN2,NAME2,MN2R,NAME2,
+>      1                                    2,U2INF,NU2,(U2(I),I= 0,NU2)
+>                           WRITE(6,636) Aad2, Rad2
+>                           FC2= ZME*(RMASS2 - MASS2)/(RMASS2*MASS2)
+1107c1138,1139
+<                   IF(NG1.GE.0) THEN
+---
+> c
+>                   IF(NT1.GE.0) THEN
+1109c1141,1145
+<                       READ(5,*) (GA1(I), I=0,NG1)
+---
+>                       IF(PAD.GT.0) THEN
+>                           READ(5,*) T1INF,(T1(I), I=0,NT1)
+>                         ELSE
+>                           READ(5,*) T1INF,(T1(I),I=0,NT1),Ana1,Rna1
+>                         ENDIF
+1111,1113c1147,1151
+<                       IF(RX.LE.0.d0) THEN
+<                           WRITE(6,634) 1,MASS1,NG1,NAME1,RMN1,NAME1,
+<      1                                    IMN1,NG1+1,(GA1(I),I= 0,NG1)
+---
+>                       IF(PAD.GT.0) THEN
+> c ... for Huang/Le Roy centrifugal BOB radial functionfor atom-1 ...
+>                           WRITE(6,634) 1,MASS1,MN1R,NAME1,IMN1,NAME1,
+>      1 1,T1INF,PNA,PNA,PNA,PNA,PNA,PNA,NT1,PNA,NT1+1,(T1(I),I= 0,NT1)
+>                           FG1= RMASS1/MASS1
+1115,1116c1153,1157
+<                           WRITE(6,636) 1,MASS1,NG1,NAME1,IMN1,RX,
+<      1                                         NG1+1,(GA1(I),I= 0,NG1)
+---
+> c ... for Coxon O-T polynomial multiplied by  m_e/M_i
+>                           WRITE(6,638) 1,MASS1,IMN1,NAME1,1,T1INF,NT1,
+>      1                                               (T1(I),I= 0,NT1)
+>                           WRITE(6,636) Ana1, Rna1
+>                           FG1= ZME/MASS1
+1119c1160,1161
+<                   IF(NG2.GE.0) THEN
+---
+> c
+>                   IF(NT2.GE.0) THEN
+1121c1163,1167
+<                       READ(5,*) (GA2(I), I=0,NG2)
+---
+>                       IF(PAD.GT.0) THEN
+>                           READ(5,*) T2INF,(T2(I), I=0,NT2)
+>                         ELSE
+>                           READ(5,*) T2INF,(T2(I),I=0,NT2),Ana2,Rna2
+>                         ENDIF
+1123,1125c1169,1173
+<                       IF(RX.LE.0.d0) THEN
+<                           WRITE(6,634) 2,MASS2,NG2,NAME2,RMN2,NAME2,
+<      1                                    IMN2,NG2+1,(GA2(I),I= 0,NG2)
+---
+>                       IF(PAD.GT.0) THEN
+> c ... for Huang/Le Roy centrifugal BOB radial function for atom-2 ...
+>                           WRITE(6,634) 2,MASS2,MN2R,NAME2,IMN2,NAME2,
+>      1 2,T2INF,PNA,PNA,PNA,PNA,PNA,PNA,NT2,PNA,NT2+1,(T2(I),I= 0,NT2)
+>                           FG2= RMASS2/MASS2
+1127,1128c1175,1179
+<                           WRITE(6,636) 2,MASS2,NG2,NAME2,IMN2,RX,
+<      1                                         NG2+1,(GA2(I),I= 0,NG2)
+---
+> c ... for Coxon O-T polynomial multiplied by  m_e/M_i
+>                           WRITE(6,638) 2,MASS2,IMN2,NAME2,2,T2INF,NT2, 
+>      1                                               (T2(I),I= 0,NT2)
+>                           WRITE(6,636) Ana2, Rna2
+>                           FG2= ZME/MASS2
+1130a1182,1186
+>                   U1INF= U1INF*FC1
+>                   U2INF= U2INF*FC2
+>                   T1INF= T1INF*FG1
+>                   T2INF= T2INF*FG2
+> c... Now generates scaled expansion parameters all at the same time!
+1132,1140c1188,1191
+<                       CA1(I)= CA1(I)*FC1
+<                       CA2(I)= CA2(I)*FC2
+<                       IF(RX.LE.0.d0) THEN
+<                           GA1(I)= GA1(I)*(1.d0-FC1)
+<                           GA2(I)= GA2(I)*(1.d0-FC2)
+<                         ELSE
+<                           GA1(I)= GA1(I)*FC1
+<                           GA2(I)= GA2(I)*FC2
+<                         ENDIF
+---
+>                       U1(I)= U1(I)*FC1
+>                       U2(I)= U2(I)*FC2
+>                       T1(I)= T1(I)*FG1
+>                       T2(I)= T2(I)*FG2
+1145c1196
+<       IF(IPOTL.EQ.1) THEN 
+---
+> c
+1147c1198
+< c** Generate a  Lennard-Jones(MPAR,NPAR)  potential here.
+---
+> c** Generate a  Lennard-Jones(NSR,MPAR)  potential here.
+1149,1154c1200,1206
+<           XM= MPAR
+<           XN= NPAR
+<           XDF= DSCM/(XM-XN)
+<           IF(LNPT.GE.0) WRITE(6,600) MPAR,NPAR,DSCM,REQ
+<           NCN= NPAR
+<           CNN= XM*XDF*REQ**NPAR
+---
+>       IF(IPOTL.EQ.1) THEN 
+>           NCN= MPAR
+>           XS= NSR
+>           XL= MPAR
+>           XDF= DSCM/(XS-XL)
+>           IF(LNPT.GE.0) WRITE(6,600) NSR,MPAR,DSCM,REQ
+>           CNN= XS*XDF*REQ**NCN
+1156c1208
+<               VV(I)= (XN*(REQ/XO(I))**MPAR - XM*(REQ/XO(I))**NPAR)*XDF
+---
+>               VV(I)= (XL*(REQ/XO(I))**NSR - XS*(REQ/XO(I))**MPAR)*XDF
+1159a1212
+> c
+1162c1215,1216
+< c** Generate an MLJ potential [as per JCP 112, 3949 (2000)] here ...
+---
+> c** Generate Seto-modified form of Surkus' GPEF function which includes
+> c  Dunham, SPF and OT forms as special cases.
+1164,1177c1218,1226
+<           NCN= NPAR
+<           IORD= NVARB-1
+<           IF(MPAR.LT.0) THEN
+< c  If appropriate, prepare to calculate switching function
+<               IORD= IORD- 3
+<               CNN= PARM(NVARB-2)
+<               BINF= DLOG(2.d0*DSCM*REQ**NPAR/CNN)
+<               ALFA= PARM(NVARB- 1)
+<               RX= PARM(NVARB)
+<             ELSE
+< c  Generate limiting Cn value for non-switching case from BINF
+<               BINF= 0.D0
+<               DO  I= 1,NVARB
+<                   BINF= BINF+ PARM(I)
+---
+>           VMIN= VLIM
+>           A0= DSCM
+>           IORD= NVARB-2
+>           X1= 1.d0
+>           FCT= PARM(NVARB-1)
+>           IF((MPAR.NE.0).AND.(DABS(FCT).GT.0.d0)) THEN
+>               FCT= 1.d0/PARM(NVARB-1)
+>               DO  J=1,IORD
+>                   X1= X1+ PARM(J)*FCT**J
+1179,1184c1228
+<               CNN= 2.d0*DSCM*REQ**NPAR *DEXP(-BINF)
+<             ENDIF
+<           IF(LNPT.GT.0) THEN
+<               WRITE(6,602) DSCM,REQ,IORD,(PARM(J),J= 1,IORD+1)
+<               IF(MPAR.LT.0) WRITE(6,604) NPAR,NPAR,NPAR,PARM(NVARB-2),
+<      1                                       PARM(NVARB-1),PARM(NVARB)
+---
+>               DSCM= DSCM*X1*FCT**2 + VMIN
+1186,1192c1230,1278
+<           NCN= NPAR
+< c  Loop over distance array XO(I)
+<           DO  I= 1,NPP
+<               ZZ= (XO(I)- REQ)/(XO(I)+ REQ)
+<               BETA= 0.d0
+<               DO  J= IORD,0,-1
+<                   BETA= BETA*ZZ+ PARM(J+1)
+---
+>           IF(MPAR.EQ.1) THEN
+> c  Cases with power =1 (including Dunham, SPF & O-T expansions).
+>               IF(DABS(PARM(NVARB-1)).LE.0.d0) THEN
+> c ... print for Dunham expansion ...
+>                   WRITE(6,612) PARM(NVARB),REQ,VMIN,A0,NVARB-2,
+>      1                                          (PARM(I),I= 1,NVARB-2)
+>                   NCN= -99
+>                   CNN= 0.d0
+>                   ENDIF
+>               IF(DABS(PARM(NVARB)).LE.0.d0) THEN
+> c ... print for Simons-Parr-Finlan expansion ...
+>                   WRITE(6,614) PARM(NVARB-1),REQ,DSCM,A0,NVARB-2,
+>      1                                          (PARM(I),I= 1,NVARB-2)
+>                   NCN= 1
+>                   ENDIF
+>               IF(DABS(PARM(NVARB)-PARM(NVARB-1)).LE.0.d0) THEN
+> c ... print for Ogilvie-Tipping expansion ...
+>                   WRITE(6,616) PARM(NVARB),REQ,DSCM,A0,NVARB-2,
+>      1                                          (PARM(I),I= 1,NVARB-2)
+>                   NCN= 1
+>                   ENDIF
+>               ENDIF
+>           IF((MPAR.NE.0).AND.((MPAR.NE.1).OR.
+>      1                ((DABS(PARM(NVARB)-PARM(NVARB-1)).GT.0.d0).AND.
+>      2               (DABS(PARM(NVARB)*PARM(NVARB-1)).GT.0.d0)))) THEN
+> c ... print for general GPEF expansion variable ...
+>               IF(MPAR.LT.0) THEN
+> c ... for negative MPAR, convert to equivalent positive MPAR case
+>                   MPAR= -MPAR
+>                   A1= PARM(NVARB)
+>                   PARM(NVARB)= -PARM(NVARB-1)
+>                   PARM(NVARB-1)= -A1
+>                   ENDIF
+>               WRITE(6,618) MPAR,MPAR,PARM(NVARB-1),MPAR,PARM(NVARB),
+>      1                 MPAR,REQ,DSCM,A0,NVARB-2,(PARM(I),I= 1,NVARB-2)
+>               NCN= MPAR
+>               ENDIF
+>           IF(MPAR.EQ.0) THEN
+> c** For case of simple power series in  R  itself
+>               NCN= -1
+>               WRITE(6,620) NVARB,VMIN,(PARM(I),I= 1,NVARB)
+>               DO  I= 1, NPP
+>                   ZP= 1.d0
+>                   A1= VMIN
+>                   DO  J= 1,NVARB
+>                       ZP= ZP*XO(I)
+>                       A1= A1+ PARM(J)*ZP
+>                       ENDDO
+>                   VV(I)= A1
+1194,1198c1280,1293
+< c  Calculate and apply switching function to MLJ exponent coefficient
+<               IF(MPAR.LT.0) BETA= BINF+ (BETA- BINF)/
+<      1                                 (1.d0+ DEXP(ALFA*(XO(I) - RX)))
+<               VV(I)= DSCM*(1.d0 - (REQ/XO(I))**NPAR *DEXP(-BETA*ZZ))**2
+<      1                                                    - DSCM+ VLIM
+---
+>               VLIM= VV(NPP)
+>               RETURN
+>               ENDIF
+> c ... otherwise - generate potential as a GPEF-type expansion
+>           DO  I= 1, NPP
+>               ZZ= (XO(I)**MPAR - REQ**MPAR)/(PARM(NVARB-1)*XO(I)**MPAR
+>      1                                       + PARM(NVARB)*REQ**MPAR)
+>               A1= 1.d0
+>               ZP= 1.d0
+>               DO  J=1, NVARB-2
+>                   ZP= ZP*ZZ
+>                   A1= A1+ PARM(J)*ZP
+>                   ENDDO
+>               VV(I)= A0*ZZ*ZZ*A1 + VMIN
+1199a1295,1300
+>           IF(DABS(PARM(NVARB-1)).GT.0) THEN
+> c ...Reset asymptote to avoid spurious  E > VLIM  warnings (e.g. for HO)
+>               VLIM= VV(NPP)
+>             ELSE
+>               VLIM= VV(1)
+>             ENDIF
+1201c1302
+<       IF(IPOTL.EQ.3) THEN
+---
+> c
+1203c1304
+< c** Generate a simple Morse, or Extended (EMO) Morse potential, or as
+---
+> c** Generate a simple Morse, or Extended (EMOp) Morse potential, or as
+1205a1307
+>       IF(IPOTL.EQ.3) THEN
+1216,1217c1318,1324
+<                       IF(MPAR.GE.0) WRITE(6,608) DSCM,REQ,NVARB-1,
+<      1                                      NVARB,(PARM(i),i= 1,NVARB)
+---
+>                       IF(MPAR.GT.0) THEN
+>                           WRITE(6,608) MPAR,DSCM,REQ,NVARB-1,MPAR,MPAR,
+>      1                            MPAR,MPAR,NVARB,(PARM(i),i= 1,NVARB)
+>                           IF((NSR.GE.NVARB).OR.(NSR.LE.0)) NSR= NVARB
+>                           IF(NSR.LT.NVARB-1) WRITE(6,611) NSR
+>                           ENDIF
+> c ... Coxon's original GMO ...
+1223a1331
+>           NLR= NVARB-1
+1231a1340,1341
+>                       IF(MPAR.GT.1) ZZ= (XO(i)**MPAR - REQ**MPAR)/
+>      1                                  (XO(i)**MPAR + REQ**MPAR)
+1235c1345,1347
+<                       DO  J= NVARB,1,-1             
+---
+>                       IORD= NLR+1
+>                       IF((ZZ.LT.0.d0).AND.(NSR.LT.NLR)) IORD= NSR+1
+>                       DO  J= IORD,1,-1             
+1239c1351
+<                   VV(I)= DSCM*(1.d0 - DEXP(-BETA*(XO(I)-REQ)))**2 
+---
+>                   VV(I)=  DSCM*(1.d0 - DEXP(-BETA*(XO(I)-REQ)))**2 
+1244c1356
+<       IF(IPOTL.EQ.4) THEN
+---
+> c
+1246,1247c1358,1359
+< c** Generate Seto-modified form of Surkus' GPEF function which includes
+< c  Dunham, SPF and OT forms as special cases.
+---
+> c** Generate an MLR (or MLJ) potential [as per Mol.Phys. 105, 691 (2007)
+> c   and JCP 112, 3949 (2000)]] 
+1249,1258c1361,1414
+<           A0= DSCM
+<           IORD= NVARB-2
+<           X1= 1.d0
+<           FCT= PARM(NVARB-1)
+<           IF(DABS(FCT).GT.0.d0) THEN
+<               FCT= 1.d0/PARM(NVARB-1)
+<               DO  J=1,IORD
+<                   X1= X1+ PARM(J)*FCT**J
+<                   ENDDO
+<               DSCM= DSCM*X1
+---
+>       IF(IPOTL.EQ.4) THEN
+>           IF(LNPT.GT.0) THEN
+>               NCN= MMLR(1)
+>               CNN= CMM(1)
+>               pPOW= MPAR
+>               IF(MPAR.EQ.0) pPOW= 1
+>               IF(MPAR.LT.0) pPOW= -MPAR
+>               MLname= 'MLJ'
+>               IF(NCMM.GT.1) MLname= 'MLR'
+>               ULRe= 0.d0
+>               DO  I= 1,NCMM
+>                   ULRe= ULRe + CMM(I)/REQ**MMLR(I)
+>                   ENDDO
+>               BINF= DLOG(2.d0*DSCM/ULRe)
+>               WRITE(6,602) MLname,pPOW,NCN,DSCM,REQ
+>               IF(MPAR.LE.0) THEN
+> c  If appropriate, prepare to calculate switching function
+>                   NLR= NVARB- 4
+>                   Asw= PARM(NVARB-2)
+>                   Rsw= PARM(NVARB-1)
+>                   Rinn= PARM(NVARB)
+>                   IF(MPAR.NE.0) WRITE(6,603) NLR,1,1,1,1,1,NLR+1,
+>      1                                            (PARM(J),J= 1,NLR+1)
+>                   IF(MPAR.EQ.0) THEN
+>                       WRITE(6,598) NLR,1,1,1,1,1,NLR+1,
+>      1                                            (PARM(J),J= 1,NLR+1)
+>                       BINF= 0.5d0*BINF
+>                       ENDIF
+>                   WRITE(6,604) NCN,NCN,NCN,CMM(1),Asw,Rsw
+>                   IF(Rinn.GT.XO(1)) WRITE(6,596) Rinn
+>                 ELSE
+> c  ... and for the two non-switching function cases ...
+>                   IF(NSR.LE.0) THEN
+> c  For case of simple exponent power series of order (NVARB-1) ...
+>                       NLR= NVARB-1
+>                       BINF= 0.D0
+>                       DO  I= 1,NVARB
+>                           BINF= BINF+ PARM(I)
+>                           ENDDO
+>                       CMM(1)= 2.d0*DSCM*REQ**NCN *DEXP(-BINF)
+>                       WRITE(6,603) NLR,MPAR,MPAR,MPAR,MPAR,MPAR,
+>      1                                     NLR+1,(PARM(J),J= 1,NLR+1)
+>                       WRITE(6,601) BINF,NCN,CMM(1)
+>                     ELSE
+> c  For THEOCHEM/Huang form:  \beta(yp)= Binf*yp + [1-yp]*{power series}
+>                       NLR= NVARB-1
+>                       IF(NSR.GT.NLR) NSR= NLR
+>                       WRITE(6,607) MPAR,MPAR,MPAR,NLR,MPAR,NLR+1,
+>      1                                           (PARM(J),J= 1,NLR+1)
+>                       IF(NSR.LT.NLR) WRITE(6,609) NSR
+>                       WRITE(6,613) MPAR,MPAR,MPAR,MPAR,MPAR,BINF,NCMM,
+>      1                                      (MMLR(I),CMM(I),I= 1,NCMM)
+>                     ENDIF
+>                 ENDIF
+1260,1280c1416,1449
+<           IF(NPAR.EQ.1) THEN
+< c  Cases with power =1 (including Dunham, SPF & O-T expansions).
+<               IF(DABS(PARM(NVARB-1)).LE.0.d0) THEN
+< c ... print for Dunham expansion ...
+<                   WRITE(6,612) PARM(NVARB),REQ,A0,NVARB-2,
+<      1                                          (PARM(I),I= 1,NVARB-2)
+<                   NCN= -99
+<                   CNN= 0.d0
+<                   ENDIF
+<               IF(DABS(PARM(NVARB)).LE.0.d0) THEN
+< c ... print for Simons-Parr-Finlan expansion ...
+<                   WRITE(6,614) PARM(NVARB-1),REQ,DSCM,A0,NVARB-2,
+<      1                                          (PARM(I),I= 1,NVARB-2)
+<                   NCN= 1
+<                   ENDIF
+<               IF(DABS(PARM(NVARB)-PARM(NVARB-1)).LE.0.d0) THEN
+< c ... print for Ogilvie-Tipping expansion ...
+<                   WRITE(6,616) PARM(NVARB),REQ,DSCM,A0,NVARB-2,
+<      1                                          (PARM(I),I= 1,NVARB-2)
+<                   NCN= 1
+<                   ENDIF
+---
+> c  Loop over distance array XO(I)
+>           IORD= NLR
+>           DO  I= 1,NPP
+>               ZZ= (XO(I)- REQ)/(XO(I)+ REQ)
+> c** MPAR=0  signals use of original O-T version of p=1 variable
+>               IF(MPAR.EQ.0) ZZ= 2.d0*ZZ
+>               IF(pPOW.GE.2) ZZ= (XO(i)**pPOW - REQ**pPOW)/
+>      1                          (XO(i)**pPOW  + REQ**pPOW)
+>               IORD= NLR
+>               IF((ZZ.LT.0).AND.(NSR.GT.0)) IORD= NSR
+>               BETA= 0.d0
+>               DO  J= IORD,0,-1
+>                   BETA= BETA*ZZ+ PARM(J+1)
+>                   ENDDO
+> c  Calculate and apply switching function to MLJ exponent coefficient
+>               IF(MPAR.LE.0) BETA= BINF+ (BETA- BINF)/
+>      1                                 (1.d0+ DEXP(Asw*(XO(I) - Rsw)))
+>               IF((MPAR.GT.0).AND.(NSR.GT.0)) BETA= BINF*ZZ + 
+>      1                                                 (1.d0- ZZ)*BETA
+>               ULR= 0.d0
+>               DO  J= 1,NCMM
+>                   ULR= ULR+ CMM(J)/XO(I)**MMLR(J)
+>                   ENDDO
+>               BETA= (ULR/ULRe) *DEXP(-BETA*ZZ)
+>               VV(I)= DSCM*(1.d0 - BETA)**2 - DSCM + VLIM
+>               ENDDO
+>           IF((PAD.LE.0).AND.(XO(1).LT.Rinn)) THEN
+> c.... If necessary prevent potential turnover in Coxon form by 
+> c   extrapolating linearly inward from  R{inn}= PARM(NVARB)
+>               J= INT((PARM(NVARB)-XO(1))/(XO(2)-XO(1)) + 1.01)
+>               BETA= VV(J+2)- VV(J+1)
+>               DO  I= J,1,-1
+>                   VV(I)= VV(I+1)- BETA
+>                   ENDDO
+1282,1294c1451,1480
+<           IF((NPAR.NE.1).OR.((DABS(PARM(NVARB)-PARM(NVARB-1)).GT.0.d0)
+<      1           .AND.(DABS(PARM(NVARB)*PARM(NVARB-1)).GT.0.d0))) THEN
+< c ... print for general GPEF expansion variable ...
+<               IF(NPAR.LT.0) THEN
+< c ... for negative NPAR, convert to equivalent positive NPAR case
+<                   NPAR= -NPAR
+<                   A1= PARM(NVARB)
+<                   PARM(NVARB)= -PARM(NVARB-1)
+<                   PARM(NVARB-1)= -A1
+<                   ENDIF
+<               WRITE(6,618) NPAR,NPAR,PARM(NVARB-1),NPAR,PARM(NVARB),
+<      1                 NPAR,REQ,DSCM,A0,NVARB-2,(PARM(I),I= 1,NVARB-2)
+<               NCN= NPAR
+---
+>           ENDIF
+> c
+> c=======================================================================
+> c** Generate a DELR potential [as per JCP 119, 7398 (2003)] 
+> c=======================================================================
+>       IF(IPOTL.EQ.5) THEN
+>           IF(LNPT.GT.0) THEN
+>               NLR= NVARB - 3
+>               RHOd= PARM(NVARB-1)
+>               IDF= 1
+>               IF(PARM(NVARB).LE.0.d0) IDF= 2
+>               PPOW= MPAR
+>               REQP= REQ**PPOW
+>               A1= 0.0d0
+>               B1= 0.0d0
+> c... first, get  AA & BB and their derivatives!
+>               DO  J= 1,NCMM
+>                   CALL dampF(REQ,RHOd,MMLR(J),Dm,Dmp,Dmpp,IDF)
+>                   A1= A1+ CMM(J)*Dm/REQ**MMLR(J)*(1.d0+ Dmp/(PARM(1)*Dm)
+>      1                                        - MMLR(J)/(PARM(1)*REQ))
+>                   B1= B1+ CMM(J)*Dm/REQ**MMLR(J)*(2.d0+ Dmp/(PARM(1)*Dm)
+>      1                                        - MMLR(J)/(PARM(1)*REQ))
+>                   ENDDO
+>               A1 = A1 + DSCM
+>               B1 = B1 + 2.0d0*DSCM
+>               WRITE(6,650)  PPOW,DSCM,REQ,NSR,NLR,A1,B1,NCMM,
+>      1                                      (MMLR(J),CMM(J),J= 1,NCMM)
+>               WRITE(6,652)  NLR+1,(I-1,PARM(I),I= 1,NLR+1)
+>               IF(IDF.EQ.1) WRITE(6,654) RHOd
+>               IF(IDF.EQ.2) WRITE(6,656) RHOd
+1295a1482
+> c** Now ... generate potential function array for DELR form
+1297,1303c1484,1497
+<               ZZ= (XO(I)**NPAR - REQ**NPAR)/(PARM(NVARB-1)*XO(I)**NPAR
+<      1                                       + PARM(NVARB)*REQ**NPAR)
+<               A1= 1.d0
+<               ZP= 1.d0
+<               DO  J=1, NVARB-2
+<                   ZP= ZP*ZZ
+<                   A1= A1+ PARM(J)*ZP
+---
+>               ZZ= (XO(I)**PPOW -REQP)/(XO(I)**PPOW +REQP)
+>               IORD= NLR+1
+>               IF((ZZ.LT.0.d0).AND.(NSR.LT.NLR)) IORD= NSR+1
+>               BETA= 0.d0
+> c ... calculate the exponent
+>               DO  J= IORD,1,-1
+>                   BETA= BETA*ZZ+ PARM(J)
+>                   ENDDO
+>               BETA= DEXP(-BETA*(XO(I)-REQ))
+> c ... calculate the (damped) long-range tail
+>               A3= 0.0d0
+>               DO  J= 1, NCMM
+>                   CALL dampF(XO(I),RHOd,MMLR(J),Dm,Dmp,Dmpp,IDF)
+>                   A3= A3+ Dm*CMM(J)/XO(I)**MMLR(J)
+1305c1499
+<               VV(I)= A0*ZZ*ZZ*A1 + VLIM
+---
+>               VV(I)=  (A1*BETA - B1)*BETA + A3 + VLIM
+1308c1502,1503
+<       IF(IPOTL.EQ.5) THEN
+---
+> c
+>       IF(IPOTL.EQ.6) THEN
+1310c1505
+< c** For generalized  H.F.D.(NPAR,6,8,10,12,14)  potential with reduced 
+---
+> c** For generalized  HFD(m= MMLR(j), j=1,NCMM) potential with reduced 
+1312,1342c1507,1541
+< c       [PARM(6)/x**NPAR + PARM(7)/x**6 + PARM(8)/x**8 + PARM(9)/x**10 
+< c       + PARM(10)/X**12 + PARM(11)/X**14]   where   x=r/R_e ,  
+< c  VBAR= V/epsilon   and   D(x)= exp[-PARM(1)*(PARM(2)/x - 1)**PARM(3)]
+< c  for  x < PARM(2)
+< c=======================================================================
+<           A1= PARM(1)
+<           A2= PARM(2)
+<           A3= PARM(3)
+<           B2= PARM(4)
+<           RC8= 0.d0
+<           RC10= 0.d0
+<           RC12= 0.d0
+<           RC14= 0.d0
+<           RCNPAR= PARM(6)
+<           NCN= 6
+<           IF(RCNPAR.GT.0.d0) NCN= NPAR
+<           RC6= PARM(7)
+<           IF(NVARB.ge.8)  RC8= PARM(8)
+<           IF(NVARB.ge.9)  RC10= PARM(9)
+<           IF(NVARB.ge.10) RC12= PARM(10)
+<           IF(NVARB.ge.11) RC14= PARM(11)
+<           DX= 1.d0
+<           DX1= 0.d0
+<           IF(A2.GT.1.d0) THEN
+<               DX= DEXP(-A1*(A2- 1.d0)**A3)
+<               DX1= A1*A2*A3*DX*(A2- 1.d0)**(A3- 1.d0)
+<               ENDIF
+<           ALFA= -1.D0+ (RCNPAR+ RC6+ RC8+ RC10+ RC12+ RC14)*DX
+<           IF(ALFA.LE.0.d0) THEN
+<               WRITE(6,622) RCNPAR,RC6,RC8,RC10,RC12,RC14,ALFA
+<               STOP
+---
+> c      [CMM(1)/x**MMLR(1) + CMM(2)/x**sMMLR(2) + CMM(3)/x**MMLR(3) + ...
+> c  x=r/R_e ,  VBAR= V/De   and    D(x) = 1 for x > PARM(2)   and
+> c      D(x)= exp[-PARM(1)*(PARM(2)/x - 1)**PARM(3)] for  x < PARM(2)
+> c=======================================================================
+>           IF(LNPT.GT.0) THEN
+>               NCN= MMLR(1)
+>               CNN= CMM(1)*DSCM*REQ**MMLR(1)
+>               A1= PARM(1)
+>               A2= PARM(2)
+>               A3= PARM(3)
+>               B2= PARM(4)
+>               DX= 1.d0
+>               DX1= 0.d0
+>               IF(A2.GT.1.d0) THEN
+>                   DX= DEXP(-A1*(A2- 1.d0)**A3)
+>                   DX1= A1*A2*A3*DX*(A2- 1.d0)**(A3- 1.d0)
+>                   ENDIF
+>               ALFA= 0.d0
+>               DO  J= 1, NCMM
+>                   ALFA= ALFA+ CMM(J)
+>                   ENDDO
+>               ALFA= ALFA*DX -1.D0
+>               IF(ALFA.LE.0.d0) THEN
+>                   WRITE(6,622) ALFA,(MMLR(J),CMM(J),J= 1, NCMM)
+>                   STOP
+>                   ENDIF
+>               B1= 0.d0
+>               DO  J= 1, NCMM
+>                   B1= B1+ (MMLR(J)*DX - DX1)*CMM(J)
+>                   ENDDO
+>               B1= B1/ALFA + PARM(5) - 2.d0*B2
+>               ALFA= ALFA*DEXP(B1+B2)
+>               WRITE(6,624) PARM(5),B1,B2,ALFA*DSCM,
+>      1                                     (MMLR(J),CMM(J),J= 1, NCMM)
+>               WRITE(6,626) DSCM,REQ,A1,A2,A3
+1344,1349d1542
+<           B1= ((NPAR*RCNPAR+6.D0*RC6+8.D0*RC8+10.D0*RC10+12.d0*RC12+
+<      1      14.d0*RC14)*DX - (RCNPAR+RC6+RC8+RC10+RC12+RC14)*DX1)/ALFA
+<      2      + PARM(5) - 2.D0*B2
+<           ALFA= ALFA*DEXP(B1+B2)
+<           IF(LNPT.GE.0) WRITE(6,624) NPAR,PARM(5),B1,B2,ALFA*DSCM,
+<      1                 RCNPAR,RC6,RC8,RC10,RC12,RC14,A1,A2,A3,DSCM,REQ
+1355,1359c1548,1647
+<               FC1= 1.D0
+<               IF(A2.GT.X1) FC1= DEXP(-A1*(A2/X1- 1.d0)**A3)
+<               XM2C= (REQ/XO(I))**2
+<               VV(I)= DSCM*(ALFA*XP1- FC1*(((((RC14*XM2C+RC12)*XM2C+RC10)
+<      1         *XM2C+ RC8)*XM2C+ RC6)*XM2C**3 + RCNPAR/X1**NPAR)) + VLIM
+---
+>               FC1= 0.d0
+>               DO  J= 1, NCMM
+>                   FC1= FC1 + CMM(J)/X1**MMLR(J)
+>                   ENDDO
+>               IF(X1.LT.A2) FC1= FC1*DEXP(-A1*(A2/X1- 1.d0)**A3)
+>               VV(I)= DSCM*(ALFA*XP1- FC1) + VLIM
+>               ENDDO
+>           ENDIF
+> c
+>       IF(IPOTL.EQ.7) THEN
+> c=======================================================================
+> c** Generate Tiemann-type polynomial potential attached to inverse-power
+> c  tail and 1/R^{12} (or exponential) inner wall [PRA 63, 012710 (2000)].
+> c  Polynomial expansion variable is  z= [R - Rm]/[R + b*Rm] where 
+> c  expansion has constant and linear terms.  The read-in DSCM= De (well
+> c  depth), but  Rm (read in as REQ) is not precisely Re (for a1 .neq. 0).
+> c  NCMM= number of inverse-power long-range terms;  
+> c  NVARB= (polynomial order) + 4.  [MPAR and NSR are dummy parameters]
+> c** Read-in parameters PARM(i) are in order: the  (IORD+1)=(NVARB-3) 
+> c  polynomial coefficients  a(0) - a(IORD), the expansion variable 
+> c  denominator factor b, and the the inner and outer bounds on the 
+> c  polynomial domain, Tiemann's Rinn & Rout, resp.  The powers and 
+> c  coefficients (-ve if attractive) of the NCMM inverse-power long-range
+> c  terms are MMCM(j) and CMM(j).
+> c=======================================================================
+>           IF(LNPT.GT.0) THEN
+>               NCN= MMLR(1)
+>               CNN= -CMM(1)
+>               A0= VLIM- DSCM
+>               IORD= NVARB - 4
+>               BT= PARM(NVARB-2)
+>               Rinn= PARM(NVARB-1)
+>               Rout= PARM(NVARB)
+> c** Determine analytic function attaching smoothly to inner wall of 
+> c  polynomial expansion at  R= Rinn < Rm
+>               ZZ= (Rinn - REQ)/(Rinn+ BT*REQ)
+>               ZP= 1.d0
+>               A1= PARM(1)
+>               A2= 0.d0
+>               DO  J= 1,IORD
+>                   A2= A2+ J*ZP*PARM(J+1)
+>                   ZP= ZP*ZZ
+>                   A1= A1+ ZP*PARM(J+1)
+>                   ENDDO
+>               A2= A2*(REQ+ BT*REQ)/(Rinn + BT*REQ)**2
+> c* If inward extrapolation is exponential:   A1*exp(-A2*(R-Rinn))
+> c             A2= -A2/A1
+> c* If inward extrapolation is inverse-power:   A1 + A2/R**12
+>               A2= -A2*Rinn**13/12.d0
+>               A1= A1 - A2/Rinn**12 + VLIM - DSCM
+> c** With long-range tail an NCMM-term inverse-power sum, add 1 additional
+> c   higher-power term to ensure continuity (not smoothness) at  Rout
+> c** NOTE attractive long-range terms have negative (-) coefficients!
+>               ZZ= (Rout - REQ)/(Rout+ BT*REQ)
+>               ZP= 1.d0
+>               B1= PARM(1)
+>               DO  J= 1,IORD
+>                   ZP= ZP*ZZ
+>                   B1= B1+ ZP*PARM(J+1)
+>                   ENDDO
+>               A3= DSCM
+>               DO  J= 1,NCMM
+>                   A3= A3+ CMM(J)/Rout**MMLR(J)
+>                   ENDDO
+>               MPAR= NCMM+ 1
+>               MMLR(MPAR)= MMLR(NCMM)+ 2
+>               CMM(MPAR)= (B1-A3)*Rout**MMLR(MPAR)
+> c*** Print for Tiemann-type potential
+>               IF(LNPT.GE.0) THEN
+>                   WRITE(6,640) DSCM,REQ,PARM(IORD+2),IORD,IORD+1, 
+>      1                                           (PARM(J),J= 1,IORD+1)
+> ccc               IF(XO(1).LT.Rinn) WRITE(6,642) PARM(NVARB-1),A1,A2,A0
+>                   IF(XO(1).LT.Rinn) WRITE(6,642) PARM(NVARB-1),A1,A2
+>                   IF(XO(NPP).GT.Rout) WRITE(6,644) PARM(NVARB),
+>      1                                   (CMM(J),MMLR(J),J= 1, MPAR)
+>                   ENDIF
+>               ENDIF
+> c ... now generate potential as a Tiemann-type expansion
+>           DO  I= 1, NPP
+>               IF(XO(I).LE.Rinn) THEN
+> c ... for exponential inward extrapolation ...
+> c                 VV(I)= A1*DEXP(-A2*(XO(I)- Rinn)) + A0
+> c ... for   A + B/R**12  inward extrapolation ...
+>                   VV(I)= A1 + A2/XO(I)**12
+>                 ELSEIF(XO(I).LE.Rout) THEN
+>                   ZZ= (XO(I) - REQ)/(XO(I) + BT*REQ)
+>                   A3= A0 + PARM(1)
+>                   ZP= 1.d0
+>                   DO  J= 1,IORD
+>                       ZP= ZP*ZZ
+>                       A3= A3+ PARM(J+1)*ZP
+>                       ENDDO
+>                   VV(I)= A3
+>                 ELSEIF(XO(I).GT.Rout) THEN
+>                   A3= VLIM
+>                   DO  J= 1, MPAR
+>                       A3= A3+ CMM(J)/XO(I)**MMLR(J)
+>                       ENDDO
+>                   VV(I)= A3
+>                 ENDIF
+1361a1650
+> c
+1365,1366c1654,1655
+< c  functions to rotationless and/or centrifugal potential(s).
+< c [Special "Coxon" option: if  RX > 0.0, expand as per older Coxon work]
+---
+> c      functions to rotationless and/or centrifugal potential(s).
+> c  If  PAD > 0, use LeRoy-Huang radial functions; else Coxon-Hajig.
+1368c1657,1660
+<           IF(RX.GE.0.D0) RDIF= REQ-RX
+---
+>           IF(PAD.LE.0) THEN
+>               fad1e= 1.d0/(1.d0 + DEXP(Aad1*(REQ- Rad1)))
+>               fad2e= 1.d0/(1.d0 + DEXP(Aad2*(REQ- Rad2)))
+>               ENDIF
+1370,1371c1662,1675
+<               IF(RX.LE.0.d0) THEN
+<                   ZZ= (XO(I)-REQ)/(XO(I)+REQ)
+---
+>               IF(PAD.GT.0) THEN
+> c ... for LeRoy/Huang radial functions ...
+>                   YPAD= (XO(I)**PAD- REQ**PAD)/(XO(I)**PAD+ REQ**PAD)
+>                   YMAD1= (XO(I)**MAD- REQ**MAD)/(XO(I)**MAD+ REQ**MAD)
+>                   YMAD2= YMAD1
+>                   YPNA= (XO(I)**PNA- REQ**PNA)/(XO(I)**PNA+ REQ**PNA)
+>                   SC1= U1INF*YMAD1
+>                   SC2= U2INF*YMAD2
+>                   SG1= T1INF*YPNA
+>                   SG2= T2INF*YPNA
+>                   YMAD1= (1.d0- YMAD1)
+>                   YMAD2= (1.d0- YMAD2)
+>                   YMNA1= (1.d0- YPNA)
+>                   YMNA2= (1.d0- YPNA)
+1373,1374c1677,1691
+<                   ZZ= XO(I)- REQ
+<                   RD= XO(I)- RX
+---
+> c** For [Coxon] BOB radial functions ....
+>                   YPAD= 2.d0*(XO(I) - REQ)/(XO(I) + REQ)
+>                   YPNA= (XO(i) - REQ)/REQ
+>                   YMAD1= 1.d0/(1.d0 + DEXP(Aad1*(XO(i)- Rad1)))
+>                   YMAD2= 1.d0/(1.d0 + DEXP(Aad2*(XO(i)- Rad2)))
+>                   YMNA1= 1.d0/(1.d0 + DEXP(Ana1*(XO(i)- Rna1)))
+>                   YMNA2= 1.d0/(1.d0 + DEXP(Ana2*(XO(i)- Rna2)))
+>                   SC1= U1INF*(1.d0 - YMAD1/fad1e)
+>                   SC2= U2INF*(1.d0 - YMAD2/fad2e)
+>                   SG1= 0.d0
+>                   SG2= 0.d0
+>                   IF(Aad1.LE.0.d0) YMAD1= 1.d0
+>                   IF(Aad2.LE.0.d0) YMAD2= 1.d0
+>                   IF(Ana1.LE.0.d0) YMNA1= 1.d0
+>                   IF(Ana2.LE.0.d0) YMNA2= 1.d0
+1376,1380c1693
+<               SC1= 0.d0
+<               SC2= 0.d0
+<               SG1= 0.d0
+<               SG2= 0.d0
+<               RPOW= 1.d0
+---
+> c ... finally, accumulate overall BOB terms ... all at the same time!
+1382,1392c1695,1702
+<                   SC1= SC1+ RPOW*CA1(J)
+<                   SC2= SC2+ RPOW*CA2(J)
+<                   IF(RX.LE.0.d0) THEN
+<                       SG1= SG1+ RPOW*GA1(J)
+<                       SG2= SG2+ RPOW*GA2(J)
+<                     ELSE 
+<                       M= J-1
+<                       SG1= SG1+ (RD**J -RDIF**J)*GA1(J)
+<                       SG2= SG2+ (RD**J -RDIF**J)*GA2(J)
+<                     ENDIF
+<                   RPOW= RPOW*ZZ
+---
+>                   SC1= SC1+ YMAD1*U1(J)
+>                   SC2= SC2+ YMAD2*U2(J)
+>                   SG1= SG1+ YMNA1*T1(J)
+>                   SG2= SG2+ YMNA2*T2(J)
+>                   YMAD1= YMAD1*YPAD
+>                   YMAD2= YMAD2*YPAD
+>                   YMNA1= YMNA1*YPNA
+>                   YMNA2= YMNA2*YPNA
+1401,1407c1711,1724
+<   602 FORMAT(/' Use an MLJ potential with   De =',F10.3,
+<      1  '(cm-1)    Re =',F12.8,'(A)'/3x,'with exponent parameter BETA an
+<      2 order-',i2,' polynomial in  z=(R-Re)/(R+Re)  with'/
+<      3  '   coefficients:',1PD16.8,3D16.8:/(5D16.8:))
+<   604 FORMAT(' & exponent switching function yielding limiting C',i1,
+<      1 '/R^',i1,' with   C_',i1,'=',1PD13.6/10x,'defined by   ALPHA_s=',
+<      2  0Pf9.6,'   R_s=',f10.6)
+---
+>   601 FORMAT(3x,'which sum to   beta_{inf}=',f12.8,'   so that   C',i1,
+>      1  '=',1Pd14.7)
+>   602 FORMAT(/' Use an  ',A3,'_',i1,'(n=',i2,')  potential with   De=',
+>      1  F10.3,'[cm-1]    Re=',F12.8,'[A]')
+>   598 FORMAT(3x,'with exponent an order-',i2,' polynomial in   y',I1,
+>      1 '= 2*(r**',i1,' - Re**',i1,')/(r**',i1,' + Re**',i1,')'/
+>      2 '   with',i3,' coefficients:',1PD16.8,2D16.8:/(8x,4D16.8:))
+>   596 FORMAT(5x,'and for   r <',f8.4,'   extrapolate inward linearly')
+>   603 FORMAT(3x,'with exponent an order-',i2,' polynomial in   y',I1,
+>      1 ' = (r**',i1,' - Re**',i1,')/(r**',i1,' + Re**',i1,')'/
+>      2 '   with',i3,' coefficients:',1PD16.8,2D16.8:/(8x,4D16.8:))
+>   604 FORMAT(' exponent switching function yields limiting  C',i1,
+>      1 '/r**',i1,'  with  C_',i1,'=',1PD14.7/10x,'defined by   A_sw=',
+>      2  0Pf10.6,'   R_sw=',f10.6)
+1413,1416c1730,1738
+<   608 FORMAT(/' Potential is Extended Morse Oscillator with   De=',
+<      1  F11.4,'    Re=',F12.9/5x,'Exponent factor "beta" is order-',i2,
+<      2 ' power series in  z=(R-Re)/(R+Re)  with'/5x,I2,' coefficients:',
+<      3  1x,1PD18.9,2D18.9:/(4X,4D18.9:))
+---
+>   607 FORMAT('   with  beta(y',i1,')= beta{INF}*y',i1,' + [1-y',i1,
+>      1 ']x{order-',i2,' polynomial in y',i1,'}'/'   with',i3,
+>      2 ' coefficients:',1PD16.8,2D16.8:/(8x,4D16.8:))
+>   608 FORMAT(/' Potential is an  EMO_',i1,'  with   De=',F11.4,
+>      1 '    Re=',F12.9/3x,'Exponent factor is order-',i2, ' power series
+>      2 in  y=(r**',i1,' - Re**',i1,')/(r**',i1,' + Re**',i1,')'/
+>      3 '   with',I3,' coefficients:',1x,1PD18.9,2D18.9:/(7X,4D18.9:))
+>   609 FORMAT('   where for  r < Re  polynomial order is truncated to ord
+>      1er   NSR=',i2,'   with')
+1419c1741
+<      2wer series in (R-Re) with coefficients:'/4x,1PD18.9,3D18.9:/
+---
+>      2wer series in (r-Re) with coefficients:'/4x,1PD18.9,3D18.9:/
+1421,1425c1743,1753
+<   612 FORMAT(/' Potential is a Dunham expansion in  (R-Re)/(',f5.2,
+<      1  ' * Re)  with   Re=',f12.9/'  a0=',1PD16.9,'   and',i3,
+<      2  '  a_i coefficients:'/(5D16.8))
+<   614 FORMAT(/' Potential is an SPF expansion in  (R-Re)/(',F5.2,
+<      1  '* R)  with   Re=',f12.9/5x,'De=',g18.10,'   b0=',
+---
+>   611 FORMAT('   where for  r < Re  polynomial order is truncated to ord
+>      1er   NSR=',i2) 
+>   612 FORMAT(/' Potential is a Dunham expansion in  (r-Re)/(',f5.2,
+>      1  ' * Re)  with   Re=',f12.9/'  V(Re)=',f12.4,'    a0=',1PD16.9,
+>      2  '   and',i3,'  a_i coefficients:'/(5D16.8))
+>   613 FORMAT(6x,'y',i1,'= (r**',i1,' - Re**',i1,')/(r**',i1,' + Re**',
+>      1 i1,')     where   phiINF=',F12.8,'   and'/  '   uLR(r) is a sum o
+>      2f',I3," term(s) with coefficients (+'ve if attractive):"/
+>      3 (3x,3(5x,'C',i2,' =',1PD14.6:)))
+>   614 FORMAT(/' Potential is an SPF expansion in  (r-Re)/(',F5.2,
+>      1  '* r)  with   Re=',f12.9/5x,'De=',g18.10,'   b0=',
+1427,1428c1755,1756
+<   616 FORMAT(/' Potential is an O-T expansion in  (R-Re)/[',f5.2,
+<      1  '*(R+Re)]  with   Re=',f12.9/5x,'De=',G18.10,
+---
+>   616 FORMAT(/' Potential is an O-T expansion in  (r-Re)/[',f5.2,
+>      1  '*(r+Re)]  with   Re=',f12.9/5x,'De=',G18.10,
+1430,1456c1758,1887
+<   618 FORMAT(/' Potential is a general GPEF expansion in  (R^',i1,
+<      1  ' - Re^',i1,')/(',SP,F5.2,'*R^',SS,i1,SP,F6.2,'*Re^',SS,i1,')'/
+<      2  5x,'with   Re=',f12.9,'   De=',g18.10,'   g0=',1PD16.9/
+<      2  5x,'and',i3,'  g_i coefficients:  ',3D16.8/(5D16.8:))
+<   622 FORMAT(/' *** ERROR in generating HFD potential *** C',i1,
+<      1 ', C6, C8, C10, C12, C14  =',6G15.7/10X,'yield    ALFA =',G15.7)
+<   624 FORMAT(/' Potential is Generalized HFD(',i1,',6,8,10,12,14) with',
+<      1 '  gamma=',f9.6/'    beta1=',f12.8,'    beta2=',f9.6,'    A=',
+<      2 1PD16.9/"    reduced {Cn's}:",3D14.6/19x,3D14.6/'    Damping func
+<      3tion  D(R)= exp[ -',0Pf6.4,'*(',f7.4,'/X -1.0)**',f5.2,']' /
+<      4 '  & DSCM=',f10.4,'[cm-1]   Re=',f9.6,'[Angst.]')
+<   628 FORMAT(' ')
+<   630 FORMAT(' B-O-B correction to rotationless potential for atom-',
+<      1  I1,'  of mass ',f14.10/5x,'is  [order-',I2,' polynomial in {(R-R
+<      2e)/(R+Re)}] * [1- MASS(',A2,i3,')/MASS(',A2,I3,')]'/5x,'with',i3,
+<      3  ' coefficients:',3G18.10:/(8x,4G18.10:))
+<   632 FORMAT(' B-O-B correction to rotationless potential for atom-',
+<      1 I1,'  of mass ',f14.10/5x,'is  [order-',I2,' polynomial in (R-Re)
+<      2]/[MASS(',A2,I3,')]   with',i3,' coefficients:'/(5x,4G18.10:))
+<   634 FORMAT(' B-O-Breakdown correction to centrifugal term for atom-',
+<      1 I1,'  of mass ',f14.10/5x,'is  [order-',I2,' polynomial in {(R-Re
+<      2/(R+Re)}] * [MASS(',A2,I3,')/MASS(',A2,I3,')]'/5x,'with',i3,' coef
+<      3ficients:',3G18.10:/(8x,4G18.10:))
+<   636 FORMAT(' B-O-Breakdown correction to centrifugal term for atom-',
+<      1 I1,'  of mass ',f14.10/5x,'is  [order-',I2,' polynomial in {(R-Rx
+<      2)**i - (Re-Rx)**i}] / [MASS(',A2,I3,')]'/5x,'with  Rx=',f6.3,
+<      3 '  &',i3,' coefficients: ',1PD18.9,D18.9:/(5x,4D18.9:))
+---
+>   618 FORMAT(/' Potential is a general GPEF expansion in  (r**',i1,
+>      1  ' - Re**',i1,')/(',SP,F5.2,'*r**',SS,i1,SP,F6.2,'*Re**',SS,i1,
+>      2  ')'/5x,'with   Re=',f12.9,'   De=',g18.10,'   g0=',1PD16.9/
+>      3  5x,'and',i3,'  g_i coefficients:  ',3D16.8/(5D16.8:))
+>   620 FORMAT(/' Potential is a power series in  r  of  order',i3,
+>      1 ' with   V(r=0)=',f11.4/3x,'& coefficients (from linear term):',
+>      2 1P2d16.8:/(5x,4D16.8:))
+>   622 FORMAT(/' *** ERROR in generating HFD potential *** generate   ALF
+>      1A=',G15.7,'  from reduced  Cm  coefficients:'/
+>      2   (3x,3('   C',i2,' =',1PD15.7:)) )
+>   624 FORMAT(/' Potential is Generalized HFD with exponent factors   gam
+>      1ma=',f9.6/'   beta1=',f12.8,'   beta2=',f9.6,'   A=',1PD16.9,
+>      2 "   & reduced Cm's:"/(3x,3('   C',i2,' =',D15.7:)) )
+>   626 FORMAT('   De=',f10.4,'[cm-1]   Re=',f9.6,'[Angst.]   and'/
+>      1  '     Damping function  D(r)= exp[ -',0Pf6.4,'*(',f7.4,
+>      1  '/X -1.0)**',f5.2,']')
+>   630 FORMAT(/' BOB adiabatic potential correction for atom-',I1,
+>      1 '  of mass ',f15.11/'   consists of mass factor  [1- MASS(',I3,
+>      2 A2,')/MASS(',I3,A2,')]  multiplying all of:'/5x,'u',i1,'INF=',
+>      3 f11.6,'  times  y',i1,'= [(r**',i1,' - Re**',i1,')/(r**',i1,
+>      4 ' + Re**',i1,')]'/5x,'plus  [1 - y',i1,']  times an order',I3,
+>      5 ' polynomial in'/7x,'y',i1,'=[(r**',i1,' - Re**',i1,')/(r**',i1,
+>      6 ' + Re**',i1,')]  with the ',i3,' coefficients:'/(3x,4G17.9:))
+>   632 FORMAT(/' BOB adiabatic potential correction for atom-',I1,
+>      1  '  of mass ',f15.11/'   consists of mass factor  m{electron}*[1/
+>      2MASS(',I3,A2,') - 1/MASS(',I3,A2,')]'/5x,'multiplying   u',i1,
+>      3 'INF=',1PD17.9,'  times [1 - fsw(r)/fsw(Re)]'/'   plus  fsw(r)  t
+>      4imes an order',0Pi3,' polynomial in z{O-T} with coefficients:' / 
+>      5  (3x,1P4D17.9:)) 
+>   634 FORMAT(/' BOB centrifugal correction for atom-',I1,'  of mass ',
+>      1 f15.11/3x,'consists of mass factor  [MASS(',I3,A2,')/MASS(',I3,
+>      2 A2,')]  multiplying all of:'/5x,'q',i1,'INF=',F11.6,' times  y',
+>      3 i1,'= [(r**',i1,' - Re**',i1,')/(r**',i1,' + Re**',i1,')]'/
+>      4 5x,'plus [1 - y',i1,'] times an order',I3,' polynomial in y',i1,
+>      5 ' with the',i3,' coefficients:'/(3x,4G17.9:))
+>   636 FORMAT(3x,'where   fsw(r) = 1/[1 - exp{',f7.4,'*(r -',f7.4,')}]')
+>   638 FORMAT(/' BOB centrifugal correction for atom-',I1,'  of mass ',
+>      1 f15.11/3x,'consists of mass factor   [mass{electron}/MASS(',I3,
+>      2 A2,')]'/'   multiplying   q',i1,'INF=',1PD17.9,'  times [1 - fsw(
+>      3r)/fsw(Re)]'/'   plus  fsw(r)  times an order',0Pi3,' polynomial i
+>      4n z{O-T} with coefficients:'/ (3x,4G17.9:)) 
+>   640 FORMAT(/' Tiemann-type potential with   De=',F11.4,'   Rm=',f9.6,
+>      1 '   is a power series'/10x,'in  (r - Re)/(r ',SP,F9.5,
+>      2 '*Re) of order',SS,I3,'  with the',I3,' coefficients:'/(5D16.8))
+> c 642 FORMAT(' where for  r < Rinn=',F7.4,'   V=',1PD13.6,'*exp[-',
+> c    1  0PF9.6,'*(r - Rinn)] ',SP,F10.3)
+>   642 FORMAT(' where for  r < Rinn=',F7.4,'   V=',SP,F12.4,1x,1PD13.6,
+>      1  '/R**12' )
+>   644 FORMAT('  and  for  r > Rout=',F7.3,'   V= VLIM ',
+>      1 (SP,1PD14.6,'/r**',SS,I2):/(39x,SP,1PD14.6,'/r**',SS,I2))
+>   650 FORMAT(/' DELR(p=',i2,') potential with   DSCM=', F11.4,'   REQ=',
+>      1 F11.8,'   and exponent'/8x,'coefficient power series of order',
+>      2 i3,' for  r < Re','  and',i3,' for  r >= Re'/3x,'Generate   A(DEL
+>      3R)=',1Pd17.9,'   B(DELR)='D17.9/6x,'where ULR defined by',I2,
+>      4 " inverse-power terms with coeffts (+'ve repulsive):"/
+>      5 (5x,3(5x,'C',0Pi2,' =',1Pd14.6:)))
+>   652 FORMAT(3x,'Exponent defined by',I3,' expansion coefficients:',6x,
+>      1 'phi(',0Pi2,')=',1PD17.10/(2x 3(3x,'phi(',0Pi2,')=',1PD15.8:)))
+>   654 FORMAT(3x,'U_{LR} term uses Tang-Toennies damping function [JCP 80
+>      1,3726(1984)]'/10x,'[1 - exp(-RHOd*r)*SUM{(RHOd*r)^k/k!}]',
+>      2  '  with   RHOd =',F9.6)
+>   656 FORMAT(3x,'U_{LR} term uses Douketis dispersion damping function [
+>      1Mol.P. 52,763(1984)]'/5x,'[1 - exp(-3.97*RHOd*r/m - 0.39*(RHOd*r)^
+>      22/sqrt{m})]^m  with  RHOd=',F9.6)
+>       END
+> c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12
+> 
+> c***********************************************************************
+>       SUBROUTINE dampF(R,RHOd,m,Dm,Dmp,Dmpp,IDF)
+> c** Subroutine to generate values 'Dm' and its first `Dmp' and second
+> c  'Dmpp' derivatives w.r.t. R of the chosen potential damping function
+> c   IDF = 1 :  Tang-Toennies damping function [JCP 80,3726(1984)]
+> c   IDF = 2 :  damped-dispersion damping function [MolP 52,763(1984)]
+> c   IDF = 3 : extend IDF=2 by multiplying by Scoles' global damping fx.
+> c  all assuming  R  in units Angst. 
+> c***********************************************************************
+>       INTEGER i,m,IDF
+>       REAL*8 R,RHOd,RHOdR,Dm,Dmp,Dmpp,fd,fdp,fdpp,Coef,XPOW
+>       REAL*8 sum(20)
+> c
+>       RHOdR= RHOd*R
+>       IF(IDF.EQ.1) THEN
+> c** Tang-Toennies damping function: numerical factor 3.16 makes these
+> c  functions equivalent to Scoles functions, and allows the  RHOd  
+> c  scaling factor to have the same significance in both cases.
+>           RHOdR= 3.16d0*RHOdR
+>           XPOW = DEXP(-RHOdR)
+>           DO  i= 1,m
+>               sum(i) = 1.0d0
+>               END DO
+>           fd = 1.0d0
+>           DO  i= 1,m
+>               fd = fd*RHOdR/i
+>               sum(i) = sum(i) + fd
+>               ENDDO
+>           Dm = 1.0d0-XPOW*sum(m)
+>           Dmp = 3.16d0*RHOd*XPOW*(sum(m) - sum(m-1))
+>           Dmpp = 3.16d0*RHOd**2*XPOW*(-sum(m) + 2*sum(m-1) - sum(m-2))
+>           ENDIF
+> c
+>       IF((IDF.EQ.2).OR.(IDF.EQ.3)) THEN
+> c** Douketis et al. [MolP 52, 763 (1984)]  damping function.
+>           XPOW= DEXP(-3.97d0*RHOdR/m-0.39d0*(RHOdR)**2/DSQRT(m*1.0d0))
+> ccc       XPOW= DEXP(-3.968424881d0*RHOdR/m
+> ccc  1                      - 0.389246070d0*(RHOdR)**2/DSQRT(m*1.0d0))
+>           Dm = (1.0d0 - XPOW)**m
+>           Coef = 3.97d0*RHOd/m + 0.78d0*RHOd*RHOdR/DSQRT(m*1.0d0)
+> ccc       Coef = 3.968424881d0*RHOd/m 
+> ccc  1                      + 0.7784921396d0*RHOd*RHOdR/DSQRT(m*1.0d0)
+>           Dmp = m*Coef*XPOW*(1.0d0 - XPOW)**(m-1)
+>           Dmpp = XPOW*(1.0d0 - XPOW)**(m-1)
+>      1                                 *(0.78d0*SQRT(m*1.0d0)*RHOd**2
+> ccc  1                          *(0.7784921396d0*SQRT(m*1.0d0)*RHOd**2 
+>      2              - m*Coef**2*(1.0d0-m*XPOW)/(1.0d0 - XPOW))
+>           ENDIF
+> c
+>       IF(IDF.EQ.3) THEN
+> c** If desired, also apply Scoles' global scaling/damping factor
+>           XPOW= DEXP(-1.474d0*RHOdR)
+>           Coef= (RHOdR)**1.68d0
+>           fd= Coef*XPOW
+>           fdp= RHOd*fd*(1.474d0 - 1.68/(RHOdR))
+>           fdpp= RHOd**2 *fd*(-2.172676d0 + 
+>      1                       (4.95264d0 - 1.1424d0/(RHOdR))/(RHOdR))
+>           fd= 1.d0 - fd
+>           Dmpp= Dmpp*fd + 2.d0*Dmp*fdp + Dm*fdpp
+>           Dmp= Dmp*fd + Dm*fdp
+>           Dm= Dm*fd
+>           END IF
+>       RETURN

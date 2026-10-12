@@ -1,0 +1,917 @@
+  Input data for  2  isotopologues(s)
+  ********************************
+      Isotopologues    Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+
+ Use experimental data input file:  ../DATA_c-a14-12-10.4         
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX= 100 cycles
+
+ For state   a3 
+    integrate from   RMIN= 2.00   to   RMAX= 50.00   with mesh   RH= 0.00500
+
+ For state   13 
+    integrate from   RMIN= 2.00   to   RMAX=182.00   with mesh   RH= 0.00200
+
+ For state 23  represent level energies by independent term values
+ ==============================================================================
+
+ State a3  represented by an MLR(q= 3, p= 5) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+           defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(-3.300(rhoAB*r)/m -0.4230(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                              C6= 6.719000000D+06[cm-1 Ang^6]
+                                              C8= 1.126350000D+08[cm-1 Ang^8]
+                                             C10= 2.786940000D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098779854
+
+    Since this state has (projected) electronic angular momentum  OMEGA= 0
+          eigenvalue calculations use centrifugal potential  [J*(J+1) - 0]/r**2
+ Adiabatic BOB functions are simple power series in  y_6(r) scaled by  m_e/M(A):
+    \tilde{S}(Li;R) = \sum\{u_i * [y6]^i}   for  i= 0 to  0
+        with Li-atom radial expansion variable:   y6 = (R^6 - Re^6)/(R^6 + Re^6)
+ Non-Adiabatic centrifugal BOB fx are power series in y_3(r) scaled by  m_e/M(A)
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM     -1.490329670000D+04       --            --
+      De      3.337795000000D+02    0.0D+00       0.0D+00
+      Re      4.170006000000D+00    0.0D+00       0.0D+00
+     C 6      6.719000000000D+06       --            --
+     C 8      1.126350000000D+08       --            --
+     C10      2.786940000000D+09       --            --
+   beta( 0)  -5.161372764975D-01    0.0D+00       0.0D+00
+   beta( 1)  -9.804102637260D-02    0.0D+00       0.0D+00
+   beta( 2)   1.132213644225D-01    0.0D+00       0.0D+00
+   beta( 3)  -2.515349973312D-02    0.0D+00       0.0D+00
+   beta_INF  -5.098779854262D-01       --            --
+   C11{exp}  -8.364370221336D+09       --            --
+    uLi( 0)   6.888864517011D-02    0.0D+00       0.0D+00
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13  represented by an MLR(q= 2, p= 6) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y2^i}
+                                                              for  i= 0 to  9
+        with radial variable:   y_{p,q} = (R^q - 5.000000^q)/(R^q + 5.000000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Aubert-Frecon 3x3  c-state uLR(r)  with   Aso=   0.335325[cm-1]
+                                        C3(^3Sig)= 3.5768280D+05[cm-1 Ang^{ 3}]
+                                        C3(^1Pi) = 7.1536560D+05[cm-1 Ang^{ 3}]
+                                        C3(^3Pi) = 7.1536560D+05[cm-1 Ang^{ 3}]
+                                        C6(^3Sig)= 1.0005900D+07[cm-1 Ang^{ 6}]
+                                        C6(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C6(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C8(^3Sig)= 3.6996500D+08[cm-1 Ang^{ 8}]
+                                        C8(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                                        C8(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                    These constants yield:   betaINF= -1.6232808975
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45149332D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.80361329D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.80361329D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.65957301D+08
+ Adiabatic BOB functions with {p= 3, q= 3} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y3 + (1 - y3)*\Sum{u_i * [y3]^i}   for  i= 0 to  3
+        with Li-atom radial expansion variable:   y3 = (R^3 - Re^3)/(R^3 + Re^3)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+ Centrifugal BOB term adds  2*[\hbar^2/{2\mu r^2}]  to the PEF
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      Te      8.143705000000D+03    0.0D+00       0.0D+00
+      De      7.093371200000D+03       --            --
+      Re      3.065446700000D+00       --            --
+  DELTAE      3.353246000000D-01       --            --
+   C3(^3Sig)  3.576828000000D+05       --            --
+   C3(^1Pi)   7.153656000000D+05       --            --
+   C3(^3Pi)   7.153656000000D+05       --            --
+   C6(^3Sig)  1.000590000000D+07       --            --
+   C6(^1Pi)   0.000000000000D+00       --            --
+   C6(^3Pi)   0.000000000000D+00       --            --
+   C8(^3Sig)  3.699650000000D+08       --            --
+   C8(^1Pi)   0.000000000000D+00       --            --
+   C8(^3Pi)   0.000000000000D+00       --            --
+   beta( 0)  -1.103030335434D+00    0.0D+00       0.0D+00
+   beta( 1)   1.987232933759D+00    0.0D+00       0.0D+00
+   beta( 2)   3.620983527698D+00       --            --
+   beta( 3)   1.908385317428D+01       --            --
+   beta( 4)   5.408922902957D+01       --            --
+   beta( 5)  -2.300236409149D+01       --            --
+   beta( 6)  -1.828744025329D+02       --            --
+   beta( 7)   1.343859769506D+02       --            --
+   beta( 8)   6.554849258270D+02       --            --
+   beta( 9)   4.212522308429D+02       --            --
+   beta_INF  -1.623280897491D+00       --            --
+   C 9{exp}  -6.447464359739D+11       --            --
+    uLi( 0)   1.596338834725D+00       --            --
+    uLi( 1)   3.139895233177D+00       --            --
+    uLi( 2)  -1.558684778364D+00       --            --
+    uLi( 3)  -1.968153637545D+00       --            --
+  u_inf(Li)   1.231515500000D+00       --            --
+ ==============================================================================
+ All distinct levels of State 23  fitted as independent term values
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to  10   for   ISOT= 2
+       and State 13  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to  13   for   ISOT= 1
+                             or  v  outside range  0  to  13   for   ISOT= 2
+       and State 23  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   9   for   ISOT= 1
+                             or  v  outside range  0  to   9   for   ISOT= 2
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= a3  ISOT= 2
+           must be in a single "band" or data group
+
+ ============================================================
+  *** Input data for   35 bands/series of Li(  6)-Li(  6) ***
+ ============================================================
+
+ ======================================================================
+  1276 Li(  6)-Li(  6)  {State 13 }--{State a3 } Transitions in  35 Bands
+ ----------------------------------------------------------------------
+   v'  v"  #data   Jmin   Jmax  Avge.Unc.  Max.Unc.
+ --------------------------------------------------
+   7   0     39      3     27    1.0D-02   1.0D-02
+   7   1     32      5     27    1.0D-02   1.0D-02
+   6   0     47      1     27    1.0D-02   1.0D-02
+   6   1     48      2     28    1.0D-02   1.0D-02
+   6   2     25     10     28    1.0D-02   1.0D-02
+   5   1     56      0     31    1.0D-02   1.0D-02
+   5   2     49      1     30    1.0D-02   1.0D-02
+   4   1     59      1     32    1.0D-02   1.0D-02
+   4   2     51      2     30    1.0D-02   1.0D-02
+   4   3     48      1     27    1.0D-02   1.0D-02
+   3   2     51      0     29    1.0D-02   1.0D-02
+   3   3     47      1     28    1.0D-02   1.0D-02
+   3   4     39      1     24    1.0D-02   1.0D-02
+   2   2     49      1     30    1.0D-02   1.0D-02
+   2   3     48      1     28    1.0D-02   1.0D-02
+   2   4     42      1     25    1.0D-02   1.0D-02
+   2   5     35      1     20    1.0D-02   1.0D-02
+   2   6     26      2     17    1.0D-02   1.0D-02
+   1   5     32      1     20    1.0D-02   1.0D-02
+   1   6     25      2     17    1.0D-02   1.0D-02
+   5   0     49      1     31    1.0D-02   1.0D-02
+   5   3     28      7     27    1.0D-02   1.0D-02
+   2   1     49      0     30    1.0D-02   1.0D-02
+   1   3     34      1     23    1.0D-02   1.0D-02
+   1   4     38      2     25    1.0D-02   1.0D-02
+   1   7     14      4     14    1.0D-02   1.0D-02
+   3   1     51      1     30    1.0D-02   1.0D-02
+   3   6     17      4     17    1.0D-02   1.0D-02
+   3   5     26      2     20    1.0D-02   1.0D-02
+   4   0     41      2     28    1.0D-02   1.0D-02
+   4   4     15      4     18    1.0D-02   1.0D-02
+   3   0     32      2     21    1.0D-02   1.0D-02
+   1   2     20      4     18    1.0D-02   1.0D-02
+   2   7     10      4     12    1.0D-02   1.0D-02
+   3   7      4      6     12    1.0D-02   1.0D-02
+
+ ============================================================
+  *** Input data for   51 bands/series of Li(  7)-Li(  7) ***
+ ============================================================
+
+ ======================================================================
+  1279 Li(  7)-Li(  7)  {State 13 }--{State a3 } Transitions in  32 Bands
+ ----------------------------------------------------------------------
+   v'  v"  #data   Jmin   Jmax  Avge.Unc.  Max.Unc.
+ --------------------------------------------------
+   7   0     48      3     31    1.0D-02   1.0D-02
+   7   1     38      5     31    1.0D-02   1.0D-02
+   6   0     53      3     31    1.0D-02   1.0D-02
+   6   1     55      3     33    1.0D-02   1.0D-02
+   6   2     37      9     30    1.0D-02   1.0D-02
+   5   1     54      3     33    1.0D-02   1.0D-02
+   5   2     49      2     30    1.0D-02   1.0D-02
+   4   1     53      1     30    1.0D-02   1.0D-02
+   4   2     57      1     32    1.0D-02   1.0D-02
+   4   3     45      3     28    1.0D-02   1.0D-02
+   3   2     48      1     28    1.0D-02   1.0D-02
+   3   3     52      2     30    1.0D-02   1.0D-02
+   3   4     48      2     28    1.0D-02   1.0D-02
+   2   2     49      1     28    1.0D-02   1.0D-02
+   2   3     53      0     29    1.0D-02   1.0D-02
+   2   4     47      1     27    1.0D-02   1.0D-02
+   2   5     44      1     24    1.0D-02   1.0D-02
+   2   6     30      1     19    1.0D-02   1.0D-02
+   2   7     15      1     15    1.0D-02   1.0D-02
+   1   5     36      1     21    1.0D-02   1.0D-02
+   1   6     31      2     24    1.0D-02   1.0D-02
+   5   0     49      1     31    1.0D-02   1.0D-02
+   5   3     24     11     26    1.0D-02   1.0D-02
+   2   1     28      5     24    1.0D-02   1.0D-02
+   1   3     27      4     21    1.0D-02   1.0D-02
+   1   4     33      3     21    1.0D-02   1.0D-02
+   1   7     11      4     16    1.0D-02   1.0D-02
+   3   1     48      1     33    1.0D-02   1.0D-02
+   3   6     27      4     19    1.0D-02   1.0D-02
+   3   7     11      3     17    1.0D-02   1.0D-02
+   4   0     42      1     29    1.0D-02   1.0D-02
+   4   4     37      4     28    1.0D-02   1.0D-02
+
+ ======================================================================
+   137 Li(  7)-Li(  7)  {State 23 }--{State a3 } Transitions in  18 Bands
+ ----------------------------------------------------------------------
+   v'  v"  #data   Jmin   Jmax  Avge.Unc.  Max.Unc.
+ --------------------------------------------------
+   1   0      8      4     13    1.0D-02   1.0D-02
+   2   0     10      2     13    7.9D-03   1.0D-02
+   1   2      8      2     13    1.0D-02   1.0D-02
+   2   2      8      4     13    8.6D-03   1.0D-02
+   1   3     11      2     13    1.0D-02   1.0D-02
+   2   3      7      4     13    8.7D-03   1.0D-02
+   1   4     11      2     15    1.0D-02   1.0D-02
+   2   4      3      4      8    8.3D-03   1.0D-02
+   1   5      9      2     13    1.0D-02   1.0D-02
+   2   5      8      4     11    8.2D-03   1.0D-02
+   1   6      9      2     13    1.0D-02   1.0D-02
+   2   6     10      2     13    7.9D-03   1.0D-02
+   1   7      8      2     13    1.0D-02   1.0D-02
+   2   7     10      2     13    7.9D-03   1.0D-02
+   1   8      4      4     11    1.0D-02   1.0D-02
+   2   8      7      4     11    8.3D-03   1.0D-02
+   1   9      2      4      6    1.0D-02   1.0D-02
+   2   9      4      4      8    8.7D-03   1.0D-02
+ ======================================================================
+   1 State a3  Li(  7)-Li(  7) PAS Binding Energies included in data set
+ ----------------------------------------------------------------------
+  #values   v(min)  v(max)   Avge.Unc.   Max.Unc.
+ ------------------------------------------------
+      1       10      10      1.3D-03    1.3D-03
+ ===========================================================================
+ ===========================================================================
+
+ For State 23   fit to individual term values for each  {v,J,p,isot}
+ ************************************
+ For Li(  6)-Li(  6)  fit to    0 T(v,J,p) term values,
+                    of which    0 are involved in only one transition
+ For Li(  7)-Li(  7)  fit to   20 T(v,J,p) term values,
+                    of which    2 are involved in only one transition
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ State 13   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ State 23   Energy Convergence criterion EPS is 1.0D-06 cm-1
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45149332D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.80361329D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.80361329D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.65957301D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=2.1740   V=    -4578.8..... !*!*
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3816.3872 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3800.1272 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ALF finds the highest calculated level is  E(v=  4)=-1.49130885D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 1:  DRMSD= 1.8539272D+05    test(PS)= 8.6D+01   test(PU)= 1.1D+01
+   PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.88886451701100D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  7.09337120000000D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  13) =  3.06544670000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  15) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  16) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) = -1.10303033543400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  1.98723293375900D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  3.62098352769800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  1.90838531742800D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) =  5.40892290295700D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  29) = -2.30023640914900D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  30) = -1.82874402532900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  31) =  1.34385976950600D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  32) =  6.55484925827000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  33) =  4.21252230842900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  34) =  1.59633883472500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  35) =  3.13989523317700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  36) = -1.55868477836400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  37) = -1.96815363754500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  38) =  1.23151550000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  39) =  6.70630014440073D+03 (+/- 1.5D+03)    PS= 2.0D+02   PC=  6.7D+03
+   PV(  40) =  6.71086451855087D+03 (+/- 1.2D+03)    PS= 1.6D+02   PC=  6.7D+03
+   PV(  41) =  6.71404431141696D+03 (+/- 2.6D+03)    PS= 3.4D+02   PC=  6.7D+03
+   PV(  42) =  6.71802346141788D+03 (+/- 1.2D+03)    PS= 1.6D+02   PC=  6.7D+03
+   PV(  43) =  6.72250088484068D+03 (+/- 1.4D+03)    PS= 1.8D+02   PC=  6.7D+03
+   PV(  44) =  6.72777520505496D+03 (+/- 1.4D+03)    PS= 1.8D+02   PC=  6.7D+03
+   PV(  45) =  6.73355046205030D+03 (+/- 1.3D+03)    PS= 1.7D+02   PC=  6.7D+03
+   PV(  46) =  6.74012029818605D+03 (+/- 1.6D+03)    PS= 2.2D+02   PC=  6.7D+03
+   PV(  47) =  6.74721713825231D+03 (+/- 1.3D+03)    PS= 1.7D+02   PC=  6.7D+03
+   PV(  48) =  6.75506093817217D+03 (+/- 3.6D+03)    PS= 4.8D+02   PC=  6.8D+03
+   PV(  49) =  6.76342711031777D+03 (+/- 1.4D+03)    PS= 1.8D+02   PC=  6.8D+03
+   PV(  50) =  6.78219256695686D+03 (+/- 3.6D+03)    PS= 4.8D+02   PC=  6.8D+03
+   PV(  51) =  6.89041489680921D+03 (+/- 1.1D+03)    PS= 1.4D+02   PC=  6.9D+03
+   PV(  52) =  6.89497507410643D+03 (+/- 6.1D+02)    PS= 8.0D+01   PC=  6.9D+03
+   PV(  53) =  6.90216054060039D+03 (+/- 8.2D+02)    PS= 1.1D+02   PC=  6.9D+03
+   PV(  54) =  6.90221232497961D+03 (+/- 8.9D+02)    PS= 1.2D+02   PC=  6.9D+03
+   PV(  55) =  6.91197456426768D+03 (+/- 9.1D+02)    PS= 1.2D+02   PC=  6.9D+03
+   PV(  56) =  6.91782125292512D+03 (+/- 1.3D+03)    PS= 1.7D+02   PC=  6.9D+03
+   PV(  57) =  6.93146795407334D+03 (+/- 1.1D+03)    PS= 1.5D+02   PC=  6.9D+03
+   PV(  58) =  6.94768771926170D+03 (+/- 1.3D+03)    PS= 1.7D+02   PC=  6.9D+03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45149332D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.80361329D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.80361329D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.65957301D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=2.1740   V=    -4578.8..... !*!*
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3816.3872 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3800.1272 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ALF finds the highest calculated level is  E(v=  4)=-1.49130885D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 2:  DRMSD= 1.4760920D+03    test(PS)= 1.9D-12   test(PU)= 2.5D-13
+   PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.88886451701100D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  7.09337120000000D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  13) =  3.06544670000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  15) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  16) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) = -1.10303033543400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  1.98723293375900D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  3.62098352769800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  1.90838531742800D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) =  5.40892290295700D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  29) = -2.30023640914900D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  30) = -1.82874402532900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  31) =  1.34385976950600D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  32) =  6.55484925827000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  33) =  4.21252230842900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  34) =  1.59633883472500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  35) =  3.13989523317700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  36) = -1.55868477836400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  37) = -1.96815363754500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  38) =  1.23151550000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  39) =  6.70630014440073D+03 (+/- 1.2D+01)    PS= 1.6D+00   PC= -1.2D-12
+   PV(  40) =  6.71086451855087D+03 (+/- 9.7D+00)    PS= 1.3D+00   PC=  4.0D-13
+   PV(  41) =  6.71404431141696D+03 (+/- 2.1D+01)    PS= 2.7D+00   PC= -1.8D-12
+   PV(  42) =  6.71802346141788D+03 (+/- 9.7D+00)    PS= 1.3D+00   PC= -4.0D-13
+   PV(  43) =  6.72250088484068D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC= -1.6D-12
+   PV(  44) =  6.72777520505496D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC= -2.1D-12
+   PV(  45) =  6.73355046205030D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  1.2D-18
+   PV(  46) =  6.74012029818605D+03 (+/- 1.3D+01)    PS= 1.7D+00   PC= -7.3D-13
+   PV(  47) =  6.74721713825231D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC= -1.8D-12
+   PV(  48) =  6.75506093817217D+03 (+/- 2.9D+01)    PS= 3.8D+00   PC=  0.0D+00
+   PV(  49) =  6.76342711031777D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC=  5.2D-13
+   PV(  50) =  6.78219256695686D+03 (+/- 2.9D+01)    PS= 3.8D+00   PC=  0.0D+00
+   PV(  51) =  6.89041489680921D+03 (+/- 8.4D+00)    PS= 1.1D+00   PC= -1.2D-12
+   PV(  52) =  6.89497507410643D+03 (+/- 4.8D+00)    PS= 6.4D-01   PC= -1.2D-12
+   PV(  53) =  6.90216054060039D+03 (+/- 6.5D+00)    PS= 8.6D-01   PC=  7.3D-13
+   PV(  54) =  6.90221232497961D+03 (+/- 7.0D+00)    PS= 9.3D-01   PC=  4.3D-13
+   PV(  55) =  6.91197456426768D+03 (+/- 7.3D+00)    PS= 9.6D-01   PC=  1.8D-12
+   PV(  56) =  6.91782125292513D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  7.3D-13
+   PV(  57) =  6.93146795407334D+03 (+/- 8.8D+00)    PS= 1.2D+00   PC=  2.1D-12
+   PV(  58) =  6.94768771926170D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  7.3D-13
+
+ !! CAUTION !! fit of   20 parameters to  2693 data not converged after  3 Cycles
+     DRMS(deviations)= 1.476D+03    test(PS) = 1.89D-12    test(PU) = 2.50D-13
+ **************************************************************
+
+  2693 data fit to   20 param. yields  DRMS(devn)= 1.4760920D+03  tst(PS)= 1.9D-12
+   PV(   1) =  3.33779500000000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.17000600000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16137276497500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -9.80410263726000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) =  1.13221364422500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   9) = -2.51534997331200D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  10) =  6.88886451701100D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  7.09337120000000D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  13) =  3.06544670000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  15) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  16) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) = -1.10303033543400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  1.98723293375900D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  3.62098352769800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  1.90838531742800D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) =  5.40892290295700D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  29) = -2.30023640914900D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  30) = -1.82874402532900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  31) =  1.34385976950600D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  32) =  6.55484925827000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  33) =  4.21252230842900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  34) =  1.59633883472500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  35) =  3.13989523317700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  36) = -1.55868477836400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  37) = -1.96815363754500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  38) =  1.23151550000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  39) =  6.70630014440073D+03 (+/- 1.2D+01)    PS= 1.6D+00   PC= -1.2D-12
+   PV(  40) =  6.71086451855087D+03 (+/- 9.7D+00)    PS= 1.3D+00   PC=  4.0D-13
+   PV(  41) =  6.71404431141696D+03 (+/- 2.1D+01)    PS= 2.7D+00   PC= -1.8D-12
+   PV(  42) =  6.71802346141788D+03 (+/- 9.7D+00)    PS= 1.3D+00   PC= -4.0D-13
+   PV(  43) =  6.72250088484068D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC= -1.6D-12
+   PV(  44) =  6.72777520505496D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC= -2.1D-12
+   PV(  45) =  6.73355046205030D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  1.2D-18
+   PV(  46) =  6.74012029818605D+03 (+/- 1.3D+01)    PS= 1.7D+00   PC= -7.3D-13
+   PV(  47) =  6.74721713825231D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC= -1.8D-12
+   PV(  48) =  6.75506093817217D+03 (+/- 2.9D+01)    PS= 3.8D+00   PC=  0.0D+00
+   PV(  49) =  6.76342711031777D+03 (+/- 1.1D+01)    PS= 1.5D+00   PC=  5.2D-13
+   PV(  50) =  6.78219256695686D+03 (+/- 2.9D+01)    PS= 3.8D+00   PC=  0.0D+00
+   PV(  51) =  6.89041489680921D+03 (+/- 8.4D+00)    PS= 1.1D+00   PC= -1.2D-12
+   PV(  52) =  6.89497507410643D+03 (+/- 4.8D+00)    PS= 6.4D-01   PC= -1.2D-12
+   PV(  53) =  6.90216054060039D+03 (+/- 6.5D+00)    PS= 8.6D-01   PC=  7.3D-13
+   PV(  54) =  6.90221232497961D+03 (+/- 7.0D+00)    PS= 9.3D-01   PC=  4.3D-13
+   PV(  55) =  6.91197456426768D+03 (+/- 7.3D+00)    PS= 9.6D-01   PC=  1.8D-12
+   PV(  56) =  6.91782125292513D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  7.3D-13
+   PV(  57) =  6.93146795407334D+03 (+/- 8.8D+00)    PS= 1.2D+00   PC=  2.1D-12
+   PV(  58) =  6.94768771926170D+03 (+/- 1.0D+01)    PS= 1.4D+00   PC=  7.3D-13
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45149332D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.80361329D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.80361329D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.65957301D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=2.1740   V=    -4578.8..... !*!*
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3816.3872 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6960.0244    
+                WF(first)/WF(Max)= 0.19D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6699.6262    
+                WF(first)/WF(Max)=-0.14D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6444.7988    
+                WF(first)/WF(Max)= 0.70D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6194.0730    
+                WF(first)/WF(Max)=-0.28D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5946.5221    
+                WF(first)/WF(Max)= 0.91D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5701.3785    
+                WF(first)/WF(Max)=-0.26D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5458.0430    
+                WF(first)/WF(Max)= 0.65D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5216.2054    
+                WF(first)/WF(Max)=-0.14D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -4975.8706    
+                WF(first)/WF(Max)= 0.28D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4737.2256    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4500.3869    
+                WF(first)/WF(Max)= 0.84D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4265.2001    
+                WF(first)/WF(Max)=-0.12D-01  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4031.4697    
+                WF(first)/WF(Max)= 0.17D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -3800.1272 .ge. V(  1)=  -3850.2553
+ ****** For  v= 13, J=  0  E= -3800.1272    
+                WF(first)/WF(Max)=-0.20D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ****** For  v=  0, J=  0  E= -6969.4152    
+                WF(first)/WF(Max)= 0.70D-07  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6727.8973    
+                WF(first)/WF(Max)=-0.54D-06  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6491.3304    
+                WF(first)/WF(Max)= 0.28D-05  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6258.4575    
+                WF(first)/WF(Max)=-0.11D-04  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -6028.4926    
+                WF(first)/WF(Max)= 0.40D-04  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5800.7893    
+                WF(first)/WF(Max)=-0.12D-03  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5574.8030    
+                WF(first)/WF(Max)= 0.31D-03  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5350.1771    
+                WF(first)/WF(Max)=-0.74D-03  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5126.8085    
+                WF(first)/WF(Max)= 0.16D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4904.8206    
+                WF(first)/WF(Max)=-0.30D-02  suggests  RMIN  may be too large
+ ****** For  v= 10, J=  0  E= -4684.4356    
+                WF(first)/WF(Max)= 0.54D-02  suggests  RMIN  may be too large
+ ****** For  v= 11, J=  0  E= -4465.7712    
+                WF(first)/WF(Max)=-0.87D-02  suggests  RMIN  may be too large
+ ****** For  v= 12, J=  0  E= -4248.6791    
+                WF(first)/WF(Max)= 0.13D-01  suggests  RMIN  may be too large
+ ****** For  v= 13, J=  0  E= -4032.9189    
+                WF(first)/WF(Max)=-0.17D-01  suggests  RMIN  may be too large
+ ALF finds the highest calculated level is  E(v=  4)=-1.49130885D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 1:  DRMSD= 1.4760920D+03    test(PS)= 3.4D+03   test(PU)= 1.2D+01
+   PV(   1) =  3.62800162509814D+02 (+/- 1.3D+01)    PS= 7.4D-02   PC=  2.9D+01
+   PV(   2) =  3.76080725074456D+00 (+/- 3.4D-02)    PS= 3.7D-04   PC= -4.1D-01
+   PV(   3) =  6.71900000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12635000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78694000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -7.66067282560959D-01 (+/- 1.7D-01)    PS= 4.4D-04   PC= -2.5D-01
+   PV(   7) = -7.45451746904129D-01 (+/- 1.0D+00)    PS= 7.4D-04   PC= -6.5D-01
+   PV(   8) = -2.88960197165083D+00 (+/- 2.3D+00)    PS= 1.1D-03   PC= -3.0D+00
+   PV(   9) = -2.70163331530177D+00 (+/- 1.7D+00)    PS= 1.6D-03   PC= -2.7D+00
+   PV(  10) = -9.15867019326188D+01 (+/- 7.2D+04)    PS= 4.9D+02   PC= -9.2D+01
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  7.09337120000000D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  13) =  3.06544670000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  3.35324600000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  15) =  3.57682800000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  16) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  1.00059000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) =  3.69965000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) = -1.03728875486075D+00 (+/- 1.5D-02)    PS= 1.9D-05   PC=  6.6D-02
+   PV(  25) =  2.12024812141231D+00 (+/- 2.8D-02)    PS= 4.0D-05   PC=  1.3D-01
+   PV(  26) =  3.62098352769800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  1.90838531742800D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) =  5.40892290295700D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  29) = -2.30023640914900D+01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  30) = -1.82874402532900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  31) =  1.34385976950600D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  32) =  6.55484925827000D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  33) =  4.21252230842900D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  34) =  1.59633883472500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  35) =  3.13989523317700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  36) = -1.55868477836400D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  37) = -1.96815363754500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  38) =  1.23151550000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  39) =  6.69429225383208D+03 (+/- 1.2D+01)    PS= 1.1D+00   PC= -1.2D+01
+   PV(  40) =  6.69936029304135D+03 (+/- 1.0D+01)    PS= 8.9D-01   PC= -1.2D+01
+   PV(  41) =  6.70189468487686D+03 (+/- 2.1D+01)    PS= 1.9D+00   PC= -1.2D+01
+   PV(  42) =  6.70759457080030D+03 (+/- 1.0D+01)    PS= 8.9D-01   PC= -1.0D+01
+   PV(  43) =  6.71136828134211D+03 (+/- 1.1D+01)    PS= 1.0D+00   PC= -1.1D+01
+   PV(  44) =  6.71749695885294D+03 (+/- 1.1D+01)    PS= 1.0D+00   PC= -1.0D+01
+   PV(  45) =  6.72467296909594D+03 (+/- 1.1D+01)    PS= 9.4D-01   PC= -8.9D+00
+   PV(  46) =  6.73187090036617D+03 (+/- 1.3D+01)    PS= 1.2D+00   PC= -8.2D+00
+   PV(  47) =  6.74037002879764D+03 (+/- 1.1D+01)    PS= 9.4D-01   PC= -6.8D+00
+   PV(  48) =  6.74902253251962D+03 (+/- 2.9D+01)    PS= 2.7D+00   PC= -6.0D+00
+   PV(  49) =  6.75876186311196D+03 (+/- 1.2D+01)    PS= 1.0D+00   PC= -4.7D+00
+   PV(  50) =  6.78157253081053D+03 (+/- 2.9D+01)    PS= 2.7D+00   PC= -6.2D-01
+   PV(  51) =  6.87636852351381D+03 (+/- 8.9D+00)    PS= 7.7D-01   PC= -1.4D+01
+   PV(  52) =  6.88347084859691D+03 (+/- 5.6D+00)    PS= 4.4D-01   PC= -1.2D+01
+   PV(  53) =  6.89182781950920D+03 (+/- 7.2D+00)    PS= 5.9D-01   PC= -1.0D+01
+   PV(  54) =  6.89177901163410D+03 (+/- 7.6D+00)    PS= 6.4D-01   PC= -1.0D+01
+   PV(  55) =  6.90253865894956D+03 (+/- 7.8D+00)    PS= 6.6D-01   PC= -9.4D+00
+   PV(  56) =  6.90828852720410D+03 (+/- 1.1D+01)    PS= 9.5D-01   PC= -9.5D+00
+   PV(  57) =  6.92445346147903D+03 (+/- 9.3D+00)    PS= 8.0D-01   PC= -7.0D+00
+   PV(  58) =  6.94237671910366D+03 (+/- 1.1D+01)    PS= 9.5D-01   PC= -5.3D+00
+ ****** For  v=  7, J=  0  E= -14938.295    
+                WF(first)/WF(Max)=-0.10D-08  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -14921.223    
+                WF(first)/WF(Max)= 0.10D-08  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -14938.295    
+                WF(first)/WF(Max)=-0.10D-08  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -14921.223    
+                WF(first)/WF(Max)= 0.10D-08  suggests  RMIN  may be too large
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45149332D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.80361329D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.80361329D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.65957301D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=2.1960   V=    -5144.8..... !*!*
+ ****** For  v=  0, J=  0  E= -6958.4837    
+                WF(first)/WF(Max)= 0.53D-06  suggests  RMIN  may be too large
+ ****** For  v=  1, J=  0  E= -6695.7019    
+                WF(first)/WF(Max)=-0.44D-05  suggests  RMIN  may be too large
+ ****** For  v=  2, J=  0  E= -6441.0554    
+                WF(first)/WF(Max)= 0.24D-04  suggests  RMIN  may be too large
+ ****** For  v=  3, J=  0  E= -6193.5075    
+                WF(first)/WF(Max)=-0.10D-03  suggests  RMIN  may be too large
+ ****** For  v=  4, J=  0  E= -5951.8566    
+                WF(first)/WF(Max)= 0.36D-03  suggests  RMIN  may be too large
+ ****** For  v=  5, J=  0  E= -5714.5958    
+                WF(first)/WF(Max)=-0.10D-02  suggests  RMIN  may be too large
+ ****** For  v=  6, J=  0  E= -5480.3358    
+                WF(first)/WF(Max)= 0.25D-02  suggests  RMIN  may be too large
+ ****** For  v=  7, J=  0  E= -5248.1178    
+                WF(first)/WF(Max)=-0.52D-02  suggests  RMIN  may be too large
+ ****** For  v=  8, J=  0  E= -5017.0791    
+                WF(first)/WF(Max)= 0.93D-02  suggests  RMIN  may be too large
+ ****** For  v=  9, J=  0  E= -4785.7761    
+                WF(first)/WF(Max)=-0.15D-01  suggests  RMIN  may be too large
+   NOTE:  for  J=  0   EO=  -4570.8771 .ge. V(  1)=  -4615.8369
+ ****** For  v= 10, J=  0  E= -4552.2077    
+                WF(first)/WF(Max)= 0.20D-01  suggests  RMIN  may be too large
+ *** ERROR in LEVQAD *** No turning point between 1-st two points as   Y1= 0.454D-04   Y2= 0.454D-04
+
+ *** ERROR ***  V(1) < E(J=  0)=  -4552.21

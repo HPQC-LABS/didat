@@ -1,0 +1,47 @@
+ 3 3  0  2  2  5   0              % AN1 AN2 CHARGE NISTP NSTATES LPRINT PRINP 
+ '../DATA_c-a14-12-10.4'          % DATAFILE
+ '0state_published16'                          % WRITFILE
+  7  7                            % MN1(1) MN2(1)
+  6  6
+  1.d0  1  0  0  15  0            % UCUTOFF NOWIDTHS IROUND ROBUST CYCMAX uBv
+ 
+ 'a3 '  0  0   -1   99  0       % (1)SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+   8   8
+  2 -14903.6481  1  0   5       % PSEL VLIM MAXMIN BOBCN OSEL
+   3.10  50.00  0.0050          % RMIN RMAX RH
+
+  3   0.54 -2  1                % NCMM RHOab IDF IDSTT
+  6   6.71850000D+06  1         % MMLR(1), CmVAL(1), IFXCm(1)
+  8   1.12629000D+08  1         % MMLR(2), CmVAL(2), IFXCm(2)
+ 10   2.78683000D+09  1         % MMLR(3), CmVAL(3), IFXCm(3)
+
+  3.337027727601D+02  0         % De IFXDe
+  4.173086207461D+00  0         % Re IFXRe
+
+  3  0   3  5   8.00D+00        % Nbeta APSE nQB nPB RREF
+ -5.167487230366D-01  0         % BETA 0  IFXBETA 0
+ -1.019686171376D-01  0         % BETA 1  IFXBETA 1
+  1.194863091227D-01  0         % BETA 2  IFXBETA 2
+ -1.390119609763D-02  0         % BETA 3  IFXBETA 3
+
+  0 -1   6  6    0              % NUA NUB qAD pAD LRad
+  6.510080413275D-02  0         % UA 0  IFXUA 0
+  0.000000000000D+00  1         % uAinf  IFXuAinf
+
+ -1 -1   3  3                   % NTA NTB qNA pNA
+
+ '23 ' -2  1    2   99  0       % (2)SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+ -1      0.0000  1  0   5       % PSEL VLIM MAXMIN BOBCN OSEL
+   1   3   0
+   2   3   0
+
+ '13 ' -2  1    7   99  0       % (2)SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+ -1      0.0000  1  0   5       % PSEL VLIM MAXMIN BOBCN OSEL
+   1   3   3
+   2   3   3
+   3   3   3
+   4   3   3
+   5   3   3
+   6   3   3
+   7   3   3
+

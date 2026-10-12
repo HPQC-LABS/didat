@@ -1,0 +1,27 @@
+  3   3   0  2  1 5 0           % AN1 AN2 CHARGE NISTP NSTATES LPRINT PRINP
+'../DATA_c-a_29-08-14.4'        
+'66N02p5q2Rf5_8'     
+  6   6                         % << DEPENS ON REFERENCE ISOTOPOLOGUE !! >> MN1(1) MN2(1)
+  7   7
+ 1.d0      1  0 0   100 0       % UCUTOFF NOWIDTHS IROUND ROBUST CYCMAX uBv 
+
+'a3'   0   0   -9    99 0       % STATE 1 (a 1^3 Sigma_u^+): SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+            9  10               % << DEPENS ON REFERENCE ISOTOPOLOGUE !! >> VMAX 6Li2 then 7Li2
+2 00000000000000d+00  0 5       % << 6Li(D1,cog) 2012 Sansonetti, PRL >> PSEL VLIM BOBCN OSEL
+ 2.20d0    50.0d0   0.005d0     % RMIN RMAX RH
+
+   3       0.700d+00 -2 1       % NCMM rhoAB IDF IDSTT
+  6  6.719000000d+06  0         % 2009 Tang 6Li , rounded to first digit of converted uncertainty 
+  8  1.126350000d+08  1         % 2009 Tang 6Li , rounded to first digit of converted uncertainty
+ 10  2.786940000d+09  1         % 2009 Tang 6Li , rounded to first digit of converted uncertainty
+
+  3.337795000000D+02  1         % De IFXDe
+  4.167336517701D+00  0         % Re IFXRe
+
+  0  2   5   2   5.80D+00       % APSE Nbeta nPB nQB RREF
+ -1.041687361720D+00  0
+ -4.355155245645D-01  0
+ -4.726999110616D-01  0
+
+  -1   -1  6  6                 % NUA NUB  pAD qAD
+  -1   -1  3  3                 % nTA nTB pNA qNA

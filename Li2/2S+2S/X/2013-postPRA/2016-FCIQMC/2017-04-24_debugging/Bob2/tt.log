@@ -1,0 +1,6 @@
+At line 209 of file readpot.f (unit = 5, file = 'stdin')
+Fortran runtime error: Bad integer for item 2 in list input
+
+real	0m0.011s
+user	0m0.000s
+sys	0m0.003s

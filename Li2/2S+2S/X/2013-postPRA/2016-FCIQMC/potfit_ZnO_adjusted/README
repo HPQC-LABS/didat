@@ -1,0 +1,11 @@
+01/01/13  
+========= 
+*  Remove  IFXP from call to DYIDPJ - it was not used inside!
+*  Remove PSS and RMSR from calls to DYIDPJ.  They were only required for
+  generating stable partial derivatives-by-differences for BCONT - and
+  now that I understand LIDE - Not needed!!
+* Remove 'old/early versions of virial coefft & other subroutines.  Copies 
+  preserved in Backup directories
+* Replaced NLpow by Nbeta everywhere, and replaced  max{NSpow,NLpow)  by Nbeta
+* Removed   RREFad & RREFna & RREFw
+

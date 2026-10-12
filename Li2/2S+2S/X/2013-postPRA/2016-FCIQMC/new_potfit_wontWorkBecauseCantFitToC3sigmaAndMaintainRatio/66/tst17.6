@@ -1,0 +1,435 @@
+  Input data for  2  isotopologues(s)
+  ********************************
+      Isotopologues    Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+
+ Use experimental data input file:  ../DATA_c-a14-12-10.4         
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX=  15 cycles
+
+ For state   a3 
+    integrate from   RMIN= 2.20   to   RMAX= 50.00   with mesh   RH= 0.00500
+
+ For state   13 
+    integrate from   RMIN= 1.40   to   RMAX=181.40   with mesh   RH= 0.00200
+ ==============================================================================
+
+ State a3  represented by an MLR(q= 3, p= 5) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  3
+        with radial variable:   y_{p,q} = (R^q - 8.000000^q)/(R^q + 8.000000^q)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+           defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(-3.300(rhoAB*r)/m -0.4230(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                              C6= 6.718500000D+06[cm-1 Ang^6]
+                                              C8= 1.126290000D+08[cm-1 Ang^8]
+                                             C10= 2.786830000D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5103628011
+
+    Since this state has (projected) electronic angular momentum  OMEGA= 0
+          eigenvalue calculations use centrifugal potential  [J*(J+1) - 0]/r**2
+ Adiabatic BOB functions with {p= 6, q= 6} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y6 + (1 - y6)*\Sum{u_i * [y6]^i}   for  i= 0 to  0
+        with Li-atom radial expansion variable:   y6 = (R^6 - Re^6)/(R^6 + Re^6)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM     -1.490364810000D+04       --            --
+      De      3.337699370637D+02       --            --
+      Re      4.169462989770D+00       --            --
+     C 6      6.718500000000D+06       --            --
+     C 8      1.126290000000D+08       --            --
+     C10      2.786830000000D+09       --            --
+   beta( 0)  -5.165282623764D-01       --            --
+   beta( 1)  -9.930353206020D-02       --            --
+   beta( 2)   1.103496321856D-01    0.0D+00       0.0D+00
+   beta( 3)  -1.747021468882D-01    0.0D+00       0.0D+00
+   beta_INF  -5.103628010520D-01       --            --
+   C11{exp}  -5.765974450545D+09       --            --
+    uLi( 0)   6.510080413275D-02       --            --
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13  represented by an MLR(q= 3, p= 6) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  9
+        with radial variable:   y_{p,q} = (R^q - 3.600000^q)/(R^q + 3.600000^q)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Aubert-Frecon 3x3  c-state uLR(r)  with   Aso=   0.335338[cm-1]
+                                        C3(^3Sig)= 3.5736836D+05[cm-1 Ang^{ 3}]
+                                        C3(^1Pi) = 7.1536560D+05[cm-1 Ang^{ 3}]
+                                        C3(^3Pi) = 7.1536560D+05[cm-1 Ang^{ 3}]
+                                        C6(^3Sig)= 1.0005400D+07[cm-1 Ang^{ 6}]
+                                        C6(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C6(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C8(^3Sig)= 3.6995300D+08[cm-1 Ang^{ 8}]
+                                        C8(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                                        C8(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                    These constants yield:   betaINF= -1.5940372925
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.43763430D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.75145532D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.75145532D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.51671742D+08
+ Adiabatic BOB functions with {p= 3, q= 3} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y3 + (1 - y3)*\Sum{u_i * [y3]^i}   for  i= 0 to  3
+        with Li-atom radial expansion variable:   y3 = (R^3 - Re^3)/(R^3 + Re^3)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+ Centrifugal BOB term adds  2*[\hbar^2/{2\mu r^2}]  to the PEF
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      Te      7.932807752937D+03    0.0D+00       0.0D+00
+      De      7.304610284127D+03       --            --
+      Re      3.065319191661D+00       --            --
+  DELTAE      3.353380000000D-01       --            --
+   C3(^3Sig)  3.573683550000D+05       --            --
+   C3(^1Pi)   7.153656000000D+05       --            --
+   C3(^3Pi)   7.153656000000D+05       --            --
+   C6(^3Sig)  1.000540000000D+07       --            --
+   C6(^1Pi)   0.000000000000D+00       --            --
+   C6(^3Pi)   0.000000000000D+00       --            --
+   C8(^3Sig)  3.699530000000D+08       --            --
+   C8(^1Pi)   0.000000000000D+00       --            --
+   C8(^3Pi)   0.000000000000D+00       --            --
+   beta( 0)  -1.479764920739D+00       --            --
+   beta( 1)  -1.767802122833D+00       --            --
+   beta( 2)  -8.708352149075D-01       --            --
+   beta( 3)  -5.757514763851D-01       --            --
+   beta( 4)  -1.594044738790D+00       --            --
+   beta( 5)  -6.589352350304D-01       --            --
+   beta( 6)  -1.287592360087D+00       --            --
+   beta( 7)  -1.407637292648D+00       --            --
+   beta( 8)   5.957097580821D-01       --            --
+   beta( 9)   2.805303969786D+00       --            --
+   beta_INF  -1.594037292539D+00       --            --
+   C 9{exp}   1.810365409979D+09       --            --
+    uLi( 0)   1.366656849795D+00       --            --
+    uLi( 1)   2.695841455481D+00       --            --
+    uLi( 2)  -1.286645176578D+00       --            --
+    uLi( 3)  -1.838467944699D+00       --            --
+  u_inf(Li)   1.055740000000D+00       --            --
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to   8   for   ISOT= 1
+                             or  v  outside range  0  to   8   for   ISOT= 2
+       and State 13  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to  30   for   ISOT= 1
+                             or  v  outside range  0  to  30   for   ISOT= 2
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ State 13   Energy Convergence criterion EPS is 1.0D-06 cm-1
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.43763430D+07
+  'Quadratic correction' for  C6(^1Pi)   yields  C6(^1Pi,adj) = 1.75145532D+07
+  'Quadratic correction' for  C6(^3Pi)   yields   C6(^3Pi,adj) = 1.75145532D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces   C9(Sigm,adj) = 3.51671742D+08
+ *** For  J=  0   E= -7.0658330D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.6442708D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.6442708D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+    ICOR= 2
+ *** For  J=  0   E= -6.7478924D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.1926096D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.9809135D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.7625909D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.5421314D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.3250853D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.3250853D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.0389810D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.8712802D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.7098693D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.5442314D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.3831116D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.2200520D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.0612260D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.9028140D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.7470720D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.5945516D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.4437471D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.2965806D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.1528294D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.0117885D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.8744946D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.7411375D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.6111884D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.4849315D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.3627436D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.2446393D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.1302742D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.0198412D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -7.0681169D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.6970359D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.4276678D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.1998631D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.9795243D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.7596745D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.5432808D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.3514008D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.1991505D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.0324241D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.8714387D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.7055978D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.5438626D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.3796755D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.2193340D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.0590694D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.9011210D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.7461635D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.5926816D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.4426020D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.2957359D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.1514371D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.0107354D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.8738402D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.7402508D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.6102333D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.4842607D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.3622591D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.2440175D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.1296349D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.0193211D+03  integration can't start till past mesh
+                                     point  161,  so RMIN smaller than needed
+ *** For  J=  0   E= -7.0472301D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.5997926D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.5997926D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+    ICOR= 2
+ *** For  J=  0   E= -6.7157211D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.1330874D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.9031209D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.6664298D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.4289209D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.2636025D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.0855632D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.9149315D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.7344046D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.5596022D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.3827278D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.2083113D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.0364542D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.8653828D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.6988989D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.5342974D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.3731342D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.2163357D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.0626774D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.9129997D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.7679704D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.6271020D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.4903637D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.3583217D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.2310871D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.1083374D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.9901011D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.8765531D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.7677714D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -7.0510338D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.6604983D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.3804084D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -6.1380343D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.9005578D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.6639410D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.4387336D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.2579225D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -5.0884986D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.9086288D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.7337660D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.5561616D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.3804947D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.2068447D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -4.0335580D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.8644653D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.6969264D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.5325059D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.3722276D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.2148385D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -3.0612271D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.9121608D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.7670690D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.6259760D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.4895017D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.3577533D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.2304664D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -2.1076335D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.9894782D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.8761074D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ *** For  J=  0   E= -1.7674277D+03  integration can't start till past mesh
+                                     point  144,  so RMIN smaller than needed
+ ALF finds the highest calculated level is  E(v=  4)=-1.49108007D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 1:  DRMSD= 3.7408495D+03    test(PS)= 2.3D+02   test(PU)= 1.6D+01
+   PV(   1) =  3.33769937063700D+02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   2) =  4.16946298977000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   3) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) = -5.16528262376400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) = -9.93035320602000D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -1.04555218649552D+01 (+/- 6.6D-01)    PS= 4.6D-02   PC= -1.1D+01
+   PV(   9) = -1.56206909956856D+01 (+/- 9.7D-01)    PS= 6.7D-02   PC= -1.5D+01
+   PV(  10) =  6.51008041327500D-02 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  11) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  12) =  7.30461028412700D+03 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  13) =  3.06531919166100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  3.35338000000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  15) =  3.57368355000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  16) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  7.15365600000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) = -1.47976492073900D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) = -1.76780212283300D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) = -8.70835214907500D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) = -5.75751476385100D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.59404473879000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  29) = -6.58935235030400D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  30) = -1.28759236008700D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  31) = -1.40763729264800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  32) =  5.95709758082100D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  33) =  2.80530396978600D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  34) =  1.36665684979500D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  35) =  2.69584145548100D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  36) = -1.28664517657800D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  37) = -1.83846794469900D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  38) =  1.05574000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+ Find  2  potential minima:   Vmin= -15237.418 -15211.578
+               at mesh points   R =    4.17000    5.28000
+ Find  2  potential maxima:   Vmax= -15205.027 -14903.649
+               at mesh points   R =    4.75500   50.00000
+ *** So  STOP !!!!

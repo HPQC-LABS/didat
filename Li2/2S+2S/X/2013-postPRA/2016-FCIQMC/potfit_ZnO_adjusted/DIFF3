@@ -1,0 +1,94 @@
+14c14
+< c               ----- Version of  13 January 2013 -----
+---
+> c               ----- Version of  18 November 2012 -----
+230,231d229
+<               C8val= CmVAL(5,ISTATE)
+<               C8Pi= CmVAL(6,ISTATE)
+239d236
+<               RE8= RE6/RE(ISTATE)**2
+249,250c246,247
+<               IF((MMLR(2,ISTATE).EQ.0).OR.(MMLR(2,ISTATE).EQ.-2)) THEN
+< c ... for Aubert-Frecon 2x2 treatment of {C3,C6,C8} for Li2 A-state
+---
+>               IF(MMLR(2,ISTATE).EQ.0) THEN
+> c ... for Aubert-Frecon 2x2 treatment of {C3,C6,C8} for Alkali A-state
+252c249,255
+<                   T1= T1+ (C8VAL - C8Pi)*RE8/3.d0
+---
+>                   IF(NCMM(ISTATE).GT.4) THEN
+> c ... extension for Aubert-Frecon Li2(A) {3,0,6,6,8,8} case ...
+>                       C8val= CmVAL(5,ISTATE)
+>                       C8Pi= CmVAL(6,ISTATE)
+>                       RE8= RE6/RE(ISTATE)**2
+>                       T1= T1+ (C8VAL - C8Pi)*RE8/3.d0
+>                       ENDIF
+256,257c259,260
+<                   ULRe= ULRe+ 0.5d0*(C8VAL + C8Pi)*RE8
+<                   IF(MMLR(2,ISTATE).EQ.-2) ULRe= ULRe - T0
+---
+>                   IF(NCMM(ISTATE).GT.4) ULRe= ULRe
+>      1                                      + 0.5d0*(C8VAL + C8Pi)*RE8
+268,270c271,274
+<                   dLULRedCm(5)= RE8*T0P23/ULRe
+<                   dLULRedCm(6)= RE8*(1.d0 - T0P23)/ULRe
+<                   dLULRedRe= dLULRedRe - RE9*4.d0*(C8VAL + C8Pi
+---
+>                   IF(NCMM(ISTATE).GT.4) THEN
+>                       dLULRedCm(5)= RE8*T0P23/ULRe
+>                       dLULRedCm(6)= RE8*(1.d0 - T0P23)/ULRe
+>                       dLULRedRe= dLULRedRe - RE9*4.d0*(C8VAL + C8Pi
+271a276
+>                       ENDIF
+386,387c391
+<                   IF((MMLR(2,ISTATE).EQ.0).OR.(MMLR(2,ISTATE).EQ.-2))
+<      1                                                            THEN
+---
+>                   IF(MMLR(2,ISTATE).EQ.0) THEN
+390,391c394,397
+<                       RD8= RD6/RVAL**2
+<                       T1= T1+ (C8VAL - C8Pi)*RD8/3.d0
+---
+>                       IF(NCMM(ISTATE).GT.4) THEN
+>                           RD8= RD6/RVAL**2
+>                           T1= T1+ (C8VAL - C8Pi)*RD8/3.d0
+>                           ENDIF
+395,396c401,402
+<                       ULR= ULR+ 0.5d0*(C8VAL + C8Pi)*RD8
+<                       IF(MMLR(2,ISTATE).EQ.-2) ULR= ULR- T0
+---
+>                       IF(NCMM(ISTATE).GT.4) ULR= ULR
+>      1                                      + 0.5d0*(C8VAL + C8Pi)*RD8
+461a468
+>                   IF(NCMM(ISTATE).GT.4) THEN
+463,464c470,471
+<                   IPV= IPV+1
+<                   DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(5)
+---
+>                       IPV= IPV+1
+>                       DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(5)
+466,467c473,474
+<                   IPV= IPV+1
+<                   DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(6)
+---
+>                       IPV= IPV+1
+>                       DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(6)
+468a476,477
+>                       ENDIF
+> 
+489a499
+>                   IF(NCMM(ISTATE).GT.4) THEN
+491,492c501,502
+<                   IPV= IPV+1
+<                   DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(5)
+---
+>                       IPV= IPV+1
+>                       DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(5)
+494,495c504,505
+<                   IPV= IPV+1
+<                   DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(6)
+---
+>                       IPV= IPV+1
+>                       DVtot(IPV,I)= YPP*((1.d0 - YP*YPE)*dLULRedCm(6)
+496a507
+>                       ENDIF

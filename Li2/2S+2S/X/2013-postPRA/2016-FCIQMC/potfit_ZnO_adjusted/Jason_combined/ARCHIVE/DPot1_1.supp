@@ -1,0 +1,163 @@
+
+c%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+c** Utility routine 'arrsizes.h' governing array dimensioning in DPotFit
+c
+      INTEGER NISTPMX,NPARMX,NphiMX,NBOBMX,NPOTMX,NDATAMX,
+     1  NBANDMX,NBNDMX,NVIBMX,NSTATEMX,NPNTMX,MORDRMX,numCmMax 
+c*  NISTPMX  is the maximum number of isotopomers allowed for fit
+      PARAMETER (NISTPMX = 6)
+c*  NPARMX  is the largest number of free parameters allowed for fit
+      PARAMETER (NPARMX  = 2500)
+c*  NphiMX  is the largest number of exponent parameters allowed for fit
+      PARAMETER (NphiMX  = 22)
+c*  NBOBMX-1  is the highest-order polynomial expansion allowed for the
+c      adiabatic or centrifugal Born-Oppenheimer breakdown functions, or 
+c      the Lambda-doubling or 2\Sigma splitting radial strength functions
+      PARAMETER (NBOBMX  = 10)
+c*  NPOTMX  is the largest number of radial function parameters of all 
+c    types (potential energy, BOB. etc.) allowed for a given state.
+c           NPOTMX >= 2 + (NphiMX+1) + 5*(NBOBMX)
+      PARAMETER (NPOTMX = 55)
+c*  NDATAMX  is largest No. of individual data which may be considered
+      PARAMETER (NDATAMX = 14000)
+c*  NBANDMX  is largest No. of bands/series which may be considered
+      PARAMETER (NBANDMX = 2500)
+c*  NBNDMX  band-by-band fits allow for up to NBNDMX data in a band
+      PARAMETER (NBNDMX  = 20)
+c*  NSTATEMX  is maximum no. of electronic states which can be
+c             simultaneously fitted to
+      PARAMETER (NSTATEMX = 2)
+c*  NVIBMX  is the maximum number of vibrational levels of a single
+c           state for which data are to be considered
+      PARAMETER (NVIBMX    = 120)
+c*  NPNTMX  is the largest number of potential data points that can be
+c           stored
+      PARAMETER (NPNTMX = 40000)
+c*  MORDRMX  is the largest number of centrifugal distortion constants
+c            which may be considered
+      PARAMETER (MORDRMX = 7)
+c*  numCmMax is the largest number of Cm terms in the DELR long-range
+c            potential
+      PARAMETER (numCmMax = 6)
+c%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+================================================================================
+1) DPotFit channel-5 input data file for the N2 analysis reported in
+   J.Chem.Phys. XXX, xxxx (2006, submitted)), as described in 
+   Section 6.4.1 of the DPotFit 1.0 manual.
+
+  7 7 0 3 1                        % AN(1) AN(2) CHARGE NISTP NSTATES
+  'dataN2X.4'                      % experimental data filename
+  '68p4u1p6C8'                     % output file root-name
+  0.1d0 1 0 0 2 0                  % UCUTOFF NOWIDTHS IROUND ROBUST LPRINT PRINP
+  14 14                            % MN1(1) MN2(2)
+  14 15                            % MN1(1) MN2(2)
+  15 15                            % MN1(1) MN2(2)
+  'X0' 0  0 20  200  0             % SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+  2  0.d0   0  50                  % PSEL VLIM BOBCN OSEL
+  4  6  6   0.d0                   % nPB nPu nPt RREF
+  0.60  6.0  0.0002                % RMIN RMAX RH
+  6 1.16D+05  0  -1.d0 0.d0        % NCN CNVAL IFXCn Asw Bsw
+  8  5.5d0  1                      % MCM RCMCN IFXRmn
+  79845.00D+00         1           % DE IFDE
+  1.0976793209D+00     0           % RE IFRE
+   6 8                             % NBETAin NBETAout
+  -2.3441446457D+00    0           % PHI(0)  IFXPHI(0)
+  -9.7247759140D-01    0           % PHI(1)  IFXPHI(1)
+  -1.5618023261D+00    0           % PHI(2)  IFXPHI(2)
+  -1.1356654112D+00    0           % PHI(3)  IFXPHI(3)
+  -1.3958865342D+00    0           % PHI(4)  IFXPHI(4)
+  -8.2116503593D-01    0           % PHI(5)  IFXPHI(5)
+  -4.5566537033D-01    0           % PHI(6)  IFXPHI(6)
+  -3.3367367368D+00    0           % PHI(7)  IFXPHI(7)
+   2.0829634321D+00    0           % PHI(8)  IFXPHI(8)
+ 
+   2                               % nuA
+   0.d0                1           % UA(0) IFXUA(0)
+  -1.4177679977D+01    0           % UA(1) IFXUA(1)
+   0.d0                1           % UA(2) IFXUA(2)
+   0.d0                1           % uAinf  IFuAinf
+  -1                               % nuB
+  -1                               % nTA
+  -1                               % nTB
+
+================================================================================
+2) DPotFit channel-5 input data file for the AgH data analysis reported in
+   J.Chem.Phys. 123, 2-04304 (2005), as described in Section 6.4.2 of the 
+   DPotFit 1.0 manual.
+
+   47   1    0    4    2           % AN(1) AN(2) CHARGE NISTP NSTATES
+  'Data_AgH.4'                     % Name of PotFit input data file
+  'Xmlj77p3_Aemo510p4'             % root name for output files
+  1.D0 1  0  0  5  0               % UCUTOFF NOWIDTHS IROUND ROBUST LPRINT PRINP
+   107  1                          % MN1(1) MN2(1)
+   109  1                          % MN1(2) MN2(2)
+   107  2                          % MN1(3) MN2(3)
+   109  2                          % MN1(4) MN2(4)
+  'X0'  0  0 11  90  0             %(1) SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+  1  19250.0d0  0  50              %  PSEL VLIM BOBCN OSEL
+  3  3  3   0.d0                   %  nPB nPu nPt RREF
+   0.8  9.0  0.001d0               %  RMIN RMAX RH
+   1.9250000000D+04   1            %  De IFXDe
+   1.6179161670D+00   0            %  Re IFXRe
+    7  7                           %  NSphi NLphi
+   1.5435811526D+00   0            %  PHI(0) IFXPHI(0)
+   3.7377771819D-02   0            %  PHI(1) IFXPHI(1)
+   1.6642808805D-01   0            %  PHI(2) IFXPHI(2)
+   9.8190938663D-02   0            %  PHI(3) IFXPHI(3)
+   1.7059432062D-01   0            %  PHI(4) IFXPHI(4)
+   5.9386199731D-02   0            %  PHI(5) IFXPHI(5)
+   1.4250663642D-01   0            %  PHI(6) IFXPHI(6)
+   2.2230265720D-01   0            %  PHI(7) IFXPHI(7)
+  -1                               %  NUA
+   3                               %  NUB
+   0.0000000000D+00   1            %  UB(0) IFXUB(0)
+   1.1749768163D+01   0            %  UB(1) IFXUB(1)
+   1.7553993295D+01   0            %  UB(2) IFXUB(2)
+  -1.2618688961D+01   0            %  UB(3) IFXUB(3)
+   0.0000000000D+00   1            %  UBinf IFXUBinf
+  -1                               %  NTAg
+   2                               %  NTH
+   0.d0               1            %  TB(0) IFXTB(0)
+   1.4851142822D-04   0            %  TB(1) IFXTB(1)
+   9.3302644949D-04   0            %  TB(2) IFXTB(2)
+   0.d0               1            %  TBinf IFXTBinf
+  'A1'  0  0 7  90  0              %(2) SLABL IOMEG VMIN VMAX JTRUNC EFSEL
+  1  48802.05  0  50               %  PSEL VLIM BOBCN OSEL
+  4  4  4  0.d0                    %  nPB nPu nPt RREF
+   0.75 7.0  0.001d0               %  RMIN RMAX RH
+   1.8830645993D+04   0            %  De IFXDe
+   1.6447948537D+00   0            %  Re IFXRe
+    5  10                          %  NSphi NLphi
+   1.4516696726D+00   0            %  PHI(0) IFXPHI(0)
+  -2.5093751948D-01   0            %  PHI(1) IFXPHI(1)
+  -2.6892797056D-01   0            %  PHI(2) IFXPHI(2)
+  -4.0519788744D-01   0            %  PHI(3) IFXPHI(3)
+  -1.1183274297D+00   0            %  PHI(4) IFXPHI(4)
+  -1.5751057028D+00   0            %  PHI(5) IFXPHI(5)
+   2.6097077067D+01   0            %  PHI(6) IFXPHI(6)
+  -9.6955732594D+01   0            %  PHI(7) IFXPHI(7)
+   1.6317499720D+02   0            %  PHI(8) IFXPHI(8)
+  -1.2748346982D+02   0            %  PHI(9) IFXPHI(9)
+   3.8202389384D+01   0            %  PHI(10) IFXPHI(10)
+   0                               %  NUA
+  -6.1532403636D-01   0            %  UA(0)
+   0.d0               1            %  UAinf IFXUAinf
+   7                               %  NUB
+  -2.0990806299D+01   0            %  UB(0) IFXUB(0)
+   1.1855118102D+02   0            %  UB(1) IFXUB(1)
+  -1.5172266409D+02   0            %  UB(2) IFXUB(2)
+   1.3266145502D+02   0            %  UB(3) IFXUB(3)
+  -5.9275261121D+02   0            %  UB(4) IFXUB(4)
+  -5.4137300903D+02   0            %  UB(5) IFXUB(5)
+   3.1572792242D+03   0            %  UB(6) IFXUB(6)
+  -2.1427337370D+03   0            %  UB(7) IFXUB(7)
+   0.d0               1            %  UBinf IFXUBinf
+  -1                               %  NTA
+   3                               %  NTB
+   0.0000000000D+00   1            %  TB(0) IFXTB(0)
+   2.8801232707D-04   0            %  TB(1) IFXTB(1)
+   2.9670189368D-03   0            %  TB(2) IFXTB(2)
+   8.0194859562D-03   0            %  TB(3) IFXTB(3)
+   0.0000000000D+00   1            %  TBinf IFXTBinf
+================================================================================

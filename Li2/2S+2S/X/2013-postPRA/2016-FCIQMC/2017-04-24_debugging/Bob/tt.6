@@ -1,0 +1,2278 @@
+  Input data for  2  isotopologues(s)
+  ********************************
+      Isotopologues    Mass of atom-1   Mass of atom-2    Reduced mass
+  -----------------    --------------   --------------   --------------
+  Li(  7) - Li(  7)      7.016003437      7.016003437      3.508001718
+  Li(  6) - Li(  6)      6.015122887      6.015122887      3.007561444
+
+ Use experimental data input file:  ../DATA_c-a14-12-10.4         
+ Uncertainties for transitions involving quasibound levels modified to:
+                    SQRT{(u(i;exp)**2 + ( 0.20*width)**2}
+ For electrically homonuclear molecules, BO correction functions are the same
+     for both atoms, so only the first sets of correction coefficients
+     UA(s) and TA(s) are used, and the mass scaling factors are sums over
+     the two individual atoms.
+ Fit uses standard  1/[uncertainty(i)]**2  data weighting
+ Non-linear fits are allowed a maximum of  CYCMAX=  31 cycles
+
+ For state   a3 
+    integrate from   RMIN= 2.00   to   RMAX= 50.00   with mesh   RH= 0.00500
+
+ For state   13 
+    integrate from   RMIN= 1.20   to   RMAX=181.20   with mesh   RH= 0.00200
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112183D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731415D+08
+ ==============================================================================
+
+ State a3  represented by an MLR(q= 3, p= 5) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  3
+     using radial expansion variable:    y_{q} = (R^3 - 8.000^3)/(R^3 + 8.000^3)
+      and switching function variable:   y_{p} = (R^5 - 8.000^5)/(R^5 + 8.000^5)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+           defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(-3.300(rhoAB*r)/m -0.4230(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                              C6= 6.718500000D+06[cm-1 Ang^6]
+                                              C8= 1.126290000D+08[cm-1 Ang^8]
+                                             C10= 2.786830000D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098791233
+
+    Since this state has (projected) electronic angular momentum  OMEGA= 0
+          eigenvalue calculations use centrifugal potential  [J*(J+1) - 0]/r**2
+ Adiabatic BOB functions with {p= 6, q= 6} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y6 + (1 - y6)*\Sum{u_i * [y6]^i}   for  i= 0 to  0
+        with Li-atom radial expansion variable:   y6 = (R^6 - Re^6)/(R^6 + Re^6)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM     -1.490364810000D+04       --            --
+      De      3.337580000000D+02    0.0D+00       0.0D+00
+      Re      4.170005000000D+00    0.0D+00       0.0D+00
+ RREF(q= 3)   8.000000000000D+00       --            --
+ RREF(p= 5)   8.000000000000D+00       --            --
+     C 6      6.718500000000D+06       --            --
+     C 8      1.126290000000D+08       --            --
+     C10      2.786830000000D+09       --            --
+   beta( 0)  -5.161080000000D-01    0.0D+00       0.0D+00
+   beta( 1)  -9.782000000000D-02    0.0D+00       0.0D+00
+   beta( 2)   1.137000000000D-01    0.0D+00       0.0D+00
+   beta( 3)  -2.480000000000D-02    0.0D+00       0.0D+00
+   beta_INF  -5.098791233415D-01       --            --
+   C11{exp}  -8.382115844315D+09       --            --
+    uLi( 0)   5.900000000000D-02    0.0D+00       0.0D+00
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13  represented by an MLR(q= 3, p= 6) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  9
+     using radial expansion variable:    y_{q} = (R^3 - 3.600^3)/(R^3 + 3.600^3)
+      and switching function variable:   y_{p} = (R^6 - 3.600^6)/(R^6 + 3.600^6)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Aubert-Frecon 3x3  c-state uLR(r)  with   Aso=   0.335339[cm-1]
+                                        C3(^3Sig)= 3.5755700D+05[cm-1 Ang^{ 3}]
+                                        C3(^1Pi) = 1.7877850D+05[cm-1 Ang^{ 3}]
+                                        C3(^3Pi) =-1.7877850D+05[cm-1 Ang^{ 3}]
+                                        C6(^3Sig)= 1.0005400D+07[cm-1 Ang^{ 6}]
+                                        C6(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C6(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C8(^3Sig)= 3.6995300D+08[cm-1 Ang^{ 8}]
+                                        C8(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                                        C8(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                    These constants yield:   betaINF= -1.8771917525
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112183D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731415D+08
+ Adiabatic BOB functions with {p= 3, q= 3} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y3 + (1 - y3)*\Sum{u_i * [y3]^i}   for  i= 0 to  3
+        with Li-atom radial expansion variable:   y3 = (R^3 - Re^3)/(R^3 + Re^3)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+ Centrifugal BOB term adds  2*[\hbar^2/{2\mu r^2}]  to the PEF
+
+   Parameter    Initial Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      Te      8.143966100000D+03    0.0D+00       0.0D+00
+      De      7.093440000000D+03    0.0D+00       0.0D+00
+      Re      3.065140000000D+00    0.0D+00       0.0D+00
+ RREF(q= 3)   3.600000000000D+00       --            --
+ RREF(p= 6)   3.600000000000D+00       --            --
+  DELTAE      3.353389000000D-01       --            --
+   C3(^3Sig)  3.575570000000D+05       --            --
+   C3(^1Pi)   1.787785000000D+05       --            --
+   C3(^3Pi)  -1.787785000000D+05       --            --
+   C6(^3Sig)  1.000540000000D+07       --            --
+   C6(^1Pi)   0.000000000000D+00       --            --
+   C6(^3Pi)   0.000000000000D+00       --            --
+   C8(^3Sig)  3.699530000000D+08       --            --
+   C8(^1Pi)   0.000000000000D+00       --            --
+   C8(^3Pi)   0.000000000000D+00       --            --
+   beta( 0)  -1.637386300000D+00    0.0D+00       0.0D+00
+   beta( 1)   2.919700000000D-01    0.0D+00       0.0D+00
+   beta( 2)  -5.554400000000D-01    0.0D+00       0.0D+00
+   beta( 3)  -2.794000000000D-01    0.0D+00       0.0D+00
+   beta( 4)  -1.599300000000D+00    0.0D+00       0.0D+00
+   beta( 5)  -6.730000000000D-01    0.0D+00       0.0D+00
+   beta( 6)  -1.230000000000D+00    0.0D+00       0.0D+00
+   beta( 7)  -1.290000000000D+00    0.0D+00       0.0D+00
+   beta( 8)   5.000000000000D-01    0.0D+00       0.0D+00
+   beta( 9)   2.600000000000D+00    0.0D+00       0.0D+00
+   beta_INF  -1.877191752485D+00       --            --
+   C 9{exp}   7.008009502835D+07       --            --
+    uLi( 0)   1.367000000000D+00    0.0D+00       0.0D+00
+    uLi( 1)   2.700000000000D+00    0.0D+00       0.0D+00
+    uLi( 2)  -1.300000000000D+00    0.0D+00       0.0D+00
+    uLi( 3)  -1.800000000000D+00    0.0D+00       0.0D+00
+  u_inf(Li)   1.055740000000D+00    0.0D+00       0.0D+00
+ ==============================================================================
+
+ Neglect data with:  Uncertainties > UCUTOFF=  1.00D+00 (cm-1)
+       and State a3  data with  J > JTRUNC=  99
+                             or  v  outside range  0  to  10   for   ISOT= 1
+                             or  v  outside range  0  to   9   for   ISOT= 2
+       and State 13  data with  J > JTRUNC= 999
+                             or  v  outside range  1  to  89   for   ISOT= 1
+                             or  v  outside range  1  to  82   for   ISOT= 2
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= a3  ISOT= 1
+           must be in a single "band" or data group
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= 13  ISOT= 1
+           must be in a single "band" or data group
+
+ NOTE that all read-in PAS Binding Energies for   ISTATE= 13  ISOT= 2
+           must be in a single "band" or data group
+ State a3   Energy Convergence criterion EPS is 1.0D-06 cm-1
+ State 13   Energy Convergence criterion EPS is 1.0D-06 cm-1
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112183D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731415D+08
+ ****** For  v= 89,J=  0  E=-2.964664D-01  WF(NEND)/WF(Max)= 1.2D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.964664D-01  WF(NEND)/WF(Max)= 1.2D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.007208D-01  WF(NEND)/WF(Max)= 3.6D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.007208D-01  WF(NEND)/WF(Max)= 3.6D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 1:  DRMSD= 1.0544829D+00    test(PS)= 4.6D+04   test(PU)= 1.1D+00
+   PV(   1) =  3.33756702789868D+02 (+/- 1.4D-02)    PS= 5.4D-05   PC= -1.3D-03
+   PV(   2) =  4.17003059438696D+00 (+/- 4.4D-05)    PS= 3.2D-07   PC=  2.6D-05
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16083050212830D-01 (+/- 4.5D-04)    PS= 3.9D-07   PC=  2.5D-05
+   PV(   9) = -9.77911425166086D-02 (+/- 2.1D-03)    PS= 6.6D-07   PC=  2.9D-05
+   PV(  10) =  1.13718891320786D-01 (+/- 3.6D-03)    PS= 1.0D-06   PC=  1.9D-05
+   PV(  11) = -2.48420781201490D-02 (+/- 2.3D-03)    PS= 1.4D-06   PC= -4.2D-05
+   PV(  12) =  6.07821709326093D-02 (+/- 1.6D-02)    PS= 3.1D-04   PC=  1.8D-03
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344200726775D+03 (+/- 4.5D-02)    PS= 4.7D-05   PC=  2.0D-03
+   PV(  15) =  3.06508698983308D+00 (+/- 2.3D-04)    PS= 1.5D-07   PC= -5.3D-05
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63741092553680D+00 (+/- 6.7D-05)    PS= 2.8D-08   PC= -2.5D-05
+   PV(  29) =  2.92133326454488D-01 (+/- 4.9D-04)    PS= 1.2D-07   PC=  1.6D-04
+   PV(  30) = -5.55125572303332D-01 (+/- 4.2D-03)    PS= 2.4D-07   PC=  3.1D-04
+   PV(  31) = -2.85297594743625D-01 (+/- 1.8D-02)    PS= 5.6D-07   PC= -5.9D-03
+   PV(  32) = -1.58450373353663D+00 (+/- 6.4D-02)    PS= 1.2D-06   PC=  1.5D-02
+   PV(  33) = -6.03127979652652D-01 (+/- 2.0D-01)    PS= 2.5D-06   PC=  7.0D-02
+   PV(  34) = -1.41542533143195D+00 (+/- 7.1D-01)    PS= 5.1D-06   PC= -1.9D-01
+   PV(  35) = -1.74925446285911D+00 (+/- 6.1D-01)    PS= 1.0D-05   PC= -4.6D-01
+   PV(  36) =  9.47566232203864D-01 (+/- 9.1D-01)    PS= 1.8D-05   PC=  4.5D-01
+   PV(  37) =  3.55651198749261D+00 (+/- 9.0D-01)    PS= 3.3D-05   PC=  9.6D-01
+   PV(  38) =  1.36613226193831D+00 (+/- 9.8D-03)    PS= 2.1D-04   PC= -8.7D-04
+   PV(  39) =  2.70524437961507D+00 (+/- 5.2D-01)    PS= 4.6D-03   PC=  5.2D-03
+   PV(  40) = -1.20883348233798D+00 (+/- 6.3D-01)    PS= 4.8D-03   PC=  9.1D-02
+   PV(  41) = -2.22778418611893D+00 (+/- 7.6D-01)    PS= 2.1D-02   PC= -4.3D-01
+   PV(  42) =  1.05870925156640D+00 (+/- 3.5D-03)    PS= 2.2D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112171D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731279D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9320   V=     2655.8..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969321D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969321D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.021789D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.021789D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134296D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 2:  DRMSD= 8.6660256D+00    test(PS)= 3.8D+02   test(PU)= 1.6D-01
+   PV(   1) =  3.33756705858238D+02 (+/- 1.1D-01)    PS= 4.4D-04   PC=  3.1D-06
+   PV(   2) =  4.17004367866557D+00 (+/- 3.6D-04)    PS= 2.6D-06   PC=  1.3D-05
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16076610233908D-01 (+/- 3.7D-03)    PS= 3.2D-06   PC=  6.4D-06
+   PV(   9) = -9.77840250588358D-02 (+/- 1.7D-02)    PS= 5.4D-06   PC=  7.1D-06
+   PV(  10) =  1.13714871012206D-01 (+/- 3.0D-02)    PS= 8.2D-06   PC= -4.0D-06
+   PV(  11) = -2.48463134334276D-02 (+/- 1.9D-02)    PS= 1.2D-05   PC= -4.2D-06
+   PV(  12) =  6.07903887088668D-02 (+/- 1.4D-01)    PS= 2.6D-03   PC=  8.2D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344207950780D+03 (+/- 3.7D-01)    PS= 3.8D-04   PC=  7.2D-05
+   PV(  15) =  3.06510348142148D+00 (+/- 1.9D-03)    PS= 1.3D-06   PC=  1.6D-05
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63749778071162D+00 (+/- 5.5D-04)    PS= 2.3D-07   PC= -8.7D-05
+   PV(  29) =  2.91977460641268D-01 (+/- 4.0D-03)    PS= 9.9D-07   PC= -1.6D-04
+   PV(  30) = -5.55154568037906D-01 (+/- 3.4D-02)    PS= 2.0D-06   PC= -2.9D-05
+   PV(  31) = -2.85125358651246D-01 (+/- 1.4D-01)    PS= 4.6D-06   PC=  1.7D-04
+   PV(  32) = -1.58525845777534D+00 (+/- 5.3D-01)    PS= 9.8D-06   PC= -7.5D-04
+   PV(  33) = -6.04531405519696D-01 (+/- 1.6D+00)    PS= 2.1D-05   PC= -1.4D-03
+   PV(  34) = -1.40562040594253D+00 (+/- 5.9D+00)    PS= 4.1D-05   PC=  9.8D-03
+   PV(  35) = -1.72995584575502D+00 (+/- 5.1D+00)    PS= 8.2D-05   PC=  1.9D-02
+   PV(  36) =  9.35225658129631D-01 (+/- 7.5D+00)    PS= 1.4D-04   PC= -1.2D-02
+   PV(  37) =  3.52601154984277D+00 (+/- 7.6D+00)    PS= 2.6D-04   PC= -3.1D-02
+   PV(  38) =  1.36621785430067D+00 (+/- 8.0D-02)    PS= 1.7D-03   PC=  8.6D-05
+   PV(  39) =  2.69912775643633D+00 (+/- 4.3D+00)    PS= 3.8D-02   PC= -6.1D-03
+   PV(  40) = -1.21239266842878D+00 (+/- 5.2D+00)    PS= 4.0D-02   PC= -3.6D-03
+   PV(  41) = -2.21382957484057D+00 (+/- 6.3D+00)    PS= 1.7D-01   PC=  1.4D-02
+   PV(  42) =  1.06166980433372D+00 (+/- 2.9D-02)    PS= 1.8D-03   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112170D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731274D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2786.6..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969503D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969503D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.031839D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.031839D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134303D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 3:  DRMSD= 2.9270848D+00    test(PS)= 3.5D+02   test(PU)= 3.0D-01
+   PV(   1) =  3.33756708048282D+02 (+/- 3.8D-02)    PS= 1.5D-04   PC=  2.2D-06
+   PV(   2) =  4.17005034952116D+00 (+/- 1.2D-04)    PS= 8.8D-07   PC=  6.7D-06
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16073254981713D-01 (+/- 1.3D-03)    PS= 1.1D-06   PC=  3.4D-06
+   PV(   9) = -9.77801347266770D-02 (+/- 5.8D-03)    PS= 1.8D-06   PC=  3.9D-06
+   PV(  10) =  1.13712983072369D-01 (+/- 1.0D-02)    PS= 2.8D-06   PC= -1.9D-06
+   PV(  11) = -2.48485299037937D-02 (+/- 6.3D-03)    PS= 4.0D-06   PC= -2.2D-06
+   PV(  12) =  6.07854534002191D-02 (+/- 4.6D-02)    PS= 8.7D-04   PC= -4.9D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344213240617D+03 (+/- 1.2D-01)    PS= 1.3D-04   PC=  5.3D-05
+   PV(  15) =  3.06509835139689D+00 (+/- 6.4D-04)    PS= 4.2D-07   PC= -5.1D-06
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747070917466D+00 (+/- 1.8D-04)    PS= 7.8D-08   PC=  2.7D-05
+   PV(  29) =  2.92025244489995D-01 (+/- 1.4D-03)    PS= 3.4D-07   PC=  4.8D-05
+   PV(  30) = -5.55135024749608D-01 (+/- 1.2D-02)    PS= 6.7D-07   PC=  2.0D-05
+   PV(  31) = -2.85182087403256D-01 (+/- 4.8D-02)    PS= 1.6D-06   PC= -5.7D-05
+   PV(  32) = -1.58537385827806D+00 (+/- 1.8D-01)    PS= 3.3D-06   PC= -1.2D-04
+   PV(  33) = -6.04139618040047D-01 (+/- 5.4D-01)    PS= 7.0D-06   PC=  3.9D-04
+   PV(  34) = -1.40449873563409D+00 (+/- 2.0D+00)    PS= 1.4D-05   PC=  1.1D-03
+   PV(  35) = -1.72991384791690D+00 (+/- 1.7D+00)    PS= 2.8D-05   PC=  4.2D-05
+   PV(  36) =  9.33628240337268D-01 (+/- 2.5D+00)    PS= 4.8D-05   PC= -1.6D-03
+   PV(  37) =  3.52508730230017D+00 (+/- 2.6D+00)    PS= 8.8D-05   PC= -9.2D-04
+   PV(  38) =  1.36630229433029D+00 (+/- 2.7D-02)    PS= 5.8D-04   PC=  8.4D-05
+   PV(  39) =  2.69391766103442D+00 (+/- 1.4D+00)    PS= 1.3D-02   PC= -5.2D-03
+   PV(  40) = -1.21853079762017D+00 (+/- 1.8D+00)    PS= 1.3D-02   PC= -6.1D-03
+   PV(  41) = -2.19441993165719D+00 (+/- 2.1D+00)    PS= 5.8D-02   PC=  1.9D-02
+   PV(  42) =  1.06462934239834D+00 (+/- 9.8D-03)    PS= 6.1D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112170D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731271D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2786.7..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969128D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969128D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.041269D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.041269D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134307D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 4:  DRMSD= 1.1497673D+00    test(PS)= 2.8D+02   test(PU)= 7.7D-01
+   PV(   1) =  3.33756709111057D+02 (+/- 1.5D-02)    PS= 5.9D-05   PC=  1.1D-06
+   PV(   2) =  4.17005374388015D+00 (+/- 4.8D-05)    PS= 3.5D-07   PC=  3.4D-06
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16071539345872D-01 (+/- 4.9D-04)    PS= 4.2D-07   PC=  1.7D-06
+   PV(   9) = -9.77781531061652D-02 (+/- 2.3D-03)    PS= 7.2D-07   PC=  2.0D-06
+   PV(  10) =  1.13711837315364D-01 (+/- 4.0D-03)    PS= 1.1D-06   PC= -1.1D-06
+   PV(  11) = -2.48498876102645D-02 (+/- 2.5D-03)    PS= 1.6D-06   PC= -1.4D-06
+   PV(  12) =  6.07813616951330D-02 (+/- 1.8D-02)    PS= 3.4D-04   PC= -4.1D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344219658896D+03 (+/- 4.9D-02)    PS= 5.1D-05   PC=  6.4D-05
+   PV(  15) =  3.06509956398145D+00 (+/- 2.5D-04)    PS= 1.7D-07   PC=  1.2D-06
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747923435061D+00 (+/- 7.3D-05)    PS= 3.1D-08   PC= -8.5D-06
+   PV(  29) =  2.92011171285895D-01 (+/- 5.3D-04)    PS= 1.3D-07   PC= -1.4D-05
+   PV(  30) = -5.55130773048672D-01 (+/- 4.6D-03)    PS= 2.6D-07   PC=  4.3D-06
+   PV(  31) = -2.85209883009819D-01 (+/- 1.9D-02)    PS= 6.1D-07   PC= -2.8D-05
+   PV(  32) = -1.58547330462042D+00 (+/- 7.1D-02)    PS= 1.3D-06   PC= -9.9D-05
+   PV(  33) = -6.03692313762173D-01 (+/- 2.1D-01)    PS= 2.8D-06   PC=  4.5D-04
+   PV(  34) = -1.40321242638294D+00 (+/- 7.8D-01)    PS= 5.5D-06   PC=  1.3D-03
+   PV(  35) = -1.72987627424480D+00 (+/- 6.8D-01)    PS= 1.1D-05   PC=  3.8D-05
+   PV(  36) =  9.31801098926236D-01 (+/- 1.0D+00)    PS= 1.9D-05   PC= -1.8D-03
+   PV(  37) =  3.52408271926332D+00 (+/- 1.0D+00)    PS= 3.5D-05   PC= -1.0D-03
+   PV(  38) =  1.36639461776338D+00 (+/- 1.1D-02)    PS= 2.3D-04   PC=  9.2D-05
+   PV(  39) =  2.68863618203638D+00 (+/- 5.6D-01)    PS= 5.0D-03   PC= -5.3D-03
+   PV(  40) = -1.22465179958376D+00 (+/- 6.9D-01)    PS= 5.3D-03   PC= -6.1D-03
+   PV(  41) = -2.17488443281669D+00 (+/- 8.3D-01)    PS= 2.3D-02   PC=  2.0D-02
+   PV(  42) =  1.06758765778169D+00 (+/- 3.8D-03)    PS= 2.4D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112169D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731267D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2786.5..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969238D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969238D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.051240D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.051240D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134309D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 5:  DRMSD= 8.4384324D-01    test(PS)= 3.1D+02   test(PU)= 1.0D+00
+   PV(   1) =  3.33756709699907D+02 (+/- 1.1D-02)    PS= 4.3D-05   PC=  5.9D-07
+   PV(   2) =  4.17005546412952D+00 (+/- 3.6D-05)    PS= 2.5D-07   PC=  1.7D-06
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16070662005466D-01 (+/- 3.6D-04)    PS= 3.1D-07   PC=  8.8D-07
+   PV(   9) = -9.77771495566410D-02 (+/- 1.7D-03)    PS= 5.2D-07   PC=  1.0D-06
+   PV(  10) =  1.13711066168179D-01 (+/- 2.9D-03)    PS= 8.0D-07   PC= -7.7D-07
+   PV(  11) = -2.48508086959370D-02 (+/- 1.8D-03)    PS= 1.1D-06   PC= -9.2D-07
+   PV(  12) =  6.07774238170139D-02 (+/- 1.3D-02)    PS= 2.5D-04   PC= -3.9D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344225894242D+03 (+/- 3.6D-02)    PS= 3.7D-05   PC=  6.2D-05
+   PV(  15) =  3.06509890886264D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -6.6D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747731988012D+00 (+/- 5.3D-05)    PS= 2.3D-08   PC=  1.9D-06
+   PV(  29) =  2.92015263449304D-01 (+/- 3.9D-04)    PS= 9.7D-08   PC=  4.1D-06
+   PV(  30) = -5.55121838156351D-01 (+/- 3.3D-03)    PS= 1.9D-07   PC=  8.9D-06
+   PV(  31) = -2.85247280696539D-01 (+/- 1.4D-02)    PS= 4.5D-07   PC= -3.7D-05
+   PV(  32) = -1.58557971625020D+00 (+/- 5.2D-02)    PS= 9.5D-07   PC= -1.1D-04
+   PV(  33) = -6.03249324457415D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.40195249268728D+00 (+/- 5.7D-01)    PS= 4.0D-06   PC=  1.3D-03
+   PV(  35) = -1.72985368279520D+00 (+/- 5.0D-01)    PS= 7.9D-06   PC=  2.3D-05
+   PV(  36) =  9.30011045251896D-01 (+/- 7.3D-01)    PS= 1.4D-05   PC= -1.8D-03
+   PV(  37) =  3.52310550040415D+00 (+/- 7.4D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36648442683595D+00 (+/- 7.8D-03)    PS= 1.7D-04   PC=  9.0D-05
+   PV(  39) =  2.68336773791698D+00 (+/- 4.1D-01)    PS= 3.7D-03   PC= -5.3D-03
+   PV(  40) = -1.23074992013496D+00 (+/- 5.1D-01)    PS= 3.9D-03   PC= -6.1D-03
+   PV(  41) = -2.15543319349273D+00 (+/- 6.1D-01)    PS= 1.7D-02   PC=  1.9D-02
+   PV(  42) =  1.07054475649715D+00 (+/- 2.8D-03)    PS= 1.8D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112169D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731262D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2786.3..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969205D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969205D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.061046D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.061046D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 6:  DRMSD= 8.2038885D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710042486D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  3.4D-07
+   PV(   2) =  4.17005632894268D+00 (+/- 3.5D-05)    PS= 2.5D-07   PC=  8.6D-07
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16070212725035D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  4.5D-07
+   PV(   9) = -9.77766444425320D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  5.1D-07
+   PV(  10) =  1.13710488074495D-01 (+/- 2.8D-03)    PS= 7.8D-07   PC= -5.8D-07
+   PV(  11) = -2.48515061449327D-02 (+/- 1.8D-03)    PS= 1.1D-06   PC= -7.0D-07
+   PV(  12) =  6.07735405446285D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.9D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344232148024D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.3D-05
+   PV(  15) =  3.06509880574298D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -1.0D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747847984725D+00 (+/- 5.2D-05)    PS= 2.2D-08   PC= -1.2D-06
+   PV(  29) =  2.92014004366356D-01 (+/- 3.8D-04)    PS= 9.4D-08   PC= -1.3D-06
+   PV(  30) = -5.55114298273931D-01 (+/- 3.3D-03)    PS= 1.9D-07   PC=  7.5D-06
+   PV(  31) = -2.85281855358883D-01 (+/- 1.4D-02)    PS= 4.4D-07   PC= -3.5D-05
+   PV(  32) = -1.58568386738047D+00 (+/- 5.0D-02)    PS= 9.3D-07   PC= -1.0D-04
+   PV(  33) = -6.02804934669716D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.40068689360905D+00 (+/- 5.6D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72982960452198D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.4D-05
+   PV(  36) =  9.28214888586994D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.52212810090655D+00 (+/- 7.2D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36657504111523D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.1D-05
+   PV(  39) =  2.67809387555778D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.23685347717931D+00 (+/- 4.9D-01)    PS= 3.8D-03   PC= -6.1D-03
+   PV(  41) = -2.13593647808107D+00 (+/- 6.0D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.07350061932017D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112169D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731258D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2786.1..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969214D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969214D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.070896D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.070896D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 7:  DRMSD= 8.1450470D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710258775D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  2.2D-07
+   PV(   2) =  4.17005675668430D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC=  4.3D-07
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069982269638D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  2.3D-07
+   PV(   9) = -9.77763944129395D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  2.5D-07
+   PV(  10) =  1.13710008528169D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -4.8D-07
+   PV(  11) = -2.48520889864492D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -5.8D-07
+   PV(  12) =  6.07697049722455D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344238369959D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509854113779D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.6D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747873116403D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -2.5D-07
+   PV(  29) =  2.92014323955668D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC=  3.2D-07
+   PV(  30) = -5.55106364507919D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.9D-06
+   PV(  31) = -2.85317197186866D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58578856343177D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.02361720185429D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39942409269958D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72980480414265D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.26421544062424D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.52114950398542D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36666534239772D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.67282432380345D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.24294987428552D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.11647191188989D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.07645525599821D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112168D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731254D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2785.9..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.080728D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.080728D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 8:  DRMSD= 8.1548032D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710361556D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  1.0D-07
+   PV(   2) =  4.17005696108866D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC=  2.0D-07
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069861954637D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.2D-07
+   PV(   9) = -9.77762674888302D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  1.3D-07
+   PV(  10) =  1.13709590453825D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -4.2D-07
+   PV(  11) = -2.48526073036351D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -5.2D-07
+   PV(  12) =  6.07658862267678D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344244580972D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509832463547D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.2D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747924827229D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -5.2D-07
+   PV(  29) =  2.92014180208558D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -1.4D-07
+   PV(  30) = -5.55098557042118D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85352270520437D-01 (+/- 1.4D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58589301363197D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.01918676629156D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39816132800810D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72977952986834D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.24628179299520D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.52017054381829D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36675566480711D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.66755640962837D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.24904370926556D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.09701413753177D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.07940866695088D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112168D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731250D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9260   V=     2785.7..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969212D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969212D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.090560D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.090560D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle # 9:  DRMSD= 8.1517089D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710480534D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  1.2D-07
+   PV(   2) =  4.17005705139923D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC=  9.0D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069800406485D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  6.2D-08
+   PV(   9) = -9.77762142435412D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  5.3D-08
+   PV(  10) =  1.13709187210606D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -4.0D-07
+   PV(  11) = -2.48531015529660D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.9D-07
+   PV(  12) =  6.07620822806067D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344250789557D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509809439578D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63747968618832D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.4D-07
+   PV(  29) =  2.92014173387312D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -6.8D-09
+   PV(  30) = -5.55090720178940D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85387393056430D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58599745942261D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.01475939780898D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39689938930174D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72975421050953D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.22835975029562D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51919209635136D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36684593465659D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.66229065008895D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.25513471112491D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.07756513836720D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.08236085275042D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112167D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731246D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2745.6..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.100387D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.100387D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #10:  DRMSD= 8.1530803D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710581125D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  1.0D-07
+   PV(   2) =  4.17005708343102D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC=  3.2D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069768054136D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  3.2D-08
+   PV(   9) = -9.77761950010892D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  1.9D-08
+   PV(  10) =  1.13708797530310D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.9D-07
+   PV(  11) = -2.48535800166819D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.8D-07
+   PV(  12) =  6.07582956239863D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344256988151D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509786892153D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748014654044D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.6D-07
+   PV(  29) =  2.92014125447616D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -4.8D-08
+   PV(  30) = -5.55082904980480D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85422426273626D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58610185305031D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.01034024809582D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39563769730438D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72972649519166D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.8D-05
+   PV(  36) =  9.21042695867793D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51820899374910D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36693610176382D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.65702869918990D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.26122030298124D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.05814432965771D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.08531182426774D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  3.0D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112167D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731241D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2745.5..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.110210D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.110210D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #11:  DRMSD= 8.1529268D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710674623D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  9.3D-08
+   PV(   2) =  4.17005708567876D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC=  2.2D-09
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069750601990D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.7D-08
+   PV(   9) = -9.77761931275185D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC=  1.9D-09
+   PV(  10) =  1.13708414434540D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48540508424444D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.7D-07
+   PV(  12) =  6.07545032216038D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344263188568D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509764179914D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748059915132D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92014091988020D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.3D-08
+   PV(  30) = -5.55075083657060D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85457496366667D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58620619532107D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.00591753461494D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39437679335785D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72970086303835D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.6D-05
+   PV(  36) =  9.19251822815918D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51723078774275D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36702629499129D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.65176733781982D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.26730590907515D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.03871329006625D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.08826157387484D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112167D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731237D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2745.3..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.120029D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.120029D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #12:  DRMSD= 8.1531895D-01    test(PS)= 3.3D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710761705D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.7D-08
+   PV(   2) =  4.17005707273637D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -1.3D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069740794294D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  9.8D-09
+   PV(   9) = -9.77762001512324D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -7.0D-09
+   PV(  10) =  1.13708035401163D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48545168738509D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.7D-07
+   PV(  12) =  6.07507290574930D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344269375920D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509741607547D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748105420583D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.6D-07
+   PV(  29) =  2.92014051421657D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -4.1D-08
+   PV(  30) = -5.55067279362022D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85492465560752D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58631048822538D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -6.00150685294438D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39311628262980D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72967174433980D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.9D-05
+   PV(  36) =  9.17459401674532D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51624573232455D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.9D-04
+   PV(  38) =  1.36711632359487D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.64651132230983D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.27338416301050D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -2.01932656993152D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.09121015649822D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112166D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731233D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2745.1..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969211D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.129843D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.129843D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #13:  DRMSD= 8.1531809D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710848746D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.7D-08
+   PV(   2) =  4.17005705201578D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.1D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069734857969D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  5.9D-09
+   PV(   9) = -9.77762117001602D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.2D-08
+   PV(  10) =  1.13707657751947D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48549813288893D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07469418585786D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344275567675D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509718940123D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748150715237D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92014016534222D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.5D-08
+   PV(  30) = -5.55059467757246D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85527492778047D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58641470150210D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.99708940692996D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39185687869849D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72964612951940D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.6D-05
+   PV(  36) =  9.15670482717727D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51526838962890D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36720643912977D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.64125433424290D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.27946462291463D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.99991289944726D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.09415752204447D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112166D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731229D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.9..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.139654D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.139654D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #14:  DRMSD= 8.1533318D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756710934649D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.6D-08
+   PV(   2) =  4.17005702732517D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.5D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069730913657D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  3.9D-09
+   PV(   9) = -9.77762255641422D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.4D-08
+   PV(  10) =  1.13707281114605D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48554446016788D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07431558612011D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344281758674D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509696305789D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748196164654D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013978823988D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.8D-08
+   PV(  30) = -5.55051658379062D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85562513759109D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58651888982231D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.99267256680033D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.39059778251534D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72962067964875D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.13882183879373D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51429175156119D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36729652796270D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.63599926374623D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.28554291778568D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.98050456931525D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.09710366729206D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112166D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731225D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.7..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.149461D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.149461D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #15:  DRMSD= 8.1533740D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711019981D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005700061160D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.7D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069727989664D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  2.9D-09
+   PV(   9) = -9.77762406136298D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.5D-08
+   PV(  10) =  1.13706905077131D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48559071623096D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07393716101028D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344287946888D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509673674735D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748241556194D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013941797124D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55043852239459D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85597519948332D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58662303237771D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.98825763402348D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38933923841630D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72959524799222D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.12094664643097D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51331553959575D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36738658035407D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.63074635069986D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.29161871480294D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.96110414921680D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.10004859238112D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112165D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731220D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.5..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.159264D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.159264D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #16:  DRMSD= 8.1534347D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711105019D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005697286999D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.8D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069725588202D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  2.4D-09
+   PV(   9) = -9.77762562687153D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13706529415699D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48563692705686D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07355890612469D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344294132330D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509651055825D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748286938856D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013904594853D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55036049574845D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85632510617320D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58672712899048D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.98384464111259D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38808124541908D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72956982342984D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.10307921037962D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51233973709778D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36747659617005D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.62549560369835D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.3D-03
+   PV(  40) = -1.29769200915155D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.94171171618611D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.10299229811586D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112165D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731216D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.4..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969210D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.169062D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.169062D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #17:  DRMSD= 8.1534866D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711238819D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  1.3D-07
+   PV(   2) =  4.17005694462465D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.8D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069725091199D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  5.0D-10
+   PV(   9) = -9.77762793252996D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -2.3D-08
+   PV(  10) =  1.13706143055316D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.9D-07
+   PV(  11) = -2.48568369788870D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.7D-07
+   PV(  12) =  6.07318115564090D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344300319507D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509628456903D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748332298088D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013867216838D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55028251468746D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85667481570376D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58683117360859D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.97943404844568D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38682386413621D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72954433090690D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.08522045337234D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51136432549290D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.8D-04
+   PV(  38) =  1.36756657908467D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.62024701224360D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.30376284126850D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.92232714693242D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.10593478473478D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112164D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731212D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.2..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.178857D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.178857D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #18:  DRMSD= 8.1535317D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711323648D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005691611149D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069723091312D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  2.0D-09
+   PV(   9) = -9.77762954406854D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13705767858265D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48572985177753D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07280322082786D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344306499453D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509605854311D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748377620869D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013830405116D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55020455523901D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85702441889385D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58693517863215D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.97502489897220D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38556697265334D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72951893077128D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.06736855071676D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.51038935691124D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36765652214363D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.61500058955023D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.30983115116318D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.90295058356527D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.10887605289390D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112164D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731208D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2744.0..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.188648D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.188648D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #19:  DRMSD= 8.1535954D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711408455D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005688746703D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069721165075D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.9D-09
+   PV(   9) = -9.77763116391203D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13705392833867D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.8D-07
+   PV(  11) = -2.48577598397022D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07242544361490D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344312676687D+03 (+/- 3.4D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509583265657D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748422946285D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013793224364D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55012663066088D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85737386754108D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58703913808118D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.97061766612571D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38431062626981D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72949353812857D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.04952433558500D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50941479640304D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36774642871497D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.60975632756418D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.31589696437043D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.88358196800724D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.11181610315747D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112164D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731204D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2743.8..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.198434D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.198434D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #20:  DRMSD= 8.1536457D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711493248D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005685876106D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069719277903D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.9D-09
+   PV(   9) = -9.77763278817949D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13705017962290D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48582209657759D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07204782944825D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344318851180D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509560685694D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748468245315D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013756181085D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.55004873976311D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85772316454788D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58714305168968D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.96621235126276D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38305483087508D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72946815912629D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.03168788110220D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50844065300807D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36783629889514D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.60451422783306D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.32196028736633D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.86422129404463D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.11475493609705D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112163D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731200D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2743.6..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969209D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.208216D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.208216D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #21:  DRMSD= 8.1537007D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711578040D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005683002924D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069717411429D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.9D-09
+   PV(   9) = -9.77763441447520D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13704643242666D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48586819002190D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07167037299931D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344325022932D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509538116091D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748513526540D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013719120115D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54997088301921D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85807230764781D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58724691961297D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.96180897089906D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38179958471075D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72944278669664D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  9.01385915831172D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50746691722898D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36792613257121D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.59927429008982D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.32802111481639D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.84486859042808D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.11769255253361D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112163D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731195D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2743.4..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.217995D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.217995D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #22:  DRMSD= 8.1537550D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711662847D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005680128978D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069715557123D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.9D-09
+   PV(   9) = -9.77763604205072D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13704268664618D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48591426520316D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07129307805253D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344331191942D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509515556312D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748558787238D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013682092013D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54989306036958D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85842129801972D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58735074161220D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.95740751180986D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.38054488838296D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72941742516591D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.99603816648859D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50649359277312D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36801592973445D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.59403651459934D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.33407944869658D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.82552385439816D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.12062895331841D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112162D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731191D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2743.2..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.227769D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.227769D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #23:  DRMSD= 8.1538105D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711747660D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005677255194D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069713709448D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77763766993435D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13703894232804D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48596032201683D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07091593505115D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344337358211D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509493006422D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748604028325D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013645084138D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54981527168174D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85877013628993D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58745451762635D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.95300796649286D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37929074385030D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72939207951594D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.97822497113135D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50552069245228D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36810569079687D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.58880089039343D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.34013530421312D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.80618698056631D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.12356413849501D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112162D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731187D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2743.1..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.237540D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.237540D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #24:  DRMSD= 8.1538666D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711832479D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005674382048D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069711866430D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77763929804962D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13703519942940D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48600636074763D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07053895371718D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344343521788D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509470466332D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748649249684D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013608096704D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54973751657292D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85911882303004D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58755824855590D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.94861033057714D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37803714279160D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72936674228964D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.96041944356578D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50454820025439D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36819541553564D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.58356742287169D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.34618867122048D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.78685803498624D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.12649810862857D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112162D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731183D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.9..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969208D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.247306D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.247306D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #25:  DRMSD= 8.1539236D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756711917320D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005671509787D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069710027335D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764092650611D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13703145790180D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48605238170877D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.07016212742526D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344349682634D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509447936205D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748694451429D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013571125692D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54965979548030D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85946735713372D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58766193375505D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.94421461281929D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37678408973474D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72934141499254D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.94262163817207D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50357611973584D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36828510387689D+00 (+/- 7.5D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.57833611231860D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.35223955100586D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.1D-03
+   PV(  41) = -1.76753701599911D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.12943086429005D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112161D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731179D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.7..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.257068D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.257068D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #26:  DRMSD= 8.1539812D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712002173D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005668638532D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069708190997D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764255489714D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13702771780460D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48609838457650D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06978545952771D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344355840747D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509425415950D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748739633324D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013534177416D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54958210830902D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.85981573879920D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58776557319316D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.93982081495722D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37553158668413D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72931609984001D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.92483158082379D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50260445428337D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36837475592066D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.57310695661881D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.35828794661534D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.74822391713153D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.13236240605856D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112161D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731175D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.5..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.266826D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.266826D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #27:  DRMSD= 8.1540396D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712087032D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005665768343D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069706357222D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764418336298D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13702397909460D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48614436959570D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06940895219915D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344361996152D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509402905492D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748784795522D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013497250552D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54950445484896D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86016396895773D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58786916722265D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.93542892557897D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37427962968266D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72929079598458D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.90704922448850D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50163320149325D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36846437153485D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.56787995731191D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.36433385237840D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.72891877310801D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.13529273473014D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112160D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731170D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.3..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.276580D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.276580D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #28:  DRMSD= 8.1540988D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712171898D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005662899259D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069704525660D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764581169549D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13702024181405D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48619033655103D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06903260074549D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344368148812D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.2D-05
+   PV(  15) =  3.06509380405029D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.3D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748829938125D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013460339925D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54942683544051D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86051204624335D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58797271545264D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.93103895733002D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37302822143363D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72926550189282D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.88927459657604D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.50066235999279D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36855395099366D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.56265510818716D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.37037728028661D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.70962150462597D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.13822185064747D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112160D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731166D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.1..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969207D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.286330D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.286330D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #29:  DRMSD= 8.1541586D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712256799D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005660031286D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069702697003D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764744031772D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13701650587580D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48623628596971D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06865640675181D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344374298773D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.1D-05
+   PV(  15) =  3.06509357914336D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.2D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748875060821D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013423453833D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54934924969340D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86085997220638D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58807621839757D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.92665089420626D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37177735740182D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72924021801739D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.87150764082254D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.49969192817636D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36864349420188D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.55743241261177D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.37641822872939D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.69033214566567D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.14114975438921D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112160D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731162D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2742.0..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969206D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969206D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.296076D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.296076D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #30:  DRMSD= 8.1542193D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712341706D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005657164438D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069700870454D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77764906881704D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13701277135789D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48628221738805D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06828036955845D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344380446013D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.1D-05
+   PV(  15) =  3.06509335433544D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.2D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748920163989D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013386585259D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54927169778996D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86120774619535D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58817967575550D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.92226474382486D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.37052704082238D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.3D-03
+   PV(  35) = -1.72921494552380D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.85374839934370D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.49872190912204D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36873300111224D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  9.0D-05
+   PV(  39) =  2.55221186775038D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.38245669460193D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.67105069424847D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.14407644652085D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112159D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731158D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2741.8..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ****** For  v= 89,J=  0  E=-2.969206D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 89,J=  0  E=-2.969206D-01  WF(NEND)/WF(Max)= 1.1D-08 > 1.0D-09
+    & initialization quality test  3.5D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.305819D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ****** For  v= 82,J=  0  E=-7.305819D-01  WF(NEND)/WF(Max)= 3.5D-09 > 1.0D-09
+    & initialization quality test  2.9D-03 > 1.D-3   so RMAX may be too small
+ ALF finds the highest calculated level is  E(v=  4)=-1.49134310D+04
+
+ *** FAIL to find level(a3 )   v=  6   J= 23  so ignore  YOBS( 2218)=   8459.5940
+ After Cycle #31:  DRMSD= 8.1542807D-01    test(PS)= 3.2D+02   test(PU)= 1.1D+00
+   PV(   1) =  3.33756712426606D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005654298729D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069699045633D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77765069697909D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13700903831852D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48632813033550D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06790449345946D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344386590497D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.1D-05
+   PV(  15) =  3.06509312962764D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.2D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748965247371D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013349734512D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54919418004246D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86155536651648D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58828308727165D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.91788052705638D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.36927727425736D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.2D-03
+   PV(  35) = -1.72918968046554D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.83599687816822D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.49775229562112D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36882247162720D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  8.9D-05
+   PV(  39) =  2.54699347650200D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.38849267309836D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.65177721392964D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.14700192820593D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+
+ !! CAUTION !! fit of   24 parameters to  2652 data not converged after 32 Cycles
+     DRMS(deviations)= 8.154D-01    test(PS) = 3.22D+02    test(PU) = 1.07D+00
+ **************************************************************
+
+  2652 data fit to   24 param. yields  DRMS(devn)= 8.1542807D-01  tst(PS)= 3.2D+02
+   PV(   1) =  3.33756712426606D+02 (+/- 1.1D-02)    PS= 4.2D-05   PC=  8.5D-08
+   PV(   2) =  4.17005654298729D+00 (+/- 3.4D-05)    PS= 2.5D-07   PC= -2.9D-08
+   PV(   3) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   4) =  8.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   5) =  6.71850000000000D+06 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   6) =  1.12629000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   7) =  2.78683000000000D+09 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(   8) = -5.16069699045633D-01 (+/- 3.5D-04)    PS= 3.0D-07   PC=  1.8D-09
+   PV(   9) = -9.77765069697909D-02 (+/- 1.6D-03)    PS= 5.1D-07   PC= -1.6D-08
+   PV(  10) =  1.13700903831852D-01 (+/- 2.8D-03)    PS= 7.7D-07   PC= -3.7D-07
+   PV(  11) = -2.48632813033550D-02 (+/- 1.7D-03)    PS= 1.1D-06   PC= -4.6D-07
+   PV(  12) =  6.06790449345946D-02 (+/- 1.3D-02)    PS= 2.4D-04   PC= -3.8D-06
+   PV(  13) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  14) =  7.09344386590497D+03 (+/- 3.5D-02)    PS= 3.6D-05   PC=  6.1D-05
+   PV(  15) =  3.06509312962764D+00 (+/- 1.8D-04)    PS= 1.2D-07   PC= -2.2D-07
+   PV(  16) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  17) =  3.60000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  18) =  3.35338900000000D-01 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  19) =  3.57557000000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  20) =  1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  21) = -1.78778500000000D+05 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  22) =  1.00054000000000D+07 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  23) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  24) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  25) =  3.69953000000000D+08 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  26) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  27) =  0.00000000000000D+00 (+/- 0.0D+00)    PS= 0.0D+00   PC=  0.0D+00
+   PV(  28) = -1.63748965247371D+00 (+/- 5.1D-05)    PS= 2.2D-08   PC= -4.5D-07
+   PV(  29) =  2.92013349734512D-01 (+/- 3.8D-04)    PS= 9.3D-08   PC= -3.7D-08
+   PV(  30) = -5.54919418004246D-01 (+/- 3.2D-03)    PS= 1.9D-07   PC=  7.8D-06
+   PV(  31) = -2.86155536651648D-01 (+/- 1.3D-02)    PS= 4.3D-07   PC= -3.5D-05
+   PV(  32) = -1.58828308727165D+00 (+/- 5.0D-02)    PS= 9.2D-07   PC= -1.0D-04
+   PV(  33) = -5.91788052705638D-01 (+/- 1.5D-01)    PS= 2.0D-06   PC=  4.4D-04
+   PV(  34) = -1.36927727425736D+00 (+/- 5.5D-01)    PS= 3.9D-06   PC=  1.2D-03
+   PV(  35) = -1.72918968046554D+00 (+/- 4.8D-01)    PS= 7.7D-06   PC=  2.5D-05
+   PV(  36) =  8.83599687816822D-01 (+/- 7.1D-01)    PS= 1.3D-05   PC= -1.8D-03
+   PV(  37) =  3.49775229562112D+00 (+/- 7.1D-01)    PS= 2.5D-05   PC= -9.7D-04
+   PV(  38) =  1.36882247162720D+00 (+/- 7.6D-03)    PS= 1.6D-04   PC=  8.9D-05
+   PV(  39) =  2.54699347650200D+00 (+/- 4.0D-01)    PS= 3.6D-03   PC= -5.2D-03
+   PV(  40) = -1.38849267309836D+00 (+/- 4.9D-01)    PS= 3.7D-03   PC= -6.0D-03
+   PV(  41) = -1.65177721392964D+00 (+/- 5.9D-01)    PS= 1.6D-02   PC=  1.9D-02
+   PV(  42) =  1.14700192820593D+00 (+/- 2.7D-03)    PS= 1.7D-04   PC=  2.9D-03
+
+ ========================================================================
+ Fitting   24  free parameters to  2652  transitions yields  DSE= 0.81914302    
+ ========================================================================
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112159D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731154D+08
+====================================
+!*!* Find State 13  inner-wall inflection at    R=1.9280   V=     2741.6..... !*!*
+     ... and ... extrapolate repulsive wall inward from the re as a LINEAR function
+====================================
+ ==============================================================================
+
+ State a3  represented by an MLR(q= 3, p= 5) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y5 +(1-y5)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  3
+     using radial expansion variable:    y_{q} = (R^3 - 8.000^3)/(R^3 + 8.000^3)
+      and switching function variable:   y_{p} = (R^5 - 8.000^5)/(R^5 + 8.000^5)
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+           defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(-3.300(rhoAB*r)/m -0.4230(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+                                              C6= 6.718500000D+06[cm-1 Ang^6]
+                                              C8= 1.126290000D+08[cm-1 Ang^8]
+                                             C10= 2.786830000D+09[cm-1 Ang^{10}]
+                    These constants yield:   betaINF= -0.5098335838
+
+    Since this state has (projected) electronic angular momentum  OMEGA= 0
+          eigenvalue calculations use centrifugal potential  [J*(J+1) - 0]/r**2
+ Adiabatic BOB functions with {p= 6, q= 6} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y6 + (1 - y6)*\Sum{u_i * [y6]^i}   for  i= 0 to  0
+        with Li-atom radial expansion variable:   y6 = (R^6 - Re^6)/(R^6 + Re^6)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM     -1.490364810000D+04       --            --
+      De      3.337567124266D+02    1.1D-02       4.2D-05
+      Re      4.170056542987D+00    3.4D-05       2.5D-07
+ RREF(q= 3)   8.000000000000D+00       --            --
+ RREF(p= 5)   8.000000000000D+00       --            --
+     C 6      6.718500000000D+06       --            --
+     C 8      1.126290000000D+08       --            --
+     C10      2.786830000000D+09       --            --
+   beta( 0)  -5.160696990456D-01    3.5D-04       3.0D-07
+   beta( 1)  -9.777650696979D-02    1.6D-03       5.1D-07
+   beta( 2)   1.137009038319D-01    2.8D-03       7.7D-07
+   beta( 3)  -2.486328130335D-02    1.7D-03       1.1D-06
+   beta_INF  -5.098335837611D-01       --            --
+   C11{exp}  -8.381419648242D+09       --            --
+    uLi( 0)   6.067904493459D-02    1.3D-02       2.4D-04
+  u_inf(Li)   0.000000000000D+00       --            --
+ ==============================================================================
+
+ State 13  represented by an MLR(q= 3, p= 6) potential defined in terms of
+ ========  exponent coefficient:  beta(R)= betaINF*y6 +(1-y6)*Sum{beta_i*y3^i}
+                                                              for  i= 0 to  9
+     using radial expansion variable:    y_{q} = (R^3 - 3.600^3)/(R^3 + 3.600^3)
+      and switching function variable:   y_{p} = (R^6 - 3.600^6)/(R^6 + 3.600^6)
+    uLR inverse-power terms incorporate NO damping functions
+ Use Aubert-Frecon 3x3  c-state uLR(r)  with   Aso=   0.335339[cm-1]
+                                        C3(^3Sig)= 3.5755700D+05[cm-1 Ang^{ 3}]
+                                        C3(^1Pi) = 1.7877850D+05[cm-1 Ang^{ 3}]
+                                        C3(^3Pi) =-1.7877850D+05[cm-1 Ang^{ 3}]
+                                        C6(^3Sig)= 1.0005400D+07[cm-1 Ang^{ 6}]
+                                        C6(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C6(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 6}]
+                                        C8(^3Sig)= 3.6995300D+08[cm-1 Ang^{ 8}]
+                                        C8(^1Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                                        C8(^3Pi) = 0.0000000D+00[cm-1 Ang^{ 8}]
+                    These constants yield:   betaINF= -1.6239647333
+  'Quadratic correction' for  C6(Sigma)  yields   C6(Sigma,adj)= 1.45112159D+07
+  'Quadratic corrn' for  MLR(m_1=3)  introduces    C9(Sigm,adj)= 3.65731154D+08
+ Adiabatic BOB functions with {p= 3, q= 3} are scaled by  DELTA{M(A)}/M(A):
+    \tilde{S}(Li;R) = u(inf)*y3 + (1 - y3)*\Sum{u_i * [y3]^i}   for  i= 0 to  3
+        with Li-atom radial expansion variable:   y3 = (R^3 - Re^3)/(R^3 + Re^3)
+ Non-Adiabatic centrifugal BOB fx. with {p= 3, q= 3} are scaled by  M(1)/M(A):
+
+ Centrifugal BOB term adds  2*[\hbar^2/{2\mu r^2}]  to the PEF
+
+   Parameter      Final Value    Uncertainty   Sensitivity
+    VLIM      0.000000000000D+00       --            --
+      Te      8.143960946522D+03    3.3D-02       3.5D-02
+      De      7.093443865905D+03    3.5D-02       3.6D-05
+      Re      3.065093129628D+00    1.8D-04       1.2D-07
+ RREF(q= 3)   3.600000000000D+00       --            --
+ RREF(p= 6)   3.600000000000D+00       --            --
+  DELTAE      3.353389000000D-01       --            --
+   C3(^3Sig)  3.575570000000D+05       --            --
+   C3(^1Pi)   1.787785000000D+05       --            --
+   C3(^3Pi)  -1.787785000000D+05       --            --
+   C6(^3Sig)  1.000540000000D+07       --            --
+   C6(^1Pi)   0.000000000000D+00       --            --
+   C6(^3Pi)   0.000000000000D+00       --            --
+   C8(^3Sig)  3.699530000000D+08       --            --
+   C8(^1Pi)   0.000000000000D+00       --            --
+   C8(^3Pi)   0.000000000000D+00       --            --
+   beta( 0)  -1.637489652474D+00    5.1D-05       2.2D-08
+   beta( 1)   2.920133497345D-01    3.8D-04       9.3D-08
+   beta( 2)  -5.549194180042D-01    3.2D-03       1.9D-07
+   beta( 3)  -2.861555366516D-01    1.3D-02       4.3D-07
+   beta( 4)  -1.588283087272D+00    5.0D-02       9.2D-07
+   beta( 5)  -5.917880527056D-01    1.5D-01       2.0D-06
+   beta( 6)  -1.369277274257D+00    5.5D-01       3.9D-06
+   beta( 7)  -1.729189680466D+00    4.8D-01       7.7D-06
+   beta( 8)   8.835996878168D-01    7.1D-01       1.3D-05
+   beta( 9)   3.497752295621D+00    7.1D-01       2.5D-05
+   beta_INF  -1.623964733335D+00       --            --
+   C 9{exp}  -9.736202105639D+07       --            --
+    uLi( 0)   1.368822471627D+00    7.6D-03       1.6D-04
+    uLi( 1)   2.546993476502D+00    4.0D-01       3.6D-03
+    uLi( 2)  -1.388492673098D+00    4.9D-01       3.7D-03
+    uLi( 3)  -1.651777213930D+00    5.9D-01       1.6D-02
+  u_inf(Li)   1.147001928206D+00    2.7D-03       1.7D-04
+ ==============================================================================
+
+ ===============================================================
+  *** Discrepancies for   34 bands/series of Li(  7)-Li(  7) ***
+ ===============================================================
+
+ ======================================================================
+  1279 Li(  7)-Li(  7)  {State 13 }--{State a3 } Transitions in  32 bands
+ ================================================== Avge. ========
+   v'  v" #data  J"min  J"max  Av.Unc.  Max.Unc.   Err/Unc   DRMSD
+ -----------------------------------------------------------------
+   7   0    48      3     31   1.0D-02  1.0D-02    0.10385   1.029
+   7   1    38      5     31   1.0D-02  1.0D-02    0.24111   0.969
+   6   0    53      3     31   1.0D-02  1.0D-02    0.02828   0.900
+   6   1    55      3     33   1.0D-02  1.0D-02    0.01408   0.814
+   6   2    37      9     30   1.0D-02  1.0D-02   -0.11239   0.843
+   5   1    54      3     33   1.0D-02  1.0D-02   -0.08861   1.091
+   5   2    49      2     30   1.0D-02  1.0D-02   -0.01587   0.805
+   4   1    53      1     30   1.0D-02  1.0D-02   -0.02991   0.763
+   4   2    57      1     32   1.0D-02  1.0D-02    0.09589   0.854
+   4   3    45      3     28   1.0D-02  1.0D-02    0.02621   0.813
+   3   2    48      1     28   1.0D-02  1.0D-02    0.11405   0.675
+   3   3    52      2     30   1.0D-02  1.0D-02   -0.06426   0.654
+   3   4    48      2     28   1.0D-02  1.0D-02    0.04910   0.796
+   2   2    49      1     28   1.0D-02  1.0D-02    0.21956   1.074
+   2   3    53      0     29   1.0D-02  1.0D-02   -0.06759   0.849
+   2   4    47      1     27   1.0D-02  1.0D-02    0.04882   0.907
+   2   5    44      1     24   1.0D-02  1.0D-02    0.23971   0.645
+   2   6    30      1     19   1.0D-02  1.0D-02   -0.07955   0.996
+   2   7    15      1     15   1.0D-02  1.0D-02    0.21784   1.044
+   1   5    36      1     21   1.0D-02  1.0D-02   -0.00149   1.110
+   1   6    31      2     24   1.0D-02  1.0D-02   -0.19492   0.907
+   5   0    49      1     31   1.0D-02  1.0D-02    0.14747   1.105
+   5   3    24     11     26   1.0D-02  1.0D-02    0.02711   0.882
+   2   1    28      5     24   1.0D-02  1.0D-02   -0.14956   0.950
+   1   3    27      4     21   1.0D-02  1.0D-02    0.18637   0.985
+   1   4    33      3     21   1.0D-02  1.0D-02   -0.04033   1.306
+   1   7    11      4     16   1.0D-02  1.0D-02   -0.19873   1.094
+   3   1    48      1     33   1.0D-02  1.0D-02    0.04531   1.293
+   3   6    27      4     19   1.0D-02  1.0D-02    0.01710   0.857
+   3   7    11      3     17   1.0D-02  1.0D-02    0.24430   1.098
+   4   0    42      1     29   1.0D-02  1.0D-02   -0.05515   1.031
+   4   4    37      4     28   1.0D-02  1.0D-02    0.18303   0.768
+ -------------- For these  1279 lines, overall:    0.03599   0.932
+
+ ==========================================================
+    1 PAS Binding Energies for State a3   Li(  7)-Li(  7)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+    1     10     10    1.3D-03  1.3D-03    0.447   0.447
+ ============================================================
+
+ ==========================================================
+   29 PAS Binding Energies for State 13   Li(  7)-Li(  7)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   29     63     89    1.6D-03  4.0D-03   -0.512   1.570
+ ============================================================
+
+ ===============================================================
+  *** Discrepancies for   36 bands/series of Li(  6)-Li(  6) ***
+ ===============================================================
+
+ ======================================================================
+  1276 Li(  6)-Li(  6)  {State 13 }--{State a3 } Transitions in  35 bands
+ ================================================== Avge. ========
+   v'  v" #data  J"min  J"max  Av.Unc.  Max.Unc.   Err/Unc   DRMSD
+ -----------------------------------------------------------------
+   7   0    39      3     27   1.0D-02  1.0D-02   -0.03783   0.693
+   7   1    32      5     27   1.0D-02  1.0D-02    0.04469   0.744
+   6   0    47      1     27   1.0D-02  1.0D-02    0.02110   0.537
+   6   1    48      2     28   1.0D-02  1.0D-02    0.09950   0.656
+   6   2    25     10     28   1.0D-02  1.0D-02   -0.07006   0.591
+   5   1    56      0     31   1.0D-02  1.0D-02    0.20965   0.695
+   5   2    49      1     30   1.0D-02  1.0D-02    0.07844   0.991
+   4   1    59      1     32   1.0D-02  1.0D-02    0.05170   0.635
+   4   2    51      2     30   1.0D-02  1.0D-02    0.05985   0.513
+   4   3    48      1     27   1.0D-02  1.0D-02    0.06720   0.554
+   3   2    51      0     29   1.0D-02  1.0D-02    0.03073   0.534
+   3   3    47      1     28   1.0D-02  1.0D-02    0.04416   0.398
+   3   4    39      1     24   1.0D-02  1.0D-02    0.07609   0.647
+   2   2    49      1     30   1.0D-02  1.0D-02   -0.07007   0.638
+   2   3    48      1     28   1.0D-02  1.0D-02   -0.03349   0.517
+   2   4    42      1     25   1.0D-02  1.0D-02   -0.15907   0.562
+   2   5    35      1     20   1.0D-02  1.0D-02    0.07239   0.480
+   2   6    26      2     17   1.0D-02  1.0D-02   -0.02610   0.509
+   1   5    32      1     20   1.0D-02  1.0D-02   -0.09294   0.617
+   1   6    25      2     17   1.0D-02  1.0D-02    0.04114   0.575
+   5   0    49      1     31   1.0D-02  1.0D-02    0.06247   0.659
+   5   3    28      7     27   1.0D-02  1.0D-02   -0.00406   0.686
+   2   1    49      0     30   1.0D-02  1.0D-02    0.02245   0.726
+   1   3    34      1     23   1.0D-02  1.0D-02    0.01657   0.453
+   1   4    38      2     25   1.0D-02  1.0D-02    0.15310   0.727
+   1   7    14      4     14   1.0D-02  1.0D-02    0.25927   0.818
+   3   1    51      1     30   1.0D-02  1.0D-02    0.08990   0.700
+   3   6    17      4     17   1.0D-02  1.0D-02   -0.20328   0.637
+   3   5    26      2     20   1.0D-02  1.0D-02    0.14806   0.649
+   4   0    41      2     28   1.0D-02  1.0D-02   -0.00175   0.596
+   4   4    15      4     18   1.0D-02  1.0D-02   -0.00828   0.718
+   3   0    32      2     21   1.0D-02  1.0D-02    0.02978   0.593
+   1   2    20      4     18   1.0D-02  1.0D-02    0.12520   0.730
+   2   7    10      4     12   1.0D-02  1.0D-02    0.18700   0.631
+   3   7     4      6     12   1.0D-02  1.0D-02   -0.28425   1.161
+ -------------- For these  1276 lines, overall:    0.03661   0.638
+
+ ==========================================================
+   67 PAS Binding Energies for State 13   Li(  6)-Li(  6)
+ ================================================== Avge. =
+ #data  v_min  v_max   AvgeUnc  Max.Unc.  Err/Unc  DRMSD
+ ----------------------------------------------------------
+   67     56     82    6.3D-03  2.6D-02   -0.272   0.951
+ ============================================================
+
+ ==============================================================================
+ Fit of    24 total param to  2652 data yields   DRMS(devn.)= 0.81542807    
+ ==============================================================================

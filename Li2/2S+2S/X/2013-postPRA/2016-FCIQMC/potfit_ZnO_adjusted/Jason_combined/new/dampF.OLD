@@ -1,0 +1,65 @@
+c***********************************************************************
+      SUBROUTINE dampF(R,bDAMP,m,Dm,Dmp,Dmpp,IDF)
+c** Subroutine to generate values 'Dm' and its first `Dmp' and second
+c  'Dmpp' derivatives w.r.t. R of the chosen potential damping function
+c   IDF = 1 :  Tang-Toennies damping function [JCP 80,3726(1984)]
+c   IDF = 2 :  damped-dispersion damping function [MolP 52,763(1984)]
+c   IDF = 3 : extend IDF=2 by multiplying by Scoles' global damping fx.
+c  all assuming  R  in units Angst. 
+c***********************************************************************
+      INTEGER i,m,IDF
+      REAL*8 br,R,bDAMP,RHOdR,Dm,Dmp,Dmpp,fd,fdp,fdpp,Coef,XPOW
+      REAL*8 sum(20)
+c
+      br= bDAMP*R
+      IF(IDF.EQ.1) THEN
+c** Tang-Toennies damping function: numerical factor 3.16 makes these
+c  functions equivalent to Scoles functions, and allows the  RHOd  
+c  scaling factor to have the same significance in both cases.
+          XPOW = DEXP(-RHOdR)
+          DO  i= 1,m
+              sum(i) = 1.0d0
+              END DO
+          fd = 1.0d0
+          DO  i= 1,m
+              fd = fd*RHOdR/i
+              sum(i) = sum(i) + fd
+              ENDDO
+          Dm = 1.0d0-XPOW*sum(m)
+          Dmp = 3.16d0*bDAMP*XPOW*(sum(m) - sum(m-1))
+          Dmpp = 3.16d0*bDAMP**2*XPOW*(-sum(m) + 2*sum(m-1) - sum(m-2))
+          ENDIF
+c
+      IF((IDF.EQ.2).OR.(IDF.EQ.3)) THEN
+c** Douketis et al. [MolP 52, 763 (1984)]  damping function.
+          XPOW= DEXP(-3.97d0*RHOdR/m-0.39d0*(RHOdR)**2/DSQRT(m*1.0d0))
+ccc       XPOW= DEXP(-3.968424881d0*RHOdR/m
+ccc  1                      - 0.389246070d0*(RHOdR)**2/DSQRT(m*1.0d0))
+          Dm = (1.0d0 - XPOW)**m
+          Coef = 3.97d0*bDAMP/m + 0.78d0*bDAMP*RHOdR/DSQRT(m*1.0d0)
+ccc       Coef = 3.968424881d0*RHOd/m 
+ccc  1                      + 0.7784921396d0*RHOd*RHOdR/DSQRT(m*1.0d0)
+          Dmp = m*Coef*XPOW*(1.0d0 - XPOW)**(m-1)
+          Dmpp = XPOW*(1.0d0 - XPOW)**(m-1)
+     1                                 *(0.78d0*SQRT(m*1.0d0)*bDAMP**2
+ccc  1                          *(0.7784921396d0*SQRT(m*1.0d0)*RHOd**2 
+     2              - m*Coef**2*(1.0d0-m*XPOW)/(1.0d0 - XPOW))
+          ENDIF
+c
+      IF(IDF.EQ.3) THEN
+c** If desired, also apply Scoles' global scaling/damping factor
+          XPOW= DEXP(-1.474d0*RHOdR)
+          Coef= (RHOdR)**1.68d0
+          fd= Coef*XPOW
+          fdp= bDAMP*fd*(1.474d0 - 1.68/(RHOdR))
+          fdpp= bDAMP**2 *fd*(-2.172676d0 + 
+     1                       (4.95264d0 - 1.1424d0/(RHOdR))/(RHOdR))
+          fd= 1.d0 - fd
+          Dmpp= Dmpp*fd + 2.d0*Dmp*fdp + Dm*fdpp
+          Dmp= Dmp*fd + Dm*fdp
+          Dm= Dm*fd
+          END IF
+      RETURN
+      END
+c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12
+
